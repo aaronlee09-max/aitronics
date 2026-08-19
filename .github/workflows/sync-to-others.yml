@@ -1,0 +1,70 @@
+name: Sync to aitronics & Softronics
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:  # 수동 실행도 가능
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout informatics
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Configure Git
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+      # ===== aitronics 동기화 =====
+      - name: Sync to aitronics
+        env:
+          TOKEN: ${{ secrets.PERSONAL_TOKEN }}
+        run: |
+          git clone --depth 1 https://x-access-token:${TOKEN}@github.com/aaronlee09-max/aitronics.git /tmp/aitronics
+          # CNAME 백업 (도메인 유지용)
+          cp /tmp/aitronics/CNAME /tmp/aitronics-CNAME.bak 2>/dev/null || true
+          # 내용 전체 복사 (기존 파일 덮어쓰기)
+          rsync -a --delete --exclude='.git' --exclude='CNAME' ./ /tmp/aitronics/
+          # CNAME 복원
+          if [ -f /tmp/aitronics-CNAME.bak ]; then
+            cp /tmp/aitronics-CNAME.bak /tmp/aitronics/CNAME
+          else
+            echo "informatics.run.place" > /tmp/aitronics/CNAME
+          fi
+          cd /tmp/aitronics
+          git add -A
+          if git diff --staged --quiet; then
+            echo "aitronics already up to date"
+          else
+            git commit -m "Sync from informatics $(date -u +%Y-%m-%d)"
+            git push origin main
+          fi
+
+      # ===== Softronics 동기화 =====
+      - name: Sync to Softronics
+        env:
+          TOKEN: ${{ secrets.PERSONAL_TOKEN }}
+        run: |
+          git clone --depth 1 https://x-access-token:${TOKEN}@github.com/aaronlee09-max/Softronics.git /tmp/Softronics
+          # CNAME 백업
+          cp /tmp/Softronics/CNAME /tmp/Softronics-CNAME.bak 2>/dev/null || true
+          # 내용 전체 복사
+          rsync -a --delete --exclude='.git' --exclude='CNAME' ./ /tmp/Softronics/
+          # CNAME 복원
+          if [ -f /tmp/Softronics-CNAME.bak ]; then
+            cp /tmp/Softronics-CNAME.bak /tmp/Softronics/CNAME
+          else
+            echo "aaronshlee.run.place" > /tmp/Softronics/CNAME
+          fi
+          cd /tmp/Softronics
+          git add -A
+          if git diff --staged --quiet; then
+            echo "Softronics already up to date"
+          else
+            git commit -m "Sync from informatics $(date -u +%Y-%m-%d)"
+            git push origin main
+          fi

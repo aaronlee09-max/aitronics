@@ -10,10 +10,10 @@
 <style>
   :root{
     --paper:#FBFAF3;
-    --line:#D8E4F2;
-    --margin:#F2B9C4;
-    --ink:#26364F;
-    --pen:#2E5FD0;
+    --line:#D8E4F2;          /* 노트 가로줄 */
+    --margin:#F2B9C4;        /* 노트 세로 마진선 */
+    --ink:#26364F;           /* 볼펜 블랙-블루 */
+    --pen:#2E5FD0;           /* 볼펜 블루 */
     --pen-soft:#8FA6C9;
     --hl-yellow:#FFE870;
     --hl-pink:#FFC3D4;
@@ -45,6 +45,7 @@
   }
   .slide.active{opacity:1;transform:none;pointer-events:auto}
 
+  /* 타이포 */
   .eyebrow{
     font-family:var(--body);font-size:clamp(16px,1.6cqw,30px);font-weight:800;
     color:var(--pen);letter-spacing:.02em;margin-bottom:1.6cqh;
@@ -66,6 +67,7 @@
   .mark-mint{background:linear-gradient(transparent 52%, var(--hl-mint) 52%, var(--hl-mint) 92%, transparent 92%);padding:0 .1em}
   .lead{font-size:clamp(18px,1.95cqw,36px);font-weight:700;color:var(--pen);margin-top:2.4cqh}
 
+  /* 종이 카드 */
   .note{
     background:var(--card);border:2.5px solid var(--ink);border-radius:14px;
     box-shadow:5px 6px 0 rgba(38,54,79,.14);
@@ -74,6 +76,7 @@
   .note.t1{transform:rotate(-.5deg)}
   .note.t2{transform:rotate(.45deg)}
 
+  /* 표지 */
   .cover{display:grid;grid-template-columns:1.25fr .75fr;align-items:center;gap:3cqw}
   .cover .tags{display:flex;flex-direction:column;gap:1.4cqh;margin-top:3.4cqh}
   .tagline{display:flex;align-items:center;gap:14px;font-size:clamp(18px,1.95cqw,36px);font-weight:800}
@@ -85,6 +88,7 @@
   .tagline i{font-style:normal;color:var(--pen-soft);font-weight:700;font-size:.8em}
   .doodle{width:100%;height:auto}
 
+  /* 2단 카드 */
   .two{display:grid;grid-template-columns:1fr 1fr;gap:2.4cqw}
   .two .k{font-size:clamp(15px,1.55cqw,28px);font-weight:800;color:var(--pen-soft);margin-bottom:1.2cqh}
   .two .v{font-family:var(--disp);font-size:clamp(26px,3.1cqw,56px);font-weight:700;line-height:1.2}
@@ -95,6 +99,7 @@
   .concl .c1{font-family:var(--disp);font-size:clamp(22px,2.5cqw,46px);font-weight:700;color:var(--pen)}
   .concl .c2{font-size:clamp(20px,2.25cqw,42px);font-weight:800;line-height:1.3}
 
+  /* 계단 */
   .stairs{display:grid;grid-template-columns:1fr 1fr;gap:2.4cqw}
   .stair .k{
     font-family:var(--disp);font-size:clamp(24px,2.4cqw,44px);font-weight:700;margin-bottom:1.6cqh;
@@ -110,6 +115,7 @@
   .step:nth-child(3){background:var(--hl-yellow)}
   .skip{margin-top:1.8cqh;font-size:clamp(16px,1.7cqw,31px);font-weight:800;color:var(--pen);line-height:1.4}
 
+  /* 과목 → 분야 */
   .bridge{display:flex;flex-direction:column;gap:1.2cqh}
   .brow{
     display:grid;grid-template-columns:minmax(0,340px) auto minmax(0,1fr);align-items:center;gap:1.2cqw;
@@ -130,6 +136,7 @@
   .brow:nth-child(3) .apps span{background:#D6F7E7}
   .brow:nth-child(4) .apps span{background:#FFE0E8}
 
+  /* 로드맵 */
   .core{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2cqw;margin-bottom:2cqh}
   .core div{
     border:2.5px solid var(--ink);border-radius:12px;background:var(--card);
@@ -160,6 +167,7 @@
   .sub .tool u{text-decoration:none;background:var(--ink);color:#fff;border-radius:6px;padding:1px 8px}
   .flow{text-align:center;font-family:var(--disp);font-size:clamp(20px,2.2cqw,40px);font-weight:700;color:var(--pen);margin-top:2cqh}
 
+  /* 오해 / 실제 */
   .myth{display:grid;grid-template-columns:1fr 1fr;gap:2.4cqw}
   .myth .box{
     background:var(--card);border:2.5px solid var(--ink);border-radius:14px;
@@ -178,6 +186,7 @@
   .final .f1{font-family:var(--disp);font-size:clamp(26px,2.9cqw,54px);font-weight:700}
   .final .f2{font-size:clamp(16px,1.6cqw,30px);font-weight:700;color:var(--pen-soft);letter-spacing:.1em}
 
+  /* 하단 */
   .hud{
     position:absolute;left:0;right:0;bottom:0;height:7.5cqh;display:flex;align-items:center;
     justify-content:space-between;padding:0 7cqw;font-size:clamp(13px,1.1cqw,20px);
@@ -192,6 +201,7 @@
 <body>
 <div class="deck" id="deck">
 
+  <!-- 1 표지 -->
   <section class="slide active">
     <div class="cover">
       <div>
@@ -215,6 +225,7 @@
     </div>
   </section>
 
+  <!-- 2 시대 변화 -->
   <section class="slide">
     <div class="eyebrow">시대가 바뀌었습니다</div>
     <h2>이제는 <span class="mark-pink">프로그램</span>도 내가 만들어 쓰는 시대</h2>
@@ -234,6 +245,7 @@
     </div>
   </section>
 
+  <!-- 3 계단 -->
   <section class="slide">
     <div class="eyebrow">"AI가 코딩해 주는데 왜 배워요?"</div>
     <h2>기초는 <span class="mark">다음 계단</span>을 밟기 위한 것</h2>
@@ -260,6 +272,7 @@
     <p class="lead">기초를 아는 사람만 AI가 준 답이 맞는지 판단하고, 고쳐 쓸 수 있습니다.</p>
   </section>
 
+  <!-- 4 도구 과목 -->
   <section class="slide">
     <div class="eyebrow">진로가 컴퓨터가 아니어도</div>
     <h2>배운 과목이 <span class="mark-mint">내 진로의 도구</span>가 됩니다</h2>
@@ -303,6 +316,7 @@
     </div>
   </section>
 
+  <!-- 5 로드맵 -->
   <section class="slide">
     <div class="eyebrow">로드맵</div>
     <h2>무엇을, 무엇으로 배우나</h2>
@@ -356,6 +370,7 @@
     <p class="flow">코딩 기초 → AI의 원리 → 데이터로 판단 → 세상에 쓰이는 소프트웨어</p>
   </section>
 
+  <!-- 6 오해와 실제 -->
   <section class="slide">
     <div class="eyebrow">선택 전, 꼭 알아 두세요</div>
     <h2>"컴퓨터실에서 노는 과목"이 아닙니다</h2>

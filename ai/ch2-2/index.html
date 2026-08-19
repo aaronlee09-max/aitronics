@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#eef0f8" />
+    <title>기계학습 알고리즘</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css?v=83" />
+  </head>
+  <body>
+    <main class="deck" aria-live="polite">
+      <section class="slide active" data-slide="1">
+        <div class="slide-header">
+          <p class="unit">01</p>
+          <p class="page-ref">p.88~91</p>
+          <h1>기계학습의 유형</h1>
+          <p class="subtitle">학습 데이터에 <strong>정답이 있는지</strong>, 그리고 <strong>어떤 방식으로 학습하는지</strong>에 따라 나눈다.</p>
+        </div>
+
+        <div class="learning-map">
+          <div class="learning-branches">
+            <article class="learning-card supervised" data-tone="blue">
+              <header class="section-heading"><span class="section-number">01</span><div><div class="learning-title-row"><h2>지도 학습</h2><b class="learning-tag">정답 있음</b></div><p>입력과 정답의 관계를 학습</p></div></header>
+              <div class="type-pair">
+                <section><b>분류</b><p>정해진 범주 중 하나를 예측</p><em>스팸 메일 · 질병 판정</em><small>의사 결정 트리 · 로지스틱 회귀 · k-NN</small></section>
+                <section><b>회귀</b><p>연속적인 수치를 예측</p><em>기온 · 주택 가격 예측</em><small>선형 회귀</small></section>
+              </div>
+            </article>
+
+            <article class="learning-card unsupervised" data-tone="orange">
+              <header class="section-heading"><span class="section-number">02</span><div><div class="learning-title-row"><h2>비지도 학습</h2><b class="learning-tag">정답 없음</b></div><p>데이터 속 구조 · 규칙을 발견</p></div></header>
+              <div class="type-pair">
+                <section><b>군집</b><p>특성이 비슷한 데이터끼리 묶기</p><em>고객 유형 나누기</em><small>k-평균 군집</small></section>
+                <section><b>연관 규칙</b><p>함께 나타나는 항목의 관계 찾기</p><em>장바구니 상품 분석</em><small>데이터 사이의 연관성</small></section>
+              </div>
+            </article>
+
+            <article class="learning-card reinforcement" data-tone="green">
+              <header class="section-heading"><span class="section-number">03</span><div><div class="learning-title-row"><h2>강화 학습</h2><b class="learning-tag">보상 있음</b></div><p>행동의 결과로 받은 보상을 이용</p></div></header>
+              <div class="reinforcement-content">
+                <div class="reinforcement-diagram" aria-label="에이전트와 환경 사이의 행동 및 상태와 보상 순환">
+                  <div class="agent-node">에이전트</div>
+                  <div class="environment-node">환경</div>
+                  <div class="action-path"><span>행동</span><i></i></div>
+                  <div class="feedback-path"><span>상태 + 보상</span><i></i></div>
+                </div>
+                <p class="reward-copy"><strong>보상을 최대화</strong>하는 행동을 학습</p>
+                <p class="examples">게임인공지능, 로봇제어, 자율주행</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide" data-slide="2">
+        <div class="slide-header">
+          <p class="unit">02</p>
+          <p class="page-ref">p.92</p>
+          <h1>기계학습 모델 구현 과정</h1>
+          <p class="subtitle">문제를 정의하고 데이터를 준비한 뒤, 모델을 만들어 평가하는 <strong>반복 과정</strong></p>
+        </div>
+
+        <div class="model-process">
+          <article class="stage-problem" data-tone="blue">
+            <div class="section-heading"><span class="section-number">01</span><h2>문제 정의</h2></div><p>해결할 문제와 예측 목표를 정한다.</p>
+            <div class="stage-points"><b>예측할 값 정하기</b><b>해결 조건 확인하기</b></div>
+          </article>
+          <article class="stage-data" data-tone="orange">
+            <div class="section-heading"><span class="section-number">02</span><h2>데이터 수집<br />및 전처리</h2></div><p>데이터를 학습 가능한 형태로 준비한다.</p>
+            <div class="stage-points"><b>데이터 수집</b><b>데이터 탐색</b><b>결측치·이상치 처리</b><b>핵심 속성 선택</b></div>
+          </article>
+          <article class="stage-model" data-tone="green">
+            <div class="section-heading"><span class="section-number">03</span><h2>모델 생성</h2></div><p>알맞은 알고리즘을 선택하여 모델을 학습시킨다.</p>
+            <div class="stage-points"><b>학습 유형 선택</b><b>알고리즘 선택</b><b>모델 학습</b></div>
+          </article>
+          <article class="stage-evaluate" data-tone="blue">
+            <div class="section-heading"><span class="section-number">04</span><h2>모델 평가</h2></div><p>새로운 데이터에 대한 예측 성능을 확인한다.</p>
+            <div class="stage-points"><b>실제 값과 비교</b><b>성능 평가</b><b>모델 개선</b></div>
+          </article>
+          <div class="feedback-loop"><span>평가 결과를 바탕으로 데이터와 모델을 다시 점검</span><strong>↶</strong></div>
+        </div>
+      </section>
+
+      <section class="slide" data-slide="3">
+        <div class="slide-header">
+          <p class="unit">03</p>
+          <p class="page-ref">p.94~95</p>
+          <h1>기계학습 모델의 학습과 평가</h1>
+          <p class="subtitle">문제에 맞는 모델을 선정하고 <strong>훈련 데이터로 학습</strong>한 뒤 <strong>테스트 데이터로 평가</strong>한다.</p>
+        </div>
+
+        <div class="model-learning-layout">
+          <article class="model-selection-card" data-tone="blue">
+            <div class="section-heading"><span class="section-number">01</span><h2>알고리즘 선정과 모델 생성</h2></div>
+            <div class="model-options">
+              <section><b>선형 회귀</b></section>
+              <section><b>분류</b></section>
+              <section><b>군집</b></section>
+            </div>
+          </article>
+
+          <article class="model-training-card" data-tone="orange">
+              <div class="section-heading"><span class="section-number">02</span><h2>데이터를 이용해 모델 학습</h2></div>
+              <p class="training-definition">모델의 <strong>매개 변수</strong> 값을 조정하여 데이터에 <strong>최적화</strong>시키는 과정</p>
+              <div class="dataset-picture" aria-label="전체 데이터를 훈련 데이터와 테스트 데이터로 분할">
+                <div class="dataset-action-labels"><span>모델 학습</span><span>모델 평가</span></div>
+                <div class="dataset-picture-bar">
+                  <section><strong>훈련 데이터</strong></section>
+                  <section><strong>테스트 데이터</strong></section>
+                </div>
+              </div>
+              <div class="training-notes">
+                <p class="overfit-note"><b>과적합</b><span>훈련 데이터에만 최적화되어 새로운 데이터의 성능이 낮아지는 문제</span></p>
+                <p class="cross-validation-note"><b>교차 검증</b><span>훈련 데이터를 나누어 훈련과 검증을 반복</span></p>
+              </div>
+          </article>
+
+          <article class="model-evaluation-card" data-tone="green">
+              <div class="section-heading"><span class="section-number">03</span><h2>모델 평가</h2></div>
+              <div class="evaluation-diagrams">
+                <section><b>데이터 충분</b><div class="evaluation-bar three"><span>훈련</span><span>검증</span><span>테스트</span></div></section>
+                <section><b>데이터 부족</b><div class="evaluation-bar two"><span>훈련</span><span>테스트</span></div></section>
+                <section><b>데이터 매우 적음</b><div class="evaluation-bar one"><span>교차 검증 결과</span></div></section>
+              </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="slide" data-slide="4">
+        <div class="slide-header">
+          <p class="unit">04</p>
+          <p class="page-ref">p.96</p>
+          <h1>선형 회귀 모델</h1>
+          <p class="subtitle">입력 속성과 예측값 사이의 관계를 가장 잘 나타내는 <strong>직선 또는 평면</strong>을 찾는다.</p>
+        </div>
+
+        <div class="regression-layout">
+          <article class="regression-card simple-regression" data-tone="blue">
+            <header class="section-heading"><span class="section-number">01</span><div><h2>단순 선형 회귀</h2><p>독립 변수가 한 개인 경우</p></div></header>
+            <div class="mini-chart" aria-label="단순 선형 회귀 산점도">
+              <span class="axis-y">허리둘레</span><span class="axis-x">목둘레</span><i class="trend-line"></i>
+              <b style="--x:12%;--y:16%"></b><b style="--x:26%;--y:34%"></b><b style="--x:39%;--y:41%"></b><b style="--x:50%;--y:55%"></b><b style="--x:65%;--y:61%"></b><b style="--x:80%;--y:82%"></b>
+            </div>
+            <div class="formula">ŷ = <strong>a</strong>x + <strong>b</strong></div>
+          </article>
+
+          <article class="regression-card multiple-regression" data-tone="orange">
+            <header class="section-heading"><span class="section-number">02</span><div><h2>다중 선형 회귀</h2><p>독립 변수가 두 개 이상인 경우</p></div></header>
+            <div class="variable-map"><div><span>목둘레</span><span>키</span><span>체중</span></div><i>→</i><strong>선형 회귀<br />모델</strong><i>→</i><b>허리둘레<br />예측</b></div>
+            <div class="formula">ŷ = <strong>a₁</strong>x₁ + <strong>a₂</strong>x₂ + … + <strong>b</strong></div>
+          </article>
+
+          <aside class="term-strip">
+            <section><b>x</b><div><h3>독립 변수</h3><p>예측에 사용하는 입력 속성</p></div></section>
+            <section><b>ŷ</b><div><h3>종속 변수</h3><p>모델이 예측하려는 값</p></div></section>
+            <section><b>a</b><div><h3>회귀 계수</h3><p>입력값이 예측값에 미치는 영향</p></div></section>
+            <section><b>b</b><div><h3>절편</h3><p>직선이 세로축과 만나는 값</p></div></section>
+          </aside>
+        </div>
+      </section>
+
+      <section class="slide" data-slide="5">
+        <div class="slide-header">
+          <p class="unit">05</p>
+          <p class="page-ref">p.97~98</p>
+          <h1>선형 회귀 모델의 성능 평가</h1>
+          <p class="subtitle"><strong>오차 함수</strong>와 <strong>결정계수(R²)</strong>로 모델의 예측 성능과 설명력을 확인한다.</p>
+        </div>
+
+        <div class="metric-layout">
+          <article class="error-figure" data-tone="blue">
+            <div class="section-heading"><span class="section-number">01</span><h2>오차 함수</h2></div>
+            <div class="error-definition">실젯값과 예측값의 차이를 구하는 함수</div>
+            <div class="residual-chart" aria-label="회귀선과 오차를 나타낸 산점도">
+              <span class="chart-y">실젯값</span><span class="chart-x">입력값</span><i class="regression-line"></i>
+              <div class="residual" style="--x:15%;--actual:38%;--low:21.67%;--gap:16.33%"><b></b><em></em></div>
+              <div class="residual" style="--x:31%;--actual:18%;--low:18%;--gap:14.33%"><b></b><em></em></div>
+              <div class="residual" style="--x:50%;--actual:60%;--low:45%;--gap:15%"><b></b><em></em></div>
+              <div class="residual" style="--x:67%;--actual:39%;--low:39%;--gap:17.33%"><b></b><em></em></div>
+              <div class="residual" style="--x:83%;--actual:82%;--low:67%;--gap:15%"><b></b><em></em></div>
+            </div>
+            <div class="graph-legend" aria-label="오차 그래프 범례">
+              <i>●</i><span>실젯값</span>
+              <i>↕</i><span>오차</span>
+              <i>━</i><span>예측값을 나타내는 회귀선</span>
+            </div>
+          </article>
+
+          <article class="metrics-panel" data-tone="orange">
+            <div class="section-heading"><span class="section-number">02</span><h2>결정계수(R²)</h2></div>
+            <section class="r2-summary">
+              <div class="r2-heading"><h3>범위 해석</h3><strong>0 ~ 1</strong></div>
+              <p>모델이 데이터를 얼마나 잘 설명하는지를 나타내며, <br /><b>1에 가까울수록</b> 설명력이 높다.</p>
+              <div class="r2-interpretation" aria-label="결정계수 범위 해석">
+                <p><b>R² = 0</b><span>예측력 없음</span></p>
+                <p><b>0.0 &lt; R² &lt; 0.3</b><span>약한 설명력</span></p>
+                <p><b>0.3 ≤ R² &lt; 0.5</b><span>중간정도 설명력</span></p>
+                <p><b>0.5 ≤ R² &lt; 0.7</b><span>높은 설명력</span></p>
+                <p><b>0.7 ≤ R² ≤ 1</b><span>매우강한 설명력</span></p>
+              </div>
+            </section>
+          </article>
+        </div>
+      </section>
+
+      <section class="slide" data-slide="6">
+        <div class="slide-header">
+          <p class="unit">06</p><p class="page-ref">p.106</p>
+          <h1>분류 모델</h1>
+          <p class="subtitle">입력 데이터를 미리 정의된 여러 <strong>클래스 중 하나로 할당</strong>한다.</p>
+        </div>
+        <div class="classification-overview">
+          <article class="food-model-card" data-tone="blue">
+            <div class="section-heading"><span class="section-number">01</span><h2>식품 분류 데이터</h2></div>
+            <table class="food-table">
+              <colgroup><col /><col /><col /></colgroup>
+              <thead><tr><th colspan="2">특징</th><th>타깃</th></tr><tr><th>당도</th><th>아삭함</th><th>식품</th></tr></thead>
+              <tbody><tr><td>10</td><td>1</td><td><b>과일</b></td></tr><tr><td>3</td><td>8</td><td><b>채소</b></td></tr><tr><td>7</td><td>2</td><td><b>과일</b></td></tr></tbody>
+            </table>
+            <div class="boundary-types">
+              <section><i class="linear-boundary"></i><b>선형 분류</b><span>직선으로 영역 구분</span></section>
+              <section><i class="nonlinear-boundary"></i><b>비선형 분류</b><span>곡선으로 영역 구분</span></section>
+            </div>
+          </article>
+          <article class="classification-core" data-tone="orange">
+            <div class="section-heading"><span class="section-number">02</span><h2>분류의 핵심 개념</h2></div>
+            <div class="classification-goal"><span>분류 모델의 핵심 목표</span><strong>클래스 영역의 경계 찾기</strong></div>
+            <dl class="classification-terms">
+              <div><dt>특징</dt><dd>타깃을 예측하는 데 사용하는 속성</dd></div>
+              <div><dt>타깃</dt><dd>분류 모델이 예측하려는 속성</dd></div>
+              <div><dt>클래스</dt><dd>타깃의 범주 · 과일, 채소</dd></div>
+              <div><dt>레이블</dt><dd>타깃의 실제 값</dd></div>
+            </dl>
+            <div class="classification-examples"><b>분류의 예</b><span>정상 메일 ↔ 스팸 메일</span><span>플라스틱 · 종이류 · 유리류</span></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="slide" data-slide="7">
+        <div class="slide-header">
+          <p class="unit">07</p><p class="page-ref">p.107~108</p>
+          <h1>분류 알고리즘</h1>
+          <p class="subtitle">분류 모델을 만드는 대표적인 세 가지 방법의 <strong>판단 원리</strong>를 비교한다.</p>
+        </div>
+        <div class="classification-algorithms">
+          <article class="algorithm-card decision-tree-card" data-tone="blue">
+            <header class="section-heading"><span class="section-number">01</span><h2>결정트리</h2></header>
+            <div class="penguin-tree"><b>날개 길이 ＞ 205?</b><i>예</i><i>아니요</i><strong>젠투펭귄</strong><em>부리 길이로 다시 분할</em></div>
+            <p>특징의 <b>분할 기준</b>에 따라 데이터를 나누는 과정을 반복한다.</p>
+            <small>특징값을 기준으로 분할하므로 정규화가 필요 없다.</small>
+          </article>
+          <article class="algorithm-card logistic-card" data-tone="orange">
+            <header class="section-heading"><span class="section-number">02</span><h2>로지스틱 회귀</h2></header>
+            <div class="logistic-curve"><span>0</span><i>확률</i><b>S</b><em>0.5</em><span>1</span></div>
+            <p>로지스틱 함수로 각 클래스에 속할 <b>확률</b>을 예측한다.</p>
+            <small>예: 확률 0.5를 기준으로 합격과 불합격 분류</small>
+          </article>
+          <article class="algorithm-card knn-card" data-tone="green">
+            <header class="section-heading"><span class="section-number">03</span><h2>k-최근접 이웃</h2></header>
+            <div class="neighbor-vote"><b>●</b><b>●</b><em>●</em><em>●</em><strong>?</strong><i>k = 3</i></div>
+            <p>가장 가까운 <b>k개 데이터의 다수 레이블</b>로 클래스를 정한다.</p>
+            <small>데이터 사이의 거리는 유클리디언 거리 등을 이용한다.</small>
+          </article>
+        </div>
+      </section>
+
+      <section class="slide" data-slide="8">
+        <div class="slide-header">
+          <p class="unit">08</p><p class="page-ref">p.108</p>
+          <h1>분류 모델 성능 평가</h1>
+          <p class="subtitle"><strong>정확도</strong>와 <strong>혼동 행렬</strong>로 예측 결과를 확인한다.</p>
+        </div>
+        <div class="classification-evaluation">
+          <article class="accuracy-panel" data-tone="blue">
+            <div class="section-heading"><span class="section-number">01</span><h2 class="metric-name">정확도</h2></div>
+            <div class="accuracy-formula"><strong>예측값과 실제값이 같은 데이터 수</strong><i>전체 데이터 수</i></div>
+            <p>전체 데이터 중 모델이 <b>올바르게 분류한 데이터의 비율</b></p>
+            <div class="metric-tags"><span>정확도</span><span>정밀도</span><span>재현율</span></div>
+          </article>
+          <article class="penguin-matrix-panel" data-tone="orange">
+            <div class="section-heading"><span class="section-number">02</span><h2>펭귄 종 분류 모델의 혼동 행렬</h2></div>
+            <p>실제 클래스와 예측 클래스를 비교하여 어떤 클래스를 혼동했는지 확인한다.</p>
+            <div class="penguin-matrix">
+              <span class="matrix-corner">실제값 ↓<br />예측값 →</span><b>아델리</b><b>턱끈</b><b>젠투</b>
+              <strong>아델리</strong><em>42</em><i>2</i><i>0</i>
+              <strong>턱끈</strong><i>3</i><em>18</em><i>0</i>
+              <strong>젠투</strong><i>0</i><i>0</i><em>36</em>
+            </div>
+            <div class="matrix-key"><span><b></b>정확하게 분류</span><span><i></i>잘못 분류</span></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="slide" data-slide="9">
+        <div class="slide-header">
+          <p class="unit">09</p><p class="page-ref">p.118</p>
+          <h1>군집 모델과 k-평균 군집화</h1>
+          <p class="subtitle">정답 없이 <strong>유사한 데이터끼리 묶어</strong> 각 집단의 특징을 파악한다.</p>
+        </div>
+        <div class="cluster-overview">
+          <article class="cluster-concept-card" data-tone="blue">
+            <div class="section-heading"><span class="section-number">01</span><h2>군집</h2></div>
+            <div class="cluster-definition"><p>서로 <b>비슷한 특성을 가진 데이터끼리</b> 묶는 비지도학습 방법</p></div>
+            <div class="music-clusters">
+              <span class="axis-label-y">에너지</span><span class="axis-label-x">템포</span>
+              <b class="music-c1" style="--x:18%;--y:22%"></b><b class="music-c1" style="--x:28%;--y:31%"></b><b class="music-c1" style="--x:37%;--y:18%"></b>
+              <b class="music-c2" style="--x:58%;--y:24%"></b><b class="music-c2" style="--x:69%;--y:36%"></b><b class="music-c2" style="--x:77%;--y:19%"></b>
+              <b class="music-c3" style="--x:55%;--y:70%"></b><b class="music-c3" style="--x:67%;--y:82%"></b><b class="music-c3" style="--x:79%;--y:67%"></b>
+              <em class="music-label label-c1">C1</em><em class="music-label label-c2">C2</em><em class="music-label label-c3">C3</em>
+            </div>
+            <div class="cluster-examples"><b>활용</b><span>고객 세분화</span><span>질병 진단</span><span>소셜 네트워크 분석</span></div>
+          </article>
+          <article class="kmeans-intro-card" data-tone="orange">
+            <header class="section-heading"><span class="section-number">02</span><div><small>대표 알고리즘</small><h2>k-평균 군집화</h2></div></header>
+            <p>주어진 데이터를 <b>k개의 군집</b>으로 묶는다.</p>
+            <ol class="kmeans-intro-steps">
+              <li><span>01</span><div><b>군집의 개수 k 결정</b><small>k는 만들 군집의 수</small></div></li>
+              <li><span>02</span><div><b>각 군집의 중심점 계산</b><small>중심점은 군집 데이터의 평균점</small></div></li>
+              <li><span>03</span><div><b>가장 가까운 중심점에 할당</b><small>주로 유클리디언 거리 사용</small></div></li>
+            </ol>
+            <div class="kmeans-key"><strong>k</strong><span>군집 개수</span><i>+</i><strong>평균</strong><span>각 군집의 중심</span></div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <button class="nav-zone nav-prev" type="button" aria-label="이전 슬라이드"><span></span></button>
+    <button class="nav-zone nav-next" type="button" aria-label="다음 슬라이드"><span></span></button>
+    <div class="footer"><div class="dots" aria-label="슬라이드 위치"></div><p><span id="currentSlide">1</span> / <span id="totalSlides">1</span></p></div>
+    <script src="script.js?v=3"></script>
+  </body>
+</html>
