@@ -1,0 +1,61 @@
+name: Sync from bloomgloom/informatics
+
+on:
+  schedule:
+    - cron: '0 */6 * * *'   # 매 6시간마다
+  workflow_dispatch:        # 수동 실행 가능
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout current repo
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.PERSONAL_TOKEN }}
+          fetch-depth: 0
+
+      - name: Configure Git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Fetch upstream and sync
+        env:
+          TOKEN: ${{ secrets.PERSONAL_TOKEN }}
+        run: |
+          # 업스트림 클론
+          git clone --depth 1 https://github.com/bloomgloom/informatics.git /tmp/upstream
+
+          # 현재 CNAME과 .github 백업
+          cp CNAME /tmp/CNAME.bak 2>/dev/null || true
+          cp -r .github /tmp/github.bak 2>/dev/null || true
+
+          # 업스트림 내용으로 덮어쓰기 ( .git 제외 )
+          rsync -a --delete \
+            --exclude='.git' \
+            --exclude='CNAME' \
+            --exclude='.github' \
+            /tmp/upstream/ ./
+
+          # CNAME 복원 (도메인 유지)
+          if [ -f /tmp/CNAME.bak ]; then
+            cp /tmp/CNAME.bak CNAME
+          else
+            echo "aaronlee.run.place" > CNAME
+          fi
+
+          # .github 복원 (기존 워크플로 유지)
+          if [ -d /tmp/github.bak ]; then
+            rm -rf .github
+            cp -r /tmp/github.bak .github
+          fi
+
+          # 변경사항 커밋 & 푸시
+          git add -A
+          if git diff --staged --quiet; then
+            echo "Already up to date with upstream"
+          else
+            git commit -m "Sync from bloomgloom/informatics $(date -u +%Y-%m-%d)"
+            git push origin main
+          fi
