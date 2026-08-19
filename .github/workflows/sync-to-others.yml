@@ -19,7 +19,7 @@ jobs:
           - repo: datatronics
             cname: datatronics-softronics.run.place
           - repo: webtronics
-            cname: ""
+            cname: webtronics.run.place
     steps:
       - name: Checkout informatics
         uses: actions/checkout@v4
