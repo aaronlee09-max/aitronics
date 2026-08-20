@@ -5,6 +5,9 @@ on:
     - cron: '0 */6 * * *'
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   sync:
     runs-on: ubuntu-latest
@@ -12,7 +15,6 @@ jobs:
       - name: Checkout current repo
         uses: actions/checkout@v4
         with:
-          token: ${{ secrets.PERSONAL_TOKEN || github.token }}
           fetch-depth: 0
 
       - name: Configure Git
@@ -21,8 +23,6 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
       - name: Fetch upstream and sync
-        env:
-          TOKEN: ${{ secrets.PERSONAL_TOKEN || github.token }}
         run: |
           git clone --depth 1 https://github.com/bloomgloom/informatics.git /tmp/upstream
 
@@ -37,8 +37,6 @@ jobs:
 
           if [ -f /tmp/CNAME.bak ]; then
             cp /tmp/CNAME.bak CNAME
-          else
-            echo "aaronlee.run.place" > CNAME
           fi
 
           if [ -d /tmp/github.bak ]; then
