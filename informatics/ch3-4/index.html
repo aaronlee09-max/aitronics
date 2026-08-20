@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3-4 조건문과 반복문</title>
+    <style>
+      * { box-sizing: border-box; }
+      body { margin: 0; background: #f7fafc; color: #172033; font-family: "Apple SD Gothic Neo", "Noto Sans KR", system-ui, sans-serif; }
+      main { width: min(880px, calc(100% - 48px)); margin: 0 auto; padding: 56px 0; }
+      a { color: #be185d; font-weight: 800; text-decoration: none; }
+      h1 { margin: 28px 0 10px; font-size: clamp(36px, 6vw, 64px); line-height: 1.05; }
+      .sub { margin: 0 0 28px; color: #5c6b7d; font-size: 18px; font-weight: 700; }
+      .row { display: grid; grid-template-columns: 1fr auto; gap: 16px; align-items: center; padding: 18px 0; border-top: 1px solid #e5eaf0; }
+      .row:last-child { border-bottom: 1px solid #e5eaf0; }
+      .downloads { display: flex; gap: 8px; flex-wrap: wrap; }
+      .download { display: inline-flex; align-items: center; justify-content: center; min-width: 82px; border: 1px solid #fbcfe8; border-radius: 8px; padding: 9px 12px; background: #fff; color: #be185d; font-size: 14px; }
+      .download.answer { border-color: #fcd34d; color: #b45309; }
+      @media (max-width: 640px) {
+        .row { grid-template-columns: 1fr; }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <a href="../">← 정보 단원 목록</a>
+      <h1>3-4 조건문과 반복문</h1>
+      <p class="sub">파이썬 조건문과 반복문으로 프로그램을 작성합니다.</p>
+      <div class="row">
+        <strong>01 조건문</strong>
+        <div class="downloads">
+          <a class="download" href="./01_conditionals.ipynb" download>노트북</a>
+          <a class="download answer" href="./01_conditionals_정답.ipynb" download>정답</a>
+        </div>
+      </div>
+      <div class="row">
+        <strong>02 반복문</strong>
+        <div class="downloads">
+          <a class="download" href="./02_iteration.ipynb" download>노트북</a>
+          <a class="download answer" href="./02_iteration_정답.ipynb" download>정답</a>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

@@ -18,9 +18,7 @@
         --shadow: 0 24px 70px rgba(26, 41, 61, 0.14);
       }
 
-      * {
-        box-sizing: border-box;
-      }
+      * { box-sizing: border-box; }
 
       body {
         min-height: 100vh;
@@ -36,9 +34,7 @@
         padding: 64px 0;
       }
 
-      header {
-        margin-bottom: 34px;
-      }
+      header { margin-bottom: 34px; }
 
       .eyebrow {
         margin: 0 0 10px;
@@ -54,10 +50,7 @@
         letter-spacing: 0;
       }
 
-      .chapters {
-        display: grid;
-        gap: 14px;
-      }
+      .chapters { display: grid; gap: 14px; }
 
       .chapter {
         display: grid;
@@ -74,13 +67,8 @@
         box-shadow: 0 10px 30px rgba(23, 32, 51, 0.06);
       }
 
-      .chapter.active {
-        border-color: rgba(37, 99, 235, 0.35);
-      }
-
-      .chapter.disabled {
-        opacity: 0.72;
-      }
+      .chapter.active { border-color: rgba(37, 99, 235, 0.35); }
+      .chapter.disabled { opacity: 0.72; }
 
       .number {
         color: var(--blue);
@@ -88,37 +76,17 @@
         font-weight: 900;
       }
 
-      .chapter:nth-child(2) .number {
-        color: var(--green);
-      }
+      .chapter:nth-child(2) .number { color: var(--green); }
+      .chapter:nth-child(3) .number { color: var(--orange); }
+      .chapter:nth-child(4) .number { color: var(--red); }
+      .chapter:nth-child(5) .number { color: #7c3aed; }
+      .chapter:nth-child(6) .number { color: #0f766e; }
+      .chapter:nth-child(7) .number { color: #be185d; }
+      .chapter:nth-child(8) .number { color: #7c3aed; }
 
-      .chapter:nth-child(3) .number {
-        color: var(--orange);
-      }
-
-      .chapter:nth-child(4) .number {
-        color: var(--red);
-      }
-
-      .chapter:nth-child(5) .number {
-        color: #7c3aed;
-      }
-
-      .title {
-        display: grid;
-        gap: 6px;
-      }
-
-      .title b {
-        font-size: clamp(28px, 3vw, 40px);
-        line-height: 1.12;
-      }
-
-      .title span {
-        color: var(--muted);
-        font-size: 18px;
-        font-weight: 800;
-      }
+      .title { display: grid; gap: 6px; }
+      .title b { font-size: clamp(28px, 3vw, 40px); line-height: 1.12; }
+      .title span { color: var(--muted); font-size: 18px; font-weight: 800; }
 
       .action {
         border-radius: 999px;
@@ -139,16 +107,12 @@
           width: min(100% - 28px, 1120px);
           padding: 36px 0;
         }
-
         .chapter {
           grid-template-columns: 1fr;
           gap: 12px;
           min-height: 0;
         }
-
-        .action {
-          width: max-content;
-        }
+        .action { width: max-content; }
       }
     </style>
   </head>
@@ -201,6 +165,24 @@
           <span class="title">
             <b>알고리즘과 프로그래밍</b>
             <span>정렬과 탐색</span>
+          </span>
+          <span class="action">열기</span>
+        </a>
+
+        <a class="chapter active" href="./ch3-3/">
+          <span class="number">3-3</span>
+          <span class="title">
+            <b>알고리즘과 프로그래밍</b>
+            <span>변수와 입출력</span>
+          </span>
+          <span class="action">열기</span>
+        </a>
+
+        <a class="chapter active" href="./ch3-4/">
+          <span class="number">3-4</span>
+          <span class="title">
+            <b>알고리즘과 프로그래밍</b>
+            <span>조건문과 반복문</span>
           </span>
           <span class="action">열기</span>
         </a>
