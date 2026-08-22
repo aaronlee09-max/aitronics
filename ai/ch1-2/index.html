@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>인공지능과 탐색</title>
+    <link rel="stylesheet" href="../textbook/styles.css" />
+  </head>
+  <body>
+    <main class="deck" aria-live="polite">
+      <section class="slide active">
+        <div class="slide-header">
+          <a class="home" href="../textbook/">← 교과서</a>
+          <p class="unit">02</p>
+          <p class="page-ref">p.26~27</p>
+          <h1>문제 해결과 탐색</h1>
+          <p class="subtitle">현재 상태에서 목표 상태까지 가는 길을 찾는 일이 <strong>탐색</strong>입니다.</p>
+        </div>
+        <div class="flow"><b>초기 상태</b><i>→</i><b>가능한 행동</b><i>→</i><b>다음 상태</b><i>→</i><b>목표 비교</b><i>→</i><b>경로</b></div>
+        <div class="grid-2">
+          <article class="card"><h2>맹목적 탐색</h2><p>정해진 순서만 따릅니다. 목표까지 남은 거리는 보지 않습니다.</p></article>
+          <article class="card orange"><h2>지능적 탐색</h2><p>휴리스틱으로 목표가 더 가까워 보이는 칸을 먼저 봅니다.</p></article>
+        </div>
+      </section>
+      <section class="slide">
+        <div class="slide-header">
+          <a class="home" href="../textbook/">← 교과서</a>
+          <p class="unit">02</p>
+          <p class="page-ref">p.30~38</p>
+          <h1>탐색 방법 고르기</h1>
+        </div>
+        <div class="tab-box">
+          <div class="tab-row">
+            <button type="button" data-tab="bfs" class="active">너비 우선</button>
+            <button type="button" data-tab="dfs">깊이 우선</button>
+            <button type="button" data-tab="astar">A*</button>
+          </div>
+          <article class="card active" data-panel="bfs"><h2>너비 우선</h2><p>가까운 칸을 모두 본 뒤 한 칸 더 먼 칸을 봅니다. 최단 경로를 찾기 쉭습니다.</p></article>
+          <article class="card green" data-panel="dfs"><h2>깊이 우선</h2><p>한 길을 깊게 내려간 뒤 막히면 돌아옵니다. 기억할 칸은 적습니다.</p></article>
+          <article class="card purple" data-panel="astar"><h2>A*</h2><p>f(n)=g(n)+h(n). 지금까지 비용과 남은 예상 비용을 더해 다음 칸을 고릅니다.</p></article>
+        </div>
+      </section>
+      <section class="slide">
+        <div class="slide-header">
+          <a class="home" href="../textbook/">← 교과서</a>
+          <p class="unit">확인</p>
+          <p class="page-ref">p.26~38</p>
+          <h1>확인 퀴즈</h1>
+        </div>
+        <div class="quiz">
+          <button type="button" data-choice="ok" data-msg="맞아요. 휴리스틱이 지능적 탐색의 핵심입니다.">지능적 탐색은 휴리스틱으로 다음 상태를 고른다.</button>
+          <button type="button" data-choice="no" data-msg="A*는 g와 h를 함께 봅니다.">A*는 지금까지 온 비용을 무시한다.</button>
+          <p class="quiz-result"></p>
+        </div>
+      </section>
+    </main>
+    <button class="nav-zone nav-prev" type="button" aria-label="이전"><span></span></button>
+    <button class="nav-zone nav-next" type="button" aria-label="다음"><span></span></button>
+    <div class="footer"><div class="dots"></div><p><span id="currentSlide">1</span> / <span id="totalSlides">1</span></p></div>
+    <script src="../textbook/script.js"></script>
+  </body>
+</html>

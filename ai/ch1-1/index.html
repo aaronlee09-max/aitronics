@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>인공지능의 원리</title>
+    <link rel="stylesheet" href="../textbook/styles.css" />
+  </head>
+  <body>
+    <main class="deck" aria-live="polite">
+      <section class="slide active">
+        <div class="slide-header">
+          <a class="home" href="../textbook/">← 교과서</a>
+          <p class="unit">01</p>
+          <p class="page-ref">p.14</p>
+          <h1>인공지능의 원리</h1>
+          <p class="subtitle">지능, 인공지능, 인공지능 시스템을 구분합니다.</p>
+        </div>
+        <div class="grid-3">
+          <article class="card"><span class="tag">1</span><h2>지능의 이해</h2><p>상황을 이해하고 목표에 맞게 판단하는 능력</p></article>
+          <article class="card green"><span class="tag">2</span><h2>인공지능의 이해</h2><p>그 판단을 기계가 데이터와 규칙으로 수행하는 기술</p></article>
+          <article class="card orange"><span class="tag">3</span><h2>시스템</h2><p>센서·소프트웨어·행동이 한 덩어리로 움직이는 구조</p></article>
+        </div>
+      </section>
+      <section class="slide">
+        <div class="slide-header">
+          <a class="home" href="../textbook/">← 교과서</a>
+          <p class="unit">01</p>
+          <p class="page-ref">p.14~16</p>
+          <h1>사람과 시스템의 판단</h1>
+          <p class="subtitle">같은 교차로에서도 입력과 결정 방식이 다릅니다.</p>
+        </div>
+        <div class="grid-2">
+          <article class="card"><h2>사람</h2><p>신호, 자전거, 옆 차를 한눈에 보고 경험으로 “지금은 기다리자”고 정합니다.</p></article>
+          <article class="card green"><h2>인공지능 시스템</h2><p>지도·GPS·센서 값을 받아 안전과 시간 목표에 맞게 직진·대기·우회를 고릅니다.</p></article>
+        </div>
+      </section>
+      <section class="slide">
+        <div class="slide-header">
+          <a class="home" href="../textbook/">← 교과서</a>
+          <p class="unit">01</p>
+          <p class="page-ref">p.16~22</p>
+          <h1>일반 소프트웨어와 인공지능</h1>
+          <p class="subtitle">인공지능은 별세계가 아니라 <strong>소프트웨어 안의 지능 기능</strong>입니다.</p>
+        </div>
+        <table class="compare">
+          <thead><tr><th></th><th>일반 소프트웨어</th><th>인공지능 소프트웨어</th></tr></thead>
+          <tbody>
+            <tr><th>하는 일</th><td>저장, 계산, 정해진 선택</td><td>판단, 추론, 학습, 예측</td></tr>
+            <tr><th>규칙</th><td>사람이 규칙을 직접 작성</td><td>데이터에서 패턴을 찾아 모델 생성</td></tr>
+            <tr><th>예</th><td>평균 계산, 재고 합계</td><td>추천, 음성 인식, 보조 진단</td></tr>
+          </tbody>
+        </table>
+        <p class="note">지능 에이전트는 스스로 행동하지만 실수도 하므로, 사람이 점검할 자리가 필요합니다.</p>
+      </section>
+      <section class="slide">
+        <div class="slide-header">
+          <a class="home" href="../textbook/">← 교과서</a>
+          <p class="unit">확인</p>
+          <p class="page-ref">p.14~22</p>
+          <h1>확인 퀴즈</h1>
+        </div>
+        <div class="quiz">
+          <button type="button" data-choice="no" data-msg="둘은 규칙과 학습 방식이 다릅니다.">일반 소프트웨어와 인공지능 소프트웨어는 항상 같다.</button>
+          <button type="button" data-choice="ok" data-msg="맞아요. 에이전트는 목표를 보고 스스로 행동합니다.">지능 에이전트는 센서 정보를 보고 목표에 맞게 행동한다.</button>
+          <p class="quiz-result"></p>
+        </div>
+      </section>
+    </main>
+    <button class="nav-zone nav-prev" type="button" aria-label="이전"><span></span></button>
+    <button class="nav-zone nav-next" type="button" aria-label="다음"><span></span></button>
+    <div class="footer"><div class="dots"></div><p><span id="currentSlide">1</span> / <span id="totalSlides">1</span></p></div>
+    <script src="../textbook/script.js"></script>
+  </body>
+</html>
