@@ -4,62 +4,115 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>인공지능 윤리</title>
-    <link rel="stylesheet" href="../textbook/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <main class="deck" aria-live="polite">
-      <section class="slide active">
+      <section class="slide active" data-slide="1">
         <div class="slide-header">
-          <a class="home" href="../textbook/">← 교과서</a>
-          <p class="unit">02</p>
-          <p class="page-ref">p.178~188</p>
-          <h1>윤리적 쟁점</h1>
-          <p class="subtitle">버튼을 눌러 각 쟁점이 무엇을 묻는지 확인합니다.</p>
+          <p class="unit">01</p>
+          <p class="page-ref">p.150</p>
+          <h1>인공지능 윤리</h1>
+          <p class="subtitle">공정성 · 투명성 · 안전성 · 책무성을 기준으로 살펴본다.</p>
         </div>
-        <div class="tab-box">
-          <div class="tab-row">
-            <button type="button" data-tab="fair" class="active">공정성</button>
-            <button type="button" data-tab="trans">투명성</button>
-            <button type="button" data-tab="safe">안전성</button>
-            <button type="button" data-tab="acc">책무성</button>
-          </div>
-          <article class="card active" data-panel="fair"><h2>공정성</h2><p>데이터가 한쪽으로 치우치면 특정 집단만 불리한 결과가 납니다.</p></article>
-          <article class="card green" data-panel="trans"><h2>투명성</h2><p>인공지능을 쓰고 있다는 것과, 왜 그런 판단이 나왔는지 설명할 수 있어야 합니다.</p></article>
-          <article class="card orange" data-panel="safe"><h2>안전성</h2><p>해킹이나 오작동이 사고로 이어질 수 있어, 사람이 개입할 장치가 필요합니다.</p></article>
-          <article class="card purple" data-panel="acc"><h2>책무성</h2><p>문제가 생겼을 때 개발자·운영자·사용자가 어떤 책임을 지는지 미리 정합니다.</p></article>
+        <div class="before-after">
+          <article>
+            <header><span>왜</span><h2>영향력</h2></header>
+            <p>AI 결정이 사람 삶에 직접 영향을 줄 수 있다.</p>
+          </article>
+          <div class="versus">→</div>
+          <article>
+            <header><span>기준</span><h2>네 가지</h2></header>
+            <p>공정 · 투명 · 안전 · 책무</p>
+          </article>
         </div>
       </section>
-      <section class="slide">
+      <section class="slide" data-slide="2">
         <div class="slide-header">
-          <a class="home" href="../textbook/">← 교과서</a>
           <p class="unit">02</p>
-          <p class="page-ref">p.188</p>
-          <h1>공존을 위한 기준</h1>
+          <p class="page-ref">p.152</p>
+          <h1>공정성과 투명성</h1>
+          <p class="subtitle">누구에게나 치우치지 않고, 왜 그런 결과가 나왔는지 설명할 수 있어야 한다.</p>
         </div>
-        <div class="grid-3">
-          <article class="card"><h2>인간 존엄성</h2><p>사람의 권리를 먼저 둡니다.</p></article>
-          <article class="card green"><h2>사회의 공공선</h2><p>소수와 취약 계층도 혜택을 받도록 만듭니다.</p></article>
-          <article class="card orange"><h2>기술의 합목적성</h2><p>목적을 분명히 하고 그 목적에 맞게 쓰니다.</p></article>
+        <div class="before-after">
+          <article>
+            <header><span>공정</span><h2>치우침 줄이기</h2></header>
+            <p>데이터·규칙이 특정 집단에 불리하지 않은지 점검한다.</p>
+          </article>
+          <div class="versus">VS</div>
+          <article>
+            <header><span>투명</span><h2>설명 가능</h2></header>
+            <p>중요한 판단은 근거를 사람이 이해할 수 있게 남긴다.</p>
+          </article>
         </div>
-        <p class="note">위험 수준이 높을수록 점검과 설명이 더 필요합니다.</p>
       </section>
-      <section class="slide">
+      <section class="slide" data-slide="3">
         <div class="slide-header">
-          <a class="home" href="../textbook/">← 교과서</a>
-          <p class="unit">확인</p>
-          <p class="page-ref">p.178</p>
-          <h1>확인 퀴즈</h1>
+          <p class="unit">03</p>
+          <p class="page-ref">p.154</p>
+          <h1>안전성과 책무성</h1>
+          <p class="subtitle">오류·오용을 줄이고, 문제가 생기면 <strong>누가 책임질지</strong> 정한다.</p>
         </div>
-        <div class="quiz">
-          <button type="button" data-choice="ok" data-msg="맞아요. 설명 가능성은 투명성과 가깝습니다.">왜 그렇게 판단했는지 설명할 수 있어야 한다는 말은 투명성과 가깝다.</button>
-          <button type="button" data-choice="no" data-msg="해킹은 안전성 문제입니다.">해킹에 약한 시스템은 공정성 문제만 해당한다.</button>
-          <p class="quiz-result"></p>
+        <div class="before-after">
+          <article>
+            <header><span>안전</span><h2>위험 관리</h2></header>
+            <p>테스트, 제한, 모니터링으로 피해를 줄인다.</p>
+          </article>
+          <div class="versus">+</div>
+          <article>
+            <header><span>책무</span><h2>책임</h2></header>
+            <p>설계·운영·사용 단계마다 역할을 분명히 한다.</p>
+          </article>
+        </div>
+      </section>
+      <section class="slide" data-slide="4">
+        <div class="slide-header">
+          <p class="unit">04</p>
+          <p class="page-ref">활동</p>
+          <h1>활동 · 우리 반 규칙</h1>
+          <p class="subtitle">교실에서 AI를 쓸 때 지킬 규칙을 함께 정해 보자.</p>
+        </div>
+        <div class="before-after">
+          <article>
+            <header><span>예시</span><h2>생각해 볼 점</h2></header>
+            <p>개인정보, 표절, 불공정한 평가, 허위 정보</p>
+          </article>
+          <div class="versus">→</div>
+          <article>
+            <header><span>규칙</span><h2>한 줄씩</h2></header>
+            <p>「~할 때 ~한다」 형태로 적어 공유한다.</p>
+          </article>
+        </div>
+      </section>
+      <section class="slide" data-slide="5">
+        <div class="slide-header">
+          <p class="unit">05</p>
+          <p class="page-ref">정리</p>
+          <h1>정리</h1>
+          <p class="subtitle">윤리에서 기억할 핵심</p>
+        </div>
+        <div class="before-after">
+          <article>
+            <header><span>기준</span><h2>네 가지</h2></header>
+            <p>공정성, 투명성, 안전성, 책무성</p>
+          </article>
+          <div class="versus">+</div>
+          <article>
+            <header><span>실천</span><h2>함께 정하기</h2></header>
+            <p>기술 사용 전 규칙과 책임을 미리 합의한다.</p>
+          </article>
         </div>
       </section>
     </main>
     <button class="nav-zone nav-prev" type="button" aria-label="이전"><span></span></button>
     <button class="nav-zone nav-next" type="button" aria-label="다음"><span></span></button>
-    <div class="footer"><div class="dots"></div><p><span id="currentSlide">1</span> / <span id="totalSlides">1</span></p></div>
-    <script src="../textbook/script.js"></script>
+    <div class="footer">
+      <div class="dots"></div>
+      <p><span id="currentSlide">1</span> / <span id="totalSlides">1</span></p>
+    </div>
+    <script src="script.js"></script>
   </body>
 </html>

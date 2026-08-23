@@ -4,69 +4,115 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>인공지능 프로젝트</title>
-    <link rel="stylesheet" href="../textbook/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <main class="deck" aria-live="polite">
-      <section class="slide active">
+      <section class="slide active" data-slide="1">
         <div class="slide-header">
-          <a class="home" href="../textbook/">← 교과서</a>
-          <p class="unit">IV</p>
-          <p class="page-ref">p.200</p>
-          <h1>인공지능 프로젝트</h1>
-          <p class="subtitle">오래 풀어야 하는 문제를 고르고, <strong>데이터와 모델</strong>로 한 걸음씩 갑니다.</p>
-        </div>
-        <div class="grid-2">
-          <article class="card"><span class="tag">01</span><h2>지속가능발전목표</h2><p>기후, 에너지, 폐기물처럼 사회가 함께 푸는 목표</p></article>
-          <article class="card green"><span class="tag">02</span><h2>프로젝트 과정</h2><p>문제 → 데이터 → 학습 → 평가 → 나누기</p></article>
-        </div>
-      </section>
-      <section class="slide">
-        <div class="slide-header">
-          <a class="home" href="../textbook/">← 교과서</a>
           <p class="unit">01</p>
-          <p class="page-ref">p.200~203</p>
-          <h1>어떤 문제를 고를까</h1>
+          <p class="page-ref">p.160</p>
+          <h1>인공지능 프로젝트</h1>
+          <p class="subtitle">문제 정의부터 평가까지 <strong>한 사이클</strong>으로 진행한다.</p>
         </div>
-        <div class="grid-3">
-          <article class="card"><h2>기후와 생물</h2><p>기온이 오르면 서식지가 줄어듭니다. 예측 모델로 위험을 볼 수 있습니다.</p></article>
-          <article class="card green"><h2>에너지</h2><p>재생 에너지 비율을 데이터로 비교하고 사용량을 예측해 뱅니다.</p></article>
-          <article class="card orange"><h2>폐기물</h2><p>하루 배출량이 늘면 수거와 재활용 계획을 다시 세워야 합니다.</p></article>
+        <div class="before-after">
+          <article>
+            <header><span>시작</span><h2>문제 정의</h2></header>
+            <p>해결하고 싶은 문제를 구체적으로 적는다.</p>
+          </article>
+          <div class="versus">→</div>
+          <article>
+            <header><span>과정</span><h2>데이터 · 모델 · 평가</h2></header>
+            <p>데이터 수집 → 모델 선택 → 결과 점검</p>
+          </article>
         </div>
       </section>
-      <section class="slide">
+      <section class="slide" data-slide="2">
         <div class="slide-header">
-          <a class="home" href="../textbook/">← 교과서</a>
           <p class="unit">02</p>
-          <p class="page-ref">p.204~227</p>
-          <h1>프로젝트 5단계</h1>
+          <p class="page-ref">p.162</p>
+          <h1>문제와 데이터</h1>
+          <p class="subtitle">좋은 문제는 목표가 분명하고, 필요한 데이터가 현실적으로 모을 수 있다.</p>
         </div>
-        <div class="steps">
-          <section><b>1</b><h2>문제 정의</h2><p>현재와 목표의 차이를 질문으로 적습니다.</p></section>
-          <section><b>2</b><h2>데이터</h2><p>정형/비정형을 고르고 결측치와 편향을 확인합니다.</p></section>
-          <section><b>3</b><h2>모델 학습</h2><p>회귀·분류·군집 중 문제에 맞는 유형을 고릅니다.</p></section>
-          <section><b>4</b><h2>평가</h2><p>테스트 데이터로 성능과 실패 사례를 봅니다.</p></section>
-          <section><b>5</b><h2>나누기</h2><p>한계와 다음 개선을 설명합니다.</p></section>
+        <div class="before-after">
+          <article>
+            <header><span>문제</span><h2>목표</h2></header>
+            <p>누구의 어떤 어려움을, 어떤 결과로 도울까?</p>
+          </article>
+          <div class="versus">+</div>
+          <article>
+            <header><span>데이터</span><h2>수집</h2></header>
+            <p>어떤 속성·개수가 필요한지, 개인정보는 안전한지</p>
+          </article>
         </div>
-        <div class="link-row"><a href="../ch2-1/">데이터 실습</a><a href="../ch2-2/">모델 실습</a></div>
       </section>
-      <section class="slide">
+      <section class="slide" data-slide="3">
         <div class="slide-header">
-          <a class="home" href="../textbook/">← 교과서</a>
-          <p class="unit">확인</p>
-          <p class="page-ref">p.204</p>
-          <h1>확인 퀴즈</h1>
+          <p class="unit">03</p>
+          <p class="page-ref">p.164</p>
+          <h1>모델과 평가</h1>
+          <p class="subtitle">모델은 문제를 푸는 도구이고, 평가는 목표에 맞는지 확인하는 단계이다.</p>
         </div>
-        <div class="quiz">
-          <button type="button" data-choice="no" data-msg="모델을 만들기 전에 문제를 먼저 정합니다.">모델을 먼저 만들고, 나중에 문제를 찾아도 된다.</button>
-          <button type="button" data-choice="ok" data-msg="맞아요. 문제 정의 → 데이터 → 학습 → 평가가 기본입니다.">문제 정의 → 데이터 → 학습 → 평가 순서가 기본이다.</button>
-          <p class="quiz-result"></p>
+        <div class="before-after">
+          <article>
+            <header><span>모델</span><h2>선택</h2></header>
+            <p>분류 · 회귀 · 군집 등 문제 유형에 맞게 고른다.</p>
+          </article>
+          <div class="versus">VS</div>
+          <article>
+            <header><span>평가</span><h2>기준</h2></header>
+            <p>정확도만이 아니라 공정·안전·실용성도 본다.</p>
+          </article>
+        </div>
+      </section>
+      <section class="slide" data-slide="4">
+        <div class="slide-header">
+          <p class="unit">04</p>
+          <p class="page-ref">활동</p>
+          <h1>활동 · 프로젝트 스케치</h1>
+          <p class="subtitle">우리 팀 프로젝트를 네 칸으로 스케치해 보자.</p>
+        </div>
+        <div class="before-after">
+          <article>
+            <header><span>1·2</span><h2>문제 · 데이터</h2></header>
+            <p>문제 한 문장<br />필요한 데이터 목록</p>
+          </article>
+          <div class="versus">→</div>
+          <article>
+            <header><span>3·4</span><h2>모델 · 기준</h2></header>
+            <p>쓸 모델 종류<br />성공 기준 2가지</p>
+          </article>
+        </div>
+      </section>
+      <section class="slide" data-slide="5">
+        <div class="slide-header">
+          <p class="unit">05</p>
+          <p class="page-ref">정리</p>
+          <h1>정리</h1>
+          <p class="subtitle">프로젝트에서 기억할 핵심</p>
+        </div>
+        <div class="before-after">
+          <article>
+            <header><span>사이클</span><h2>정의→평가</h2></header>
+            <p>문제 → 데이터 → 모델 → 평가를 반복한다.</p>
+          </article>
+          <div class="versus">+</div>
+          <article>
+            <header><span>태도</span><h2>책임</h2></header>
+            <p>결과만이 아니라 과정과 영향도 함께 점검한다.</p>
+          </article>
         </div>
       </section>
     </main>
     <button class="nav-zone nav-prev" type="button" aria-label="이전"><span></span></button>
     <button class="nav-zone nav-next" type="button" aria-label="다음"><span></span></button>
-    <div class="footer"><div class="dots"></div><p><span id="currentSlide">1</span> / <span id="totalSlides">1</span></p></div>
-    <script src="../textbook/script.js"></script>
+    <div class="footer">
+      <div class="dots"></div>
+      <p><span id="currentSlide">1</span> / <span id="totalSlides">1</span></p>
+    </div>
+    <script src="script.js"></script>
   </body>
 </html>
