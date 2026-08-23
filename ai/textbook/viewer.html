@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>교과서 뷰어</title>
+<style>
+  *{box-sizing:border-box}
+  html,body{height:100%;margin:0;background:#1a1f2e;color:#e8eef7;font-family:"Apple SD Gothic Neo","Noto Sans KR",system-ui,sans-serif}
+  .bar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding:10px 14px;background:#121826;border-bottom:1px solid #2a3348}
+  .bar a,.bar button{appearance:none;border:1px solid #3b465c;background:#1e2638;color:#e8eef7;border-radius:8px;padding:8px 12px;font-weight:700;text-decoration:none;cursor:pointer;font-size:14px}
+  .bar button.primary{background:#2563eb;border-color:#2563eb}
+  .bar .title{font-weight:800;margin-right:auto}
+  .bar .meta{color:#9aa8bd;font-size:13px}
+  #viewer{height:calc(100% - 54px);width:100%;border:0;background:#2b3242}
+  .msg{display:none;place-items:center;height:calc(100% - 54px);padding:40px;text-align:center;color:#c5d0e0}
+  .msg.show{display:grid}
+  .msg h1{margin:0 0 12px;font-size:28px}
+  .msg p{margin:0;line-height:1.6;color:#9aa8bd}
+</style>
+</head>
+<body>
+  <div class="bar">
+    <a href="./">← 교과서</a>
+    <span class="title">인공지능 기초 · PDF 뷰어</span>
+    <span class="meta" id="pageInfo">—</span>
+    <button type="button" id="prevBtn">이전</button>
+    <button type="button" id="nextBtn">다음</button>
+    <button type="button" class="primary" id="printBtn">인쇄</button>
+  </div>
+  <canvas id="viewer"></canvas>
+  <div class="msg" id="msg">
+    <h1>PDF 파일을 준비해 주세요</h1>
+    <p>이 폴더에 <b>book.pdf</b>를 올리면 웹에서 바로 볼 수 있습니다.<br>
+    다운로드 버튼은 없고, 인쇄만 가능합니다.</p>
+  </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script>
+  pdfjsLib.GlobalWorkerOptions.workerSrc = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
+  const canvas = document.getElementById("viewer");
+  const ctx = canvas.getContext("2d");
+  const msg = document.getElementById("msg");
+  const pageInfo = document.getElementById("pageInfo");
+  let pdfDoc = null, pageNum = 1, rendering = false, pending = null;
+  document.addEventListener("keydown", (e) => {
+    if ((e.ctrlKey || e.metaKey) && ["s","S"].includes(e.key)) e.preventDefault();
+  });
+  document.addEventListener("contextmenu", (e) => e.preventDefault());
+  async function renderPage(num) {
+    rendering = true;
+    const page = await pdfDoc.getPage(num);
+    const viewport = page.getViewport({ scale: 1.35 });
+    canvas.height = viewport.height;
+    canvas.width = viewport.width;
+    await page.render({ canvasContext: ctx, viewport }).promise;
+    pageInfo.textContent = num + " / " + pdfDoc.numPages;
+    rendering = false;
+    if (pending !== null) { const p = pending; pending = null; queuePage(p); }
+  }
+  function queuePage(num) {
+    if (num < 1 || (pdfDoc && num > pdfDoc.numPages)) return;
+    if (rendering) { pending = num; return; }
+    pageNum = num; renderPage(pageNum);
+  }
+  document.getElementById("prevBtn").onclick = () => queuePage(pageNum - 1);
+  document.getElementById("nextBtn").onclick = () => queuePage(pageNum + 1);
+  document.getElementById("printBtn").onclick = () => window.print();
+  pdfjsLib.getDocument("./book.pdf").promise.then((doc) => {
+    pdfDoc = doc; msg.classList.remove("show"); canvas.style.display = "block";
+    queuePage(1);
+  }).catch(() => {
+    canvas.style.display = "none"; msg.classList.add("show");
+  });
+</script>
+<style media="print">
+  .bar,.msg{display:none!important}
+  body{background:#fff}
+  #viewer{display:block!important;width:100%!important;height:auto!important}
+</style>
+</body>
+</html>

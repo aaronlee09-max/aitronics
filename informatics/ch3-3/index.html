@@ -1,45 +1,52 @@
 <!doctype html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>3-3 변수와 입출력</title>
-    <style>
-      * { box-sizing: border-box; }
-      body { margin: 0; background: #f7fafc; color: #172033; font-family: "Apple SD Gothic Neo", "Noto Sans KR", system-ui, sans-serif; }
-      main { width: min(880px, calc(100% - 48px)); margin: 0 auto; padding: 56px 0; }
-      a { color: #0f766e; font-weight: 800; text-decoration: none; }
-      h1 { margin: 28px 0 10px; font-size: clamp(36px, 6vw, 64px); line-height: 1.05; }
-      .sub { margin: 0 0 28px; color: #5c6b7d; font-size: 18px; font-weight: 700; }
-      .row { display: grid; grid-template-columns: 1fr auto; gap: 16px; align-items: center; padding: 18px 0; border-top: 1px solid #e5eaf0; }
-      .row:last-child { border-bottom: 1px solid #e5eaf0; }
-      .downloads { display: flex; gap: 8px; flex-wrap: wrap; }
-      .download { display: inline-flex; align-items: center; justify-content: center; min-width: 82px; border: 1px solid #99f6e4; border-radius: 8px; padding: 9px 12px; background: #fff; color: #0f766e; font-size: 14px; }
-      .download.answer { border-color: #fcd34d; color: #b45309; }
-      @media (max-width: 640px) {
-        .row { grid-template-columns: 1fr; }
-      }
-    </style>
-  </head>
-  <body>
-    <main>
-      <a href="../">← 정보 단원 목록</a>
-      <h1>3-3 변수와 입출력</h1>
-      <p class="sub">파이썬으로 변수, 자료형, 표준 입출력을 실습합니다.</p>
-      <div class="row">
-        <strong>01 변수와 자료형</strong>
-        <div class="downloads">
-          <a class="download" href="./01_variables_and_types.ipynb" download>노트북</a>
-          <a class="download answer" href="./01_variables_and_types_정답.ipynb" download>정답</a>
-        </div>
-      </div>
-      <div class="row">
-        <strong>02 표준 입출력</strong>
-        <div class="downloads">
-          <a class="download" href="./02_standard_io.ipynb" download>노트북</a>
-          <a class="download answer" href="./02_standard_io_정답.ipynb" download>정답</a>
-        </div>
-      </div>
-    </main>
-  </body>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>3-3 변수와 입출력</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#f7fafc;color:#172033;font-family:"Apple SD Gothic Neo","Noto Sans KR",system-ui,sans-serif}
+main{width:min(920px,calc(100% - 48px));margin:0 auto;padding:56px 0}
+a{color:#0f766e;font-weight:800;text-decoration:none}
+h1{margin:28px 0 10px;font-size:clamp(36px,6vw,64px);line-height:1.05}
+.sub{margin:0 0 22px;color:#5c6b7d;font-size:18px;font-weight:700}
+.note{background:#e8f3fb;border-radius:14px;padding:14px 16px;color:#1c3f66;font-size:14px;line-height:1.55;margin-bottom:22px}
+.row{display:grid;grid-template-columns:1fr auto;gap:16px;align-items:center;padding:18px 0;border-top:1px solid #e5eaf0}
+.row:last-child{border-bottom:1px solid #e5eaf0}
+.downloads{display:flex;gap:8px;flex-wrap:wrap}
+.downloads a{display:inline-flex;align-items:center;justify-content:center;min-width:72px;border-radius:8px;padding:9px 12px;font-size:14px;font-weight:700;text-decoration:none}
+.run{background:#eff6ff;color:#1d4ed8;border:1px solid #93c5fd}
+.run.site{background:#ecfdf5;color:#047857;border:1px solid #6ee7b7}
+.dl{background:#fff;color:#0f766e;border:1px solid #99f6e4}
+.dl.answer{border-color:#fcd34d;color:#b45309}
+@media(max-width:640px){.row{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<main>
+  <a href="../">← 정보 단원 목록</a>
+  <h1>3-3 변수와 입출력</h1>
+  <p class="sub">파이썬 변수·자료형·표준 입출력을 연습합니다.</p>
+  <div class="note"><b>사용 팁</b><br>1) <b>Colab</b> — Google 계정으로 실행<br>2) <b>사이트실행</b> — JupyterLite (설치 불필요)</div>
+  <div class="row">
+    <strong>01 변수와 자료형</strong>
+    <div class="downloads">
+      <a class="run" href="https://colab.research.google.com/github/aaronlee09-max/informatics/blob/main/informatics/ch3-3/01_variables_and_types.ipynb" target="_blank" rel="noopener">Colab</a>
+      <a class="run site" href="../../ai/jlite/notebooks/index.html?path=informatics/ch3-3/01_variables_and_types.ipynb">사이트실행</a>
+      <a class="dl" href="./01_variables_and_types.ipynb" download>노트북</a>
+      <a class="dl answer" href="./01_variables_and_types_정답.ipynb" download>정답</a>
+    </div>
+  </div>
+  <div class="row">
+    <strong>02 표준 입출력</strong>
+    <div class="downloads">
+      <a class="run" href="https://colab.research.google.com/github/aaronlee09-max/informatics/blob/main/informatics/ch3-3/02_standard_io.ipynb" target="_blank" rel="noopener">Colab</a>
+      <a class="run site" href="../../ai/jlite/notebooks/index.html?path=informatics/ch3-3/02_standard_io.ipynb">사이트실행</a>
+      <a class="dl" href="./02_standard_io.ipynb" download>노트북</a>
+      <a class="dl answer" href="./02_standard_io_정답.ipynb" download>정답</a>
+    </div>
+  </div>
+</main>
+</body>
 </html>
