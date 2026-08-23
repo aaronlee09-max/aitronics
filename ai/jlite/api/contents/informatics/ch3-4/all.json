@@ -1,0 +1,71 @@
+{
+  "content": [
+    {
+      "content": null,
+      "created": "2026-08-23T22:58:23.256673Z",
+      "format": null,
+      "hash": null,
+      "hash_algorithm": null,
+      "last_modified": "2026-08-23T22:58:21.660426Z",
+      "mimetype": null,
+      "name": "02_iteration.ipynb",
+      "path": "informatics/ch3-4/02_iteration.ipynb",
+      "size": 11272,
+      "type": "notebook",
+      "writable": true
+    },
+    {
+      "content": null,
+      "created": "2026-08-23T22:58:23.256786Z",
+      "format": null,
+      "hash": null,
+      "hash_algorithm": null,
+      "last_modified": "2026-08-23T22:58:21.661696Z",
+      "mimetype": null,
+      "name": "02_iteration_\uc815\ub2f5.ipynb",
+      "path": "informatics/ch3-4/02_iteration_\uc815\ub2f5.ipynb",
+      "size": 3488,
+      "type": "notebook",
+      "writable": true
+    },
+    {
+      "content": null,
+      "created": "2026-08-23T22:58:23.256390Z",
+      "format": null,
+      "hash": null,
+      "hash_algorithm": null,
+      "last_modified": "2026-08-23T22:58:21.662951Z",
+      "mimetype": null,
+      "name": "01_conditionals_\uc815\ub2f5.ipynb",
+      "path": "informatics/ch3-4/01_conditionals_\uc815\ub2f5.ipynb",
+      "size": 3342,
+      "type": "notebook",
+      "writable": true
+    },
+    {
+      "content": null,
+      "created": "2026-08-23T22:58:23.256085Z",
+      "format": null,
+      "hash": null,
+      "hash_algorithm": null,
+      "last_modified": "2026-08-23T22:58:21.664241Z",
+      "mimetype": null,
+      "name": "01_conditionals.ipynb",
+      "path": "informatics/ch3-4/01_conditionals.ipynb",
+      "size": 8041,
+      "type": "notebook",
+      "writable": true
+    }
+  ],
+  "created": "2026-08-23T22:58:23.256786Z",
+  "format": "json",
+  "hash": null,
+  "hash_algorithm": null,
+  "last_modified": "2026-08-23T22:58:23.256786Z",
+  "mimetype": null,
+  "name": "ch3-4",
+  "path": "informatics/ch3-4",
+  "size": null,
+  "type": "directory",
+  "writable": true
+}
