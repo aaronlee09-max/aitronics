@@ -1,143 +1,88 @@
 <!doctype html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>지식의 표현과 추론</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <main class="deck" aria-live="polite">
-      <section class="slide active" data-slide="1">
-        <div class="slide-header">
-          <p class="unit">01</p>
-          <p class="page-ref">p.42</p>
-          <h1>지식의 표현과 추론</h1>
-          <p class="subtitle">알고 있는 것을 <strong>기호와 규칙</strong>으로 적으면, 컴퓨터가 새로운 결론을 이끌어 낼 수 있다.</p>
-        </div>
-        <div class="before-after">
-          <article>
-            <header><span>표현</span><h2>지식 표현</h2></header>
-            <p>사실·개념·관계를 <strong>기호</strong>로 정리한다.</p>
-            <div class="process-line"><b>사실</b><i>→</i><b>기호</b><i>→</i><strong>규칙</strong></div>
-          </article>
-          <div class="versus">+</div>
-          <article>
-            <header><span>활용</span><h2>추론</h2></header>
-            <p>규칙에 사실을 넣어 <strong>새로운 결론</strong>을 얻는다.</p>
-            <div class="process-line deep"><b>사실</b><i>+</i><b>규칙</b><i>→</i><strong>결론</strong></div>
-          </article>
-        </div>
-      </section>
-      <section class="slide" data-slide="2">
-        <div class="slide-header">
-          <p class="unit">02</p>
-          <p class="page-ref">p.42~43</p>
-          <h1>사실 · 규칙 · 결론</h1>
-          <p class="subtitle">추론은 <strong>이미 아는 것</strong>으로 <strong>모르는 것</strong>을 이끌어 내는 과정이다.</p>
-        </div>
-        <div class="before-after">
-          <article>
-            <header><span>사실</span><h2>주어진 정보</h2></header>
-            <p>물이 있다.<br />바깥 기온이 0°C보다 낮다.</p>
-          </article>
-          <div class="versus">→</div>
-          <article>
-            <header><span>규칙</span><h2>IF → THEN</h2></header>
-            <p>물이 있고 기온이 0°C 이하이면<br /><strong>얼 수 있다.</strong></p>
-            <div class="process-line deep"><b>사실</b><i>+</i><b>규칙</b><i>→</i><strong>결론</strong></div>
-          </article>
-        </div>
-      </section>
-      <section class="slide" data-slide="3">
-        <div class="slide-header">
-          <p class="unit">03</p>
-          <p class="page-ref">p.44~45</p>
-          <h1>지식을 기호로 표현하기</h1>
-          <p class="subtitle">문장을 기호로 바꾸면 컴퓨터가 <strong>같은 규칙</strong>을 여러 상황에 적용할 수 있다.</p>
-        </div>
-        <div class="before-after">
-          <article>
-            <header><span>문장</span><h2>자연어</h2></header>
-            <p>「서울은 도시이다.」<br />「도시는 사람이 산다.」</p>
-          </article>
-          <div class="versus">→</div>
-          <article>
-            <header><span>기호</span><h2>표현 예시</h2></header>
-            <p>도시(서울)<br />IF 도시(X) THEN 거주(사람, X)</p>
-          </article>
-        </div>
-      </section>
-      <section class="slide" data-slide="4">
-        <div class="slide-header">
-          <p class="unit">04</p>
-          <p class="page-ref">p.46</p>
-          <h1>추론의 방향</h1>
-          <p class="subtitle">규칙을 적용하는 방향에 따라 <strong>전향 추론</strong>과 <strong>후향 추론</strong>으로 나눈다.</p>
-        </div>
-        <div class="before-after">
-          <article>
-            <header><span>전향</span><h2>사실 → 결론</h2></header>
-            <div class="process-line"><b>사실</b><i>→</i><b>규칙 적용</b><i>→</i><strong>결론</strong></div>
-            <p>주어진 사실에서 출발해 앞으로 나아간다.</p>
-          </article>
-          <div class="versus">VS</div>
-          <article>
-            <header><span>후향</span><h2>목표 ← 사실</h2></header>
-            <div class="process-line deep"><b>목표</b><i>←</i><b>필요한 조건</b><i>←</i><strong>사실 확인</strong></div>
-            <p>원하는 결론에서 시작해 필요한 사실을 확인한다.</p>
-          </article>
-        </div>
-      </section>
-      <section class="slide" data-slide="5">
-        <div class="slide-header">
-          <p class="unit">05</p>
-          <p class="page-ref">활동</p>
-          <h1>활동 · 규칙으로 추론하기</h1>
-          <p class="subtitle">사실과 규칙을 보고, 이끌어 낼 수 있는 결론을 말해 보자.</p>
-        </div>
-        <div class="before-after">
-          <article>
-            <header><span>사실 · 규칙</span><h2>주어진 정보</h2></header>
-            <p>민수는 학생이다.<br />학생이면 도서관 이용이 가능하다.<br /><br />IF 학생(X) THEN 이용가능(도서관, X)</p>
-          </article>
-          <div class="versus">?</div>
-          <article>
-            <header><span>질문</span><h2>추론해 보기</h2></header>
-            <p>민수는 도서관을 이용할 수 있는가?<br /><br /><strong>어떤 사실과 규칙을 연결했는지</strong> 설명하자.</p>
-          </article>
-        </div>
-      </section>
-      <section class="slide" data-slide="6">
-        <div class="slide-header">
-          <p class="unit">06</p>
-          <p class="page-ref">정리</p>
-          <h1>정리</h1>
-          <p class="subtitle">지식의 표현과 추론에서 기억할 핵심</p>
-        </div>
-        <div class="before-after">
-          <article>
-            <header><span>표현</span><h2>지식 표현</h2></header>
-            <p>사실·관계를 기호와 규칙으로 정리한다.</p>
-            <div class="process-line"><b>사실</b><i>→</i><b>기호</b><i>→</i><strong>규칙</strong></div>
-          </article>
-          <div class="versus">+</div>
-          <article>
-            <header><span>추론</span><h2>전향 · 후향</h2></header>
-            <p>사실 + 규칙 → 새로운 결론<br />전향: 사실에서 결론으로<br />후향: 목표에서 사실 확인</p>
-          </article>
-        </div>
-      </section>
-    </main>
-    <button class="nav-zone nav-prev" type="button" aria-label="이전"><span></span></button>
-    <button class="nav-zone nav-next" type="button" aria-label="다음"><span></span></button>
-    <div class="footer">
-      <div class="dots"></div>
-      <p><span id="currentSlide">1</span> / <span id="totalSlides">1</span></p>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>지식의 표현과 추론</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<main class="deck" aria-live="polite">
+  <section class="slide active" data-slide="1">
+    <div class="slide-header"><p class="unit">01</p><p class="page-ref">p.42</p><h1>지식의 표현과 추론</h1>
+    <p class="subtitle">알고 있는 것을 <strong>기호와 규칙</strong>으로 적으면, 컴퓨터가 새로운 결론을 이끌어 낸다.</p></div>
+    <div class="scene"><div class="art">🧠➡️📐➡️💡</div>
+    <div class="panel">
+      <div class="before-after" style="grid-template-columns:1fr 40px 1fr;gap:10px">
+        <article><header><span>표현</span><h2>지식 표현</h2></header><p>사실·개념·관계를 <strong>기호</strong>로 정리</p></article>
+        <div class="versus">+</div>
+        <article><header><span>활용</span><h2>추론</h2></header><p>규칙에 사실을 넣어 <strong>결론</strong></p></article>
+      </div>
+      <div class="diagram" style="margin-top:16px"><div class="node">사실</div><div class="arrow">→</div><div class="node">기호</div><div class="arrow">→</div><div class="node hi">규칙</div><div class="arrow">→</div><div class="node hi">결론</div></div>
+    </div></div>
+  </section>
+  <section class="slide" data-slide="2">
+    <div class="slide-header"><p class="unit">02</p><p class="page-ref">p.42~43</p><h1>사실 · 규칙 · 결론</h1>
+    <p class="subtitle">추론은 <strong>이미 아는 것</strong>으로 <strong>모르는 것</strong>을 이끌어 내는 과정이다.</p></div>
+    <div class="visual-row">
+      <div class="vcard orange"><div class="emoji">📌</div><h3>사실</h3><p>참이라고 받아들여진 정보<br>예: 물이 있다</p></div>
+      <div class="vcard blue"><div class="emoji">📜</div><h3>규칙</h3><p>IF → THEN 관계<br>예: 0°C 이하면 언다</p></div>
+      <div class="vcard green"><div class="emoji">✨</div><h3>결론</h3><p>규칙으로 얻은 새 지식<br>예: 물이 얼 수 있다</p></div>
     </div>
-    <script src="script.js"></script>
-  </body>
+  </section>
+  <section class="slide" data-slide="3">
+    <div class="slide-header"><p class="unit">03</p><p class="page-ref">p.44</p><h1>기호로 표현하기</h1>
+    <p class="subtitle">문장을 <strong>기호</strong>로 바꾸면 컴퓨터가 다루기 쉬워진다.</p></div>
+    <div class="scene"><div class="panel">
+      <div class="diagram"><div class="node">문장</div><div class="arrow">→</div><div class="node hi">기호</div><div class="arrow">→</div><div class="node">계산</div></div>
+      <p style="margin-top:18px;font-size:24px;font-weight:800;color:#5c6b7d;line-height:1.5">「서울은 도시이다.」 → 도시(서울)<br>IF 도시(X) THEN 거주(사람, X)</p>
+      <div class="badge-list" style="margin-top:16px"><span>술어</span><span>변수</span><span>규칙</span></div>
+    </div><div class="art">🔤</div></div>
+  </section>
+  <section class="slide" data-slide="4">
+    <div class="slide-header"><p class="unit">04</p><p class="page-ref">p.46</p><h1>전향 · 후향 추론</h1>
+    <p class="subtitle">규칙을 적용하는 <strong>방향</strong>이 다르다.</p></div>
+    <div class="before-after">
+      <article><header><span>전향</span><h2>사실 → 결론</h2></header>
+        <div class="diagram"><div class="node">사실</div><div class="arrow">→</div><div class="node hi">결론</div></div>
+        <p style="margin-top:12px">주어진 사실에서 출발해 앞으로</p>
+        <div style="font-size:48px;text-align:center;margin-top:8px">⏩</div>
+      </article>
+      <div class="versus">VS</div>
+      <article><header><span>후향</span><h2>목표 ← 사실</h2></header>
+        <div class="diagram"><div class="node hi">목표</div><div class="arrow">←</div><div class="node">사실</div></div>
+        <p style="margin-top:12px">원하는 결론에서 조건을 거꾸로</p>
+        <div style="font-size:48px;text-align:center;margin-top:8px">⏪</div>
+      </article>
+    </div>
+  </section>
+  <section class="slide" data-slide="5">
+    <div class="slide-header"><p class="unit">05</p><p class="page-ref">활동</p><h1>활동 · 규칙으로 추론하기</h1>
+    <p class="subtitle">사실과 규칙을 연결해 결론을 말해 보자.</p></div>
+    <div class="scene"><div class="art">🤔</div>
+    <div class="panel">
+      <div class="vcard blue" style="margin-bottom:12px"><h3>사실 · 규칙</h3><p>민수는 학생이다.<br>학생이면 도서관 이용이 가능하다.<br>IF 학생(X) THEN 이용가능(도서관, X)</p></div>
+      <div class="vcard orange"><h3>질문</h3><p>민수는 도서관을 이용할 수 있는가?<br><strong>어떤 사실과 규칙을 연결했는지</strong> 설명하자.</p></div>
+    </div></div>
+  </section>
+  <section class="slide" data-slide="6">
+    <div class="slide-header"><p class="unit">06</p><p class="page-ref">정리</p><h1>정리</h1>
+    <p class="subtitle">표현 → 규칙 → 추론 → 결론</p></div>
+    <div class="diagram" style="flex:1;align-content:center">
+      <div class="node">지식 표현</div><div class="arrow">→</div>
+      <div class="node">지식 베이스</div><div class="arrow">→</div>
+      <div class="node hi">추론 엔진</div><div class="arrow">→</div>
+      <div class="node hi">결론</div>
+    </div>
+    <div class="badge-list" style="justify-content:center"><span>전향 추론</span><span>후향 추론</span><span>전문가 시스템</span></div>
+  </section>
+</main>
+<button class="nav-zone nav-prev" type="button" aria-label="이전"><span></span></button>
+<button class="nav-zone nav-next" type="button" aria-label="다음"><span></span></button>
+<div class="footer"><div class="dots"></div><p><span id="currentSlide">1</span> / <span id="totalSlides">1</span></p></div>
+<script src="script.js"></script>
+</body>
 </html>

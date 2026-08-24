@@ -1,99 +1,49 @@
 <!doctype html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>인공지능과 탐색</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <main class="deck" aria-live="polite">
-      <section class="slide active" data-slide="1">
-        <div class="slide-header">
-          <p class="unit">01</p>
-          <p class="page-ref">p.28</p>
-          <h1>인공지능과 탐색</h1>
-          <p class="subtitle">문제 공간에서 <strong>목표 상태</strong>에 이르는 길을 찾는다.</p>
-        </div>
-        <div class="before-after">
-          <article>
-            <header><span>탐색</span><h2>길 찾기</h2></header>
-            <p>시작에서 목표까지 가능한 경로를 살펴본다.</p>
-          </article>
-          <div class="versus">·</div>
-          <article>
-            <header><span>상태</span><h2>문제 공간</h2></header>
-            <p>각 상황은 상태로, 행동은 상태 변화로 나타낸다.</p>
-          </article>
-        </div>
-      </section>
-      <section class="slide" data-slide="2">
-        <div class="slide-header">
-          <p class="unit">02</p>
-          <p class="page-ref">p.30</p>
-          <h1>맹목적 탐색</h1>
-          <p class="subtitle">정해진 순서대로 상태를 넓혀 가며 목표를 찾는다.</p>
-        </div>
-        <div class="before-after">
-          <article>
-            <header><span>너비</span><h2>가까운 것부터</h2></header>
-            <p>시작에서 가까운 상태를 먼저 살핀다.</p>
-          </article>
-          <div class="versus">VS</div>
-          <article>
-            <header><span>깊이</span><h2>한 줄로 깊게</h2></header>
-            <p>한 방향을 끝까지 간 뒤 다른 방향을 본다.</p>
-          </article>
-        </div>
-      </section>
-      <section class="slide" data-slide="3">
-        <div class="slide-header">
-          <p class="unit">03</p>
-          <p class="page-ref">p.32</p>
-          <h1>지능적 탐색</h1>
-          <p class="subtitle">목표에 더 가까워 보이는 쪽을 <strong>우선</strong> 살핀다.</p>
-        </div>
-        <div class="before-after">
-          <article>
-            <header><span>휴리스틱</span><h2>힌트</h2></header>
-            <p>남은 거리·비용 같은 단서로 순서를 정한다.</p>
-          </article>
-          <div class="versus">→</div>
-          <article>
-            <header><span>효과</span><h2>더 빠른 탐색</h2></header>
-            <p>불필요한 경로를 줄여 목표에 더 빨리 도달할 수 있다.</p>
-          </article>
-        </div>
-      </section>
-      <section class="slide" data-slide="4">
-        <div class="slide-header">
-          <p class="unit">04</p>
-          <p class="page-ref">정리</p>
-          <h1>정리</h1>
-          <p class="subtitle">탐색에서 기억할 핵심</p>
-        </div>
-        <div class="before-after">
-          <article>
-            <header><span>맹목적</span><h2>순서 고정</h2></header>
-            <p>너비·깊이처럼 정해진 순서로 상태를 확장한다.</p>
-          </article>
-          <div class="versus">+</div>
-          <article>
-            <header><span>지능적</span><h2>단서 활용</h2></header>
-            <p>휴리스틱으로 더 유망한 경로를 먼저 본다.</p>
-          </article>
-        </div>
-      </section>
-    </main>
-    <button class="nav-zone nav-prev" type="button" aria-label="이전"><span></span></button>
-    <button class="nav-zone nav-next" type="button" aria-label="다음"><span></span></button>
-    <div class="footer">
-      <div class="dots"></div>
-      <p><span id="currentSlide">1</span> / <span id="totalSlides">1</span></p>
-    </div>
-    <script src="script.js"></script>
-  </body>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>인공지능과 탐색</title>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<main class="deck" aria-live="polite">
+<section class="slide active" data-slide="1">
+  <div class="slide-header"><p class="unit">01</p><p class="page-ref">p.28</p><h1>탐색이란?</h1>
+  <p class="subtitle">문제 공간에서 <strong>목표</strong>에 이르는 경로를 찾는 과정</p></div>
+  <div class="scene"><div class="art">🗺️</div>
+  <div class="panel"><div class="diagram"><div class="node">시작</div><div class="arrow">→</div><div class="node">상태들</div><div class="arrow">→</div><div class="node hi">목표</div></div>
+  <p style="margin-top:18px;font-size:22px;font-weight:800;color:#5c6b7d">연산자로 상태를 바꾸며 길을 찾는다.</p></div></div>
+</section>
+<section class="slide" data-slide="2">
+  <div class="slide-header"><p class="unit">02</p><p class="page-ref">p.30</p><h1>너비 우선 · 깊이 우선</h1>
+  <p class="subtitle">탐색 전략에 따라 <strong>순서</strong>가 달라진다.</p></div>
+  <div class="before-after">
+    <article><header><span>BFS</span><h2>너비 우선</h2></header><p>가까운 층부터 넓게<br>최단 경로에 유리</p><div style="font-size:64px;text-align:center">🌊</div></article>
+    <div class="versus">vs</div>
+    <article><header><span>DFS</span><h2>깊이 우선</h2></header><p>한 길을 깊게<br>메모리에 유리할 수 있음</p><div style="font-size:64px;text-align:center">🌲</div></article>
+  </div>
+</section>
+<section class="slide" data-slide="3">
+  <div class="slide-header"><p class="unit">03</p><p class="page-ref">p.32</p><h1>8퍼즐</h1>
+  <p class="subtitle">타일을 밀어 <strong>목표 배치</strong>를 만드는 고전 탐색 문제</p></div>
+  <div class="hero-visual"><div class="big">🧩</div><div class="orbit"></div></div>
+  <div class="badge-list" style="justify-content:center;margin-top:12px"><span>상태 공간</span><span>연산자</span><span>목표 검사</span></div>
+</section>
+<section class="slide" data-slide="4">
+  <div class="slide-header"><p class="unit">04</p><p class="page-ref">정리</p><h1>탐색 체크</h1>
+  <p class="subtitle">문제를 풀 때 확인할 것</p></div>
+  <div class="visual-row">
+    <div class="vcard blue"><div class="emoji">📍</div><h3>상태</h3><p>시작·목표 정의</p></div>
+    <div class="vcard orange"><div class="emoji">🔁</div><h3>연산자</h3><p>가능한 행동</p></div>
+    <div class="vcard green"><div class="emoji">🏁</div><h3>전략</h3><p>BFS / DFS 등</p></div>
+  </div>
+</section>
+</main>
+<button class="nav-zone nav-prev" type="button" aria-label="이전"><span></span></button>
+<button class="nav-zone nav-next" type="button" aria-label="다음"><span></span></button>
+<div class="footer"><div class="dots"></div><p><span id="currentSlide">1</span> / <span id="totalSlides">1</span></p></div>
+<script src="script.js"></script>
+</body>
 </html>
