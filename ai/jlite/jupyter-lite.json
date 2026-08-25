@@ -1,10 +1,9 @@
 {
   "jupyter-config-data": {
-    "appName": "\uc815\ubcf4\u00b7AI \uc2e4\uc2b5 JupyterLite",
+    "appName": "정보·AI 실습 JupyterLite",
     "appUrl": "./lab",
     "appVersion": "0.8.3",
     "baseUrl": "./",
-    "collaborative": false,
     "contentsAllJsonFile": "all.json",
     "defaultKernelName": "python",
     "faviconUrl": "./lab/favicon.ico",
@@ -401,7 +400,18 @@
       "@jupyterlite/pyodide-kernel-extension:kernel": {
         "pipliteUrls": [
           "./extensions/@jupyterlite/pyodide-kernel-extension/static/pypi/all.json?sha256=b0fbc8323d9394c8d15587f70bdadd88843643fc9b7cb0595fdc4fbc86af168c"
-        ]
+        ],
+        "loadPyodideOptions": {
+          "packages": [
+            "numpy",
+            "pandas",
+            "matplotlib",
+            "scipy",
+            "scikit-learn",
+            "seaborn",
+            "micropip"
+          ]
+        }
       }
     },
     "versionInfo": {
@@ -413,7 +423,8 @@
         "label": "JupyterLab",
         "version": "4.6.3"
       }
-    }
+    },
+    "collaborative": false
   },
   "jupyter-lite-schema-version": 0
 }

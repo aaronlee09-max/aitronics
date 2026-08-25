@@ -52,5 +52,17 @@
 <button class="nav-zone nav-next" type="button" aria-label="다음"><span></span></button>
 <div class="footer"><div class="dots"></div><p><span id="currentSlide">1</span> / <span id="totalSlides">1</span></p></div>
 <script src="script.js"></script>
+
+<style id="site-back-style">
+.site-back{position:fixed;top:12px;left:12px;z-index:9999;display:inline-flex;align-items:center;gap:6px;
+padding:8px 14px;border-radius:999px;background:rgba(23,32,51,.9);color:#fff!important;
+font-weight:800;font-size:14px;text-decoration:none!important;
+font-family:"Apple SD Gothic Neo","Noto Sans KR",system-ui,sans-serif;
+box-shadow:0 4px 16px rgba(0,0,0,.28);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.12);
+transition:background .15s ease}
+.site-back:hover{background:#2563eb}
+@media print{.site-back{display:none!important}}
+</style>
+<a class="site-back" href="../" title="이전 페이지로 돌아가기">← 돌아가기</a>
 </body>
 </html>
