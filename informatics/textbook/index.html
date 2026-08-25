@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>정보 · 교과서</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#f7fafc;color:#172033;font-family:"Apple SD Gothic Neo","Noto Sans KR",system-ui,sans-serif}
+main{width:min(720px,calc(100% - 48px));margin:0 auto;padding:64px 0}
+h1{margin:0 0 12px;font-size:clamp(32px,5vw,48px)}
+p{color:#5c6b7d;font-weight:700;line-height:1.5}
+.card{display:block;margin-top:28px;padding:28px;border-radius:16px;background:#fff;border:2px solid #d7e0ea;text-decoration:none;color:inherit;box-shadow:0 10px 30px rgba(23,32,51,.06)}
+.card strong{display:block;font-size:22px;margin-bottom:8px;color:#2563eb}
+.card span{color:#5c6b7d;font-size:15px;font-weight:700}
+.note{margin-top:20px;padding:14px 16px;background:#e8f3fb;border-radius:12px;color:#1c3f66;font-size:14px;line-height:1.55}
+</style>
+</head>
+<body>
+<main>
+  <h1>정보 교과서</h1>
+  <p>웹 뷰어로 열람 · 다운로드 불가 · 인쇄 가능</p>
+  <a class="card" href="./viewer.html">
+    <strong>📖 교과서 PDF 뷰어</strong>
+    <span>브라우저에서 바로 보기 (저장/다운로드 막힘)</span>
+  </a>
+  <div class="note">
+    · 다운로드 버튼 없음 · 인쇄만 가능<br>
+    · PDF가 없으면 뷰어에 안내가 표시됩니다. <b>informatics/textbook/textbook.pdf</b> 로 올려 주세요.
+  </div>
+</main>
+<style id="site-back-style">
+.site-back{position:fixed;top:12px;left:12px;z-index:9999;display:inline-flex;align-items:center;gap:6px;
+padding:8px 14px;border-radius:999px;background:rgba(23,32,51,.9);color:#fff!important;
+font-weight:800;font-size:14px;text-decoration:none!important;
+font-family:"Apple SD Gothic Neo","Noto Sans KR",system-ui,sans-serif;
+box-shadow:0 4px 16px rgba(0,0,0,.28);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.12)}
+.site-back:hover{background:#2563eb}
+@media print{.site-back{display:none!important}}
+</style>
+<a class="site-back" href="../" title="이전 페이지로 돌아가기">← 돌아가기</a>
+</body>
+</html>
