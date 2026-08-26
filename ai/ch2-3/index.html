@@ -5,8 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>인공 신경망과 딥러닝</title>
     <link rel="stylesheet" href="styles.css" />
-  </head>
+  <style id="site-nav-float">
+.site-nav-float{position:fixed;top:12px;left:12px;z-index:9999;display:flex;gap:8px;font-family:"Apple SD Gothic Neo","Noto Sans KR",sans-serif}
+.site-nav-float a{display:inline-block;padding:8px 14px;border-radius:999px;background:rgba(23,32,51,.88);color:#fff;text-decoration:none;font-weight:800;font-size:14px;box-shadow:0 8px 24px rgba(0,0,0,.18)}
+.site-nav-float a:hover{background:#2563eb}
+</style>
+</head>
   <body>
+<div class="site-nav-float" id="site-nav-float"><a href="../">← 이전</a><a href="/">홈</a></div>
     <main class="deck" aria-live="polite">
       <section class="slide active" data-slide="1">
         <div class="slide-header">
@@ -125,18 +131,5 @@
     <button class="nav-zone nav-next" type="button" aria-label="다음 슬라이드"><span></span></button>
     <div class="footer"><div class="dots" aria-label="슬라이드 위치"></div><p><span id="currentSlide">1</span> / <span id="totalSlides">1</span></p></div>
     <script src="script.js"></script>
-  <style id="site-nav-style">
-.site-nav{position:fixed;top:12px;left:12px;z-index:9999;display:flex;gap:8px;flex-wrap:wrap}
-.site-nav a{display:inline-flex;align-items:center;gap:6px;padding:8px 14px;border-radius:999px;
-background:rgba(23,32,51,.9);color:#fff!important;font-weight:800;font-size:14px;text-decoration:none!important;
-font-family:"Apple SD Gothic Neo","Noto Sans KR",system-ui,sans-serif;
-box-shadow:0 4px 16px rgba(0,0,0,.28);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.12);
-transition:background .15s ease}
-.site-nav a:hover{background:#2563eb}
-.site-nav a.home{background:rgba(37,99,235,.92)}
-.site-nav a.home:hover{background:#1d4ed8}
-@media print{.site-nav{display:none!important}}
-</style>
-<nav class="site-nav" aria-label="페이지 이동"><a href="../" title="이전 화면으로">← 이전</a><a class="home" href="/" title="홈으로 가기">홈</a></nav>
-</body>
+  </body>
 </html>
