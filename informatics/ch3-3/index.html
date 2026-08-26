@@ -58,16 +58,18 @@ h1{margin:28px 0 10px;font-size:clamp(36px,6vw,64px);line-height:1.05}
   </div>
 </main>
 
-<style id="site-back-style">
-.site-back{position:fixed;top:12px;left:12px;z-index:9999;display:inline-flex;align-items:center;gap:6px;
-padding:8px 14px;border-radius:999px;background:rgba(23,32,51,.9);color:#fff!important;
-font-weight:800;font-size:14px;text-decoration:none!important;
+<style id="site-nav-style">
+.site-nav{position:fixed;top:12px;left:12px;z-index:9999;display:flex;gap:8px;flex-wrap:wrap}
+.site-nav a{display:inline-flex;align-items:center;gap:6px;padding:8px 14px;border-radius:999px;
+background:rgba(23,32,51,.9);color:#fff!important;font-weight:800;font-size:14px;text-decoration:none!important;
 font-family:"Apple SD Gothic Neo","Noto Sans KR",system-ui,sans-serif;
 box-shadow:0 4px 16px rgba(0,0,0,.28);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.12);
 transition:background .15s ease}
-.site-back:hover{background:#2563eb}
-@media print{.site-back{display:none!important}}
+.site-nav a:hover{background:#2563eb}
+.site-nav a.home{background:rgba(37,99,235,.92)}
+.site-nav a.home:hover{background:#1d4ed8}
+@media print{.site-nav{display:none!important}}
 </style>
-<a class="site-back" href="../" title="이전 페이지로 돌아가기">← 돌아가기</a>
+<nav class="site-nav" aria-label="페이지 이동"><a href="../" title="이전 화면으로">← 이전</a><a class="home" href="/" title="홈으로 가기">홈</a></nav>
 </body>
 </html>
