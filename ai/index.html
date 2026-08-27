@@ -18,8 +18,7 @@
       .title { display: grid; gap: 6px; }
       .title b { font-size: clamp(28px, 3vw, 40px); line-height: 1.12; }
       .title span { color: #5c6b7d; font-size: 18px; }
-      .action { border-radius: 999px; padding: 12px 18px; background: #f3efff; color: #7c3aed; font-size: 18px; transition: background 160ms ease, transform 160ms ease; }
-      .action:hover { background: #e9e0ff; transform: translateY(-1px); }
+      .action { border-radius: 999px; padding: 12px 18px; background: #f3efff; color: #7c3aed; font-size: 18px; }
       .resources { display: grid; gap: 1px; padding: 0 26px 22px 166px; }
       .resource-row { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 20px; padding: 15px 0; border-top: 1px solid #e5eaf0; }
       .resource-title { display: flex; align-items: center; gap: 12px; min-width: 0; }
@@ -27,191 +26,75 @@
       .activity-label { flex: 0 0 auto; border-radius: 999px; padding: 5px 9px; background: #f1f5f9; color: #64748b; font-size: 13px; font-weight: 900; }
       .model-group { overflow: hidden; border: 1px solid #d8ccf8; border-radius: 12px; background: #faf8ff; }
       .model-group + .model-group { margin-top: 18px; }
-      .model-group-title { margin: 0; padding: 15px 18px; border-bottom: 1px solid #d8ccf8; background: #ede9fe; color: #5b21b6; font-size: 22px; font-weight: 900; line-height: 1.2; }
+      .model-group-title { margin: 0; padding: 15px 18px; border-bottom: 1px solid #d8ccf8; background: #ede9fe; color: #5b21b6; font-size: 22px; font-weight: 900; }
       .model-group .resource-row { margin: 0 18px; }
       .model-group .resource-row:first-of-type { border-top: 0; }
-      .downloads { display: flex; gap: 8px; }
-      .download { display: inline-flex; align-items: center; justify-content: center; min-width: 82px; border: 1px solid #d8ccf8; border-radius: 8px; padding: 9px 12px; background: #fff; color: #6d28d9; font-size: 14px; transition: border-color 160ms ease, background 160ms ease; }
-      .download:hover { border-color: #a78bfa; background: #faf8ff; }
+      .downloads { display: flex; gap: 8px; flex-wrap: wrap; }
+      .download { display: inline-flex; align-items: center; justify-content: center; min-width: 82px; border: 1px solid #d8ccf8; border-radius: 8px; padding: 9px 12px; background: #fff; color: #6d28d9; font-size: 14px; }
       .download.csv { border-color: #b9e1d0; color: #047857; }
-      .download.csv:hover { border-color: #6fc4a3; background: #f3fbf7; }
-      a:focus-visible { outline: 3px solid #f59e0b; outline-offset: 3px; }
+      .download.answer { border-color: #fcd34d; color: #b45309; }
+      .download.run { border-color: #93c5fd; color: #1d4ed8; background: #eff6ff; min-width: 72px; }
+      .download.site { border-color: #6ee7b7; color: #047857; background: #ecfdf5; min-width: 72px; }
       @media (max-width: 720px) {
-        main { width: min(100% - 28px, 1120px); padding: 36px 0; }
-        h1 { margin: 36px 0 26px; }
-        .chapter-main { grid-template-columns: 1fr; gap: 12px; padding: 22px; }
-        .action { width: max-content; }
+        .chapter-main { grid-template-columns: 1fr; }
         .resources { padding: 0 22px 14px; }
-        .resource-row { grid-template-columns: 1fr; gap: 12px; }
-        .resource-title { align-items: flex-start; }
+        .resource-row { grid-template-columns: 1fr; }
         .resource-title strong { overflow: visible; white-space: normal; }
-        .downloads { flex-wrap: wrap; }
       }
     </style>
-  <style id="site-nav-float">
-.site-nav-float{position:fixed;top:12px;left:12px;z-index:9999;display:flex;gap:8px;font-family:"Apple SD Gothic Neo","Noto Sans KR",sans-serif}
-.site-nav-float a{display:inline-block;padding:8px 14px;border-radius:999px;background:rgba(23,32,51,.88);color:#fff;text-decoration:none;font-weight:800;font-size:14px;box-shadow:0 8px 24px rgba(0,0,0,.18)}
-.site-nav-float a:hover{background:#2563eb}
-</style>
-</head>
+  </head>
   <body>
-<div class="site-nav-float" id="site-nav-float"><a href="../">← 이전</a><a href="/">홈</a></div>
     <main>
       <a class="back" href="../">← 정보 교과군</a>
       <h1>인공지능 기초</h1>
+      <article class="chapter"><div class="chapter-main"><span class="number">교과서</span><span class="title"><b>인공지능 기초 교과서</b><span>슬라이드 수업 · 공식 뷰어</span></span><a class="action" href="./textbook/">열기</a></div></article>
+      <article class="chapter"><div class="chapter-main"><span class="number">1-1</span><span class="title"><b>인공지능의 원리</b><span>지능, 시스템, 에이전트</span></span><a class="action" href="./ch1-1/">열기</a></div></article>
+      <article class="chapter"><div class="chapter-main"><span class="number">1-2</span><span class="title"><b>인공지능과 탐색</b><span>맹목적 탐색과 지능적 탐색</span></span><a class="action" href="./ch1-2/">열기</a></div></article>
+      <article class="chapter"><div class="chapter-main"><span class="number">1-3</span><span class="title"><b>지식의 표현과 추론</b><span>규칙으로 결론 내기</span></span><a class="action" href="./ch1-3/">열기</a></div></article>
       <article class="chapter">
-        <div class="chapter-main">
-          <span class="number">2-1</span>
-          <span class="title">
-            <b>기계학습과 데이터</b>
-            <span>기계학습의 개념과 데이터로 학습하기</span>
-          </span>
-          <a class="action" href="./ch2-1/">열기</a>
-        </div>
-        <div class="resources" aria-label="2-1 실습 자료">
-          <div class="resource-row">
-            <div class="resource-title">
-              <span class="activity-label">실습 1</span>
-              <strong>펭귄 데이터 탐색하기</strong>
-            </div>
-            <div class="downloads">
-              <a class="download" href="./ch2-1/실습1_펭귄_데이터_탐색하기.ipynb" download>노트북</a>
-              <a class="download csv" href="./ch2-1/penguins_size.csv" download>CSV</a>
-            </div>
-          </div>
-          <div class="resource-row">
-            <div class="resource-title">
-              <span class="activity-label">선택 활동 1</span>
-              <strong>지진 데이터 분석하기</strong>
-            </div>
-            <div class="downloads">
-              <a class="download" href="./ch2-1/선택활동1_지진_데이터_분석하기.ipynb" download>노트북</a>
-              <a class="download csv" href="./ch2-1/earthquake.csv" download>CSV</a>
-            </div>
-          </div>
+        <div class="chapter-main"><span class="number">2-1</span><span class="title"><b>기계학습과 데이터</b><span>기계학습의 개념과 데이터로 학습하기</span></span><a class="action" href="./ch2-1/">열기</a></div>
+        <div class="resources">
+          <div class="resource-row"><div class="resource-title"><span class="activity-label">실습 1</span><strong>펭귄 데이터 탐색하기</strong></div><div class="downloads"><a class="download run" href="https://colab.research.google.com/github/aaronlee09-max/informatics/blob/main/ai/ch2-1/실습1_펭귄_데이터_탐색하기.ipynb" target="_blank" rel="noopener">Colab</a><a class="download site" href="./jlite/notebooks/index.html?path=ch2-1/실습1_펭귄_데이터_탐색하기.ipynb">사이트실행</a><a class="download" href="./ch2-1/실습1_펭귄_데이터_탐색하기.ipynb" download>노트북</a><a class="download answer" href="./ch2-1/실습1_펭귄_데이터_탐색하기_정답.ipynb" download>정답</a><a class="download csv" href="./ch2-1/penguins_size.csv" download>CSV</a></div></div>
+          <div class="resource-row"><div class="resource-title"><span class="activity-label">선택 활동 1</span><strong>지진 데이터 분석하기</strong></div><div class="downloads"><a class="download run" href="https://colab.research.google.com/github/aaronlee09-max/informatics/blob/main/ai/ch2-1/선택활동1_지진_데이터_분석하기.ipynb" target="_blank" rel="noopener">Colab</a><a class="download site" href="./jlite/notebooks/index.html?path=ch2-1/선택활동1_지진_데이터_분석하기.ipynb">사이트실행</a><a class="download" href="./ch2-1/선택활동1_지진_데이터_분석하기.ipynb" download>노트북</a><a class="download answer" href="./ch2-1/선택활동1_지진_데이터_분석하기_정답.ipynb" download>정답</a><a class="download csv" href="./ch2-1/earthquake.csv" download>CSV</a></div></div>
         </div>
       </article>
       <article class="chapter">
-        <div class="chapter-main">
-          <span class="number">2-2</span>
-          <span class="title">
-            <b>기계학습 알고리즘</b>
-            <span>기계학습 모델을 구현하고 성능 평가하기</span>
-          </span>
-          <a class="action" href="./ch2-2/">열기</a>
-        </div>
-        <div class="resources" aria-label="2-2 실습 자료">
-          <section class="model-group" aria-labelledby="regression-title">
-            <h2 class="model-group-title" id="regression-title">회귀</h2>
-            <div class="resource-row">
-              <div class="resource-title">
-                <span class="activity-label">실습 2</span>
-                <strong>목둘레로 허리둘레를 예측하는 선형 회귀 모델 구현하기</strong>
-              </div>
-              <div class="downloads">
-                <a class="download" href="./ch2-2/2/실습2_목둘레로_허리둘레를_예측하는_선형_회귀_모델_구현하기.ipynb" download>노트북</a>
-                <a class="download csv" href="./ch2-2/2/jeans.csv" download>CSV</a>
-              </div>
-            </div>
-            <div class="resource-row">
-              <div class="resource-title">
-                <span class="activity-label">선택 활동 2</span>
-                <strong>다중 선형 회귀로 허리둘레를 예측해 보기</strong>
-              </div>
-              <div class="downloads">
-                <a class="download" href="./ch2-2/2/선택활동2_다중_선형_회귀로_허리둘레를_예측해_보기.ipynb" download>노트북</a>
-                <a class="download csv" href="./ch2-2/2/jeans.csv" download>CSV</a>
-              </div>
-            </div>
-            <div class="resource-row">
-              <div class="resource-title">
-                <span class="activity-label">선택 활동 3</span>
-                <strong>전복의 나이를 예측해 해양 생태계 보존하기</strong>
-              </div>
-              <div class="downloads">
-                <a class="download" href="./ch2-2/2/선택활동3_전복의_나이를_예측해_해양_생태계_보존하기.ipynb" download>노트북</a>
-                <a class="download csv" href="./ch2-2/2/abalone_original.csv" download>CSV</a>
-              </div>
-            </div>
+        <div class="chapter-main"><span class="number">2-2</span><span class="title"><b>기계학습 알고리즘</b><span>기계학습 모델을 구현하고 성능 평가하기</span></span><a class="action" href="./ch2-2/">열기</a></div>
+        <div class="resources">
+          <section class="model-group"><h2 class="model-group-title">회귀</h2>
+            <div class="resource-row"><div class="resource-title"><span class="activity-label">실습 2</span><strong>목둘레로 허리둘레를 예측하는 선형 회귀 모델 구현하기</strong></div><div class="downloads"><a class="download run" href="https://colab.research.google.com/github/aaronlee09-max/informatics/blob/main/ai/ch2-2/2/실습2_목둘레로_허리둘레를_예측하는_선형_회귀_모델_구현하기.ipynb" target="_blank" rel="noopener">Colab</a><a class="download site" href="./jlite/notebooks/index.html?path=ch2-2/2/실습2_목둘레로_허리둘레를_예측하는_선형_회귀_모델_구현하기.ipynb">사이트실행</a><a class="download" href="./ch2-2/2/실습2_목둘레로_허리둘레를_예측하는_선형_회귀_모델_구현하기.ipynb" download>노트북</a><a class="download answer" href="./ch2-2/2/실습2_목둘레로_허리둘레를_예측하는_선형_회귀_모델_구현하기_정답.ipynb" download>정답</a><a class="download csv" href="./ch2-2/2/jeans.csv" download>CSV</a></div></div>
+            <div class="resource-row"><div class="resource-title"><span class="activity-label">선택 활동 2</span><strong>다중 선형 회귀로 허리둘레를 예측해 보기</strong></div><div class="downloads"><a class="download run" href="https://colab.research.google.com/github/aaronlee09-max/informatics/blob/main/ai/ch2-2/2/선택활동2_다중_선형_회귀로_허리둘레를_예측해_보기.ipynb" target="_blank" rel="noopener">Colab</a><a class="download site" href="./jlite/notebooks/index.html?path=ch2-2/2/선택활동2_다중_선형_회귀로_허리둘레를_예측해_보기.ipynb">사이트실행</a><a class="download" href="./ch2-2/2/선택활동2_다중_선형_회귀로_허리둘레를_예측해_보기.ipynb" download>노트북</a><a class="download answer" href="./ch2-2/2/선택활동2_다중_선형_회귀로_허리둘레를_예측해_보기_정답.ipynb" download>정답</a><a class="download csv" href="./ch2-2/2/jeans.csv" download>CSV</a></div></div>
+            <div class="resource-row"><div class="resource-title"><span class="activity-label">선택 활동 3</span><strong>전복의 나이를 예측해 해양 생태계 보존하기</strong></div><div class="downloads"><a class="download run" href="https://colab.research.google.com/github/aaronlee09-max/informatics/blob/main/ai/ch2-2/2/선택활동3_전복의_나이를_예측해_해양_생태계_보존하기.ipynb" target="_blank" rel="noopener">Colab</a><a class="download site" href="./jlite/notebooks/index.html?path=ch2-2/2/선택활동3_전복의_나이를_예측해_해양_생태계_보존하기.ipynb">사이트실행</a><a class="download" href="./ch2-2/2/선택활동3_전복의_나이를_예측해_해양_생태계_보존하기.ipynb" download>노트북</a><a class="download answer" href="./ch2-2/2/선택활동3_전복의_나이를_예측해_해양_생태계_보존하기_정답.ipynb" download>정답</a><a class="download csv" href="./ch2-2/2/abalone_original.csv" download>CSV</a></div></div>
           </section>
-          <section class="model-group" aria-labelledby="classification-title">
-            <h2 class="model-group-title" id="classification-title">분류</h2>
-            <div class="resource-row">
-              <div class="resource-title">
-                <span class="activity-label">간단 실습</span>
-                <strong>당도와 아삭함으로 과일인지 채소인지 분류하기</strong>
-              </div>
-              <div class="downloads">
-                <a class="download" href="./ch2-2/3/간단실습_당도와_아삭함으로_과일인지_채소인지_분류하기.ipynb" download>노트북</a>
-                <a class="download csv" href="./ch2-2/3/food.csv" download>CSV</a>
-              </div>
-            </div>
-            <div class="resource-row">
-              <div class="resource-title">
-                <span class="activity-label">실습 3</span>
-                <strong>펭귄 종 분류 모델 구현하기</strong>
-              </div>
-              <div class="downloads">
-                <a class="download" href="./ch2-2/3/실습3_펭귄_종_분류_모델_구현하기.ipynb" download>노트북</a>
-                <a class="download csv" href="./ch2-2/3/penguins_size.csv" download>CSV</a>
-              </div>
-            </div>
-            <div class="resource-row">
-              <div class="resource-title">
-                <span class="activity-label">선택 활동 4</span>
-                <strong>로지스틱 회귀와 kNN으로 펭귄 종 분류하기</strong>
-              </div>
-              <div class="downloads">
-                <a class="download" href="./ch2-2/3/선택활동4_로지스틱_회귀와_kNN으로_펭귄_종_분류하기.ipynb" download>노트북</a>
-                <a class="download csv" href="./ch2-2/3/penguins_size.csv" download>CSV</a>
-              </div>
-            </div>
-            <div class="resource-row">
-              <div class="resource-title">
-                <span class="activity-label">선택 활동 5</span>
-                <strong>항공사 고객 만족도 서비스 모델 만들기</strong>
-              </div>
-              <div class="downloads">
-                <a class="download" href="./ch2-2/3/선택활동5_항공사_고객_만족도_서비스_모델_만들기.ipynb" download>노트북</a>
-                <a class="download csv" href="./ch2-2/3/airline_passenger_satisfaction.csv" download>CSV</a>
-              </div>
-            </div>
+          <section class="model-group"><h2 class="model-group-title">분류</h2>
+            <div class="resource-row"><div class="resource-title"><span class="activity-label">간단 실습</span><strong>당도와 아삭함으로 과일인지 채소인지 분류하기</strong></div><div class="downloads"><a class="download run" href="https://colab.research.google.com/github/aaronlee09-max/informatics/blob/main/ai/ch2-2/3/간단실습_당도와_아삭함으로_과일인지_채소인지_분류하기.ipynb" target="_blank" rel="noopener">Colab</a><a class="download site" href="./jlite/notebooks/index.html?path=ch2-2/3/간단실습_당도와_아삭함으로_과일인지_채소인지_분류하기.ipynb">사이트실행</a><a class="download" href="./ch2-2/3/간단실습_당도와_아삭함으로_과일인지_채소인지_분류하기.ipynb" download>노트북</a><a class="download answer" href="./ch2-2/3/간단실습_당도와_아삭함으로_과일인지_채소인지_분류하기_정답.ipynb" download>정답</a><a class="download csv" href="./ch2-2/3/food.csv" download>CSV</a></div></div>
+            <div class="resource-row"><div class="resource-title"><span class="activity-label">실습 3</span><strong>펭귄 종 분류 모델 구현하기</strong></div><div class="downloads"><a class="download run" href="https://colab.research.google.com/github/aaronlee09-max/informatics/blob/main/ai/ch2-2/3/실습3_펭귄_종_분류_모델_구현하기.ipynb" target="_blank" rel="noopener">Colab</a><a class="download site" href="./jlite/notebooks/index.html?path=ch2-2/3/실습3_펭귄_종_분류_모델_구현하기.ipynb">사이트실행</a><a class="download" href="./ch2-2/3/실습3_펭귄_종_분류_모델_구현하기.ipynb" download>노트북</a><a class="download answer" href="./ch2-2/3/실습3_펭귄_종_분류_모델_구현하기_정답.ipynb" download>정답</a><a class="download csv" href="./ch2-2/3/penguins_size.csv" download>CSV</a></div></div>
+            <div class="resource-row"><div class="resource-title"><span class="activity-label">선택 활동 4</span><strong>로지스틱 회귀와 kNN으로 펭귄 종 분류하기</strong></div><div class="downloads"><a class="download run" href="https://colab.research.google.com/github/aaronlee09-max/informatics/blob/main/ai/ch2-2/3/선택활동4_로지스틱_회귀와_kNN으로_펭귄_종_분류하기.ipynb" target="_blank" rel="noopener">Colab</a><a class="download site" href="./jlite/notebooks/index.html?path=ch2-2/3/선택활동4_로지스틱_회귀와_kNN으로_펭귄_종_분류하기.ipynb">사이트실행</a><a class="download" href="./ch2-2/3/선택활동4_로지스틱_회귀와_kNN으로_펭귄_종_분류하기.ipynb" download>노트북</a><a class="download answer" href="./ch2-2/3/선택활동4_로지스틱_회귀와_kNN으로_펭귄_종_분류하기_정답.ipynb" download>정답</a><a class="download csv" href="./ch2-2/3/penguins_size.csv" download>CSV</a></div></div>
+            <div class="resource-row"><div class="resource-title"><span class="activity-label">선택 활동 5</span><strong>항공사 고객 만족도 서비스 모델 만들기</strong></div><div class="downloads"><a class="download run" href="https://colab.research.google.com/github/aaronlee09-max/informatics/blob/main/ai/ch2-2/3/선택활동5_항공사_고객_만족도_서비스_모델_만들기.ipynb" target="_blank" rel="noopener">Colab</a><a class="download site" href="./jlite/notebooks/index.html?path=ch2-2/3/선택활동5_항공사_고객_만족도_서비스_모델_만들기.ipynb">사이트실행</a><a class="download" href="./ch2-2/3/선택활동5_항공사_고객_만족도_서비스_모델_만들기.ipynb" download>노트북</a><a class="download answer" href="./ch2-2/3/선택활동5_항공사_고객_만족도_서비스_모델_만들기_정답.ipynb" download>정답</a><a class="download csv" href="./ch2-2/3/airline_passenger_satisfaction.csv" download>CSV</a></div></div>
           </section>
-          <section class="model-group" aria-labelledby="clustering-title">
-            <h2 class="model-group-title" id="clustering-title">군집</h2>
-            <div class="resource-row">
-              <div class="resource-title">
-                <span class="activity-label">실습 4</span>
-                <strong>쇼핑몰 고객 군집 모델 구현하기</strong>
-              </div>
-              <div class="downloads">
-                <a class="download" href="./ch2-2/4/실습4_쇼핑몰_고객_군집_모델_구현하기.ipynb" download>노트북</a>
-                <a class="download csv" href="./ch2-2/4/Mall_Customers.csv" download>CSV</a>
-              </div>
-            </div>
-            <div class="resource-row">
-              <div class="resource-title">
-                <span class="activity-label">선택 활동 6</span>
-                <strong>당신의 취향에 맞는 카페 음료 추천하기</strong>
-              </div>
-              <div class="downloads">
-                <a class="download" href="./ch2-2/4/선택활동6_당신의_취향에_맞는_카페_음료_추천하기.ipynb" download>노트북</a>
-                <a class="download csv" href="./ch2-2/4/caffe_menu.csv" download>CSV</a>
-              </div>
-            </div>
+          <section class="model-group"><h2 class="model-group-title">군집</h2>
+            <div class="resource-row"><div class="resource-title"><span class="activity-label">실습 4</span><strong>쇼핑몰 고객 군집 모델 구현하기</strong></div><div class="downloads"><a class="download run" href="https://colab.research.google.com/github/aaronlee09-max/informatics/blob/main/ai/ch2-2/4/실습4_쇼핑몰_고객_군집_모델_구현하기.ipynb" target="_blank" rel="noopener">Colab</a><a class="download site" href="./jlite/notebooks/index.html?path=ch2-2/4/실습4_쇼핑몰_고객_군집_모델_구현하기.ipynb">사이트실행</a><a class="download" href="./ch2-2/4/실습4_쇼핑몰_고객_군집_모델_구현하기.ipynb" download>노트북</a><a class="download answer" href="./ch2-2/4/실습4_쇼핑몰_고객_군집_모델_구현하기_정답.ipynb" download>정답</a><a class="download csv" href="./ch2-2/4/Mall_Customers.csv" download>CSV</a></div></div>
+            <div class="resource-row"><div class="resource-title"><span class="activity-label">선택 활동 6</span><strong>당신의 취향에 맞는 카페 음료 추천하기</strong></div><div class="downloads"><a class="download run" href="https://colab.research.google.com/github/aaronlee09-max/informatics/blob/main/ai/ch2-2/4/선택활동6_당신의_취향에_맞는_카페_음료_추천하기.ipynb" target="_blank" rel="noopener">Colab</a><a class="download site" href="./jlite/notebooks/index.html?path=ch2-2/4/선택활동6_당신의_취향에_맞는_카페_음료_추천하기.ipynb">사이트실행</a><a class="download" href="./ch2-2/4/선택활동6_당신의_취향에_맞는_카페_음료_추천하기.ipynb" download>노트북</a><a class="download answer" href="./ch2-2/4/선택활동6_당신의_취향에_맞는_카페_음료_추천하기_정답.ipynb" download>정답</a><a class="download csv" href="./ch2-2/4/caffe_menu.csv" download>CSV</a></div></div>
           </section>
         </div>
       </article>
-      <article class="chapter">
-        <div class="chapter-main">
-          <span class="number">2-3</span>
-          <span class="title">
-            <b>인공 신경망과 딥러닝</b>
-            <span>인공 신경망과 딥러닝의 원리 및 활용 분야 알아보기</span>
-          </span>
-          <a class="action" href="./ch2-3/">열기</a>
-        </div>
-      </article>
+      <article class="chapter"><div class="chapter-main"><span class="number">2-3</span><span class="title"><b>인공 신경망과 딥러닝</b><span>인공 신경망과 딥러닝의 원리 및 활용 분야 알아보기</span></span><a class="action" href="./ch2-3/">열기</a></div></article>
+      <article class="chapter"><div class="chapter-main"><span class="number">3-1</span><span class="title"><b>발전과 사회 변화</b><span>일과 진로가 바뀌는 지점</span></span><a class="action" href="./ch3-1/">열기</a></div></article>
+      <article class="chapter"><div class="chapter-main"><span class="number">3-2</span><span class="title"><b>인공지능 윤리</b><span>공정성, 투명성, 안전성, 책무성</span></span><a class="action" href="./ch3-2/">열기</a></div></article>
+      <article class="chapter"><div class="chapter-main"><span class="number">4-1</span><span class="title"><b>인공지능 프로젝트</b><span>문제 정의부터 평가까지</span></span><a class="action" href="./ch4-1/">열기</a></div></article>
     </main>
-  </body>
+  <style id="site-nav-style">
+.site-nav{position:fixed;top:12px;left:12px;z-index:9999;display:flex;gap:8px;flex-wrap:wrap}
+.site-nav a{display:inline-flex;align-items:center;gap:6px;padding:8px 14px;border-radius:999px;
+background:rgba(23,32,51,.9);color:#fff!important;font-weight:800;font-size:14px;text-decoration:none!important;
+font-family:"Apple SD Gothic Neo","Noto Sans KR",system-ui,sans-serif;
+box-shadow:0 4px 16px rgba(0,0,0,.28);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.12);
+transition:background .15s ease}
+.site-nav a:hover{background:#2563eb}
+.site-nav a.home{background:rgba(37,99,235,.92)}
+.site-nav a.home:hover{background:#1d4ed8}
+@media print{.site-nav{display:none!important}}
+</style>
+<nav class="site-nav" aria-label="페이지 이동"><a href="/" title="이전 화면으로">← 이전</a><a class="home" href="/" title="홈으로 가기">홈</a></nav>
+</body>
 </html>
