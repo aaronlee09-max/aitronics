@@ -29,39 +29,96 @@ def set_md(cell, text: str) -> None:
     cell["source"] = to_src(text)
 
 
+def fill_by_index(nb, codes):
+    cells = nb["cells"]
+    for i, text in codes.items():
+        if i < len(cells) and cells[i].get("cell_type") == "code":
+            set_code(cells[i], text)
+
+
+def fill_s5(nb):
+    fill_by_index(nb, {
+        6: "from tensorflow import keras\n\nmnist = keras.datasets.mnist\n(X_train, y_train), (X_test, y_test) = mnist.load_data()\nprint(X_train.shape, y_train.shape, X_test.shape, y_test.shape)\n",
+        9: "import matplotlib.pyplot as plt\n\nimage = X_test[0].reshape(28, 28)\nplt.imshow(image, cmap='gray')\nplt.title(y_test[0])\nplt.show()\n",
+        12: "X_train = X_train / 255.0\nX_test = X_test / 255.0\n",
+        14: "from tensorflow.keras.models import Sequential\nfrom tensorflow.keras.layers import Dense, Flatten\n",
+        16: "model = Sequential()\nmodel.add(Flatten(input_shape=(28, 28)))\nmodel.add(Dense(128, activation='relu'))\n",
+        17: "model.add(Dense(64, activation='relu'))\nmodel.add(Dense(10, activation='softmax'))\n",
+        19: "model.compile(\n    loss='sparse_categorical_crossentropy',\n    optimizer='adam',\n    metrics=['accuracy']\n)\n",
+        21: "model.fit(X_train, y_train, epochs=10)\n",
+        25: "model.evaluate(X_test, y_test)\n",
+        28: "predictions = model.predict(X_test)\nprint(predictions[0])\n",
+        31: "import numpy as np\n\nprint(np.argmax(predictions[0]))\n",
+        34: "model.save(\"mnist_model.h5\")\n",
+    })
+    cells = nb["cells"]
+    reps = {
+        7: [("훈련 ( )개 · 테스트 ( )개", "훈련 **60000**개 · 테스트 **10000**개"), ("  → ( )", "  → **숫자 한 장이 세로 28픽셀, 가로 28픽셀이라는 뜻이다.**"), ("  → ( )", "  → **테스트 이미지 한 장을 그림으로 확인한다.**")],
+        10: [("→ ( )", "→ **7** (`y_test[0]`)"), ("→ ( )", "→ **일치한다.**"), ("  → ( )", "  → **0~1 사이로 정규화한다.**")],
+        22: [("→ ( )", "→ **줄어든다.** (교과서 예: 0.2387 → 0.0198)"), ("→ ( )", "→ **높아진다.** (교과서 예: 0.9284 → 0.9934)"), ("  → ( )", "  → **안 된다. 테스트 데이터로 다시 평가해야 한다.**")],
+        26: [("손실 ( ) · 정확도 ( )", "손실 **0.0955** · 정확도 **0.9784**"), ("  → ( )", "  → **배우지 않은 데이터에서는 성능이 조금 떨어질 수 있다.**"), ("  → ( )", "  → **한 장이 어떤 숫자로 예측되는지 본다.**")],
+        29: [("→ ( )개", "→ **10**개"), ("→ ( )", "→ **7번**"), ("→ ( )", "→ **np.argmax()**")],
+        32: [("→ ( )", "→ **7**"), ("→ ( )", "→ **일치한다.**"), ("→ ( )", "→ **모델을 파일로 저장한다.**")],
+        36: [("   →\n", "   → **28×28 픽셀, 출력층 10개(숫자 0~9)**\n"), ("   →\n", "   → **테스트 정확도가 약 0.978로 높아서 대체로 잘 분류한다.**\n"), ("   →\n", "   → **소프트맥스 확률 중 7번 인덱스 값이 가장 크기 때문이다.**\n")],
+    }
+    for i, pairs in reps.items():
+        text = join(cells[i])
+        for old, new in pairs:
+            text = text.replace(old, new, 1)
+        set_md(cells[i], text)
+
+
+def fill_s6(nb):
+    fill_by_index(nb, {
+        7: "import os\nfrom pathlib import Path\n\ntry:\n    from google.colab import drive\nexcept ImportError:\n    current_dir = Path.cwd()\n    data_dir = current_dir if current_dir.name == 'crack' else current_dir / 'crack'\nelse:\n    drive.mount('/content/gdrive')\n    data_dir = Path('/content/gdrive/My Drive/data/crack')\n    if not (data_dir / 'train').is_dir():\n        alt = Path('/content/gdrive/MyDrive/data/crack')\n        if (alt / 'train').is_dir():\n            data_dir = alt\n\nos.chdir(data_dir)\nprint('현재 폴더:', Path.cwd())\n",
+        9: "from tensorflow.keras.preprocessing.image import ImageDataGenerator\n\ntrain_datagen = ImageDataGenerator(rescale=1./255)\ntraining_set = train_datagen.flow_from_directory(\n    'train',\n    target_size=(64, 64),\n    batch_size=32,\n    shuffle=True,\n    class_mode='categorical'\n)\n",
+        12: "test_datagen = ImageDataGenerator(rescale=1./255)\ntest_set = test_datagen.flow_from_directory(\n    'test',\n    target_size=(64, 64),\n    shuffle=False,\n    class_mode='categorical'\n)\n",
+        16: "from tensorflow.keras.applications.vgg16 import VGG16\n\nvgg = VGG16(include_top=False, weights='imagenet', input_shape=(64, 64, 3))\nfor layer in vgg.layers:\n    layer.trainable = False\nvgg.summary()\n",
+        19: "from tensorflow.keras.models import Sequential\nfrom tensorflow.keras.layers import Dense, Flatten, Input\n",
+        21: "model = Sequential()\nmodel.add(Input(shape=(64, 64, 3)))\nmodel.add(vgg)\nmodel.add(Flatten())\nmodel.add(Dense(64, activation='relu'))\nmodel.add(Dense(2, activation='softmax'))\nmodel.summary()\n",
+        24: "model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])\n",
+        26: "model.fit(training_set, epochs=5)\n",
+        30: "model.evaluate(test_set)\n",
+        33: "pred = model.predict(test_set)\nprint(pred[:3])\n",
+        35: "print(training_set.class_indices)\n",
+        38: "import numpy as np\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nfrom sklearn.metrics import confusion_matrix\n\nPredicted = np.argmax(pred, axis=1)\nActual = test_set.labels\nconf = confusion_matrix(Actual, Predicted)\n\nsns.heatmap(conf, annot=True, cmap='BuPu', fmt='d')\nplt.title('Crack Classification')\nplt.xlabel('Predicted')\nplt.ylabel('Actual')\nplt.show()\n",
+    })
+    cells = nb["cells"]
+    reps = {
+        10: [("→ ( )개", "→ **300**개"), ("→ ( )개", "→ **2**개 (Negative, Positive)"), ("→ ( )", "→ **테스트 데이터**")],
+        13: [("→ ( )개", "→ **80**개"), ("  → ( )", "  → **예측 결과와 실제 레이블 순서를 맞춰 혼동 행렬을 만들기 위해서이다.**"), ("→ ( )", "→ **특징(feature)**")],
+        17: [("→ `( )`", "→ 입력 64×64일 때 보통 **(None, 2, 2, 512)**"), ("  → ( )", "  → **사전 학습된 가중치를 고정(`trainable=False`)했기 때문이다.**"), ("→ ( )", "→ **완전 연결 계층(Dense)**")],
+        22: [("  → ( )", "  → **Negative / Positive 두 클래스를 분류하기 때문이다.**"), ("  → ( )", "  → **뒤에 붙인 Flatten·Dense 층**"), ("→ ( )", "→ **손실함수·최적화 함수·평가지표(compile)**")],
+        27: [("  → ( )", "  → **손실은 줄고 정확도는 높아진다.**"), ("  → ( )", "  → **아니다. 테스트 데이터로 따로 평가해야 한다.**")],
+        31: [("→ ( )", "→ 교과서 예: 손실 **약 0.18** · 정확도 **0.9125**"), ("→ ( )", "→ **과적합**"), ("  → ( )", "  → **알 수 없다. 혼동 행렬이 필요하다.**")],
+        36: [("Negative ( ) · Positive ( )", "Negative **0** · Positive **1**"), ("→ ( )", "→ **혼동 행렬**")],
+        39: [("→ ( )", "→ **정확히 분류한 개수**"), ("40 + 33 = ( )개", "40 + 33 = **73**개"), ("  → ( )", "  → **실제 Positive 7장을 Negative로 잘못 분류한 것**")],
+        40: [("   →\n", "   → **훈련 300개, 테스트 80개. Negative / Positive**\n"), ("   →\n", "   → **ImageNet으로 미리 배운 특징 추출기를 그대로 쓰고, 데이터가 적을 때 과적합을 줄이기 위해서이다.**\n"), ("   →\n", "   → **전체 정확도만으로는 어느 클래스를 자주 틀리는지 알 수 없기 때문이다.**\n"), ("   →\n", "   → **균열 있음(Positive)을 균열 없음으로 놓치는 경우**\n")],
+    }
+    for i, pairs in reps.items():
+        text = join(cells[i])
+        for old, new in pairs:
+            text = text.replace(old, new, 1)
+        set_md(cells[i], text)
+
+
 def fill_s3(nb):
     empties = []
     for i, cell in enumerate(nb["cells"]):
         t = join(cell)
         ct = cell.get("cell_type")
         if ct == "code" and "데이터 프레임 요약 정보" in t and "dropna" not in t:
-            set_code(cell, "import pandas as pd\ndf = pd.read_csv('penguins_size.csv')\ndf.info()  # 데이터 프레임 요약 정보\n")
+            set_code(cell, "import pandas as pd\ndf = pd.read_csv('penguins_size.csv')\ndf.info()\n")
         elif ct == "code" and "결측치 개수 확인하기" in t:
-            set_code(cell, "df.isnull().sum()     # 결측치 개수 확인하기\n# 행 방향으로 결측치를 제거하고, 데이터 프레임(df) 수정하기\ndf.dropna(axis=0, inplace=True)\ndf.info()    # 데이터 프레임 요약 정보\n")
+            set_code(cell, "df.isnull().sum()\ndf.dropna(axis=0, inplace=True)\ndf.info()\n")
         elif ct == "code" and "모델 생성하기" in t:
-            set_code(cell, "from sklearn.tree import DecisionTreeClassifier\ndt = DecisionTreeClassifier()               # 모델 생성하기\ndt.fit(X_train, y_train)                    # 모델 학습하기\n# 훈련 데이터로 결정트리 모델 분류 정확도 구하기\nprint(dt.score(X_train, y_train))\n")
+            set_code(cell, "from sklearn.tree import DecisionTreeClassifier\ndt = DecisionTreeClassifier()\ndt.fit(X_train, y_train)\nprint(dt.score(X_train, y_train))\n")
         elif ct == "code" and "plot_tree" in t:
-            set_code(cell, "import matplotlib.pyplot as plt\n# sklearn.tree 모듈에서 plot_tree 함수 가져오기\nfrom sklearn.tree import plot_tree\nplt.figure(figsize=(20, 10)) # 이미지 크기(20, 10) 설정하기\nplot_tree(dt, feature_names=X.columns,\n           max_depth=2, filled=True)\nplt.show()\n")
+            set_code(cell, "import matplotlib.pyplot as plt\nfrom sklearn.tree import plot_tree\nplt.figure(figsize=(20, 10))\nplot_tree(dt, feature_names=X.columns, max_depth=2, filled=True)\nplt.show()\n")
         elif ct == "code" and "dt 모델 예측하기" in t:
-            set_code(cell, "dt_pred = dt.predict(X_test)                  # dt 모델 예측하기\n# 테스트 데이터로 결정트리 모델 분류 정확도 구하기\nprint(\"결정트리 모델 성능 평가 : \", dt.score(X_test, y_test))\n")
+            set_code(cell, "dt_pred = dt.predict(X_test)\nprint(\"결정트리 모델 성능 평가 : \", dt.score(X_test, y_test))\n")
         elif ct == "code" and not t.strip():
             empties.append(i)
-        elif ct == "markdown" and "데이터가 모두 몇 개 있는가?" in t:
-            set_md(cell, "**❓ 확인하기**\n\n- 이 데이터에는 데이터가 모두 몇 개 있는가?  → **344개**\n- 결측치가 있는 속성은 무엇이고, 각각 몇 개인가?\n\n  → **교과서: 종·서식지는 344개, 나머지 일부 열은 342개 또는 334개.**\n")
-        elif ct == "markdown" and "344개에서 334개로 줄었다" in t:
-            set_md(cell, "**❓ 확인하기**\n\n- 데이터가 344개에서 334개로 줄었다. 결측치 때문에 삭제된 데이터는 몇 개인가?  → **10개**\n- 결측치가 있는 데이터를 삭제한 이유는 무엇인가?\n\n  → **결측치는 모델 성능을 떨어뜨리는 요인이기 때문이다.**\n")
-        elif ct == "markdown" and "근거로 사용할 특징은 무엇인가?" in t:
-            set_md(cell, "**❓ 확인하기**\n\n- 모델이 펭귄 종을 분류할 때 근거로 사용할 특징은 무엇인가?\n\n  → **culmen_length_mm(부리 길이), culmen_depth_mm(부리 깊이), flipper_length_mm(날개 길이)**\n- 모델이 맞혀야 할 타깃은 무엇인가?  → **species(펭귄 종)**\n- 이 문제는 연속적인 값을 예측하는 회귀인가, 종류를 맞히는 분류인가?  → **분류**\n")
-        elif ct == "markdown" and "훈련 데이터와 테스트 데이터는 각각 몇 개인가?" in t:
-            set_md(cell, "**❓ 확인하기**\n\n- 훈련 데이터와 테스트 데이터는 각각 몇 개인가?  → 훈련 **233개** · 테스트 **101개**\n- `stratify=y`를 사용하면 어떤 효과가 있는가?\n\n  → **펭귄 종을 훈련/테스트에 균일하게 나눈다.**\n")
-        elif ct == "markdown" and "훈련 데이터에 대한 정확도는 약 얼마인가?" in t:
-            set_md(cell, "**❓ 확인하기**\n\n- 훈련 데이터에 대한 정확도는 약 얼마인가?  → **1.0**\n- 훈련 정확도 1.00만 보고 새로운 펭귄도 모두 맞힐 것이라고 판단해도 될까?\n\n  → **아니다. 테스트 데이터로 다시 평가해야 한다.**\n")
-        elif ct == "markdown" and "가장 먼저 사용한 특징은 무엇인가?" in t:
-            set_md(cell, "**❓ 확인하기**\n\n- 트리의 맨 위(루트 노드)에서 가장 먼저 사용한 특징은 무엇인가?  → **flipper_length_mm(날개 길이)**\n- 그 특징의 기준값(threshold)은 대략 얼마인가?  → **206.5 mm**\n")
-        elif ct == "markdown" and "테스트 데이터에 대한 정확도는 약 얼마인가?" in t:
-            set_md(cell, "**❓ 확인하기**\n\n- 테스트 데이터에 대한 정확도는 약 얼마인가?  → **`dt.score(X_test, y_test)` 실행 결과**\n- 훈련 정확도와 테스트 정확도를 비교해 보자. 차이가 있는가?\n\n  → **있을 수 있다. 훈련은 1.0이고 테스트는 그보다 낮으면 과적합을 의심한다.**\n")
-        elif ct == "markdown" and "🏁 마무리" in t:
-            set_md(cell, "## 🏁 마무리\n\n1. 루트 노드에서 가장 먼저 사용한 특징은 무엇인가?\n\n   → **날개 길이(flipper_length_mm), 기준값 206.5 mm**\n\n2. 훈련 정확도와 테스트 정확도가 다른 이유는 무엇인가?\n\n   → **훈련은 학습한 데이터, 테스트는 처음 보는 데이터에 대한 성능이다.**\n\n3. 이 모델을 실제 생태 조사에 활용한다면 어떤 점에 주의해야 할까?\n\n   → **측정 오차, 지역·계절 차이, 데이터 편향을 보고 추가 검증 없이 단정하지 않는다.**\n")
     codes = [
         "X = df[['culmen_length_mm', 'culmen_depth_mm',\n        'flipper_length_mm']]\ny = df['species']\n",
         "from sklearn.model_selection import train_test_split\nX_train, X_test, y_train, y_test = train_test_split(\n                            X, y, test_size=0.3, stratify=y)\n",
@@ -76,33 +133,19 @@ def fill_s4(nb):
         t = join(cell)
         ct = cell.get("cell_type")
         if ct == "code" and "pandas 불러오기" in t:
-            set_code(cell, "import pandas as pd                            # pandas 불러오기\ndf = pd.read_csv('Mall_Customers.csv')\ndf.head()\n")
+            set_code(cell, "import pandas as pd\ndf = pd.read_csv('Mall_Customers.csv')\ndf.head()\n")
         elif ct == "code" and "데이터 프레임 5행 보여 주기" in t:
-            set_code(cell, "data = df[['Annual Income (k$)', 'Spending Score (1-100)']]\ndata.head()                                # 데이터 프레임 5행 보여 주기\n")
+            set_code(cell, "data = df[['Annual Income (k$)', 'Spending Score (1-100)']]\ndata.head()\n")
         elif ct == "code" and "k = 5인 KMeans" in t:
-            set_code(cell, "from sklearn.cluster import KMeans\nk = 5\nmodel = KMeans(n_clusters=k)     # k = 5인 KMeans 모델을 생성하기\nmodel.fit(data)                  # 군집 모델을 학습하기\n")
+            set_code(cell, "from sklearn.cluster import KMeans\nk = 5\nmodel = KMeans(n_clusters=k)\nmodel.fit(data)\n")
         elif ct == "code" and "데이터 군집 예측하기" in t:
-            set_code(cell, "prediction = model.predict(data)            # 데이터 군집 예측하기\nprediction[0:10]                            # 어떤 군집에 속하는지 보여 주기\n# 군집 결과를 df['centroid'] 열에 추가하기\ndf['centroid'] = model.labels_\n# 군집의 중심값을 반환해 final_centroid에 저장하기\nfinal_centroid = model.cluster_centers_\nprint(final_centroid)\n")
+            set_code(cell, "prediction = model.predict(data)\nprediction[0:10]\ndf['centroid'] = model.labels_\nfinal_centroid = model.cluster_centers_\nprint(final_centroid)\n")
         elif ct == "code" and "산점도에 표시하기" in t:
-            set_code(cell, "import seaborn as sns\nimport matplotlib.pyplot as plt\n# Annual Income (k$)과 Spending Score (1-100)를 산점도에 표시하기\nsns.scatterplot(x='Annual Income (k$)',\n                  y='Spending Score (1-100)', hue='centroid',\n                  data=df, palette='bright')\n# final_centroid에 저장된 군집 중심값을 산점도에 표시하기\nplt.scatter(final_centroid[:, 0], final_centroid[:, 1],\nmarker='*', s=300, color='black', label='Centroids')\nplt.legend() # 범례 표시하기\nplt.show()\n")
+            set_code(cell, "import seaborn as sns\nimport matplotlib.pyplot as plt\nsns.scatterplot(x='Annual Income (k$)',\n                  y='Spending Score (1-100)', hue='centroid',\n                  data=df, palette='bright')\nplt.scatter(final_centroid[:, 0], final_centroid[:, 1],\nmarker='*', s=300, color='black', label='Centroids')\nplt.legend()\nplt.show()\n")
         elif ct == "code" and "실루엣 계산" in t:
-            set_code(cell, "from sklearn.metrics import silhouette_score          # 실루엣 계산\nsilhouette = silhouette_score(data, model.labels_)\nprint(silhouette)\n")
+            set_code(cell, "from sklearn.metrics import silhouette_score\nsilhouette = silhouette_score(data, model.labels_)\nprint(silhouette)\n")
         elif ct == "code" and not t.strip():
             empties.append(i)
-        elif ct == "markdown" and "고객이 모두 몇 명 있는가?" in t:
-            set_md(cell, "**❓ 확인하기**\n\n- 이 데이터에는 고객이 모두 몇 명 있는가?  → **200명**\n- 데이터의 속성(열)은 몇 개인가?  → **5개**\n- 결측치가 있는 속성이 있는가?  → **없다**\n")
-        elif ct == "markdown" and "특징(data)은 몇 개인가?" in t:
-            set_md(cell, "**❓ 확인하기**\n\n- 군집에 사용할 특징(data)은 몇 개인가?  → **2개** (연 소득, 소비 점수)\n- 군집 분석에는 왜 타깃 y가 필요 없는가?\n\n  → **군집 모델은 타깃이 필요 없다. 비지도학습이기 때문이다.**\n")
-        elif ct == "markdown" and "군집 중심점이 5개인 이유" in t:
-            set_md(cell, "**❓ 확인하기**\n\n- 군집 중심점이 5개인 이유는 무엇인가?  → **k=5로 설정했기 때문이다.**\n- 각 중심점의 두 값은 무엇을 나타내는가?\n\n  → **해당 군집의 평균 연 소득과 평균 소비 점수**\n- 군집 번호가 크다고 더 좋은 군집이라는 뜻인가?  → **아니다. 번호는 이름표일 뿐이다.**\n")
-        elif ct == "markdown" and "검은 별표" in t:
-            set_md(cell, "**❓ 확인하기**\n\n- 산점도에서 검은 별표(중심점)는 무엇을 나타내는가?\n\n  → **각 군집의 중심(평균 연 소득, 평균 소비 점수)**\n- 소득도 소비 점수도 모두 높은 군집은 어디에 위치하는가? (오른쪽 위 / 오른쪽 아래 / 왼쪽 위 / 왼쪽 아래)  → **오른쪽 위**\n")
-        elif ct == "markdown" and "k=5일 때 실루엣 점수" in t:
-            set_md(cell, "**❓ 확인하기**\n\n- k=5일 때 실루엣 점수는 약 얼마인가?  → **약 0.5539**\n- 이 점수가 0보다 크고 1에 더 가까운 것은 군집 결과에 대해 무엇을 뜻하는가?\n\n  → **데이터가 자기 군집에 어느 정도 잘 속해 있다는 뜻이다.**\n- k=5가 가장 적절한지는 어떻게 더 확인할 수 있을까?\n\n  → **k를 바꿔 가며 실루엣 점수를 비교한다.**\n")
-        elif ct == "markdown" and "실루엣 점수가 가장 높은 k" in t:
-            set_md(cell, "**❓ 확인하기**\n\n- 실루엣 점수가 가장 높은 k는 얼마인가?  → **보통 5**\n- 그 점수는 교과서에서 사용한 k=5의 점수와 비교했을 때 어떠한가?\n\n  → **교과서 k=5 실루엣은 약 0.5539이다. 비슷하면 5가 적절하다.**\n")
-        elif ct == "markdown" and "🏁 마무리" in t:
-            set_md(cell, "## 🏁 마무리\n\n1. 지도학습과 달리 군집 모델에 타깃 y가 필요 없는 이유는 무엇인가?\n\n   → **군집은 정답이 없는 비지도학습이라 비슷한 특성끼리 묶는 것이 목표이다.**\n\n2. 군집 0~4의 고객 특성을 연 소득과 소비 점수로 설명해 보자.\n\n   → **고소득·고소비(오른쪽 위), 고소득·저소비(오른쪽 아래), 저소득·고소비(왼쪽 위), 저소득·저소비(왼쪽 아래), 중간·중간.**\n\n3. 실루엣 점수가 가장 높은 k와 교과서의 k=5 결과를 비교해 보자.\n\n   → **교과서 k=5 실루엣은 약 0.5539이다. 가장 높은 k가 5 근처이면 같다.**\n")
     extra = (
         "from sklearn.cluster import KMeans\n"
         "from sklearn.metrics import silhouette_score\n"
@@ -120,8 +163,10 @@ def fill_s4(nb):
 
 
 HANDLERS = {
-    "실습3_펭귄_종_분류_모델_구현하기.ipynb": fill_s3,
-    "실습4_쇼핑몰_고객_군집_모델_구현하기.ipynb": fill_s4,
+    "실습53_펭귄_종_분류_모델_구현하기.ipynb": fill_s3,
+    "실습54_쇼핑몰_고객_군집_모델_구현하기.ipynb": fill_s4,
+    "실습55_손으로_쓠_숫자_분류_모델_구현하기.ipynb": fill_s5,
+    "실습56_도로_균열_유무를_분류하는_합성곱_신경망_모델_구현하기.ipynb": fill_s6,
 }
 
 
@@ -135,7 +180,7 @@ def main() -> None:
         HANDLERS[student.name](nb)
         out = student.with_name(student.stem + "_정답.ipynb")
         out.write_text(json.dumps(nb, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
-        print("wrote", out.relative_to(ROOT))
+        print("wrote", out.relative_to(ROOT), "cells", len(nb["cells"]))
 
 
 if __name__ == "__main__":
