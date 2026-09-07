@@ -87,22 +87,38 @@ def title_match(song, text):
     a,b=norm(song),norm(text)
     return bool(a) and a in b
 
+def artist_aliases(artist):
+    raw = artist or ""
+    parts = [raw]
+    parts += re.findall(r"([^()]+)", raw)
+    # Melon commonly stores "English (Korean)" or "Korean (English)".
+    # Accept each meaningful artist name independently.
+    aliases = []
+    for part in parts:
+        n = norm(part)
+        if n and len(n) >= 2 and n not in aliases:
+            aliases.append(n)
+    return aliases
+
 def channel_is_artist_or_topic(artist, channel):
     """
-    YouTube Music commonly exposes auto-generated official releases as
-    "<Artist> - Topic". Also accept a channel whose name is the artist/group
-    itself. A random uploader saying "Official Audio" is NOT sufficient.
+    Accept only the artist/group's own YouTube channel or its auto-generated
+    "<Artist> - Topic" channel. A random uploader saying "Official Audio" is
+    never sufficient.
     """
-    ch = norm(channel)
-    ar = norm(artist)
-    if not ch or not ar:
+    ch_raw = channel or ""
+    ch = norm(ch_raw)
+    aliases = artist_aliases(artist)
+    if not ch or not aliases:
         return False
-    if ch == ar:
-        return True
-    if ch.endswith("topic") and ar in ch[:-5]:
-        return True
-    # Handle punctuation/spacing differences in "<Artist> - Topic".
-    return bool(re.search(r"topic$", channel or "", re.I) and ar in ch)
+    for ar in aliases:
+        if ch == ar:
+            return True
+        if ch.endswith("topic") and ar in ch[:-5]:
+            return True
+        if re.search(r"topic$", ch_raw, re.I) and ar in ch:
+            return True
+    return False
 
 def score_audio(song, artist, title, channel):
     if not title or AUDIO_NEG.search(title): return -999
@@ -145,9 +161,25 @@ def score_mv(song, artist, title, channel):
     return score if score>=120 else -999
 
 def pick(kind, song, artist, full):
-    qs = ([f"{song} {artist} Official Audio", f"{artist} {song} Official Audio"] if kind=="audio"
-          else [f"{song} {artist} Official MV", f"{artist} {song} Official MV"])
+    if kind == "audio":
+        # The Audio marker is useful but not mandatory. Official artist/Topic
+        # channels often publish the track under its plain release title.
+        qs = [
+            f"{song} {artist} Official Audio",
+            f"{artist} {song} Official Audio",
+            f"{song} {artist}",
+            f"{artist} {song}",
+        ]
+    else:
+        qs = [
+            f"{song} {artist} Official MV",
+            f"{artist} {song} Official MV",
+            f"{song} {artist}",
+            f"{artist} {song}",
+        ]
     candidates={}
+    # Quick uses the strongest targeted search; Full combines all query
+    # variants so releases without "Audio" in the title can still be found.
     for q in (qs if full else qs[:1]):
         for row in youtube_search(q,10): candidates[row["id"]]=row
     scored=[]
