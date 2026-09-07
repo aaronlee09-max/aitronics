@@ -41,7 +41,7 @@ jobs:
           CHART_MODE: ${{ github.event.inputs.mode || 'quick' }}
         run: |
           MODE="$CHART_MODE"
-          if [ "${{ github.event.schedule }}" = "0 15 * * *" ]; then
+          if [ "${{ github.event.schedule }}" = "0 15 * * *" ] || [ "${{ github.event_name }}" = "push" ]; then
             MODE=full
           fi
           echo "chart mode=$MODE"
