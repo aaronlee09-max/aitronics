@@ -248,9 +248,14 @@ def attach_links(tracks, previous, mode):
         key=f"{t['title']}|{t['artist']}"
         old_rank=previous_rank.get(key)
         if old_rank is None:
+            # A genuinely new title gets NEW. This is also safe on the first
+            # ever run, where there is no previous chart to compare against.
             t["change"], t["delta"]="new", 0
         else:
-            diff=int(old_rank)-int(t["rank"])
+            try:
+                diff=int(old_rank)-int(t["rank"])
+            except (TypeError, ValueError):
+                diff=0
             if diff > 0:
                 t["change"], t["delta"]="up", diff
             elif diff < 0:
