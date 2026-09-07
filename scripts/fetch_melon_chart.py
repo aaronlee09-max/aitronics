@@ -349,14 +349,34 @@ def main():
     html=fetch_html(); tracks=parse_tracks(html)
     if len(tracks)<50: raise SystemExit(f"expected at least 50 tracks, got {len(tracks)}")
     out=Path("chart.json"); previous=None
-    baseline=Path("chart_yesterday.json")
+    baseline=Path("chart_previous.json")
     if baseline.exists():
         try: previous=json.loads(baseline.read_text(encoding="utf-8"))
         except json.JSONDecodeError: previous=None
     if out.exists() and previous is None:
         try: previous=json.loads(out.read_text(encoding="utf-8"))
         except json.JSONDecodeError: pass
+    if previous is None:
+        previous = {"tracks": []}
+        for t in tracks:
+            try:
+                delta = int(t.get("delta", 0))
+                if t.get("change") == "up":
+                    old_rank = int(t["rank"]) + delta
+                elif t.get("change") == "down":
+                    old_rank = int(t["rank"]) - delta
+                else:
+                    old_rank = int(t["rank"])
+                previous["tracks"].append({"title": t["title"], "artist": t["artist"], "rank": old_rank})
+            except (TypeError, ValueError):
+                pass
+
     attach_links(tracks,previous,a.mode)
+    if out.exists():
+        try:
+            shutil.copy2(out, "chart_previous.json")
+        except OSError:
+            pass
     payload={"source":"Melon TOP100","sourceUrl":CHART_URL,"updatedAt":datetime.now(timezone.utc).isoformat(),"chartTime":re.search(r"(20\d{2}\.\d{2}\.\d{2})",html).group(1) if re.search(r"(20\d{2}\.\d{2}\.\d{2})",html) else "","count":len(tracks),"mode":a.mode,"tracks":tracks}
     out.write_text(json.dumps(payload,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
     print(f"wrote {out} ({len(tracks)} tracks, audio={sum(bool(x['ytAudioId']) for x in tracks)}, mode={a.mode})")
