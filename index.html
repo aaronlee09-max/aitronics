@@ -6,24 +6,17 @@
     <title>멜론 실시간 인기차트 · informatics.run.place</title>
     <style>
       :root {
-        --bg: #f3f7f4;
-        --paper: #fff;
-        --ink: #163027;
-        --muted: #5d7268;
-        --line: #d7e6dc;
-        --green-deep: #00962b;
-        --up: #e11d48;
-        --down: #2563eb;
+        --bg: #f3f7f4; --paper: #fff; --ink: #163027; --muted: #5d7268;
+        --line: #d7e6dc; --green-deep: #00962b; --up: #e11d48; --down: #2563eb;
       }
       * { box-sizing: border-box; }
       body {
-        margin: 0;
-        min-height: 100vh;
+        margin: 0; min-height: 100vh; padding-bottom: 88px;
         background: radial-gradient(circle at top left, rgba(0, 205, 60, .12), transparent 34%), var(--bg);
         color: var(--ink);
         font-family: "Apple SD Gothic Neo", "Noto Sans KR", system-ui, sans-serif;
       }
-      .page { width: min(920px, calc(100% - 32px)); margin: 0 auto; padding: 36px 0 64px; }
+      .page { width: min(920px, calc(100% - 32px)); margin: 0 auto; padding: 36px 0 24px; }
       header { display: grid; gap: 10px; margin-bottom: 22px; }
       .kicker { color: var(--green-deep); font-size: 13px; font-weight: 800; letter-spacing: .08em; }
       h1 { margin: 0; font-size: clamp(28px, 6vw, 46px); line-height: 1.1; }
@@ -49,14 +42,15 @@
       .info .artist { color: var(--muted); font-size: 13px; font-weight: 700; }
       .info .album { color: #7a8c83; font-size: 12px; font-weight: 700; margin-top: 2px; }
       .services { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
-      .svc {
+      .svc, .playbtn {
         display: inline-flex; align-items: center; gap: 6px; height: 28px; padding: 0 8px 0 4px;
-        border-radius: 999px; text-decoration: none; color: #fff; font-size: 11px; font-weight: 800;
+        border: 0; border-radius: 999px; text-decoration: none; color: #fff; font-size: 11px; font-weight: 800;
+        cursor: pointer; font-family: inherit;
       }
-      .svc svg { width: 20px; height: 20px; flex: 0 0 auto; }
+      .svc svg, .playbtn svg { width: 20px; height: 20px; flex: 0 0 auto; }
       .svc.melon { background: #00cd3c; color: #083; }
       .svc.ytmv { background: #ff0000; }
-      .svc.ytaudio { background: #b31217; }
+      .playbtn { background: #b31217; }
       .svc.ytmusic { background: #111; }
       .svc.genie { background: #3493eb; }
       .svc.bugs { background: #ff3b28; }
@@ -66,6 +60,14 @@
       footer { margin-top: 22px; color: var(--muted); font-size: 12px; line-height: 1.6; }
       a { color: var(--green-deep); }
       .empty, .error { padding: 24px; border-radius: 16px; background: var(--paper); color: var(--muted); font-weight: 700; }
+      .dock {
+        position: fixed; left: 0; right: 0; bottom: 0; z-index: 20;
+        background: #111; color: #fff; box-shadow: 0 -10px 30px rgba(0,0,0,.18);
+      }
+      .dock-inner { width: min(920px, calc(100% - 24px)); margin: 0 auto; padding: 10px 0 12px; }
+      .now { display: flex; justify-content: space-between; gap: 12px; align-items: center; font-size: 13px; font-weight: 800; margin-bottom: 8px; }
+      .now span { color: #bbb; font-weight: 700; }
+      .dock iframe { width: 100%; height: 58px; border: 0; border-radius: 10px; background: #000; }
       @media (max-width: 640px) {
         .track { grid-template-columns: 36px 56px 1fr; }
         .cover { width: 56px; height: 56px; }
@@ -86,19 +88,26 @@
       <input id="q" type="search" placeholder="노래 제목, 아티스트, 앨범 검색" autocomplete="off" />
       <section id="list" class="list">차트 불러오는 중...</section>
       <footer>
-        YouTube는 Official MV와 Official Audio를 따로 검색하고, YouTube Music 링크도 함께 둡니다.
+        Official Audio는 이 페이지의 YouTube 삽입 플레이어로 바로 재생됩니다.
         공식 차트: <a href="https://www.melon.com/chart/index.htm" rel="noreferrer">melon.com/chart</a>
       </footer>
     </main>
+    <div class="dock" id="dock" hidden>
+      <div class="dock-inner">
+        <div class="now"><b id="now-title">재생 대기</b><span id="now-artist"></span></div>
+        <iframe id="player" title="YouTube Official Audio" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
     <script>
       const listEl = document.getElementById("list");
       const qEl = document.getElementById("q");
+      const dock = document.getElementById("dock");
+      const player = document.getElementById("player");
       let tracks = [];
       const YT_ICON = '<svg viewBox="0 0 20 20" aria-hidden="true"><rect width="20" height="20" rx="6" fill="#ff0000"/><path d="M8 6.5v7l6-3.5-6-3.5z" fill="#fff"/></svg>';
       const ICONS = {
         melon: '<svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#00cd3c"/><path d="M6 11c2-4 6-4 8 0" fill="none" stroke="#0a3" stroke-width="1.8" stroke-linecap="round"/><circle cx="10" cy="8.2" r="1.3" fill="#0a3"/></svg>',
         ytmv: YT_ICON,
-        ytaudio: YT_ICON,
         ytmusic: '<svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#111"/><circle cx="10" cy="10" r="6.2" fill="none" stroke="#fff" stroke-width="1.4"/><path d="M8.4 7.2v5.6L13.4 10 8.4 7.2z" fill="#fff"/></svg>',
         genie: '<svg viewBox="0 0 20 20" aria-hidden="true"><rect width="20" height="20" rx="6" fill="#3493eb"/><path d="M6 13.5c2.2-6 5.8-8 8-8" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/><circle cx="13.5" cy="6.2" r="1.3" fill="#fff"/></svg>',
         bugs: '<svg viewBox="0 0 20 20" aria-hidden="true"><rect width="20" height="20" rx="6" fill="#ff3b28"/><circle cx="10" cy="10" r="4.4" fill="none" stroke="#fff" stroke-width="1.7"/><circle cx="10" cy="10" r="1.5" fill="#fff"/></svg>',
@@ -106,64 +115,79 @@
         spotify: '<svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#1db954"/><path d="M5.5 8.2c2.8-1.2 6.3-1 8.8.4M5.8 10.6c2.3-1 5.2-.8 7.2.4M6.2 12.9c1.8-.8 4.1-.6 5.6.3" fill="none" stroke="#fff" stroke-width="1.4" stroke-linecap="round"/></svg>',
         vibe: '<svg viewBox="0 0 20 20" aria-hidden="true"><rect width="20" height="20" rx="6" fill="#ff2e88"/><text x="10" y="14" text-anchor="middle" font-size="10" font-weight="700" fill="#fff">V</text></svg>'
       };
-      function ytSearch(query) {
-        return "https://www.youtube.com/results?search_query=" + encodeURIComponent(query) + "&sp=EgIQAQ%3D%3D";
-      }
+      function watchUrl(id) { return id ? ("https://www.youtube.com/watch?v=" + id) : ""; }
+      function musicUrl(id) { return id ? ("https://music.youtube.com/watch?v=" + id) : ""; }
+      function embedUrl(id) { return "https://www.youtube-nocookie.com/embed/" + id + "?autoplay=1&rel=0&modestbranding=1"; }
       function linksFor(track) {
-        const base = track.title + " " + track.artist;
-        const q = encodeURIComponent(base);
+        const q = encodeURIComponent(track.title + " " + track.artist);
+        const audioId = track.ytAudioId || "";
+        const mvId = track.ytMvId || "";
         return [
-          { key: "melon", name: "Melon", href: track.url || ("https://www.melon.com/search/song/index.htm?q=" + q) },
-          { key: "ytmv", name: "YT MV", href: ytSearch(base + " Official MV 뮤직비디오") },
-          { key: "ytaudio", name: "YT Audio", href: ytSearch(base + " Official Audio") },
-          { key: "ytmusic", name: "YT Music", href: "https://music.youtube.com/search?q=" + q },
-          { key: "genie", name: "Genie", href: "https://www.genie.co.kr/search/searchMain?query=" + q },
-          { key: "bugs", name: "Bugs", href: "https://music.bugs.co.kr/search/track?q=" + q },
-          { key: "apple", name: "Apple", href: "https://music.apple.com/kr/search?term=" + q },
-          { key: "spotify", name: "Spotify", href: "https://open.spotify.com/search/" + q },
-          { key: "vibe", name: "Vibe", href: "https://vibe.naver.com/search?query=" + q }
-        ];
+          { key: "melon", name: "Melon", href: track.url },
+          { key: "ytmv", name: "YT MV", href: watchUrl(mvId) || ("https://www.youtube.com/results?search_query=" + encodeURIComponent(track.title + " " + track.artist + " Official MV")) },
+          { key: "ytmusic", name: "YT Music", href: musicUrl(audioId) || ("https://music.youtube.com/search?q=" + q) },
+          { key: "genie", name: "Genie", href: track.genieUrl || ("https://www.genie.co.kr/search/searchMain?query=" + q) },
+          { key: "bugs", name: "Bugs", href: track.bugsUrl || ("https://music.bugs.co.kr/search/track?q=" + q) },
+          { key: "apple", name: "Apple", href: track.appleUrl || ("https://music.apple.com/kr/search?term=" + q) },
+          { key: "spotify", name: "Spotify", href: track.spotifyUrl || ("https://open.spotify.com/search/" + q) },
+          { key: "vibe", name: "Vibe", href: track.vibeUrl || ("https://vibe.naver.com/search?query=" + q) }
+        ].filter(function(svc) { return svc.href; });
+      }
+      function playAudio(track) {
+        if (!track.ytAudioId) return;
+        dock.hidden = false;
+        document.getElementById("now-title").textContent = track.title;
+        document.getElementById("now-artist").textContent = track.artist;
+        player.src = embedUrl(track.ytAudioId);
       }
       function deltaLabel(track) {
         if (track.change === "new") return { text: "NEW", cls: "new" };
-        if (track.change === "up") return { text: "▲ " + track.delta, cls: "up" };
-        if (track.change === "down") return { text: "▼ " + track.delta, cls: "down" };
+        if (track.change === "up") return { text: "\u25b2 " + track.delta, cls: "up" };
+        if (track.change === "down") return { text: "\u25bc " + track.delta, cls: "down" };
         return { text: "-", cls: "same" };
       }
-      function rankClass(rank) {
-        return rank === 1 ? "gold" : rank === 2 ? "silver" : rank === 3 ? "bronze" : "";
-      }
+      function rankClass(rank) { return rank === 1 ? "gold" : rank === 2 ? "silver" : rank === 3 ? "bronze" : ""; }
       function formatKst(iso) {
         const date = new Date(iso);
         if (Number.isNaN(date.getTime())) return "";
-        return new Intl.DateTimeFormat("ko-KR", {
-          timeZone: "Asia/Seoul", month: "numeric", day: "numeric", hour: "2-digit", minute: "2-digit"
-        }).format(date) + " 갱신";
+        return new Intl.DateTimeFormat("ko-KR", { timeZone: "Asia/Seoul", month: "numeric", day: "numeric", hour: "2-digit", minute: "2-digit" }).format(date) + " 갱신";
       }
       function escapeHtml(value) {
-        return String(value || "").replaceAll("&", "&").replaceAll("<", "<").replaceAll(">", ">").replaceAll('"', """);
+        return String(value || "").replace(/[&<>"']/g, function(ch) {
+          if (ch === "&") return String.fromCharCode(38) + "amp;";
+          if (ch === "<") return String.fromCharCode(38) + "lt;";
+          if (ch === ">") return String.fromCharCode(38) + "gt;";
+          if (ch === '"') return String.fromCharCode(38) + "quot;";
+          return String.fromCharCode(38) + "#39;";
+        });
       }
-      function escapeAttr(value) { return escapeHtml(value).replaceAll("'", "&#39;"); }
+      function escapeAttr(value) { return escapeHtml(value); }
       function render() {
         const query = qEl.value.trim().toLowerCase();
         const visible = tracks.filter(function(track) {
           return !query || [track.title, track.artist, track.album].join(" ").toLowerCase().includes(query);
         });
-        if (!visible.length) {
-          listEl.innerHTML = '<div class="empty">검색 결과가 없습니다.</div>';
-          return;
-        }
+        if (!visible.length) { listEl.innerHTML = '<div class="empty">검색 결과가 없습니다.</div>'; return; }
         listEl.innerHTML = visible.map(function(track) {
           const change = deltaLabel(track);
           const services = linksFor(track).map(function(svc) {
             return '<a class="svc ' + svc.key + '" href="' + escapeAttr(svc.href) + '" target="_blank" rel="noreferrer" title="' + svc.name + '">' + ICONS[svc.key] + '<span>' + svc.name + '</span></a>';
           }).join("");
+          const play = track.ytAudioId
+            ? '<button class="playbtn" type="button" data-play="' + escapeAttr(track.songId) + '">' + YT_ICON + '<span>Audio 재생</span></button>'
+            : "";
           return '<article class="track">' +
             '<div class="rank-wrap"><div class="rank ' + rankClass(track.rank) + '">' + track.rank + '</div><div class="delta ' + change.cls + '">' + change.text + '</div></div>' +
             '<img class="cover" alt="' + escapeAttr(track.title) + ' 앨범 표지" src="' + escapeAttr(track.image) + '" width="72" height="72" />' +
-            '<div class="info"><b>' + escapeHtml(track.title) + '</b><div class="artist">' + escapeHtml(track.artist) + '</div><div class="album">' + escapeHtml(track.album || "") + '</div><div class="services">' + services + '</div></div>' +
+            '<div class="info"><b>' + escapeHtml(track.title) + '</b><div class="artist">' + escapeHtml(track.artist) + '</div><div class="album">' + escapeHtml(track.album || "") + '</div><div class="services">' + play + services + '</div></div>' +
             '</article>';
         }).join("");
+        listEl.querySelectorAll("[data-play]").forEach(function(btn) {
+          btn.addEventListener("click", function() {
+            const track = tracks.find(function(item) { return item.songId === btn.getAttribute("data-play"); });
+            if (track) playAudio(track);
+          });
+        });
       }
       async function loadChart() {
         try {
