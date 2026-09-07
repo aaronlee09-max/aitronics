@@ -58,7 +58,7 @@ except Exception:
     print("")
 PY
 )
-            if [ ! -f chart_yesterday.json ] || [ "$SNAP_DATE" = "$TODAY_KST" ] || [ "$CURRENT_DATE" != "$TODAY_KST" ]; then
+            if [ "$CURRENT_DATE" = "$TODAY_KST" ] && { [ ! -f chart_yesterday.json ] || [ "$SNAP_DATE" != "$TODAY_KST" ]; }; then
               cp chart.json chart_yesterday.json
               echo "saved yesterday baseline from $CURRENT_DATE"
             else
