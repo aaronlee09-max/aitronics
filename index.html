@@ -3,26 +3,172 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>informatics.run.place</title>
+    <title>멜론 실시간 인기차트 · informatics.run.place</title>
+    <meta name="description" content="멜론 TOP100 기준 실시간 인기차트" />
     <style>
-      :root { --bg:#f7fafc; --ink:#172033; --muted:#5c6b7d; --line:#d7e0ea; --blue:#2563eb; }
+      :root {
+        --bg: #f3f7f4;
+        --paper: #ffffff;
+        --ink: #163027;
+        --muted: #5d7268;
+        --line: #d7e6dc;
+        --green: #00cd3c;
+        --green-deep: #00962b;
+        --up: #e11d48;
+        --down: #2563eb;
+      }
       * { box-sizing: border-box; }
       body {
-        min-height: 100vh; margin: 0; background: var(--bg); color: var(--ink);
+        margin: 0;
+        min-height: 100vh;
+        background: radial-gradient(circle at top left, rgba(0, 205, 60, 0.12), transparent 34%), var(--bg);
+        color: var(--ink);
         font-family: "Apple SD Gothic Neo", "Noto Sans KR", system-ui, sans-serif;
-        display: grid; place-items: center;
       }
-      main { width: min(640px, calc(100% - 40px)); }
-      h1 { margin: 0 0 12px; font-size: clamp(28px, 5vw, 44px); }
-      p { margin: 0 0 10px; color: var(--muted); line-height: 1.55; }
-      a { color: var(--blue); font-weight: 800; text-decoration: none; }
+      .page { width: min(880px, calc(100% - 32px)); margin: 0 auto; padding: 36px 0 64px; }
+      header { display: grid; gap: 10px; margin-bottom: 22px; }
+      .kicker { color: var(--green-deep); font-size: 13px; font-weight: 800; letter-spacing: 0.08em; }
+      h1 { margin: 0; font-size: clamp(28px, 6vw, 46px); line-height: 1.1; }
+      .meta { display: flex; flex-wrap: wrap; gap: 8px 14px; color: var(--muted); font-size: 14px; font-weight: 700; }
+      .toolbar { display: flex; gap: 10px; margin: 0 0 16px; }
+      input[type="search"] {
+        flex: 1; border: 1px solid var(--line); border-radius: 14px; padding: 12px 14px;
+        background: var(--paper); color: var(--ink); font: inherit; font-weight: 700;
+      }
+      .list { display: grid; gap: 8px; }
+      .track {
+        display: grid; grid-template-columns: 56px 72px 1fr auto; align-items: center;
+        gap: 14px; padding: 10px 12px; border: 1px solid var(--line); border-radius: 16px; background: var(--paper);
+      }
+      .track:hover { border-color: rgba(0, 205, 60, 0.45); }
+      .rank-wrap { display: grid; justify-items: center; gap: 2px; }
+      .rank { font-size: 22px; font-weight: 900; }
+      .rank.gold { color: #c79212; }
+      .rank.silver { color: #6b7785; }
+      .rank.bronze { color: #b86a28; }
+      .delta { font-size: 11px; font-weight: 800; }
+      .delta.up { color: var(--up); }
+      .delta.down { color: var(--down); }
+      .delta.new { color: var(--green-deep); }
+      .delta.same { color: #94a3b8; }
+      .cover { width: 72px; height: 72px; border-radius: 12px; object-fit: cover; background: #e8eee9; }
+      .info b { display: block; font-size: 16px; line-height: 1.25; }
+      .info span { color: var(--muted); font-size: 13px; font-weight: 700; }
+      .actions { display: grid; gap: 6px; justify-items: end; }
+      .album { max-width: 180px; color: var(--muted); font-size: 12px; font-weight: 700; text-align: right; }
+      .play {
+        display: inline-flex; align-items: center; border-radius: 999px; padding: 7px 12px;
+        background: #111; color: #fff; font-size: 12px; font-weight: 800; text-decoration: none;
+      }
+      footer { margin-top: 22px; color: var(--muted); font-size: 12px; line-height: 1.6; }
+      a { color: var(--green-deep); }
+      .empty, .error { padding: 24px; border-radius: 16px; background: var(--paper); color: var(--muted); font-weight: 700; }
+      @media (max-width: 640px) {
+        .track { grid-template-columns: 40px 64px 1fr; }
+        .actions { display: none; }
+      }
     </style>
   </head>
   <body>
-    <main>
-      <h1>informatics.run.place</h1>
-      <p>이 도메인·저장소는 수업 사이트가 아닙니다. 다른 용도로 써도 됩니다.</p>
-      <p>정보 수업 사이트는 <a href="https://aaronlee.run.place">aaronlee.run.place</a> 입니다.</p>
+    <main class="page">
+      <header>
+        <div class="kicker">INFORMATICS.RUN.PLACE</div>
+        <h1>멜론 실시간 인기차트</h1>
+        <div class="meta">
+          <span id="source">Melon TOP100</span>
+          <span id="chart-time">차트 시각 확인 중</span>
+          <span id="updated">데이터 불러오는 중</span>
+        </div>
+      </header>
+      <div class="toolbar">
+        <input id="q" type="search" placeholder="노래 제목, 아티스트, 앨범 검색" autocomplete="off" />
+      </div>
+      <section id="list" class="list" aria-live="polite">차트 불러오는 중...</section>
+      <footer>
+        이 페이지는 멜론 TOP100을 주기적으로 가져와 보여 줍니다.
+        각 곡에는 앨범 표지, 노래 제목, 아티스트가 함께 나옵니다.
+        전체 듣기는 YouTube Music 공식 검색으로 연결합니다.
+        공식 차트: <a href="https://www.melon.com/chart/index.htm" rel="noreferrer">melon.com/chart</a>
+      </footer>
     </main>
+    <script>
+      const listEl = document.getElementById("list");
+      const qEl = document.getElementById("q");
+      let tracks = [];
+      function deltaLabel(track) {
+        if (track.change === "new") return { text: "NEW", cls: "new" };
+        if (track.change === "up") return { text: "▲ " + track.delta, cls: "up" };
+        if (track.change === "down") return { text: "▼ " + track.delta, cls: "down" };
+        return { text: "-", cls: "same" };
+      }
+      function rankClass(rank) {
+        if (rank === 1) return "gold";
+        if (rank === 2) return "silver";
+        if (rank === 3) return "bronze";
+        return "";
+      }
+      function formatKst(iso) {
+        if (!iso) return "";
+        const date = new Date(iso);
+        if (Number.isNaN(date.getTime())) return iso;
+        return new Intl.DateTimeFormat("ko-KR", {
+          timeZone: "Asia/Seoul", month: "numeric", day: "numeric", hour: "2-digit", minute: "2-digit"
+        }).format(date) + " 갱신";
+      }
+      function render() {
+        const query = qEl.value.trim().toLowerCase();
+        const visible = tracks.filter((track) => {
+          if (!query) return true;
+          return [track.title, track.artist, track.album].join(" ").toLowerCase().includes(query);
+        });
+        if (!visible.length) {
+          listEl.innerHTML = '<div class="empty">검색 결과가 없습니다.</div>';
+          return;
+        }
+        listEl.innerHTML = visible.map((track) => {
+          const change = deltaLabel(track);
+          const ytQuery = encodeURIComponent(`${track.title} ${track.artist}`);
+          const ytMusic = `https://music.youtube.com/search?q=${ytQuery}`;
+          return `
+            <article class="track">
+              <div class="rank-wrap">
+                <div class="rank ${rankClass(track.rank)}">${track.rank}</div>
+                <div class="delta ${change.cls}">${change.text}</div>
+              </div>
+              <img class="cover" alt="${escapeAttr(track.title)} 앨범 표지" src="${escapeAttr(track.image)}" width="72" height="72" />
+              <div class="info">
+                <b>${escapeHtml(track.title)}</b>
+                <span>${escapeHtml(track.artist)}</span>
+              </div>
+              <div class="actions">
+                <a class="play" href="${ytMusic}" target="_blank" rel="noreferrer">YouTube Music</a>
+                <div class="album">${escapeHtml(track.album || "")}</div>
+              </div>
+            </article>`;
+        }).join("");
+      }
+      function escapeHtml(value) {
+        return String(value || "").replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;");
+      }
+      function escapeAttr(value) { return escapeHtml(value).replaceAll("'", "&#39;"); }
+      async function loadChart() {
+        try {
+          const response = await fetch("./chart.json?t=" + Date.now(), { cache: "no-store" });
+          if (!response.ok) throw new Error("chart.json " + response.status);
+          const data = await response.json();
+          tracks = data.tracks || [];
+          document.getElementById("source").textContent = data.source || "Melon TOP100";
+          document.getElementById("chart-time").textContent = data.chartTime ? "멜론 차트 " + data.chartTime : "멜론 TOP100";
+          document.getElementById("updated").textContent = formatKst(data.updatedAt);
+          render();
+        } catch (error) {
+          listEl.innerHTML = '<div class="error">차트를 불러오지 못했습니다. 잠시 후 다시 새로고침 해 주세요.</div>';
+          console.error(error);
+        }
+      }
+      qEl.addEventListener("input", render);
+      loadChart();
+      setInterval(loadChart, 60 * 1000);
+    </script>
   </body>
 </html>
