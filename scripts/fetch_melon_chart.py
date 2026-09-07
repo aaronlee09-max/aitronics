@@ -240,7 +240,24 @@ def deezer_url(title, artist):
 def attach_links(tracks, previous, mode):
     prev={f"{x.get('title','')}|{x.get('artist','')}":x for x in (previous or {}).get("tracks",[])}
     full=mode=="full"
+
+    # Always derive the visible rank movement from the previous cached chart.
+    # This makes the indicator reliable even when Melon's row markup changes.
+    previous_rank={f"{x.get('title','')}|{x.get('artist','')}": x.get('rank') for x in (previous or {}).get("tracks",[])}
     for t in tracks:
+        key=f"{t['title']}|{t['artist']}"
+        old_rank=previous_rank.get(key)
+        if old_rank is None:
+            t["change"], t["delta"]="new", 0
+        else:
+            diff=int(old_rank)-int(t["rank"])
+            if diff > 0:
+                t["change"], t["delta"]="up", diff
+            elif diff < 0:
+                t["change"], t["delta"]="down", abs(diff)
+            else:
+                t["change"], t["delta"]="same", 0
+
         old=prev.get(f"{t['title']}|{t['artist']}",{})
 
         # Full mode deliberately rematches every service and every YouTube candidate.
