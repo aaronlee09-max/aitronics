@@ -115,8 +115,11 @@
       }
       function deltaLabel(track) {
         if (track.change === "new") return { text: "NEW", cls: "new" };
-        if (track.change === "up") return { text: "\u25b2 " + track.delta, cls: "up" };
-        if (track.change === "down") return { text: "\u25bc " + track.delta, cls: "down" };
+        const delta = Number(track.delta);
+        // Never render meaningless ▲0/▼0. Zero means no movement.
+        if (!Number.isFinite(delta) || delta <= 0) return { text: "-", cls: "same" };
+        if (track.change === "up") return { text: "\u25b2 " + delta, cls: "up" };
+        if (track.change === "down") return { text: "\u25bc " + delta, cls: "down" };
         return { text: "-", cls: "same" };
       }
       function rankClass(rank) { return rank === 1 ? "gold" : rank === 2 ? "silver" : rank === 3 ? "bronze" : ""; }
