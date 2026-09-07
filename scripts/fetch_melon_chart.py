@@ -202,22 +202,54 @@ def valid_cached_mv(t, old):
 
 
 def apple_url(title, artist):
-    for term in (f"{artist} {title}", f"{title} {artist}", title):
-        try:
-            raw = get(f"https://itunes.apple.com/search?term={urllib.parse.quote(term)}&entity=song&country=us&limit=5")
-            data = json.loads(raw)
-            target = norm(title)
-            a = norm(artist)
-            ranked = []
-            for item in data.get("results") or []:
-                it = norm(item.get("trackName",""))
-                ia = norm(item.get("artistName",""))
-                if target and target in it:
-                    ranked.append((2 if a and a in ia else 0, item.get("trackViewUrl","")))
-            for _, url in sorted(ranked, reverse=True):
-                if url: return url.split("&uo=")[0]
-        except Exception:
-            continue
+    """Resolve a verified Apple Music KR track URL.
+    
+    The old resolver accepted loose title-only matches from the US catalog,
+    which could return the wrong song/album. Require a strong title + artist
+    match and prefer the Korean storefront.
+    """
+    target = norm(title)
+    artist_parts = [norm(x) for x in re.split(r"[/|,&]|\\bfeat\\.?\\b|\\bwith\\b", artist or "") if norm(x)]
+    terms = (f"{artist} {title}", f"{title} {artist}", title)
+    for country in ("kr", "us"):
+        for term in terms:
+            try:
+                raw = get(
+                    f"https://itunes.apple.com/search?term={urllib.parse.quote(term)}"
+                    f"&entity=song&country={country}&limit=25"
+                )
+                data = json.loads(raw)
+                ranked = []
+                for item in data.get("results") or []:
+                    track = norm(item.get("trackName", ""))
+                    apple_artist = norm(item.get("artistName", ""))
+                    collection = norm(item.get("collectionName", ""))
+                    if not target or track != target:
+                        continue
+                    artist_score = max(
+                        (100 if part and part in apple_artist else 0)
+                        for part in artist_parts
+                    ) if artist_parts else 0
+                    if artist_score < 100:
+                        continue
+                    # Prefer a direct track URL and the Korean storefront.
+                    url = item.get("trackViewUrl", "")
+                    if not url:
+                        continue
+                    score = artist_score
+                    if norm(title) == track:
+                        score += 20
+                    if collection:
+                        score += 5
+                    ranked.append((score, url))
+                if ranked:
+                    ranked.sort(key=lambda x: x[0], reverse=True)
+                    url = ranked[0][1]
+                    if country == "kr":
+                        return re.sub(r"https://music\\.apple\\.com/(?:us|[a-z]{2})/", "https://music.apple.com/kr/", url)
+                    return url
+            except Exception:
+                continue
     return ""
 
 def vibe_url(title, artist):
