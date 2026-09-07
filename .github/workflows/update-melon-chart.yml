@@ -55,5 +55,10 @@ jobs:
             echo "chart unchanged"
           else
             git commit -m "chore: auto-sync Melon chart and official follow-up links"
-            git push
+            # A human/code push may land while the chart is being generated.
+            # Rebase the generated chart commit onto the latest main instead
+            # of failing with a non-fast-forward rejection.
+            git fetch origin main
+            git rebase origin/main
+            git push origin HEAD:main
           fi
