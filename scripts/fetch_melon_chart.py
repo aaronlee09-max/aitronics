@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import argparse
 import html as html_lib
 import json
 import re
@@ -152,22 +153,22 @@ def good_mv(song, yt_title):
     return norm(song) in norm(yt_title)
 
 
-def pick_youtube(kind, title, artist):
-    query = f"{title} {artist} Official Audio" if kind == "audio" else f"{title} {artist} Official MV"
-    best, best_score = None, -999
-    for row in youtube_search(query):
-        yt_title = row["title"]
-        if kind == "audio":
-            if not good_audio(title, artist, yt_title):
+def pick_youtube(kind, title, artist, extra=False):
+    queries = [f"{title} {artist} Official Audio" if kind == "audio" else f"{title} {artist} Official MV"]
+    if extra:
+        queries.append(f"{title} Official Audio" if kind == "audio" else f"{title} Official MV")
+    best = None
+    for query in queries:
+        for row in youtube_search(query):
+            yt_title = row["title"]
+            if kind == "audio" and not good_audio(title, artist, yt_title):
                 continue
-            score = 20
-            if re.search(r"- Topic$", row["channel"]): score += 8
-        else:
-            if not good_mv(title, yt_title):
+            if kind == "mv" and not good_mv(title, yt_title):
                 continue
-            score = 20
-        if score > best_score:
-            best, best_score = row, score
+            best = row
+            break
+        if best:
+            break
     return (best["id"], best["title"]) if best else ("", "")
 
 
@@ -208,8 +209,9 @@ def deezer_url(title, artist):
     return (items[0].get("link") or "") if items else ""
 
 
-def attach_links(tracks, previous):
+def attach_links(tracks, previous, mode="quick"):
     cached = previous_map(previous)
+    extra = mode == "full"
     for track in tracks:
         old = cached.get(f"{track['title']}|{track['artist']}", {})
         for key in ("genieUrl", "bugsUrl", "appleUrl", "spotifyUrl", "vibeUrl", "deezerUrl"):
@@ -219,12 +221,12 @@ def attach_links(tracks, previous):
         if old_audio and good_audio(track["title"], track["artist"], old_audio_title):
             track["ytAudioId"], track["ytAudioTitle"], track["ytAudioKind"] = old_audio, old_audio_title, "audio"
         else:
-            track["ytAudioId"], track["ytAudioTitle"] = pick_youtube("audio", track["title"], track["artist"])
+            track["ytAudioId"], track["ytAudioTitle"] = pick_youtube("audio", track["title"], track["artist"], extra=extra)
             track["ytAudioKind"] = "audio" if track["ytAudioId"] else ""
         if old_mv and good_mv(track["title"], old_mv_title):
             track["ytMvId"], track["ytMvTitle"] = old_mv, old_mv_title
         else:
-            track["ytMvId"], track["ytMvTitle"] = pick_youtube("mv", track["title"], track["artist"])
+            track["ytMvId"], track["ytMvTitle"] = pick_youtube("mv", track["title"], track["artist"], extra=extra)
         resolvers = {"genieUrl": genie_url, "bugsUrl": bugs_url, "appleUrl": apple_url, "vibeUrl": vibe_url, "deezerUrl": deezer_url}
         for key, fn in resolvers.items():
             if not track[key]:
@@ -241,6 +243,9 @@ def attach_links(tracks, previous):
 
 
 def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--mode", choices=("quick", "full"), default="quick")
+    args = parser.parse_args()
     html = fetch_html()
     tracks = parse_tracks(html)
     if len(tracks) < 50:
@@ -252,17 +257,19 @@ def main():
             previous = json.loads(out.read_text(encoding="utf-8"))
         except json.JSONDecodeError:
             previous = None
-    attach_links(tracks, previous)
+    attach_links(tracks, previous, mode=args.mode)
     payload = {
         "source": "Melon TOP100",
         "sourceUrl": CHART_URL,
         "updatedAt": datetime.now(timezone.utc).isoformat(),
         "chartTime": parse_chart_time(html),
         "count": len(tracks),
+        "mode": args.mode,
         "tracks": tracks,
     }
     out.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    print(f"wrote {out} ({len(tracks)} tracks)")
+    audio = sum(1 for t in tracks if t.get("ytAudioId"))
+    print(f"wrote {out} ({len(tracks)} tracks, audio={audio}, mode={args.mode})")
 
 
 if __name__ == "__main__":
