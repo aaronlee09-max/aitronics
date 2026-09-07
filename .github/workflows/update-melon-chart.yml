@@ -2,7 +2,7 @@ name: Update Melon chart
 
 on:
   schedule:
-    - cron: "*/20 * * * *"
+    - cron: "*/30 * * * *"
   workflow_dispatch:
   push:
     paths:
@@ -15,9 +15,12 @@ permissions:
 jobs:
   update:
     runs-on: ubuntu-latest
+    timeout-minutes: 50
     steps:
       - uses: actions/checkout@v4
-      - name: Fetch Melon TOP100
+      - name: Install yt-dlp
+        run: pip install -U yt-dlp
+      - name: Fetch Melon TOP100 and YouTube watch IDs
         run: python3 scripts/fetch_melon_chart.py
       - name: Commit chart.json if changed
         run: |
@@ -27,6 +30,6 @@ jobs:
           if git diff --staged --quiet; then
             echo "chart unchanged"
           else
-            git commit -m "chore: refresh Melon TOP100 chart"
+            git commit -m "chore: refresh Melon chart and YouTube watch links"
             git push
           fi

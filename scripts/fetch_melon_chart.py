@@ -1,11 +1,13 @@
 #!/usr/bin/env python3
-"""Fetch Melon TOP100 chart and write chart.json for GitHub Pages."""
+"""Fetch Melon TOP100 and attach direct YouTube watch IDs."""
 
 from __future__ import annotations
 
 import html as html_lib
 import json
 import re
+import shutil
+import subprocess
 import urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
@@ -16,6 +18,7 @@ USER_AGENT = (
     "AppleWebKit/537.36 (KHTML, like Gecko) "
     "Chrome/128.0.0.0 Safari/537.36"
 )
+YOUTUBE_ID_RE = re.compile(r"^[A-Za-z0-9_-]{11}$")
 
 
 def clean(text: str | None) -> str:
@@ -86,6 +89,8 @@ def parse_tracks(html: str) -> list[dict]:
                 "change": change,
                 "delta": delta,
                 "url": f"https://www.melon.com/song/detail.htm?songId={song_id}",
+                "ytMvId": "",
+                "ytAudioId": "",
             }
         )
     return tracks
@@ -98,20 +103,65 @@ def parse_chart_time(html: str) -> str:
     return " ".join(part for part in match.groups() if part)
 
 
+def previous_map(previous: dict | None) -> dict[str, dict]:
+    mapping = {}
+    if not previous:
+        return mapping
+    for track in previous.get("tracks") or []:
+        key = f"{track.get('title', '')}|{track.get('artist', '')}"
+        mapping[key] = track
+    return mapping
+
+
+def youtube_id(query: str) -> str:
+    yt_dlp = shutil.which("yt-dlp")
+    if not yt_dlp:
+        return ""
+    try:
+        result = subprocess.run(
+            [
+                yt_dlp,
+                "--skip-download",
+                "--no-playlist",
+                "--flat-playlist",
+                "--print",
+                "id",
+                f"ytsearch1:{query}",
+            ],
+            check=False,
+            capture_output=True,
+            text=True,
+            timeout=40,
+        )
+    except (subprocess.TimeoutExpired, OSError):
+        return ""
+    video_id = (result.stdout or "").strip().splitlines()
+    video_id = video_id[0].strip() if video_id else ""
+    return video_id if YOUTUBE_ID_RE.match(video_id) else ""
+
+
+def attach_youtube_ids(tracks: list[dict], previous: dict | None) -> None:
+    cached = previous_map(previous)
+    missing = 0
+    for track in tracks:
+        old = cached.get(f"{track['title']}|{track['artist']}", {})
+        track["ytMvId"] = old.get("ytMvId") or ""
+        track["ytAudioId"] = old.get("ytAudioId") or ""
+        if not track["ytMvId"]:
+            track["ytMvId"] = youtube_id(f"{track['title']} {track['artist']} Official MV")
+            missing += 1
+        if not track["ytAudioId"]:
+            track["ytAudioId"] = youtube_id(f"{track['title']} {track['artist']} Official Audio")
+            missing += 1
+        print(f"{track['rank']:3} {track['title']} mv={track['ytMvId'] or '-'} audio={track['ytAudioId'] or '-'}")
+    print(f"youtube lookups this run: {missing}")
+
+
 def main() -> None:
     html = fetch_html()
     tracks = parse_tracks(html)
     if len(tracks) < 50:
         raise SystemExit(f"expected at least 50 tracks, got {len(tracks)}")
-
-    payload = {
-        "source": "Melon TOP100",
-        "sourceUrl": CHART_URL,
-        "updatedAt": datetime.now(timezone.utc).isoformat(),
-        "chartTime": parse_chart_time(html),
-        "count": len(tracks),
-        "tracks": tracks,
-    }
 
     out = Path("chart.json")
     previous = None
@@ -121,9 +171,16 @@ def main() -> None:
         except json.JSONDecodeError:
             previous = None
 
-    if previous and previous.get("tracks") == tracks and previous.get("chartTime") == payload["chartTime"]:
-        payload["updatedAt"] = previous.get("updatedAt", payload["updatedAt"])
+    attach_youtube_ids(tracks, previous)
 
+    payload = {
+        "source": "Melon TOP100",
+        "sourceUrl": CHART_URL,
+        "updatedAt": datetime.now(timezone.utc).isoformat(),
+        "chartTime": parse_chart_time(html),
+        "count": len(tracks),
+        "tracks": tracks,
+    }
     out.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(f"wrote {out} ({len(tracks)} tracks, chartTime={payload['chartTime']})")
 
