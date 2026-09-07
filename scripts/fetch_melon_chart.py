@@ -349,7 +349,11 @@ def main():
     html=fetch_html(); tracks=parse_tracks(html)
     if len(tracks)<50: raise SystemExit(f"expected at least 50 tracks, got {len(tracks)}")
     out=Path("chart.json"); previous=None
-    if out.exists():
+    baseline=Path("chart_yesterday.json")
+    if baseline.exists():
+        try: previous=json.loads(baseline.read_text(encoding="utf-8"))
+        except json.JSONDecodeError: previous=None
+    if out.exists() and previous is None:
         try: previous=json.loads(out.read_text(encoding="utf-8"))
         except json.JSONDecodeError: pass
     attach_links(tracks,previous,a.mode)
