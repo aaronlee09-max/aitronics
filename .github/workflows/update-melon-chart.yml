@@ -2,8 +2,20 @@ name: Update Melon chart
 
 on:
   schedule:
+    # Melon rank refresh through the day
     - cron: "*/30 * * * *"
+    # Full follow-up sync at 00:00 KST (15:00 UTC)
+    - cron: "0 15 * * *"
   workflow_dispatch:
+    inputs:
+      mode:
+        description: "quick = ranks + missing links, full = retry empty Official Audio/MV/streaming links"
+        required: false
+        default: "full"
+        type: choice
+        options:
+          - quick
+          - full
   push:
     paths:
       - "scripts/fetch_melon_chart.py"
@@ -11,6 +23,10 @@ on:
 
 permissions:
   contents: write
+
+concurrency:
+  group: melon-chart-sync
+  cancel-in-progress: false
 
 jobs:
   update:
@@ -20,8 +36,16 @@ jobs:
       - uses: actions/checkout@v4
       - name: Install yt-dlp
         run: pip install -U yt-dlp
-      - name: Sync Melon chart and official song links
-        run: python3 scripts/fetch_melon_chart.py
+      - name: Sync Melon chart and follow-up links
+        env:
+          CHART_MODE: ${{ github.event.inputs.mode || 'quick' }}
+        run: |
+          MODE="$CHART_MODE"
+          if [ "${{ github.event.schedule }}" = "0 15 * * *" ]; then
+            MODE=full
+          fi
+          echo "chart mode=$MODE"
+          python3 scripts/fetch_melon_chart.py --mode "$MODE"
       - name: Commit chart.json if changed
         run: |
           git config user.name "github-actions[bot]"
@@ -30,6 +54,6 @@ jobs:
           if git diff --staged --quiet; then
             echo "chart unchanged"
           else
-            git commit -m "chore: refresh Melon chart, album info, and official links"
+            git commit -m "chore: auto-sync Melon chart and official follow-up links"
             git push
           fi
