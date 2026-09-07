@@ -110,8 +110,7 @@ def score_audio(song, artist, title, channel):
     # Provenance is mandatory: a random uploader cannot become Official Audio
     # just by putting "Official Audio" in the title.
     artist_or_topic = channel_is_artist_or_topic(artist, channel)
-    label_channel = bool(OFFICIAL.search(channel or ""))
-    if not artist_or_topic and not label_channel:
+    if not artist_or_topic:
         return -999
 
     exact = title_match(song, title)
@@ -130,8 +129,6 @@ def score_audio(song, artist, title, channel):
     score+=40
     if artist_match(artist,title): score+=25
     if artist_or_topic: score+=70
-    if label_channel: score+=20
-
     return score if score>=115 else -999
 
 def score_mv(song, artist, title, channel):
