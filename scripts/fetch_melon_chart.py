@@ -134,29 +134,128 @@ def valid_cached_audio(t, old):
 def valid_cached_mv(t, old):
     return bool(old.get("ytMvId") and score_mv(t["title"],t["artist"],old.get("ytMvTitle",""),old.get("ytMvChannel",""))>=120)
 
+
+def apple_url(title, artist):
+    for term in (f"{artist} {title}", f"{title} {artist}", title):
+        try:
+            raw = get(f"https://itunes.apple.com/search?term={urllib.parse.quote(term)}&entity=song&country=us&limit=5")
+            data = json.loads(raw)
+            target = norm(title)
+            a = norm(artist)
+            ranked = []
+            for item in data.get("results") or []:
+                it = norm(item.get("trackName",""))
+                ia = norm(item.get("artistName",""))
+                if target and target in it:
+                    ranked.append((2 if a and a in ia else 0, item.get("trackViewUrl","")))
+            for _, url in sorted(ranked, reverse=True):
+                if url: return url.split("&uo=")[0]
+        except Exception:
+            continue
+    return ""
+
+def vibe_url(title, artist):
+    try:
+        raw = get(f"https://apis.naver.com/vibeWeb/musicapiweb/v3/search/track?query={urllib.parse.quote(title + ' ' + artist)}&start=1&display=5")
+        data = json.loads(raw)
+        tracks = (((data.get("response") or {}).get("result") or {}).get("tracks")) or []
+        target, art = norm(title), norm(artist)
+        best = None
+        for item in tracks:
+            name = norm(item.get("trackTitle","") or item.get("title",""))
+            an = norm(" ".join(x.get("artistName","") for x in (item.get("artists") or [])))
+            score = (50 if target and target in name else 0) + (50 if art and art in an else 0)
+            if best is None or score > best[0]:
+                best = (score, item)
+        if best and best[0] >= 50:
+            tid = best[1].get("trackId")
+            if tid: return f"https://vibe.naver.com/track/{tid}"
+    except Exception:
+        pass
+    return ""
+
+def genie_url(title, artist):
+    try:
+        html = get(f"https://www.genie.co.kr/search/searchSong?query={urllib.parse.quote(title + ' ' + artist)}").decode("utf-8","replace")
+        ids = re.findall(r"fnPlaySong\(['\"](\d+)", html)
+        return f"https://www.genie.co.kr/detail/songInfo?xgnm={ids[0]}" if ids else ""
+    except Exception:
+        return ""
+
+def bugs_url(title, artist):
+    try:
+        html = get(f"https://music.bugs.co.kr/search/track?q={urllib.parse.quote(title + ' ' + artist)}").decode("utf-8","replace")
+        ids = re.findall(r"/track/(\d+)", html)
+        return f"https://music.bugs.co.kr/track/{ids[0]}" if ids else ""
+    except Exception:
+        return ""
+
+def deezer_url(title, artist):
+    try:
+        raw = get(f"https://api.deezer.com/search?q={urllib.parse.quote(title + ' ' + artist)}&limit=5")
+        data = json.loads(raw)
+        target, art = norm(title), norm(artist)
+        best = None
+        for item in data.get("data") or []:
+            score = (60 if target and target in norm(item.get("title","")) else 0) + (40 if art and art in norm((item.get("artist") or {}).get("name","")) else 0)
+            if best is None or score > best[0]: best = (score, item)
+        if best and best[0] >= 60:
+            return best[1].get("link") or ""
+    except Exception:
+        pass
+    return ""
+
 def attach_links(tracks, previous, mode):
     prev={f"{x.get('title','')}|{x.get('artist','')}":x for x in (previous or {}).get("tracks",[])}
     full=mode=="full"
     for t in tracks:
         old=prev.get(f"{t['title']}|{t['artist']}",{})
-        for k in ("genieUrl","bugsUrl","appleUrl","spotifyUrl","vibeUrl","deezerUrl"): t[k]=old.get(k,"")
-        if full or not valid_cached_audio(t,old):
-            aid,atitle,ach=pick("audio",t["title"],t["artist"],full)
-        else:
+
+        # Full mode deliberately rematches every service and every YouTube candidate.
+        # Quick mode reuses only validated YouTube cache and existing direct service URLs.
+        if full:
+            aid,atitle,ach=pick("audio",t["title"],t["artist"],True)
+            mid,mtitle,mch=pick("mv",t["title"],t["artist"],True)
+        elif valid_cached_audio(t,old):
             aid,atitle,ach=old.get("ytAudioId",""),old.get("ytAudioTitle",""),old.get("ytAudioChannel","")
-        if full or not valid_cached_mv(t,old):
-            mid,mtitle,mch=pick("mv",t["title"],t["artist"],full)
+            mid,mtitle,mch=(old.get("ytMvId",""),old.get("ytMvTitle",""),old.get("ytMvChannel","")) if valid_cached_mv(t,old) else pick("mv",t["title"],t["artist"],False)
         else:
-            mid,mtitle,mch=old.get("ytMvId",""),old.get("ytMvTitle",""),old.get("ytMvChannel","")
-        if aid and mid and aid==mid: mid,mtitle,mch="","",""
+            aid,atitle,ach=pick("audio",t["title"],t["artist"],False)
+            mid,mtitle,mch=pick("mv",t["title"],t["artist"],False)
+
+        if aid and mid and aid==mid:
+            mid,mtitle,mch="","",""
+
         t["ytAudioId"],t["ytAudioTitle"],t["ytAudioChannel"],t["ytAudioKind"]=aid,atitle,ach,"audio" if aid else ""
         t["ytMvId"],t["ytMvTitle"],t["ytMvChannel"]=mid,mtitle,mch
         t["ytAudioUrl"]=f"https://www.youtube.com/watch?v={aid}" if aid else ""
         t["ytMusicUrl"]=f"https://music.youtube.com/watch?v={aid}" if aid else ""
         t["ytMvUrl"]=f"https://www.youtube.com/watch?v={mid}" if mid else ""
-        print(f"{t['rank']:3} {t['title']} audio={aid or '-'} mv={mid or '-'}")
-        # Preserve existing streaming links; they are resolved by the existing site data flow.
-        
+
+        if full:
+            # Re-resolve all direct streaming destinations instead of carrying
+            # forward stale/mismatched cache entries.
+            resolvers = {
+                "genieUrl": genie_url, "bugsUrl": bugs_url,
+                "appleUrl": apple_url, "vibeUrl": vibe_url, "deezerUrl": deezer_url,
+            }
+            for key, fn in resolvers.items():
+                try:
+                    t[key] = fn(t["title"], t["artist"]) or ""
+                except Exception:
+                    t[key] = ""
+            # Spotify has no public unauthenticated track-ID resolver here;
+            # preserve an existing direct URL, otherwise leave it empty.
+            t["spotifyUrl"] = old.get("spotifyUrl","") or ""
+        else:
+            for key in ("genieUrl","bugsUrl","appleUrl","spotifyUrl","vibeUrl","deezerUrl"):
+                t[key]=old.get(key,"") or ""
+
+        print(f"{t['rank']:3} {t['title']} audio={aid or '-'} mv={mid or '-'} "
+              f"genie={'Y' if t['genieUrl'] else '-'} bugs={'Y' if t['bugsUrl'] else '-'} "
+              f"apple={'Y' if t['appleUrl'] else '-'} vibe={'Y' if t['vibeUrl'] else '-'} "
+              f"deezer={'Y' if t['deezerUrl'] else '-'}")
+
 def main():
     ap=argparse.ArgumentParser(); ap.add_argument("--mode",choices=("quick","full"),default="quick"); a=ap.parse_args()
     html=fetch_html(); tracks=parse_tracks(html)
