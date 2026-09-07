@@ -1,53 +1,25 @@
-name: Sync from aaronlee09-max/informatics
+name: Wipe class-site mirror
 
 on:
-  schedule:
-    - cron: '15 0 * * *'
   workflow_dispatch:
-  repository_dispatch:
-    types: [sync-from-informatics]
 
 permissions:
   contents: write
 
 jobs:
-  sync:
+  wipe:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout current repo
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
-      - name: Fetch source of truth and sync
+      - uses: actions/checkout@v4
+      - name: Remove leftover course mirror folders
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-
-          git clone --depth 1 https://github.com/aaronlee09-max/informatics.git /tmp/upstream
-
-          cp CNAME /tmp/CNAME.bak 2>/dev/null || true
-          cp -r .github /tmp/github.bak 2>/dev/null || true
-
-          rsync -a --delete \
-            --exclude='.git' \
-            --exclude='CNAME' \
-            --exclude='.github' \
-            /tmp/upstream/ ./
-
-          if [ -f /tmp/CNAME.bak ]; then
-            cp /tmp/CNAME.bak CNAME
-          fi
-
-          if [ -d /tmp/github.bak ]; then
-            rm -rf .github
-            cp -r /tmp/github.bak .github
-          fi
-
+          git config user.name github-actions[bot]
+          git config user.email github-actions[bot]@users.noreply.github.com
+          rm -rf ai curriculum data informatics pepe software tools
           git add -A
           if git diff --staged --quiet; then
-            echo "Already up to date"
+            echo nothing to delete
           else
-            git commit -m "Sync from aaronlee09-max/informatics $(date -u +%Y-%m-%d)"
-            git push origin main
+            git commit -m "remove leftover class-site mirror files"
+            git push
           fi
