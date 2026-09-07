@@ -36,6 +36,37 @@ jobs:
       - uses: actions/checkout@v4
       - name: Install yt-dlp
         run: pip install -U yt-dlp
+      - name: Snapshot yesterday chart
+        run: |
+          TODAY_KST=$(TZ=Asia/Seoul date +%Y.%m.%d)
+          if [ -f chart.json ]; then
+            SNAP_DATE=$(python3 - <<'PY'
+import json
+try:
+    d=json.load(open("chart_yesterday.json", encoding="utf-8"))
+    print(d.get("chartTime",""))
+except Exception:
+    print("")
+PY
+)
+            CURRENT_DATE=$(python3 - <<'PY'
+import json
+try:
+    d=json.load(open("chart.json", encoding="utf-8"))
+    print(d.get("chartTime",""))
+except Exception:
+    print("")
+PY
+)
+            if [ ! -f chart_yesterday.json ] || [ "$SNAP_DATE" = "$TODAY_KST" ] || [ "$CURRENT_DATE" != "$TODAY_KST" ]; then
+              cp chart.json chart_yesterday.json
+              echo "saved yesterday baseline from $CURRENT_DATE"
+            else
+              echo "yesterday baseline already saved: $SNAP_DATE"
+            fi
+          else
+            echo "no previous chart to snapshot"
+          fi
       - name: Sync Melon chart and follow-up links
         env:
           CHART_MODE: ${{ github.event.inputs.mode || 'quick' }}
@@ -50,7 +81,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add chart.json
+          git add chart.json chart_yesterday.json
           if git diff --staged --quiet; then
             echo "chart unchanged"
           else
