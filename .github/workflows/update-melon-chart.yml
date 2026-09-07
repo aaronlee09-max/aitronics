@@ -26,7 +26,7 @@ permissions:
 
 concurrency:
   group: melon-chart-sync
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   update:
