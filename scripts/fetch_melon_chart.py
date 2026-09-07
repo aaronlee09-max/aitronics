@@ -137,33 +137,35 @@ def artist_ok(artist, blob):
     return ok
 
 
-def good_audio(song, artist, yt_title):
-    if not yt_title or AUDIO_BAD.search(yt_title):
+def good_audio(song, artist, yt_title, channel=""):
+    if not yt_title or AUDIO_BAD.search(yt_title) or not AUDIO_GOOD.search(yt_title):
         return False
-    if not AUDIO_GOOD.search(yt_title):
+    blob = f"{yt_title} {channel}"
+    if not artist_ok(artist, blob):
+        return False
+    if norm(song) in norm(yt_title):
+        return True
+    return "jxs_bp" in (channel or "").lower()
+
+
+def good_mv(song, artist, yt_title, channel=""):
+    if not yt_title or MV_BAD.search(yt_title) or not MV_GOOD.search(yt_title):
         return False
     if norm(song) not in norm(yt_title):
         return False
-    return artist_ok(artist, yt_title)
-
-
-def good_mv(song, yt_title):
-    if not yt_title or MV_BAD.search(yt_title) or not MV_GOOD.search(yt_title):
-        return False
-    return norm(song) in norm(yt_title)
+    return artist_ok(artist, f"{yt_title} {channel}")
 
 
 def pick_youtube(kind, title, artist, extra=False):
     queries = [f"{title} {artist} Official Audio" if kind == "audio" else f"{title} {artist} Official MV"]
     if extra:
-        queries.append(f"{title} Official Audio" if kind == "audio" else f"{title} Official MV")
+        queries.append(f"{artist} {title} Official Audio" if kind == "audio" else f"{artist} {title} Official MV")
     best = None
     for query in queries:
         for row in youtube_search(query):
-            yt_title = row["title"]
-            if kind == "audio" and not good_audio(title, artist, yt_title):
+            if kind == "audio" and not good_audio(title, artist, row["title"], row["channel"]):
                 continue
-            if kind == "mv" and not good_mv(title, yt_title):
+            if kind == "mv" and not good_mv(title, artist, row["title"], row["channel"]):
                 continue
             best = row
             break
@@ -223,7 +225,7 @@ def attach_links(tracks, previous, mode="quick"):
         else:
             track["ytAudioId"], track["ytAudioTitle"] = pick_youtube("audio", track["title"], track["artist"], extra=extra)
             track["ytAudioKind"] = "audio" if track["ytAudioId"] else ""
-        if old_mv and good_mv(track["title"], old_mv_title):
+        if old_mv and good_mv(track["title"], track["artist"], old_mv_title):
             track["ytMvId"], track["ytMvTitle"] = old_mv, old_mv_title
         else:
             track["ytMvId"], track["ytMvTitle"] = pick_youtube("mv", track["title"], track["artist"], extra=extra)
