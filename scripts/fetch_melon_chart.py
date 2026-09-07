@@ -100,10 +100,13 @@ def score_audio(song, artist, title, channel):
     return score if score>=100 else -999
 
 def score_mv(song, artist, title, channel):
+    # A different song must never become the MV just because it is from
+    # the same artist and is an Official MV.
     if not title or MV_NEG.search(title) or not MV_POS.search(title): return -999
+    if not title_match(song, title): return -999
     score=80
     if re.search(r"official\s*music\s*video",title,re.I): score+=20
-    if title_match(song,title): score+=40
+    score+=40
     if artist_match(artist,title): score+=25
     if artist_match(artist,channel): score+=30
     if OFFICIAL.search(channel): score+=20
