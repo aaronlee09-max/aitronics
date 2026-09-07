@@ -20,7 +20,7 @@ jobs:
       - uses: actions/checkout@v4
       - name: Install yt-dlp
         run: pip install -U yt-dlp
-      - name: Fetch Melon TOP100 and YouTube watch IDs
+      - name: Sync Melon chart and official song links
         run: python3 scripts/fetch_melon_chart.py
       - name: Commit chart.json if changed
         run: |
@@ -30,6 +30,6 @@ jobs:
           if git diff --staged --quiet; then
             echo "chart unchanged"
           else
-            git commit -m "chore: refresh Melon chart and YouTube watch links"
+            git commit -m "chore: refresh Melon chart, album info, and official links"
             git push
           fi
