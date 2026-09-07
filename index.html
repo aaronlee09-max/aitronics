@@ -4,15 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>멜론 실시간 인기차트 · informatics.run.place</title>
-    <meta name="description" content="멜론 TOP100 기준 실시간 인기차트" />
     <style>
       :root {
         --bg: #f3f7f4;
-        --paper: #ffffff;
+        --paper: #fff;
         --ink: #163027;
         --muted: #5d7268;
         --line: #d7e6dc;
-        --green: #00cd3c;
         --green-deep: #00962b;
         --up: #e11d48;
         --down: #2563eb;
@@ -21,51 +19,57 @@
       body {
         margin: 0;
         min-height: 100vh;
-        background: radial-gradient(circle at top left, rgba(0, 205, 60, 0.12), transparent 34%), var(--bg);
+        background: radial-gradient(circle at top left, rgba(0, 205, 60, .12), transparent 34%), var(--bg);
         color: var(--ink);
         font-family: "Apple SD Gothic Neo", "Noto Sans KR", system-ui, sans-serif;
       }
-      .page { width: min(880px, calc(100% - 32px)); margin: 0 auto; padding: 36px 0 64px; }
+      .page { width: min(920px, calc(100% - 32px)); margin: 0 auto; padding: 36px 0 64px; }
       header { display: grid; gap: 10px; margin-bottom: 22px; }
-      .kicker { color: var(--green-deep); font-size: 13px; font-weight: 800; letter-spacing: 0.08em; }
+      .kicker { color: var(--green-deep); font-size: 13px; font-weight: 800; letter-spacing: .08em; }
       h1 { margin: 0; font-size: clamp(28px, 6vw, 46px); line-height: 1.1; }
       .meta { display: flex; flex-wrap: wrap; gap: 8px 14px; color: var(--muted); font-size: 14px; font-weight: 700; }
-      .toolbar { display: flex; gap: 10px; margin: 0 0 16px; }
       input[type="search"] {
-        flex: 1; border: 1px solid var(--line); border-radius: 14px; padding: 12px 14px;
-        background: var(--paper); color: var(--ink); font: inherit; font-weight: 700;
+        width: 100%; margin: 0 0 16px; border: 1px solid var(--line); border-radius: 14px;
+        padding: 12px 14px; background: var(--paper); color: var(--ink); font: inherit; font-weight: 700;
       }
       .list { display: grid; gap: 8px; }
       .track {
-        display: grid; grid-template-columns: 56px 72px 1fr auto; align-items: center;
-        gap: 14px; padding: 10px 12px; border: 1px solid var(--line); border-radius: 16px; background: var(--paper);
+        display: grid; grid-template-columns: 52px 72px 1fr; gap: 12px 14px;
+        padding: 12px; border: 1px solid var(--line); border-radius: 16px; background: var(--paper);
       }
-      .track:hover { border-color: rgba(0, 205, 60, 0.45); }
-      .rank-wrap { display: grid; justify-items: center; gap: 2px; }
+      .rank-wrap { display: grid; justify-items: center; align-content: start; gap: 2px; padding-top: 8px; }
       .rank { font-size: 22px; font-weight: 900; }
-      .rank.gold { color: #c79212; }
-      .rank.silver { color: #6b7785; }
-      .rank.bronze { color: #b86a28; }
+      .rank.gold { color: #c79212; } .rank.silver { color: #6b7785; } .rank.bronze { color: #b86a28; }
       .delta { font-size: 11px; font-weight: 800; }
-      .delta.up { color: var(--up); }
-      .delta.down { color: var(--down); }
-      .delta.new { color: var(--green-deep); }
-      .delta.same { color: #94a3b8; }
+      .delta.up { color: var(--up); } .delta.down { color: var(--down); }
+      .delta.new { color: var(--green-deep); } .delta.same { color: #94a3b8; }
       .cover { width: 72px; height: 72px; border-radius: 12px; object-fit: cover; background: #e8eee9; }
+      .info { min-width: 0; }
       .info b { display: block; font-size: 16px; line-height: 1.25; }
-      .info span { color: var(--muted); font-size: 13px; font-weight: 700; }
-      .actions { display: grid; gap: 6px; justify-items: end; }
-      .album { max-width: 180px; color: var(--muted); font-size: 12px; font-weight: 700; text-align: right; }
-      .play {
-        display: inline-flex; align-items: center; border-radius: 999px; padding: 7px 12px;
-        background: #111; color: #fff; font-size: 12px; font-weight: 800; text-decoration: none;
+      .info .artist { color: var(--muted); font-size: 13px; font-weight: 700; }
+      .info .album { color: #7a8c83; font-size: 12px; font-weight: 700; margin-top: 2px; }
+      .services { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+      .svc {
+        display: inline-flex; align-items: center; gap: 6px; height: 28px; padding: 0 8px 0 4px;
+        border-radius: 999px; text-decoration: none; color: #fff; font-size: 11px; font-weight: 800;
       }
+      .svc svg { width: 20px; height: 20px; flex: 0 0 auto; }
+      .svc.melon { background: #00cd3c; color: #083; }
+      .svc.youtube { background: #ff0000; }
+      .svc.ytmusic { background: #111; }
+      .svc.genie { background: #3493eb; }
+      .svc.bugs { background: #ff3b28; }
+      .svc.apple { background: #fc3c44; }
+      .svc.spotify { background: #1db954; color: #062; }
+      .svc.vibe { background: #ff2e88; }
       footer { margin-top: 22px; color: var(--muted); font-size: 12px; line-height: 1.6; }
       a { color: var(--green-deep); }
       .empty, .error { padding: 24px; border-radius: 16px; background: var(--paper); color: var(--muted); font-weight: 700; }
       @media (max-width: 640px) {
-        .track { grid-template-columns: 40px 64px 1fr; }
-        .actions { display: none; }
+        .track { grid-template-columns: 36px 56px 1fr; }
+        .cover { width: 56px; height: 56px; }
+        .svc span { display: none; }
+        .svc { width: 28px; padding: 0; justify-content: center; }
       }
     </style>
   </head>
@@ -80,14 +84,10 @@
           <span id="updated">데이터 불러오는 중</span>
         </div>
       </header>
-      <div class="toolbar">
-        <input id="q" type="search" placeholder="노래 제목, 아티스트, 앨범 검색" autocomplete="off" />
-      </div>
-      <section id="list" class="list" aria-live="polite">차트 불러오는 중...</section>
+      <input id="q" type="search" placeholder="노래 제목, 아티스트, 앨범 검색" autocomplete="off" />
+      <section id="list" class="list">차트 불러오는 중...</section>
       <footer>
-        이 페이지는 멜론 TOP100을 주기적으로 가져와 보여 줍니다.
-        각 곡에는 앨범 표지, 노래 제목, 아티스트가 함께 나옵니다.
-        전체 듣기는 YouTube Music 공식 검색으로 연결합니다.
+        각 곡에는 앨범 표지, 노래 제목, 아티스트와 함께 멜론·YouTube·지니·벅스·Apple Music·Spotify·Vibe 공식 링크가 있습니다.
         공식 차트: <a href="https://www.melon.com/chart/index.htm" rel="noreferrer">melon.com/chart</a>
       </footer>
     </main>
@@ -95,62 +95,70 @@
       const listEl = document.getElementById("list");
       const qEl = document.getElementById("q");
       let tracks = [];
+      const ICONS = {
+        melon: '<svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#00cd3c"/><path d="M6 11c2-4 6-4 8 0" fill="none" stroke="#0a3" stroke-width="1.8" stroke-linecap="round"/><circle cx="10" cy="8.2" r="1.3" fill="#0a3"/></svg>',
+        youtube: '<svg viewBox="0 0 20 20" aria-hidden="true"><rect width="20" height="20" rx="6" fill="#ff0000"/><path d="M8 6.5v7l6-3.5-6-3.5z" fill="#fff"/></svg>',
+        ytmusic: '<svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#111"/><circle cx="10" cy="10" r="6.2" fill="none" stroke="#fff" stroke-width="1.4"/><path d="M8.4 7.2v5.6L13.4 10 8.4 7.2z" fill="#fff"/></svg>',
+        genie: '<svg viewBox="0 0 20 20" aria-hidden="true"><rect width="20" height="20" rx="6" fill="#3493eb"/><path d="M6 13.5c2.2-6 5.8-8 8-8" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/><circle cx="13.5" cy="6.2" r="1.3" fill="#fff"/></svg>',
+        bugs: '<svg viewBox="0 0 20 20" aria-hidden="true"><rect width="20" height="20" rx="6" fill="#ff3b28"/><circle cx="10" cy="10" r="4.4" fill="none" stroke="#fff" stroke-width="1.7"/><circle cx="10" cy="10" r="1.5" fill="#fff"/></svg>',
+        apple: '<svg viewBox="0 0 20 20" aria-hidden="true"><rect width="20" height="20" rx="6" fill="#fc3c44"/><text x="10" y="14" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">A</text></svg>',
+        spotify: '<svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#1db954"/><path d="M5.5 8.2c2.8-1.2 6.3-1 8.8.4M5.8 10.6c2.3-1 5.2-.8 7.2.4M6.2 12.9c1.8-.8 4.1-.6 5.6.3" fill="none" stroke="#fff" stroke-width="1.4" stroke-linecap="round"/></svg>',
+        vibe: '<svg viewBox="0 0 20 20" aria-hidden="true"><rect width="20" height="20" rx="6" fill="#ff2e88"/><text x="10" y="14" text-anchor="middle" font-size="10" font-weight="700" fill="#fff">V</text></svg>'
+      };
+      function linksFor(track) {
+        const q = encodeURIComponent(track.title + " " + track.artist);
+        return [
+          { key: "melon", name: "Melon", href: track.url || ("https://www.melon.com/search/song/index.htm?q=" + q) },
+          { key: "youtube", name: "YouTube", href: "https://www.youtube.com/results?search_query=" + q },
+          { key: "ytmusic", name: "YT Music", href: "https://music.youtube.com/search?q=" + q },
+          { key: "genie", name: "Genie", href: "https://www.genie.co.kr/search/searchMain?query=" + q },
+          { key: "bugs", name: "Bugs", href: "https://music.bugs.co.kr/search/track?q=" + q },
+          { key: "apple", name: "Apple", href: "https://music.apple.com/kr/search?term=" + q },
+          { key: "spotify", name: "Spotify", href: "https://open.spotify.com/search/" + q },
+          { key: "vibe", name: "Vibe", href: "https://vibe.naver.com/search?query=" + q }
+        ];
+      }
       function deltaLabel(track) {
         if (track.change === "new") return { text: "NEW", cls: "new" };
-        if (track.change === "up") return { text: "▲ " + track.delta, cls: "up" };
-        if (track.change === "down") return { text: "▼ " + track.delta, cls: "down" };
+        if (track.change === "up") return { text: "\u25b2 " + track.delta, cls: "up" };
+        if (track.change === "down") return { text: "\u25bc " + track.delta, cls: "down" };
         return { text: "-", cls: "same" };
       }
       function rankClass(rank) {
-        if (rank === 1) return "gold";
-        if (rank === 2) return "silver";
-        if (rank === 3) return "bronze";
-        return "";
+        return rank === 1 ? "gold" : rank === 2 ? "silver" : rank === 3 ? "bronze" : "";
       }
       function formatKst(iso) {
-        if (!iso) return "";
         const date = new Date(iso);
-        if (Number.isNaN(date.getTime())) return iso;
+        if (Number.isNaN(date.getTime())) return "";
         return new Intl.DateTimeFormat("ko-KR", {
           timeZone: "Asia/Seoul", month: "numeric", day: "numeric", hour: "2-digit", minute: "2-digit"
         }).format(date) + " 갱신";
-      }
-      function render() {
-        const query = qEl.value.trim().toLowerCase();
-        const visible = tracks.filter((track) => {
-          if (!query) return true;
-          return [track.title, track.artist, track.album].join(" ").toLowerCase().includes(query);
-        });
-        if (!visible.length) {
-          listEl.innerHTML = '<div class="empty">검색 결과가 없습니다.</div>';
-          return;
-        }
-        listEl.innerHTML = visible.map((track) => {
-          const change = deltaLabel(track);
-          const ytQuery = encodeURIComponent(`${track.title} ${track.artist}`);
-          const ytMusic = `https://music.youtube.com/search?q=${ytQuery}`;
-          return `
-            <article class="track">
-              <div class="rank-wrap">
-                <div class="rank ${rankClass(track.rank)}">${track.rank}</div>
-                <div class="delta ${change.cls}">${change.text}</div>
-              </div>
-              <img class="cover" alt="${escapeAttr(track.title)} 앨범 표지" src="${escapeAttr(track.image)}" width="72" height="72" />
-              <div class="info">
-                <b>${escapeHtml(track.title)}</b>
-                <span>${escapeHtml(track.artist)}</span>
-              </div>
-              <div class="actions">
-                <a class="play" href="${ytMusic}" target="_blank" rel="noreferrer">YouTube Music</a>
-                <div class="album">${escapeHtml(track.album || "")}</div>
-              </div>
-            </article>`;
-        }).join("");
       }
       function escapeHtml(value) {
         return String(value || "").replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;");
       }
       function escapeAttr(value) { return escapeHtml(value).replaceAll("'", "&#39;"); }
+      function render() {
+        const query = qEl.value.trim().toLowerCase();
+        const visible = tracks.filter(function(track) {
+          return !query || [track.title, track.artist, track.album].join(" ").toLowerCase().includes(query);
+        });
+        if (!visible.length) {
+          listEl.innerHTML = '<div class="empty">검색 결과가 없습니다.</div>';
+          return;
+        }
+        listEl.innerHTML = visible.map(function(track) {
+          const change = deltaLabel(track);
+          const services = linksFor(track).map(function(svc) {
+            return '<a class="svc ' + svc.key + '" href="' + escapeAttr(svc.href) + '" target="_blank" rel="noreferrer" title="' + svc.name + '">' + ICONS[svc.key] + '<span>' + svc.name + '</span></a>';
+          }).join("");
+          return '<article class="track">' +
+            '<div class="rank-wrap"><div class="rank ' + rankClass(track.rank) + '">' + track.rank + '</div><div class="delta ' + change.cls + '">' + change.text + '</div></div>' +
+            '<img class="cover" alt="' + escapeAttr(track.title) + ' 앨범 표지" src="' + escapeAttr(track.image) + '" width="72" height="72" />' +
+            '<div class="info"><b>' + escapeHtml(track.title) + '</b><div class="artist">' + escapeHtml(track.artist) + '</div><div class="album">' + escapeHtml(track.album || "") + '</div><div class="services">' + services + '</div></div>' +
+            '</article>';
+        }).join("");
+      }
       async function loadChart() {
         try {
           const response = await fetch("./chart.json?t=" + Date.now(), { cache: "no-store" });
@@ -163,7 +171,6 @@
           render();
         } catch (error) {
           listEl.innerHTML = '<div class="error">차트를 불러오지 못했습니다. 잠시 후 다시 새로고침 해 주세요.</div>';
-          console.error(error);
         }
       }
       qEl.addEventListener("input", render);
