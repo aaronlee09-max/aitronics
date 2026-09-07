@@ -18,7 +18,8 @@ on:
           - full
   push:
     paths:
-      - "scripts/fetch_melon_chart.py"\n      - "scripts/fetch_youtube_chart.py"
+      - "scripts/fetch_melon_chart.py"
+      - "scripts/fetch_youtube_chart.py"
       - ".github/workflows/update-melon-chart.yml"
 
 permissions:
@@ -46,7 +47,11 @@ jobs:
           fi
           echo "chart mode=$MODE"
           python3 scripts/fetch_melon_chart.py --mode "$MODE"
-      - name: Sync YouTube Music Korea weekly Top Songs\n        run: python3 scripts/fetch_youtube_chart.py\n\n      - name: Commit chart.json if changed
+      - name: Sync YouTube Music Korea weekly Top Songs
+        run: python3 scripts/fetch_youtube_chart.py
+      - name: Validate chart links and rank data
+        run: python3 scripts/validate_chart.py
+      - name: Commit chart.json if changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
