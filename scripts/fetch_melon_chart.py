@@ -11,7 +11,7 @@ UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/128 Sa
 HEADERS = {"User-Agent": UA, "Accept-Language": "ko-KR,ko;q=0.9,en;q=0.8"}
 YID = re.compile(r"^[A-Za-z0-9_-]{11}$")
 AUDIO_POS = re.compile(r"official\s*audio|officialaudio|\[audio\]|\(audio\)|audio\s*version", re.I)
-AUDIO_NEG = re.compile(r"official\s*m\.?v|official\s*music\s*video|music\s*video|뮤직\s*비디오|special\s*video|performance(?:\s*video)?|dance\s*practice|color\s*coded|lyrics?|lyric\s*video|가사|live|fancam|직캠|teaser|trailer|shorts", re.I)
+AUDIO_NEG = re.compile(r"official\\s*m\\.?v|official\\s*music\\s*video|\\bm\\s*/\\s*v\\b|music\\s*video|뮤직\\s*비디오|special\\s*video|performance(?:\\s*video)?|dance\\s*practice|color\\s*coded|lyrics?|lyric\\s*video|가사|live|fancam|직캠|teaser|trailer|shorts|choreography|instrumental|demo|remix|sped\\s*up|slowed|highlight|medley", re.I)
 MV_POS = re.compile(r"official\s*m\.?v|official\s*music\s*video", re.I)
 MV_NEG = re.compile(r"official\s*audio|audio|special\s*video|performance|dance\s*practice|color\s*coded|lyrics?|가사|live|fancam|직캠|teaser|trailer|shorts", re.I)
 OFFICIAL = re.compile(r"official|vevo|smtown|jyp|yg|hybe|ador|source music|pledis|belift|koz|starship|cube|rbw|kq|wakeone", re.I)
@@ -72,7 +72,7 @@ def youtube_search(query, n=10):
     for line in p.stdout.splitlines():
         a=line.split("\t")
         if len(a)>=2 and YID.match(a[0].strip()):
-            out.append({"id":a[0].strip(),"title":a[1].strip(),"channel":a[2].strip() if len(a)>2 else ""})
+            channel = a[2].strip() if len(a)>2 else ""\n            uploader = a[3].strip() if len(a)>3 else ""\n            out.append({"id":a[0].strip(),"title":a[1].strip(),"channel":channel or uploader})
     return out
 
 def artist_match(artist, text):
