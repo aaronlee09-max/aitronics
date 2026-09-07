@@ -1,7 +1,7 @@
 {
   "source": "Melon TOP100",
   "sourceUrl": "https://www.melon.com/chart/index.htm",
-  "updatedAt": "2026-09-07T00:45:11.306411+00:00",
+  "updatedAt": "2026-09-07T00:56:01.525425+00:00",
   "chartTime": "2026.09.07",
   "count": 100,
   "tracks": [
@@ -16,7 +16,16 @@
       "delta": 0,
       "url": "https://www.melon.com/song/detail.htm?songId=37928381",
       "ytMvId": "9XttLI0oH0I",
-      "ytAudioId": "_IZiw5uqFz8"
+      "ytAudioId": "_IZiw5uqFz8",
+      "ytMvUrl": "https://www.youtube.com/watch?v=9XttLI0oH0I",
+      "ytAudioUrl": "https://www.youtube.com/watch?v=_IZiw5uqFz8",
+      "ytMusicUrl": "https://music.youtube.com/watch?v=_IZiw5uqFz8",
+      "genieUrl": "https://www.genie.co.kr/detail/songInfo?xgnm=107590768",
+      "bugsUrl": "https://music.bugs.co.kr/track/6259115",
+      "appleUrl": "https://music.apple.com/us/album/love-attack/1764485168?i=1764485170",
+      "spotifyUrl": "",
+      "vibeUrl": "https://vibe.naver.com/track/86839869",
+      "deezerUrl": "https://www.deezer.com/track/2966352091"
     },
     {
       "rank": 2,
@@ -29,7 +38,16 @@
       "delta": 0,
       "url": "https://www.melon.com/song/detail.htm?songId=602839323",
       "ytMvId": "L8ZnXgbyUuc",
-      "ytAudioId": "BmfTc54KE-g"
+      "ytAudioId": "BmfTc54KE-g",
+      "ytMvUrl": "https://www.youtube.com/watch?v=L8ZnXgbyUuc",
+      "ytAudioUrl": "https://www.youtube.com/watch?v=BmfTc54KE-g",
+      "ytMusicUrl": "https://music.youtube.com/watch?v=BmfTc54KE-g",
+      "genieUrl": "https://www.genie.co.kr/detail/songInfo?xgnm=116476809",
+      "bugsUrl": "https://music.bugs.co.kr/track/6502948",
+      "appleUrl": "https://music.apple.com/us/album/biiig/6801365249?i=6801365250",
+      "spotifyUrl": "",
+      "vibeUrl": "https://vibe.naver.com/track/106951550",
+      "deezerUrl": "https://www.deezer.com/track/4223081212"
     },
     {
       "rank": 3,
@@ -42,7 +60,16 @@
       "delta": 0,
       "url": "https://www.melon.com/song/detail.htm?songId=602024048",
       "ytMvId": "Jxgbfc89hNI",
-      "ytAudioId": "JOrdFrtb6u0"
+      "ytAudioId": "JOrdFrtb6u0",
+      "ytMvUrl": "https://www.youtube.com/watch?v=Jxgbfc89hNI",
+      "ytAudioUrl": "https://www.youtube.com/watch?v=JOrdFrtb6u0",
+      "ytMusicUrl": "https://music.youtube.com/watch?v=JOrdFrtb6u0",
+      "genieUrl": "https://www.genie.co.kr/detail/songInfo?xgnm=115057327",
+      "bugsUrl": "https://music.bugs.co.kr/track/6466675",
+      "appleUrl": "https://music.apple.com/us/album/suddenly/6769328211?i=6769328214",
+      "spotifyUrl": "",
+      "vibeUrl": "https://vibe.naver.com/track/103518538",
+      "deezerUrl": "https://www.deezer.com/track/4099183431"
     },
     {
       "rank": 4,
@@ -55,7 +82,16 @@
       "delta": 0,
       "url": "https://www.melon.com/song/detail.htm?songId=602450078",
       "ytMvId": "qZlu2j2SiBA",
-      "ytAudioId": "qZlu2j2SiBA"
+      "ytAudioId": "qZlu2j2SiBA",
+      "ytMvUrl": "https://www.youtube.com/watch?v=qZlu2j2SiBA",
+      "ytAudioUrl": "https://www.youtube.com/watch?v=qZlu2j2SiBA",
+      "ytMusicUrl": "https://music.youtube.com/watch?v=qZlu2j2SiBA",
+      "genieUrl": "https://www.genie.co.kr/detail/songInfo?xgnm=115753952",
+      "bugsUrl": "https://music.bugs.co.kr/track/6488138",
+      "appleUrl": "https://music.apple.com/us/album/pretty-girl/6786111944?i=6786111946",
+      "spotifyUrl": "",
+      "vibeUrl": "https://vibe.naver.com/track/105475370",
+      "deezerUrl": "https://www.deezer.com/track/4135069791"
     },
     {
       "rank": 5,
@@ -68,7 +104,16 @@
       "delta": 0,
       "url": "https://www.melon.com/song/detail.htm?songId=601807965",
       "ytMvId": "U6BDbXIah-Y",
-      "ytAudioId": "tSSI7ntBKIs"
+      "ytAudioId": "tSSI7ntBKIs",
+      "ytMvUrl": "https://www.youtube.com/watch?v=U6BDbXIah-Y",
+      "ytAudioUrl": "https://www.youtube.com/watch?v=tSSI7ntBKIs",
+      "ytMusicUrl": "https://music.youtube.com/watch?v=tSSI7ntBKIs",
+      "genieUrl": "https://www.genie.co.kr/detail/songInfo?xgnm=114752666",
+      "bugsUrl": "https://music.bugs.co.kr/track/6455645",
+      "appleUrl": "https://music.apple.com/us/album/redred/1887671065?i=1887671067",
+      "spotifyUrl": "",
+      "vibeUrl": "https://vibe.naver.com/track/102913042",
+      "deezerUrl": "https://www.deezer.com/track/3964491871"
     },
     {
       "rank": 6,
@@ -81,7 +126,16 @@
       "delta": 0,
       "url": "https://www.melon.com/song/detail.htm?songId=602939768",
       "ytMvId": "IbYTmiZw0R4",
-      "ytAudioId": "d3oxPUPJ3Xk"
+      "ytAudioId": "d3oxPUPJ3Xk",
+      "ytMvUrl": "https://www.youtube.com/watch?v=IbYTmiZw0R4",
+      "ytAudioUrl": "https://www.youtube.com/watch?v=d3oxPUPJ3Xk",
+      "ytMusicUrl": "https://music.youtube.com/watch?v=d3oxPUPJ3Xk",
+      "genieUrl": "https://www.genie.co.kr/detail/songInfo?xgnm=116645737",
+      "bugsUrl": "https://music.bugs.co.kr/track/6504759",
+      "appleUrl": "https://music.apple.com/us/album/nostalgia-band-ver/6805367597?i=6805367599",
+      "spotifyUrl": "",
+      "vibeUrl": "https://vibe.naver.com/track/107243485",
+      "deezerUrl": ""
     },
     {
       "rank": 7,
@@ -94,7 +148,16 @@
       "delta": 0,
       "url": "https://www.melon.com/song/detail.htm?songId=39231685",
       "ytMvId": "ZbO9PBdFRdc",
-      "ytAudioId": "ZbO9PBdFRdc"
+      "ytAudioId": "ZbO9PBdFRdc",
+      "ytMvUrl": "https://www.youtube.com/watch?v=ZbO9PBdFRdc",
+      "ytAudioUrl": "https://www.youtube.com/watch?v=ZbO9PBdFRdc",
+      "ytMusicUrl": "https://music.youtube.com/watch?v=ZbO9PBdFRdc",
+      "genieUrl": "https://www.genie.co.kr/detail/songInfo?xgnm=110778923",
+      "bugsUrl": "https://music.bugs.co.kr/track/6320796",
+      "appleUrl": "https://music.apple.com/us/album/deja-vu/1822439985?i=1822439986",
+      "spotifyUrl": "",
+      "vibeUrl": "https://vibe.naver.com/track/95005839",
+      "deezerUrl": "https://www.deezer.com/track/3426703371"
     },
     {
       "rank": 8,
@@ -107,7 +170,16 @@
       "delta": 0,
       "url": "https://www.melon.com/song/detail.htm?songId=602322595",
       "ytMvId": "-q_S27LbNKU",
-      "ytAudioId": "OHxYsZgq_6U"
+      "ytAudioId": "OHxYsZgq_6U",
+      "ytMvUrl": "https://www.youtube.com/watch?v=-q_S27LbNKU",
+      "ytAudioUrl": "https://www.youtube.com/watch?v=OHxYsZgq_6U",
+      "ytMusicUrl": "https://music.youtube.com/watch?v=OHxYsZgq_6U",
+      "genieUrl": "https://www.genie.co.kr/detail/songInfo?xgnm=115681237",
+      "bugsUrl": "https://music.bugs.co.kr/track/132289374",
+      "appleUrl": "https://music.apple.com/us/album/bad/159292399?i=159294345",
+      "spotifyUrl": "",
+      "vibeUrl": "https://vibe.naver.com/track/105212001",
+      "deezerUrl": "https://www.deezer.com/track/4168092092"
     },
     {
       "rank": 9,
@@ -120,7 +192,16 @@
       "delta": 0,
       "url": "https://www.melon.com/song/detail.htm?songId=602115220",
       "ytMvId": "83C3TZ4Zm_o",
-      "ytAudioId": "RKHfhecEIbU"
+      "ytAudioId": "RKHfhecEIbU",
+      "ytMvUrl": "https://www.youtube.com/watch?v=83C3TZ4Zm_o",
+      "ytAudioUrl": "https://www.youtube.com/watch?v=RKHfhecEIbU",
+      "ytMusicUrl": "https://music.youtube.com/watch?v=RKHfhecEIbU",
+      "genieUrl": "https://www.genie.co.kr/detail/songInfo?xgnm=115283510",
+      "bugsUrl": "https://music.bugs.co.kr/track/6471298",
+      "appleUrl": "https://music.apple.com/us/album/lemonade/1893742002?i=1893742010",
+      "spotifyUrl": "",
+      "vibeUrl": "https://vibe.naver.com/track/104202029",
+      "deezerUrl": "https://www.deezer.com/track/4037009371"
     },
     {
       "rank": 10,
@@ -133,7 +214,16 @@
       "delta": 0,
       "url": "https://www.melon.com/song/detail.htm?songId=602377105",
       "ytMvId": "VVO05mYGFY8",
-      "ytAudioId": "VS-hguvFOmY"
+      "ytAudioId": "VS-hguvFOmY",
+      "ytMvUrl": "https://www.youtube.com/watch?v=VVO05mYGFY8",
+      "ytAudioUrl": "https://www.youtube.com/watch?v=VS-hguvFOmY",
+      "ytMusicUrl": "https://music.youtube.com/watch?v=VS-hguvFOmY",
+      "genieUrl": "https://www.genie.co.kr/detail/songInfo?xgnm=115707756",
+      "bugsUrl": "https://music.bugs.co.kr/track/6483975",
+      "appleUrl": "https://music.apple.com/us/album/bansanka/6783734895?i=6783734896",
+      "spotifyUrl": "",
+      "vibeUrl": "https://vibe.naver.com/track/105213207",
+      "deezerUrl": ""
     },
     {
       "rank": 11,
@@ -146,7 +236,16 @@
       "delta": 0,
       "url": "https://www.melon.com/song/detail.htm?songId=601899271",
       "ytMvId": "bMhDJ0S0OBA",
-      "ytAudioId": "_qzyZG6A7RA"
+      "ytAudioId": "_qzyZG6A7RA",
+      "ytMvUrl": "https://www.youtube.com/watch?v=bMhDJ0S0OBA",
+      "ytAudioUrl": "https://www.youtube.com/watch?v=_qzyZG6A7RA",
+      "ytMusicUrl": "https://music.youtube.com/watch?v=_qzyZG6A7RA",
+      "genieUrl": "https://www.genie.co.kr/detail/songInfo?xgnm=107590768",
+      "bugsUrl": "https://music.bugs.co.kr/track/6460285",
+      "appleUrl": "https://music.apple.com/us/album/its-me/1887194024?i=1887194026",
+      "spotifyUrl": "",
+      "vibeUrl": "",
+      "deezerUrl": ""
     },
     {
       "rank": 12,
@@ -159,7 +258,16 @@
       "delta": 0,
       "url": "https://www.melon.com/song/detail.htm?songId=602552833",
       "ytMvId": "hrkELy64_zA",
-      "ytAudioId": "hrkELy64_zA"
+      "ytAudioId": "hrkELy64_zA",
+      "ytMvUrl": "https://www.youtube.com/watch?v=hrkELy64_zA",
+      "ytAudioUrl": "https://www.youtube.com/watch?v=hrkELy64_zA",
+      "ytMusicUrl": "https://music.youtube.com/watch?v=hrkELy64_zA",
+      "genieUrl": "https://www.genie.co.kr/detail/songInfo?xgnm=116036638",
+      "bugsUrl": "https://music.bugs.co.kr/track/6493973",
+      "appleUrl": "https://music.apple.com/us/album/please-summer/6792700625?i=6792700626",
+      "spotifyUrl": "",
+      "vibeUrl": "https://vibe.naver.com/track/106063561",
+      "deezerUrl": ""
     },
     {
       "rank": 13,
@@ -172,7 +280,16 @@
       "delta": 0,
       "url": "https://www.melon.com/song/detail.htm?songId=36397952",
       "ytMvId": "tiKFuzpX-NA",
-      "ytAudioId": "NbKH4iZqq1Y"
+      "ytAudioId": "NbKH4iZqq1Y",
+      "ytMvUrl": "https://www.youtube.com/watch?v=tiKFuzpX-NA",
+      "ytAudioUrl": "https://www.youtube.com/watch?v=NbKH4iZqq1Y",
+      "ytMusicUrl": "https://music.youtube.com/watch?v=NbKH4iZqq1Y",
+      "genieUrl": "https://www.genie.co.kr/detail/songInfo?xgnm=101514417",
+      "bugsUrl": "https://music.bugs.co.kr/track/6197438",
+      "appleUrl": "https://music.apple.com/us/album/drowning/1683448653?i=1683448656",
+      "spotifyUrl": "",
+      "vibeUrl": "https://vibe.naver.com/track/64071990",
+      "deezerUrl": "https://www.deezer.com/track/2257513467"
     },
     {
       "rank": 14,
@@ -185,7 +302,16 @@
       "delta": 0,
       "url": "https://www.melon.com/song/detail.htm?songId=36730261",
       "ytMvId": "h0KIWaUEIgQ",
-      "ytAudioId": "h0KIWaUEIgQ"
+      "ytAudioId": "h0KIWaUEIgQ",
+      "ytMvUrl": "https://www.youtube.com/watch?v=h0KIWaUEIgQ",
+      "ytAudioUrl": "https://www.youtube.com/watch?v=h0KIWaUEIgQ",
+      "ytMusicUrl": "https://music.youtube.com/watch?v=h0KIWaUEIgQ",
+      "genieUrl": "https://www.genie.co.kr/detail/songInfo?xgnm=103167974",
+      "bugsUrl": "https://music.bugs.co.kr/track/32944687",
+      "appleUrl": "https://music.apple.com/us/album/landing-in-love/1703196819?i=1703196825",
+      "spotifyUrl": "",
+      "vibeUrl": "https://vibe.naver.com/track/66762282",
+      "deezerUrl": "https://www.deezer.com/track/2417070075"
     },
     {
       "rank": 15,
@@ -198,7 +324,16 @@
       "delta": 0,
       "url": "https://www.melon.com/song/detail.htm?songId=601479669",
       "ytMvId": "ItSKahBISg0",
-      "ytAudioId": "0pU0Xl7PgkE"
+      "ytAudioId": "0pU0Xl7PgkE",
+      "ytMvUrl": "https://www.youtube.com/watch?v=ItSKahBISg0",
+      "ytAudioUrl": "https://www.youtube.com/watch?v=0pU0Xl7PgkE",
+      "ytMusicUrl": "https://music.youtube.com/watch?v=0pU0Xl7PgkE",
+      "genieUrl": "https://www.genie.co.kr/detail/songInfo?xgnm=114176738",
+      "bugsUrl": "https://music.bugs.co.kr/track/6437154",
+      "appleUrl": "https://music.apple.com/us/album/catch-catch/1882581635?i=1882581639",
+      "spotifyUrl": "",
+      "vibeUrl": "https://vibe.naver.com/track/101579106",
+      "deezerUrl": ""
     },
     {
       "rank": 16,
@@ -211,7 +346,16 @@
       "delta": 0,
       "url": "https://www.melon.com/song/detail.htm?songId=602732384",
       "ytMvId": "UsbRoaH6y-Q",
-      "ytAudioId": "e1IH2q8QNLM"
+      "ytAudioId": "e1IH2q8QNLM",
+      "ytMvUrl": "https://www.youtube.com/watch?v=UsbRoaH6y-Q",
+      "ytAudioUrl": "https://www.youtube.com/watch?v=e1IH2q8QNLM",
+      "ytMusicUrl": "https://music.youtube.com/watch?v=e1IH2q8QNLM",
+      "genieUrl": "https://www.genie.co.kr/detail/songInfo?xgnm=116282362",
+      "bugsUrl": "https://music.bugs.co.kr/track/6500936",
+      "appleUrl": "https://music.apple.com/us/album/pop-off-pop-off/6796609538?i=6796609794",
+      "spotifyUrl": "",
+      "vibeUrl": "https://vibe.naver.com/track/106457150",
+      "deezerUrl": "https://www.deezer.com/track/4204204872"
     },
     {
       "rank": 17,
@@ -224,7 +368,16 @@
       "delta": 0,
       "url": "https://www.melon.com/song/detail.htm?songId=601332163",
       "ytMvId": "F7sGJVUrkjQ",
-      "ytAudioId": "F7sGJVUrkjQ"
+      "ytAudioId": "F7sGJVUrkjQ",
+      "ytMvUrl": "https://www.youtube.com/watch?v=F7sGJVUrkjQ",
+      "ytAudioUrl": "https://www.youtube.com/watch?v=F7sGJVUrkjQ",
+      "ytMusicUrl": "https://music.youtube.com/watch?v=F7sGJVUrkjQ",
+      "genieUrl": "https://www.genie.co.kr/detail/songInfo?xgnm=113970278",
+      "bugsUrl": "https://music.bugs.co.kr/track/6426604",
+      "appleUrl": "https://music.apple.com/us/album/rude/1875146814?i=1875146815",
+      "spotifyUrl": "",
+      "vibeUrl": "https://vibe.naver.com/track/100897469",
+      "deezerUrl": "https://www.deezer.com/track/3966363741"
     },
     {
       "rank": 18,
@@ -237,7 +390,16 @@
       "delta": 0,
       "url": "https://www.melon.com/song/detail.htm?songId=39504779",
       "ytMvId": "_Ngk-DCHfD0",
-      "ytAudioId": "_Ngk-DCHfD0"
+      "ytAudioId": "_Ngk-DCHfD0",
+      "ytMvUrl": "https://www.youtube.com/watch?v=_Ngk-DCHfD0",
+      "ytAudioUrl": "https://www.youtube.com/watch?v=_Ngk-DCHfD0",
+      "ytMusicUrl": "https://music.youtube.com/watch?v=_Ngk-DCHfD0",
+      "genieUrl": "https://www.genie.co.kr/detail/songInfo?xgnm=111202261",
+      "bugsUrl": "https://music.bugs.co.kr/track/33625951",
+      "appleUrl": "https://music.apple.com/us/album/0-0/1828393588?i=1828393595",
+      "spotifyUrl": "",
+      "vibeUrl": "https://vibe.naver.com/track/95432950",
+      "deezerUrl": "https://www.deezer.com/track/3473988621"
     },
     {
       "rank": 19,
@@ -250,7 +412,16 @@
       "delta": 0,
       "url": "https://www.melon.com/song/detail.htm?songId=602940179",
       "ytMvId": "oAwzFFEYm38",
-      "ytAudioId": "oAwzFFEYm38"
+      "ytAudioId": "oAwzFFEYm38",
+      "ytMvUrl": "https://www.youtube.com/watch?v=oAwzFFEYm38",
+      "ytAudioUrl": "https://www.youtube.com/watch?v=oAwzFFEYm38",
+      "ytMusicUrl": "https://music.youtube.com/watch?v=oAwzFFEYm38",
+      "genieUrl": "https://www.genie.co.kr/detail/songInfo?xgnm=116626731",
+      "bugsUrl": "https://music.bugs.co.kr/track/6504762",
+      "appleUrl": "https://music.apple.com/us/album/skibidi/6803731727?i=6803731729",
+      "spotifyUrl": "",
+      "vibeUrl": "",
+      "deezerUrl": ""
     },
     {
       "rank": 20,
@@ -263,7 +434,16 @@
       "delta": 0,
       "url": "https://www.melon.com/song/detail.htm?songId=600287375",
       "ytMvId": "Qe8fa4b5xNU",
-      "ytAudioId": "Qe8fa4b5xNU"
+      "ytAudioId": "Qe8fa4b5xNU",
+      "ytMvUrl": "https://www.youtube.com/watch?v=Qe8fa4b5xNU",
+      "ytAudioUrl": "https://www.youtube.com/watch?v=Qe8fa4b5xNU",
+      "ytMusicUrl": "https://music.youtube.com/watch?v=Qe8fa4b5xNU",
+      "genieUrl": "https://www.genie.co.kr/detail/songInfo?xgnm=112223437",
+      "bugsUrl": "https://music.bugs.co.kr/track/6361285",
+      "appleUrl": "https://music.apple.com/us/album/good-goodbye/1843518967?i=1843518968",
+      "spotifyUrl": "",
+      "vibeUrl": "https://vibe.naver.com/track/97477096",
+      "deezerUrl": "https://www.deezer.com/track/3581442421"
     },
     {
       "rank": 21,
@@ -276,7 +456,16 @@
       "delta": 0,
       "url": "https://www.melon.com/song/detail.htm?songId=602313594",
       "ytMvId": "1VqxWNwgf5Q",
-      "ytAudioId": "1VqxWNwgf5Q"
+      "ytAudioId": "1VqxWNwgf5Q",
+      "ytMvUrl": "https://www.youtube.com/watch?v=1VqxWNwgf5Q",
+      "ytAudioUrl": "https://www.youtube.com/watch?v=1VqxWNwgf5Q",
+      "ytMusicUrl": "https://music.youtube.com/watch?v=1VqxWNwgf5Q",
+      "genieUrl": "https://www.genie.co.kr/detail/songInfo?xgnm=115638790",
+      "bugsUrl": "https://music.bugs.co.kr/track/6480884",
+      "appleUrl": "https://music.apple.com/us/album/lemon-tang/6779521284?i=6779521286",
+      "spotifyUrl": "",
+      "vibeUrl": "https://vibe.naver.com/track/104907697",
+      "deezerUrl": "https://www.deezer.com/track/4193879092"
     },
     {
       "rank": 22,
@@ -289,7 +478,16 @@
       "delta": 0,
       "url": "https://www.melon.com/song/detail.htm?songId=36985781",
       "ytMvId": "TUDsVaezoKU",
-      "ytAudioId": "TUDsVaezoKU"
+      "ytAudioId": "TUDsVaezoKU",
+      "ytMvUrl": "https://www.youtube.com/watch?v=TUDsVaezoKU",
+      "ytAudioUrl": "https://www.youtube.com/watch?v=TUDsVaezoKU",
+      "ytMusicUrl": "https://music.youtube.com/watch?v=TUDsVaezoKU",
+      "genieUrl": "https://www.genie.co.kr/detail/songInfo?xgnm=104440545",
+      "bugsUrl": "https://music.bugs.co.kr/track/6223063",
+      "appleUrl": "https://music.apple.com/us/album/when-i-stop-thinking/1717383448?i=1717383449",
+      "spotifyUrl": "",
+      "vibeUrl": "https://vibe.naver.com/track/81376553",
+      "deezerUrl": "https://www.deezer.com/track/2550231712"
     },
     {
       "rank": 23,
@@ -302,7 +500,16 @@
       "delta": 0,
       "url": "https://www.melon.com/song/detail.htm?songId=601719413",
       "ytMvId": "D54StAZFUrc",
-      "ytAudioId": "D54StAZFUrc"
+      "ytAudioId": "D54StAZFUrc",
+      "ytMvUrl": "https://www.youtube.com/watch?v=D54StAZFUrc",
+      "ytAudioUrl": "https://www.youtube.com/watch?v=D54StAZFUrc",
+      "ytMusicUrl": "https://music.youtube.com/watch?v=D54StAZFUrc",
+      "genieUrl": "https://www.genie.co.kr/detail/songInfo?xgnm=114585403",
+      "bugsUrl": "https://music.bugs.co.kr/track/6450133",
+      "appleUrl": "https://music.apple.com/us/album/paradise-of-rumors/1887773334?i=1887773335",
+      "spotifyUrl": "",
+      "vibeUrl": "https://vibe.naver.com/track/102385484",
+      "deezerUrl": "https://www.deezer.com/track/3920191731"
     },
     {
       "rank": 24,
@@ -315,7 +522,16 @@
       "delta": 0,
       "url": "https://www.melon.com/song/detail.htm?songId=601719416",
       "ytMvId": "SNn_H_Q2moo",
-      "ytAudioId": "0nFffgpjs1A"
+      "ytAudioId": "0nFffgpjs1A",
+      "ytMvUrl": "https://www.youtube.com/watch?v=SNn_H_Q2moo",
+      "ytAudioUrl": "https://www.youtube.com/watch?v=0nFffgpjs1A",
+      "ytMusicUrl": "https://music.youtube.com/watch?v=0nFffgpjs1A",
+      "genieUrl": "https://www.genie.co.kr/detail/songInfo?xgnm=114585406",
+      "bugsUrl": "https://music.bugs.co.kr/track/6450136",
+      "appleUrl": "https://music.apple.com/us/album/joy-sorrow-a-beautiful-heart/1887773334?i=1887773339",
+      "spotifyUrl": "",
+      "vibeUrl": "https://vibe.naver.com/track/102385487",
+      "deezerUrl": "https://www.deezer.com/track/3920191761"
     },
     {
       "rank": 25,
@@ -328,7 +544,16 @@
       "delta": 0,
       "url": "https://www.melon.com/song/detail.htm?songId=600299706",
       "ytMvId": "qE35JN1ogeI",
-      "ytAudioId": "lmkslDfyejU"
+      "ytAudioId": "lmkslDfyejU",
+      "ytMvUrl": "https://www.youtube.com/watch?v=qE35JN1ogeI",
+      "ytAudioUrl": "https://www.youtube.com/watch?v=lmkslDfyejU",
+      "ytMusicUrl": "https://music.youtube.com/watch?v=lmkslDfyejU",
+      "genieUrl": "https://www.genie.co.kr/detail/songInfo?xgnm=112239609",
+      "bugsUrl": "https://music.bugs.co.kr/track/6361665",
+      "appleUrl": "https://music.apple.com/us/album/time-capsule/1845310196?i=1845310197",
+      "spotifyUrl": "",
+      "vibeUrl": "https://vibe.naver.com/track/97484376",
+      "deezerUrl": ""
     },
     {
       "rank": 26,
@@ -341,7 +566,16 @@
       "delta": 0,
       "url": "https://www.melon.com/song/detail.htm?songId=38242510",
       "ytMvId": "gx5dn_fBxYw",
-      "ytAudioId": "fLi0EJfi_vg"
+      "ytAudioId": "fLi0EJfi_vg",
+      "ytMvUrl": "https://www.youtube.com/watch?v=gx5dn_fBxYw",
+      "ytAudioUrl": "https://www.youtube.com/watch?v=fLi0EJfi_vg",
+      "ytMusicUrl": "https://music.youtube.com/watch?v=fLi0EJfi_vg",
+      "genieUrl": "https://www.genie.co.kr/detail/songInfo?xgnm=108434388",
+      "bugsUrl": "https://music.bugs.co.kr/track/6272222",
+      "appleUrl": "https://music.apple.com/us/album/home-sweet-home-feat-taeyang-daesung/1780634924?i=1780635199",
+      "spotifyUrl": "",
+      "vibeUrl": "https://vibe.naver.com/track/87830018",
+      "deezerUrl": "https://www.deezer.com/track/3100773221"
     },
     {
       "rank": 27,
@@ -354,7 +588,16 @@
       "delta": 0,
       "url": "https://www.melon.com/song/detail.htm?songId=37473973",
       "ytMvId": "3AoruwUKQ3I",
-      "ytAudioId": "IhKjZk5AYRg"
+      "ytAudioId": "IhKjZk5AYRg",
+      "ytMvUrl": "https://www.youtube.com/watch?v=3AoruwUKQ3I",
+      "ytAudioUrl": "https://www.youtube.com/watch?v=IhKjZk5AYRg",
+      "ytMusicUrl": "https://music.youtube.com/watch?v=IhKjZk5AYRg",
+      "genieUrl": "https://www.genie.co.kr/detail/songInfo?xgnm=106340424",
+      "bugsUrl": "https://music.bugs.co.kr/track/33167108",
+      "appleUrl": "https://music.apple.com/us/album/popcorn/1743749264?i=1743749267",
+      "spotifyUrl": "",
+      "vibeUrl": "https://vibe.naver.com/track/85104232",
+      "deezerUrl": "https://www.deezer.com/track/2773141871"
     },
     {
       "rank": 28,
@@ -367,7 +610,16 @@
       "delta": 0,
       "url": "https://www.melon.com/song/detail.htm?songId=32061975",
       "ytMvId": "m3DZsBw5bnE",
-      "ytAudioId": "m3DZsBw5bnE"
+      "ytAudioId": "m3DZsBw5bnE",
+      "ytMvUrl": "https://www.youtube.com/watch?v=m3DZsBw5bnE",
+      "ytAudioUrl": "https://www.youtube.com/watch?v=m3DZsBw5bnE",
+      "ytMusicUrl": "https://music.youtube.com/watch?v=m3DZsBw5bnE",
+      "genieUrl": "https://www.genie.co.kr/detail/songInfo?xgnm=89382909",
+      "bugsUrl": "https://music.bugs.co.kr/track/31708907",
+      "appleUrl": "https://music.apple.com/us/album/how-can-i-love-the-heartbreak-youre-the-one-i-love/1480802547?i=1480802550",
+      "spotifyUrl": "",
+      "vibeUrl": "https://vibe.naver.com/track/28487815",
+      "deezerUrl": "https://www.deezer.com/track/1233268802"
     },
     {
       "rank": 29,
@@ -380,7 +632,16 @@
       "delta": 0,
       "url": "https://www.melon.com/song/detail.htm?songId=601013499",
       "ytMvId": "zhHB4dZTChw",
-      "ytAudioId": "3_l-UI4prVY"
+      "ytAudioId": "3_l-UI4prVY",
+      "ytMvUrl": "https://www.youtube.com/watch?v=zhHB4dZTChw",
+      "ytAudioUrl": "https://www.youtube.com/watch?v=3_l-UI4prVY",
+      "ytMusicUrl": "https://music.youtube.com/watch?v=3_l-UI4prVY",
+      "genieUrl": "https://www.genie.co.kr/detail/songInfo?xgnm=113568760",
+      "bugsUrl": "https://music.bugs.co.kr/track/6410329",
+      "appleUrl": "https://music.apple.com/us/album/404-new-era/1866860579?i=1866860733",
+      "spotifyUrl": "",
+      "vibeUrl": "https://vibe.naver.com/track/100287306",
+      "deezerUrl": "https://www.deezer.com/track/3758369852"
     },
     {
       "rank": 30,
@@ -393,7 +654,16 @@
       "delta": 0,
       "url": "https://www.melon.com/song/detail.htm?songId=601237102",
       "ytMvId": "9qkpcLK422o",
-      "ytAudioId": "gYTDhHGK6TQ"
+      "ytAudioId": "gYTDhHGK6TQ",
+      "ytMvUrl": "https://www.youtube.com/watch?v=9qkpcLK422o",
+      "ytAudioUrl": "https://www.youtube.com/watch?v=gYTDhHGK6TQ",
+      "ytMusicUrl": "https://music.youtube.com/watch?v=gYTDhHGK6TQ",
+      "genieUrl": "https://www.genie.co.kr/detail/songInfo?xgnm=113791695",
+      "bugsUrl": "https://music.bugs.co.kr/track/6418109",
+      "appleUrl": "https://music.apple.com/us/album/bang-bang/1872627662?i=1872628039",
+      "spotifyUrl": "",
+      "vibeUrl": "https://vibe.naver.com/track/100726305",
+      "deezerUrl": "https://www.deezer.com/track/3823100291"
     },
     {
       "rank": 31,
@@ -406,7 +676,16 @@
       "delta": 0,
       "url": "https://www.melon.com/song/detail.htm?songId=4446485",
       "ytMvId": "Dbxzh078jr4",
-      "ytAudioId": "evOsUf9en-Y"
+      "ytAudioId": "evOsUf9en-Y",
+      "ytMvUrl": "https://www.youtube.com/watch?v=Dbxzh078jr4",
+      "ytAudioUrl": "https://www.youtube.com/watch?v=evOsUf9en-Y",
+      "ytMusicUrl": "https://music.youtube.com/watch?v=evOsUf9en-Y",
+      "genieUrl": "https://www.genie.co.kr/detail/songInfo?xgnm=82280761",
+      "bugsUrl": "https://music.bugs.co.kr/track/3387407",
+      "appleUrl": "https://music.apple.com/us/album/every-moment-of-you-instrumental/1859791979?i=1859791981",
+      "spotifyUrl": "",
+      "vibeUrl": "https://vibe.naver.com/track/4104267",
+      "deezerUrl": "https://www.deezer.com/track/3702776612"
     },
     {
       "rank": 32,
@@ -419,7 +698,16 @@
       "delta": 0,
       "url": "https://www.melon.com/song/detail.htm?songId=38733032",
       "ytMvId": "1mZ-hoIvEx8",
-      "ytAudioId": "xMpxBy6V0Vo"
+      "ytAudioId": "xMpxBy6V0Vo",
+      "ytMvUrl": "https://www.youtube.com/watch?v=1mZ-hoIvEx8",
+      "ytAudioUrl": "https://www.youtube.com/watch?v=xMpxBy6V0Vo",
+      "ytMusicUrl": "https://music.youtube.com/watch?v=xMpxBy6V0Vo",
+      "genieUrl": "https://www.genie.co.kr/detail/songInfo?xgnm=109608007",
+      "bugsUrl": "https://music.bugs.co.kr/track/6297052",
+      "appleUrl": "https://music.apple.com/us/album/sadder-than-yesterday/1805509908?i=1805510091",
+      "spotifyUrl": "",
+      "vibeUrl": "https://vibe.naver.com/track/91746086",
+      "deezerUrl": ""
     },
     {
       "rank": 33,
@@ -432,7 +720,16 @@
       "delta": 0,
       "url": "https://www.melon.com/song/detail.htm?songId=31927275",
       "ytMvId": "vnS_jn2uibs",
-      "ytAudioId": "vnS_jn2uibs"
+      "ytAudioId": "vnS_jn2uibs",
+      "ytMvUrl": "https://www.youtube.com/watch?v=vnS_jn2uibs",
+      "ytAudioUrl": "https://www.youtube.com/watch?v=vnS_jn2uibs",
+      "ytMusicUrl": "https://music.youtube.com/watch?v=vnS_jn2uibs",
+      "genieUrl": "https://www.genie.co.kr/detail/songInfo?xgnm=89220627",
+      "bugsUrl": "https://music.bugs.co.kr/track/31650949",
+      "appleUrl": "https://music.apple.com/us/album/time-of-our-life/1689325535?i=1689325541",
+      "spotifyUrl": "",
+      "vibeUrl": "https://vibe.naver.com/track/27852478",
+      "deezerUrl": "https://www.deezer.com/track/2297163515"
     },
     {
       "rank": 34,
@@ -445,7 +742,16 @@
       "delta": 0,
       "url": "https://www.melon.com/song/detail.htm?songId=602584682",
       "ytMvId": "_IT83Y_HcAw",
-      "ytAudioId": "vR49dHUwMUA"
+      "ytAudioId": "vR49dHUwMUA",
+      "ytMvUrl": "https://www.youtube.com/watch?v=_IT83Y_HcAw",
+      "ytAudioUrl": "https://www.youtube.com/watch?v=vR49dHUwMUA",
+      "ytMusicUrl": "https://music.youtube.com/watch?v=vR49dHUwMUA",
+      "genieUrl": "https://www.genie.co.kr/detail/songInfo?xgnm=116078119",
+      "bugsUrl": "https://music.bugs.co.kr/track/6495171",
+      "appleUrl": "https://music.apple.com/us/album/less-than-a-lover/6793277024?i=6793277028",
+      "spotifyUrl": "",
+      "vibeUrl": "https://vibe.naver.com/track/106147865",
+      "deezerUrl": "https://www.deezer.com/track/4170431392"
     },
     {
       "rank": 35,
@@ -458,7 +764,16 @@
       "delta": 0,
       "url": "https://www.melon.com/song/detail.htm?songId=38626852",
       "ytMvId": "Ry1RrIVyl1M",
-      "ytAudioId": "qRdFd34gnOY"
+      "ytAudioId": "qRdFd34gnOY",
+      "ytMvUrl": "https://www.youtube.com/watch?v=Ry1RrIVyl1M",
+      "ytAudioUrl": "https://www.youtube.com/watch?v=qRdFd34gnOY",
+      "ytMusicUrl": "https://music.youtube.com/watch?v=qRdFd34gnOY",
+      "genieUrl": "https://www.genie.co.kr/detail/songInfo?xgnm=109330096",
+      "bugsUrl": "https://music.bugs.co.kr/track/6292278",
+      "appleUrl": "https://music.apple.com/us/album/to-reach-you/1800086188?i=1800086189",
+      "spotifyUrl": "",
+      "vibeUrl": "https://vibe.naver.com/track/90447280",
+      "deezerUrl": "https://www.deezer.com/track/3604979652"
     },
     {
       "rank": 36,
@@ -471,7 +786,16 @@
       "delta": 0,
       "url": "https://www.melon.com/song/detail.htm?songId=600243411",
       "ytMvId": "EmeW6li6bbo",
-      "ytAudioId": "k1WbiVmq3-U"
+      "ytAudioId": "k1WbiVmq3-U",
+      "ytMvUrl": "https://www.youtube.com/watch?v=EmeW6li6bbo",
+      "ytAudioUrl": "https://www.youtube.com/watch?v=k1WbiVmq3-U",
+      "ytMusicUrl": "https://music.youtube.com/watch?v=k1WbiVmq3-U",
+      "genieUrl": "https://www.genie.co.kr/detail/songInfo?xgnm=112062253",
+      "bugsUrl": "https://music.bugs.co.kr/track/6360689",
+      "appleUrl": "https://music.apple.com/us/album/blue-valentine/1839523838?i=1839523842",
+      "spotifyUrl": "",
+      "vibeUrl": "https://vibe.naver.com/track/97379237",
+      "deezerUrl": "https://www.deezer.com/track/3593847642"
     },
     {
       "rank": 37,
@@ -484,7 +808,16 @@
       "delta": 0,
       "url": "https://www.melon.com/song/detail.htm?songId=38104031",
       "ytMvId": "5ly8tAU-n_w",
-      "ytAudioId": "5ly8tAU-n_w"
+      "ytAudioId": "5ly8tAU-n_w",
+      "ytMvUrl": "https://www.youtube.com/watch?v=5ly8tAU-n_w",
+      "ytAudioUrl": "https://www.youtube.com/watch?v=5ly8tAU-n_w",
+      "ytMusicUrl": "https://music.youtube.com/watch?v=5ly8tAU-n_w",
+      "genieUrl": "https://www.genie.co.kr/detail/songInfo?xgnm=108005739",
+      "bugsUrl": "https://music.bugs.co.kr/track/33324182",
+      "appleUrl": "https://music.apple.com/us/album/if-you-ask-me-what-love-is/1773218819?i=1773218828",
+      "spotifyUrl": "",
+      "vibeUrl": "https://vibe.naver.com/track/87483041",
+      "deezerUrl": ""
     },
     {
       "rank": 38,
@@ -497,7 +830,16 @@
       "delta": 0,
       "url": "https://www.melon.com/song/detail.htm?songId=38429074",
       "ytMvId": "tfmwbxBKPh0",
-      "ytAudioId": "tfmwbxBKPh0"
+      "ytAudioId": "tfmwbxBKPh0",
+      "ytMvUrl": "https://www.youtube.com/watch?v=tfmwbxBKPh0",
+      "ytAudioUrl": "https://www.youtube.com/watch?v=tfmwbxBKPh0",
+      "ytMusicUrl": "https://music.youtube.com/watch?v=tfmwbxBKPh0",
+      "genieUrl": "https://www.genie.co.kr/detail/songInfo?xgnm=108805752",
+      "bugsUrl": "https://music.bugs.co.kr/track/6280276",
+      "appleUrl": "https://music.apple.com/us/album/%EB%AA%A8%EB%A5%B4%EC%8B%9C%EB%82%98%EC%9A%94-prod-%EB%A1%9C%EC%BD%94%EB%B2%A0%EB%A6%AC-mr/1815428496?i=1815428502",
+      "spotifyUrl": "",
+      "vibeUrl": "https://vibe.naver.com/track/88523480",
+      "deezerUrl": ""
     },
     {
       "rank": 39,
@@ -510,7 +852,16 @@
       "delta": 0,
       "url": "https://www.melon.com/song/detail.htm?songId=39307948",
       "ytMvId": "19oT04OuBhg",
-      "ytAudioId": "_FRB3rRQlEk"
+      "ytAudioId": "_FRB3rRQlEk",
+      "ytMvUrl": "https://www.youtube.com/watch?v=19oT04OuBhg",
+      "ytAudioUrl": "https://www.youtube.com/watch?v=_FRB3rRQlEk",
+      "ytMusicUrl": "https://music.youtube.com/watch?v=_FRB3rRQlEk",
+      "genieUrl": "https://www.genie.co.kr/detail/songInfo?xgnm=110968221",
+      "bugsUrl": "https://music.bugs.co.kr/track/6323868",
+      "appleUrl": "https://music.apple.com/us/album/endangered-love/1825027867?i=1825027874",
+      "spotifyUrl": "",
+      "vibeUrl": "https://vibe.naver.com/track/95239347",
+      "deezerUrl": ""
     },
     {
       "rank": 40,
@@ -523,7 +874,16 @@
       "delta": 0,
       "url": "https://www.melon.com/song/detail.htm?songId=38300904",
       "ytMvId": "eA0lHNZ1KCA",
-      "ytAudioId": "eA0lHNZ1KCA"
+      "ytAudioId": "eA0lHNZ1KCA",
+      "ytMvUrl": "https://www.youtube.com/watch?v=eA0lHNZ1KCA",
+      "ytAudioUrl": "https://www.youtube.com/watch?v=eA0lHNZ1KCA",
+      "ytMusicUrl": "https://music.youtube.com/watch?v=eA0lHNZ1KCA",
+      "genieUrl": "https://www.genie.co.kr/detail/songInfo?xgnm=107590768",
+      "bugsUrl": "https://music.bugs.co.kr/track/6274999",
+      "appleUrl": "https://music.apple.com/us/album/toxic-till-the-end/1771105914?i=1771105929",
+      "spotifyUrl": "",
+      "vibeUrl": "",
+      "deezerUrl": "https://www.deezer.com/track/3124823321"
     },
     {
       "rank": 41,
@@ -536,7 +896,16 @@
       "delta": 0,
       "url": "https://www.melon.com/song/detail.htm?songId=601879407",
       "ytMvId": "6Ycn9qZK09I",
-      "ytAudioId": "xED4wo87QFE"
+      "ytAudioId": "xED4wo87QFE",
+      "ytMvUrl": "https://www.youtube.com/watch?v=6Ycn9qZK09I",
+      "ytAudioUrl": "https://www.youtube.com/watch?v=xED4wo87QFE",
+      "ytMusicUrl": "https://music.youtube.com/watch?v=xED4wo87QFE",
+      "genieUrl": "https://www.genie.co.kr/detail/songInfo?xgnm=114873244",
+      "bugsUrl": "https://music.bugs.co.kr/track/6463154",
+      "appleUrl": "https://music.apple.com/us/album/heavy-serenade/1892154305?i=1892154309",
+      "spotifyUrl": "",
+      "vibeUrl": "https://vibe.naver.com/track/103292092",
+      "deezerUrl": "https://www.deezer.com/track/4006888161"
     },
     {
       "rank": 42,
@@ -549,7 +918,16 @@
       "delta": 0,
       "url": "https://www.melon.com/song/detail.htm?songId=39298775",
       "ytMvId": "CgCVZdcKcqY",
-      "ytAudioId": "RUKqwwyAiEU"
+      "ytAudioId": "RUKqwwyAiEU",
+      "ytMvUrl": "https://www.youtube.com/watch?v=CgCVZdcKcqY",
+      "ytAudioUrl": "https://www.youtube.com/watch?v=RUKqwwyAiEU",
+      "ytMusicUrl": "https://music.youtube.com/watch?v=RUKqwwyAiEU",
+      "genieUrl": "https://www.genie.co.kr/detail/songInfo?xgnm=110931419",
+      "bugsUrl": "https://music.bugs.co.kr/track/6323217",
+      "appleUrl": "https://music.apple.com/us/album/jump/1824672650?i=1824672652",
+      "spotifyUrl": "",
+      "vibeUrl": "https://vibe.naver.com/track/95226788",
+      "deezerUrl": ""
     },
     {
       "rank": 43,
@@ -562,7 +940,16 @@
       "delta": 0,
       "url": "https://www.melon.com/song/detail.htm?songId=34061322",
       "ytMvId": "LKQ-18LoFQk",
-      "ytAudioId": "0ccff10h7y4"
+      "ytAudioId": "0ccff10h7y4",
+      "ytMvUrl": "https://www.youtube.com/watch?v=LKQ-18LoFQk",
+      "ytAudioUrl": "https://www.youtube.com/watch?v=0ccff10h7y4",
+      "ytMusicUrl": "https://music.youtube.com/watch?v=0ccff10h7y4",
+      "genieUrl": "https://www.genie.co.kr/detail/songInfo?xgnm=94535712",
+      "bugsUrl": "https://music.bugs.co.kr/track/6131070",
+      "appleUrl": "https://music.apple.com/us/album/love-always-run-away/1589204990?i=1589204991",
+      "spotifyUrl": "",
+      "vibeUrl": "https://vibe.naver.com/track/50867113",
+      "deezerUrl": "https://www.deezer.com/track/1515577462"
     },
     {
       "rank": 44,
@@ -575,7 +962,16 @@
       "delta": 0,
       "url": "https://www.melon.com/song/detail.htm?songId=602683997",
       "ytMvId": "NZP153MUpHY",
-      "ytAudioId": "NZP153MUpHY"
+      "ytAudioId": "NZP153MUpHY",
+      "ytMvUrl": "https://www.youtube.com/watch?v=NZP153MUpHY",
+      "ytAudioUrl": "https://www.youtube.com/watch?v=NZP153MUpHY",
+      "ytMusicUrl": "https://music.youtube.com/watch?v=NZP153MUpHY",
+      "genieUrl": "https://www.genie.co.kr/detail/songInfo?xgnm=116196002",
+      "bugsUrl": "https://music.bugs.co.kr/track/6498833",
+      "appleUrl": "https://music.apple.com/us/album/surfin-boy/6794291724?i=6794291725",
+      "spotifyUrl": "",
+      "vibeUrl": "",
+      "deezerUrl": "https://www.deezer.com/track/4178965332"
     },
     {
       "rank": 45,
@@ -588,7 +984,16 @@
       "delta": 0,
       "url": "https://www.melon.com/song/detail.htm?songId=37228861",
       "ytMvId": "fQ84rvbfa08",
-      "ytAudioId": "eFOD35wX2Lc"
+      "ytAudioId": "eFOD35wX2Lc",
+      "ytMvUrl": "https://www.youtube.com/watch?v=fQ84rvbfa08",
+      "ytAudioUrl": "https://www.youtube.com/watch?v=eFOD35wX2Lc",
+      "ytMusicUrl": "https://music.youtube.com/watch?v=eFOD35wX2Lc",
+      "genieUrl": "https://www.genie.co.kr/detail/songInfo?xgnm=105563654",
+      "bugsUrl": "https://music.bugs.co.kr/track/6234453",
+      "appleUrl": "https://music.apple.com/us/album/heavenly-fate/1731682479?i=1731682480",
+      "spotifyUrl": "",
+      "vibeUrl": "https://vibe.naver.com/track/83077839",
+      "deezerUrl": "https://www.deezer.com/track/2667818662"
     },
     {
       "rank": 46,
@@ -601,7 +1006,16 @@
       "delta": 0,
       "url": "https://www.melon.com/song/detail.htm?songId=33411344",
       "ytMvId": "RaTCjhIS4AY",
-      "ytAudioId": "RaTCjhIS4AY"
+      "ytAudioId": "RaTCjhIS4AY",
+      "ytMvUrl": "https://www.youtube.com/watch?v=RaTCjhIS4AY",
+      "ytAudioUrl": "https://www.youtube.com/watch?v=RaTCjhIS4AY",
+      "ytMusicUrl": "https://music.youtube.com/watch?v=RaTCjhIS4AY",
+      "genieUrl": "https://www.genie.co.kr/detail/songInfo?xgnm=92970438",
+      "bugsUrl": "https://music.bugs.co.kr/track/6103720",
+      "appleUrl": "https://music.apple.com/us/album/a-letter-for-you/1562973794?i=1562973799",
+      "spotifyUrl": "",
+      "vibeUrl": "https://vibe.naver.com/track/46735061",
+      "deezerUrl": ""
     },
     {
       "rank": 47,
@@ -614,7 +1028,16 @@
       "delta": 0,
       "url": "https://www.melon.com/song/detail.htm?songId=37390939",
       "ytMvId": "fBB4MaBybyg",
-      "ytAudioId": "fBB4MaBybyg"
+      "ytAudioId": "fBB4MaBybyg",
+      "ytMvUrl": "https://www.youtube.com/watch?v=fBB4MaBybyg",
+      "ytAudioUrl": "https://www.youtube.com/watch?v=fBB4MaBybyg",
+      "ytMusicUrl": "https://music.youtube.com/watch?v=fBB4MaBybyg",
+      "genieUrl": "https://www.genie.co.kr/detail/songInfo?xgnm=104055957",
+      "bugsUrl": "https://music.bugs.co.kr/track/33144670",
+      "appleUrl": "https://music.apple.com/us/album/sudden-shower/1739750620?i=1739750624",
+      "spotifyUrl": "",
+      "vibeUrl": "https://vibe.naver.com/track/84585525",
+      "deezerUrl": ""
     },
     {
       "rank": 48,
@@ -627,7 +1050,16 @@
       "delta": 0,
       "url": "https://www.melon.com/song/detail.htm?songId=38071559",
       "ytMvId": "1bZNp9d7pLM",
-      "ytAudioId": "hPgWv-buSHs"
+      "ytAudioId": "hPgWv-buSHs",
+      "ytMvUrl": "https://www.youtube.com/watch?v=1bZNp9d7pLM",
+      "ytAudioUrl": "https://www.youtube.com/watch?v=hPgWv-buSHs",
+      "ytMusicUrl": "https://music.youtube.com/watch?v=hPgWv-buSHs",
+      "genieUrl": "https://www.genie.co.kr/detail/songInfo?xgnm=107985564",
+      "bugsUrl": "https://music.bugs.co.kr/track/6265038",
+      "appleUrl": "https://music.apple.com/us/album/coming-of-age-story/1786303332?i=1786303336",
+      "spotifyUrl": "",
+      "vibeUrl": "https://vibe.naver.com/track/87341125",
+      "deezerUrl": "https://www.deezer.com/track/3149835081"
     },
     {
       "rank": 49,
@@ -640,7 +1072,16 @@
       "delta": 0,
       "url": "https://www.melon.com/song/detail.htm?songId=37323944",
       "ytMvId": "sWXGbkM0tBI",
-      "ytAudioId": "2o1zdX72400"
+      "ytAudioId": "2o1zdX72400",
+      "ytMvUrl": "https://www.youtube.com/watch?v=sWXGbkM0tBI",
+      "ytAudioUrl": "https://www.youtube.com/watch?v=2o1zdX72400",
+      "ytMusicUrl": "https://music.youtube.com/watch?v=2o1zdX72400",
+      "genieUrl": "https://www.genie.co.kr/detail/songInfo?xgnm=105757622",
+      "bugsUrl": "https://music.bugs.co.kr/track/33122825",
+      "appleUrl": "https://music.apple.com/us/album/happy/1732319005?i=1732319018",
+      "spotifyUrl": "",
+      "vibeUrl": "https://vibe.naver.com/track/83681270",
+      "deezerUrl": "https://www.deezer.com/track/2703218862"
     },
     {
       "rank": 50,
@@ -653,7 +1094,16 @@
       "delta": 0,
       "url": "https://www.melon.com/song/detail.htm?songId=36699489",
       "ytMvId": "IMWT6937uUs",
-      "ytAudioId": "iFtDTa99HKI"
+      "ytAudioId": "iFtDTa99HKI",
+      "ytMvUrl": "https://www.youtube.com/watch?v=IMWT6937uUs",
+      "ytAudioUrl": "https://www.youtube.com/watch?v=iFtDTa99HKI",
+      "ytMusicUrl": "https://music.youtube.com/watch?v=iFtDTa99HKI",
+      "genieUrl": "https://www.genie.co.kr/detail/songInfo?xgnm=103024121",
+      "bugsUrl": "https://music.bugs.co.kr/track/6212711",
+      "appleUrl": "https://music.apple.com/us/album/if-only-i-had-you-mr/1850602139?i=1850602143",
+      "spotifyUrl": "",
+      "vibeUrl": "https://vibe.naver.com/track/66643147",
+      "deezerUrl": ""
     },
     {
       "rank": 51,
@@ -666,7 +1116,16 @@
       "delta": 0,
       "url": "https://www.melon.com/song/detail.htm?songId=39166708",
       "ytMvId": "hohuFW0zQUw",
-      "ytAudioId": "fPLAgY5bU1Y"
+      "ytAudioId": "fPLAgY5bU1Y",
+      "ytMvUrl": "https://www.youtube.com/watch?v=hohuFW0zQUw",
+      "ytAudioUrl": "https://www.youtube.com/watch?v=fPLAgY5bU1Y",
+      "ytMusicUrl": "https://music.youtube.com/watch?v=fPLAgY5bU1Y",
+      "genieUrl": "https://www.genie.co.kr/detail/songInfo?xgnm=110589415",
+      "bugsUrl": "https://music.bugs.co.kr/track/125523552",
+      "appleUrl": "https://music.apple.com/us/album/golden/1820264137?i=1820264150",
+      "spotifyUrl": "",
+      "vibeUrl": "https://vibe.naver.com/track/94660626",
+      "deezerUrl": "https://www.deezer.com/track/3412534581"
     },
     {
       "rank": 52,
@@ -679,7 +1138,16 @@
       "delta": 0,
       "url": "https://www.melon.com/song/detail.htm?songId=38123332",
       "ytMvId": "jWQx2f-CErU",
-      "ytAudioId": "kngr_3FvB-M"
+      "ytAudioId": "kngr_3FvB-M",
+      "ytMvUrl": "https://www.youtube.com/watch?v=jWQx2f-CErU",
+      "ytAudioUrl": "https://www.youtube.com/watch?v=kngr_3FvB-M",
+      "ytMusicUrl": "https://music.youtube.com/watch?v=kngr_3FvB-M",
+      "genieUrl": "https://www.genie.co.kr/detail/songInfo?xgnm=108110514",
+      "bugsUrl": "https://music.bugs.co.kr/track/6266734",
+      "appleUrl": "https://music.apple.com/us/album/whiplash/1772214980?i=1772214981",
+      "spotifyUrl": "",
+      "vibeUrl": "https://vibe.naver.com/track/87532802",
+      "deezerUrl": "https://www.deezer.com/track/3030102541"
     },
     {
       "rank": 53,
@@ -692,7 +1160,16 @@
       "delta": 0,
       "url": "https://www.melon.com/song/detail.htm?songId=601719493",
       "ytMvId": "rsZwrTNklos",
-      "ytAudioId": "5uubX_W3YFk"
+      "ytAudioId": "5uubX_W3YFk",
+      "ytMvUrl": "https://www.youtube.com/watch?v=rsZwrTNklos",
+      "ytAudioUrl": "https://www.youtube.com/watch?v=5uubX_W3YFk",
+      "ytMusicUrl": "https://music.youtube.com/watch?v=5uubX_W3YFk",
+      "genieUrl": "https://www.genie.co.kr/detail/songInfo?xgnm=114544535",
+      "bugsUrl": "https://music.bugs.co.kr/track/6450604",
+      "appleUrl": "https://music.apple.com/us/album/runaway/1889474645?i=1889474652",
+      "spotifyUrl": "",
+      "vibeUrl": "https://vibe.naver.com/track/102411310",
+      "deezerUrl": "https://www.deezer.com/track/3934788171"
     },
     {
       "rank": 54,
@@ -705,7 +1182,16 @@
       "delta": 0,
       "url": "https://www.melon.com/song/detail.htm?songId=602540014",
       "ytMvId": "sLk8zWUuYTA",
-      "ytAudioId": "sLk8zWUuYTA"
+      "ytAudioId": "sLk8zWUuYTA",
+      "ytMvUrl": "https://www.youtube.com/watch?v=sLk8zWUuYTA",
+      "ytAudioUrl": "https://www.youtube.com/watch?v=sLk8zWUuYTA",
+      "ytMusicUrl": "https://music.youtube.com/watch?v=sLk8zWUuYTA",
+      "genieUrl": "https://www.genie.co.kr/detail/songInfo?xgnm=116020152",
+      "bugsUrl": "https://music.bugs.co.kr/track/34011323",
+      "appleUrl": "https://music.apple.com/us/album/vitamin-me/6791520495?i=6791520498",
+      "spotifyUrl": "",
+      "vibeUrl": "https://vibe.naver.com/track/106021568",
+      "deezerUrl": "https://www.deezer.com/track/4157622882"
     },
     {
       "rank": 55,
@@ -718,7 +1204,16 @@
       "delta": 0,
       "url": "https://www.melon.com/song/detail.htm?songId=34753369",
       "ytMvId": "pNi9PjmbUrI",
-      "ytAudioId": "niazCi1AqqA"
+      "ytAudioId": "niazCi1AqqA",
+      "ytMvUrl": "https://www.youtube.com/watch?v=pNi9PjmbUrI",
+      "ytAudioUrl": "https://www.youtube.com/watch?v=niazCi1AqqA",
+      "ytMusicUrl": "https://music.youtube.com/watch?v=niazCi1AqqA",
+      "genieUrl": "https://www.genie.co.kr/detail/songInfo?xgnm=96236538",
+      "bugsUrl": "https://music.bugs.co.kr/track/32486385",
+      "appleUrl": "https://music.apple.com/us/album/let-me-love-my-youth/1613687888?i=1613687889",
+      "spotifyUrl": "",
+      "vibeUrl": "https://vibe.naver.com/track/54401691",
+      "deezerUrl": "https://www.deezer.com/track/1681322007"
     },
     {
       "rank": 56,
@@ -731,7 +1226,16 @@
       "delta": 0,
       "url": "https://www.melon.com/song/detail.htm?songId=31666417",
       "ytMvId": "GpQ222I1ULc",
-      "ytAudioId": "5g4KsIizYhQ"
+      "ytAudioId": "5g4KsIizYhQ",
+      "ytMvUrl": "https://www.youtube.com/watch?v=GpQ222I1ULc",
+      "ytAudioUrl": "https://www.youtube.com/watch?v=5g4KsIizYhQ",
+      "ytMusicUrl": "https://music.youtube.com/watch?v=5g4KsIizYhQ",
+      "genieUrl": "https://www.genie.co.kr/detail/songInfo?xgnm=88686378",
+      "bugsUrl": "https://music.bugs.co.kr/track/31501137",
+      "appleUrl": "https://music.apple.com/us/album/for-lovers-who-hesitate/1456102975?i=1456103133",
+      "spotifyUrl": "",
+      "vibeUrl": "https://vibe.naver.com/track/26193354",
+      "deezerUrl": ""
     },
     {
       "rank": 57,
@@ -744,7 +1248,16 @@
       "delta": 0,
       "url": "https://www.melon.com/song/detail.htm?songId=33241003",
       "ytMvId": "ERlE9AqiYfQ",
-      "ytAudioId": "ZurHW2kBqrw"
+      "ytAudioId": "ZurHW2kBqrw",
+      "ytMvUrl": "https://www.youtube.com/watch?v=ERlE9AqiYfQ",
+      "ytAudioUrl": "https://www.youtube.com/watch?v=ZurHW2kBqrw",
+      "ytMusicUrl": "https://music.youtube.com/watch?v=ZurHW2kBqrw",
+      "genieUrl": "https://www.genie.co.kr/detail/songInfo?xgnm=92118774",
+      "bugsUrl": "https://music.bugs.co.kr/track/6065300",
+      "appleUrl": "https://music.apple.com/us/album/my-whole-world/1661608701?i=1661608702",
+      "spotifyUrl": "",
+      "vibeUrl": "https://vibe.naver.com/track/44192550",
+      "deezerUrl": ""
     },
     {
       "rank": 58,
@@ -757,7 +1270,16 @@
       "delta": 0,
       "url": "https://www.melon.com/song/detail.htm?songId=38629386",
       "ytMvId": "JSFG-IE8n_c",
-      "ytAudioId": "JSFG-IE8n_c"
+      "ytAudioId": "JSFG-IE8n_c",
+      "ytMvUrl": "https://www.youtube.com/watch?v=JSFG-IE8n_c",
+      "ytAudioUrl": "https://www.youtube.com/watch?v=JSFG-IE8n_c",
+      "ytMusicUrl": "https://music.youtube.com/watch?v=JSFG-IE8n_c",
+      "genieUrl": "https://www.genie.co.kr/detail/songInfo?xgnm=109342665",
+      "bugsUrl": "https://music.bugs.co.kr/track/6292518",
+      "appleUrl": "https://music.apple.com/us/album/like-jennie/1800280826?i=1800281048",
+      "spotifyUrl": "",
+      "vibeUrl": "https://vibe.naver.com/track/90527708",
+      "deezerUrl": "https://www.deezer.com/track/3879889311"
     },
     {
       "rank": 59,
@@ -770,7 +1292,16 @@
       "delta": 0,
       "url": "https://www.melon.com/song/detail.htm?songId=601555642",
       "ytMvId": "b4iVv91Z6lY",
-      "ytAudioId": "G-z30uk_Xn4"
+      "ytAudioId": "G-z30uk_Xn4",
+      "ytMvUrl": "https://www.youtube.com/watch?v=b4iVv91Z6lY",
+      "ytAudioUrl": "https://www.youtube.com/watch?v=G-z30uk_Xn4",
+      "ytMusicUrl": "https://music.youtube.com/watch?v=G-z30uk_Xn4",
+      "genieUrl": "https://www.genie.co.kr/detail/songInfo?xgnm=114356078",
+      "bugsUrl": "https://music.bugs.co.kr/track/6441889",
+      "appleUrl": "https://music.apple.com/us/album/swim/1868481904?i=1868482073",
+      "spotifyUrl": "",
+      "vibeUrl": "https://vibe.naver.com/track/101782333",
+      "deezerUrl": "https://www.deezer.com/track/3907717261"
     },
     {
       "rank": 60,
@@ -783,7 +1314,16 @@
       "delta": 0,
       "url": "https://www.melon.com/song/detail.htm?songId=30962526",
       "ytMvId": "nq0BYGyH2Do",
-      "ytAudioId": "64uidOIH2vY"
+      "ytAudioId": "64uidOIH2vY",
+      "ytMvUrl": "https://www.youtube.com/watch?v=nq0BYGyH2Do",
+      "ytAudioUrl": "https://www.youtube.com/watch?v=64uidOIH2vY",
+      "ytMusicUrl": "https://music.youtube.com/watch?v=64uidOIH2vY",
+      "genieUrl": "https://www.genie.co.kr/detail/songInfo?xgnm=87840106",
+      "bugsUrl": "https://music.bugs.co.kr/track/30994623",
+      "appleUrl": "https://music.apple.com/us/album/every-day-every-moment/1360245436?i=1360245440",
+      "spotifyUrl": "",
+      "vibeUrl": "https://vibe.naver.com/track/21064399",
+      "deezerUrl": "https://www.deezer.com/track/728091372"
     },
     {
       "rank": 61,
@@ -796,7 +1336,16 @@
       "delta": 0,
       "url": "https://www.melon.com/song/detail.htm?songId=600791038",
       "ytMvId": "eDlYB_e5k3c",
-      "ytAudioId": "eDlYB_e5k3c"
+      "ytAudioId": "eDlYB_e5k3c",
+      "ytMvUrl": "https://www.youtube.com/watch?v=eDlYB_e5k3c",
+      "ytAudioUrl": "https://www.youtube.com/watch?v=eDlYB_e5k3c",
+      "ytMusicUrl": "https://music.youtube.com/watch?v=eDlYB_e5k3c",
+      "genieUrl": "https://www.genie.co.kr/detail/songInfo?xgnm=113251268",
+      "bugsUrl": "https://music.bugs.co.kr/track/6398399",
+      "appleUrl": "https://music.apple.com/us/album/borrow-your-night/1864310244?i=1864310245",
+      "spotifyUrl": "",
+      "vibeUrl": "https://vibe.naver.com/track/99603645",
+      "deezerUrl": ""
     },
     {
       "rank": 62,
@@ -809,7 +1358,16 @@
       "delta": 0,
       "url": "https://www.melon.com/song/detail.htm?songId=30232719",
       "ytMvId": "BS7tz2rAOSA",
-      "ytAudioId": "BS7tz2rAOSA"
+      "ytAudioId": "BS7tz2rAOSA",
+      "ytMvUrl": "https://www.youtube.com/watch?v=BS7tz2rAOSA",
+      "ytAudioUrl": "https://www.youtube.com/watch?v=BS7tz2rAOSA",
+      "ytMusicUrl": "https://music.youtube.com/watch?v=BS7tz2rAOSA",
+      "genieUrl": "https://www.genie.co.kr/detail/songInfo?xgnm=86931930",
+      "bugsUrl": "https://music.bugs.co.kr/track/30540153",
+      "appleUrl": "https://music.apple.com/us/album/you-were-beautiful/1689198298?i=1689198306",
+      "spotifyUrl": "",
+      "vibeUrl": "https://vibe.naver.com/track/16081363",
+      "deezerUrl": "https://www.deezer.com/track/2295735705"
     },
     {
       "rank": 63,
@@ -822,7 +1380,16 @@
       "delta": 0,
       "url": "https://www.melon.com/song/detail.htm?songId=36617841",
       "ytMvId": "QU9c0053UAU",
-      "ytAudioId": "Vs64cZbeY88"
+      "ytAudioId": "Vs64cZbeY88",
+      "ytMvUrl": "https://www.youtube.com/watch?v=QU9c0053UAU",
+      "ytAudioUrl": "https://www.youtube.com/watch?v=Vs64cZbeY88",
+      "ytMusicUrl": "https://music.youtube.com/watch?v=Vs64cZbeY88",
+      "genieUrl": "https://www.genie.co.kr/detail/songInfo?xgnm=102664199",
+      "bugsUrl": "https://music.bugs.co.kr/track/6207490",
+      "appleUrl": "https://music.apple.com/us/album/seven-clean-ver/1709554767?i=1709555102",
+      "spotifyUrl": "",
+      "vibeUrl": "https://vibe.naver.com/track/66041610",
+      "deezerUrl": "https://www.deezer.com/track/2523325001"
     },
     {
       "rank": 64,
@@ -835,7 +1402,16 @@
       "delta": 0,
       "url": "https://www.melon.com/song/detail.htm?songId=37375706",
       "ytMvId": "t37jMbfNTPk",
-      "ytAudioId": "l2ToQHlD2Vs"
+      "ytAudioId": "l2ToQHlD2Vs",
+      "ytMvUrl": "https://www.youtube.com/watch?v=t37jMbfNTPk",
+      "ytAudioUrl": "https://www.youtube.com/watch?v=l2ToQHlD2Vs",
+      "ytMusicUrl": "https://music.youtube.com/watch?v=l2ToQHlD2Vs",
+      "genieUrl": "https://www.genie.co.kr/detail/songInfo?xgnm=105980797",
+      "bugsUrl": "https://music.bugs.co.kr/track/6239745",
+      "appleUrl": "https://music.apple.com/us/album/propose/1786322515?i=1786322516",
+      "spotifyUrl": "",
+      "vibeUrl": "https://vibe.naver.com/track/84204455",
+      "deezerUrl": "https://www.deezer.com/track/3149977401"
     },
     {
       "rank": 65,
@@ -848,7 +1424,16 @@
       "delta": 0,
       "url": "https://www.melon.com/song/detail.htm?songId=39765727",
       "ytMvId": "sFK89gemgKM",
-      "ytAudioId": "ZK1ymAzBi-Y"
+      "ytAudioId": "ZK1ymAzBi-Y",
+      "ytMvUrl": "https://www.youtube.com/watch?v=sFK89gemgKM",
+      "ytAudioUrl": "https://www.youtube.com/watch?v=ZK1ymAzBi-Y",
+      "ytMusicUrl": "https://music.youtube.com/watch?v=ZK1ymAzBi-Y",
+      "genieUrl": "https://www.genie.co.kr/detail/songInfo?xgnm=111564226",
+      "bugsUrl": "https://music.bugs.co.kr/track/6340982",
+      "appleUrl": "https://music.apple.com/us/album/eternal-moment/1836064679?i=1836064683",
+      "spotifyUrl": "",
+      "vibeUrl": "https://vibe.naver.com/track/96490447",
+      "deezerUrl": ""
     },
     {
       "rank": 66,
@@ -861,7 +1446,16 @@
       "delta": 0,
       "url": "https://www.melon.com/song/detail.htm?songId=37140709",
       "ytMvId": "hVAc1Vf2ITU",
-      "ytAudioId": "hVAc1Vf2ITU"
+      "ytAudioId": "hVAc1Vf2ITU",
+      "ytMvUrl": "https://www.youtube.com/watch?v=hVAc1Vf2ITU",
+      "ytAudioUrl": "https://www.youtube.com/watch?v=hVAc1Vf2ITU",
+      "ytMusicUrl": "https://music.youtube.com/watch?v=hVAc1Vf2ITU",
+      "genieUrl": "https://www.genie.co.kr/detail/songInfo?xgnm=105262751",
+      "bugsUrl": "https://music.bugs.co.kr/track/6230613",
+      "appleUrl": "https://music.apple.com/us/album/plot-twist/1723932647?i=1723932648",
+      "spotifyUrl": "",
+      "vibeUrl": "https://vibe.naver.com/track/82771961",
+      "deezerUrl": "https://www.deezer.com/track/2625258552"
     },
     {
       "rank": 67,
@@ -874,7 +1468,16 @@
       "delta": 0,
       "url": "https://www.melon.com/song/detail.htm?songId=34657844",
       "ytMvId": "UoBsiQW23IY",
-      "ytAudioId": "l3YfzCrTRXY"
+      "ytAudioId": "l3YfzCrTRXY",
+      "ytMvUrl": "https://www.youtube.com/watch?v=UoBsiQW23IY",
+      "ytAudioUrl": "https://www.youtube.com/watch?v=l3YfzCrTRXY",
+      "ytMusicUrl": "https://music.youtube.com/watch?v=l3YfzCrTRXY",
+      "genieUrl": "https://www.genie.co.kr/detail/songInfo?xgnm=96042335",
+      "bugsUrl": "https://music.bugs.co.kr/track/6147666",
+      "appleUrl": "https://music.apple.com/us/album/love-maybe/1609910932?i=1609910933",
+      "spotifyUrl": "",
+      "vibeUrl": "https://vibe.naver.com/track/53934759",
+      "deezerUrl": "https://www.deezer.com/track/3412534641"
     },
     {
       "rank": 68,
@@ -887,7 +1490,16 @@
       "delta": 0,
       "url": "https://www.melon.com/song/detail.htm?songId=38123338",
       "ytMvId": "MezvFK_r-MI",
-      "ytAudioId": "xL_cd1DJan8"
+      "ytAudioId": "xL_cd1DJan8",
+      "ytMvUrl": "https://www.youtube.com/watch?v=MezvFK_r-MI",
+      "ytAudioUrl": "https://www.youtube.com/watch?v=xL_cd1DJan8",
+      "ytMusicUrl": "https://music.youtube.com/watch?v=xL_cd1DJan8",
+      "genieUrl": "https://www.genie.co.kr/detail/songInfo?xgnm=108110746",
+      "bugsUrl": "https://music.bugs.co.kr/track/6266740",
+      "appleUrl": "https://music.apple.com/us/album/im-firefly/1773943441?i=1773943442",
+      "spotifyUrl": "",
+      "vibeUrl": "https://vibe.naver.com/track/87532203",
+      "deezerUrl": ""
     },
     {
       "rank": 69,
@@ -900,7 +1512,16 @@
       "delta": 0,
       "url": "https://www.melon.com/song/detail.htm?songId=1556553",
       "ytMvId": "qdr0fZbuffY",
-      "ytAudioId": "Kv-Aqwttwzo"
+      "ytAudioId": "Kv-Aqwttwzo",
+      "ytMvUrl": "https://www.youtube.com/watch?v=qdr0fZbuffY",
+      "ytAudioUrl": "https://www.youtube.com/watch?v=Kv-Aqwttwzo",
+      "ytMusicUrl": "https://music.youtube.com/watch?v=Kv-Aqwttwzo",
+      "genieUrl": "https://www.genie.co.kr/detail/songInfo?xgnm=45790278",
+      "bugsUrl": "",
+      "appleUrl": "https://music.apple.com/us/album/love-love-love-feat-%EC%9C%B5%EC%A7%84/1610106934?i=1610108181",
+      "spotifyUrl": "",
+      "vibeUrl": "https://vibe.naver.com/track/651187",
+      "deezerUrl": "https://www.deezer.com/track/1773737457"
     },
     {
       "rank": 70,
@@ -913,7 +1534,16 @@
       "delta": 0,
       "url": "https://www.melon.com/song/detail.htm?songId=32872978",
       "ytMvId": "gdZLi9oWNZg",
-      "ytAudioId": "OiMWFojB9Ok"
+      "ytAudioId": "OiMWFojB9Ok",
+      "ytMvUrl": "https://www.youtube.com/watch?v=gdZLi9oWNZg",
+      "ytAudioUrl": "https://www.youtube.com/watch?v=OiMWFojB9Ok",
+      "ytMusicUrl": "https://music.youtube.com/watch?v=OiMWFojB9Ok",
+      "genieUrl": "https://www.genie.co.kr/detail/songInfo?xgnm=90705547",
+      "bugsUrl": "https://music.bugs.co.kr/track/31999479",
+      "appleUrl": "https://music.apple.com/us/album/dynamite-live/1823627665?i=1823627863",
+      "spotifyUrl": "",
+      "vibeUrl": "https://vibe.naver.com/track/41684117",
+      "deezerUrl": "https://www.deezer.com/track/1564465082"
     },
     {
       "rank": 71,
@@ -926,7 +1556,16 @@
       "delta": 0,
       "url": "https://www.melon.com/song/detail.htm?songId=37323943",
       "ytMvId": "RowlrvmyFEk",
-      "ytAudioId": "70ZUhz8j9zk"
+      "ytAudioId": "70ZUhz8j9zk",
+      "ytMvUrl": "https://www.youtube.com/watch?v=RowlrvmyFEk",
+      "ytAudioUrl": "https://www.youtube.com/watch?v=70ZUhz8j9zk",
+      "ytMusicUrl": "https://music.youtube.com/watch?v=70ZUhz8j9zk",
+      "genieUrl": "https://www.genie.co.kr/detail/songInfo?xgnm=105757621",
+      "bugsUrl": "https://music.bugs.co.kr/track/33122824",
+      "appleUrl": "https://music.apple.com/us/album/welcome-to-the-show/1732319005?i=1732319011",
+      "spotifyUrl": "",
+      "vibeUrl": "https://vibe.naver.com/track/83681269",
+      "deezerUrl": "https://www.deezer.com/track/2703218852"
     },
     {
       "rank": 72,
@@ -939,7 +1578,16 @@
       "delta": 0,
       "url": "https://www.melon.com/song/detail.htm?songId=33496587",
       "ytMvId": "YPvrhziJAno",
-      "ytAudioId": "s_9wW2vunAE"
+      "ytAudioId": "s_9wW2vunAE",
+      "ytMvUrl": "https://www.youtube.com/watch?v=YPvrhziJAno",
+      "ytAudioUrl": "https://www.youtube.com/watch?v=s_9wW2vunAE",
+      "ytMusicUrl": "https://music.youtube.com/watch?v=s_9wW2vunAE",
+      "genieUrl": "https://www.genie.co.kr/detail/songInfo?xgnm=94621927",
+      "bugsUrl": "https://music.bugs.co.kr/track/6110464",
+      "appleUrl": "https://music.apple.com/us/album/if-you-lovingly-call-my-name-female-version/1590789871?i=1590789873",
+      "spotifyUrl": "",
+      "vibeUrl": "https://vibe.naver.com/track/48336942",
+      "deezerUrl": ""
     },
     {
       "rank": 73,
@@ -952,7 +1600,16 @@
       "delta": 0,
       "url": "https://www.melon.com/song/detail.htm?songId=37901626",
       "ytMvId": "kPa7bsKwL-c",
-      "ytAudioId": "PfH7jq_uSCM"
+      "ytAudioId": "PfH7jq_uSCM",
+      "ytMvUrl": "https://www.youtube.com/watch?v=kPa7bsKwL-c",
+      "ytAudioUrl": "https://www.youtube.com/watch?v=PfH7jq_uSCM",
+      "ytMusicUrl": "https://music.youtube.com/watch?v=PfH7jq_uSCM",
+      "genieUrl": "https://www.genie.co.kr/detail/songInfo?xgnm=107520166",
+      "bugsUrl": "https://music.bugs.co.kr/track/116131843",
+      "appleUrl": "https://music.apple.com/us/album/die-with-a-smile/1762656724?i=1762656732",
+      "spotifyUrl": "",
+      "vibeUrl": "https://vibe.naver.com/track/86726389",
+      "deezerUrl": "https://www.deezer.com/track/2947516331"
     },
     {
       "rank": 74,
@@ -965,7 +1622,16 @@
       "delta": 0,
       "url": "https://www.melon.com/song/detail.htm?songId=38120327",
       "ytMvId": "ekr2nIex040",
-      "ytAudioId": "8Ebqe2Dbzls"
+      "ytAudioId": "8Ebqe2Dbzls",
+      "ytMvUrl": "https://www.youtube.com/watch?v=ekr2nIex040",
+      "ytAudioUrl": "https://www.youtube.com/watch?v=8Ebqe2Dbzls",
+      "ytMusicUrl": "https://music.youtube.com/watch?v=8Ebqe2Dbzls",
+      "genieUrl": "https://www.genie.co.kr/detail/songInfo?xgnm=107590768",
+      "bugsUrl": "https://music.bugs.co.kr/track/6266460",
+      "appleUrl": "https://music.apple.com/us/album/apt/1773452219?i=1773452221",
+      "spotifyUrl": "",
+      "vibeUrl": "",
+      "deezerUrl": "https://www.deezer.com/track/3050380851"
     },
     {
       "rank": 75,
@@ -978,7 +1644,16 @@
       "delta": 0,
       "url": "https://www.melon.com/song/detail.htm?songId=34908740",
       "ytMvId": "JPPIrXdocjQ",
-      "ytAudioId": "xwSyicR1XDA"
+      "ytAudioId": "xwSyicR1XDA",
+      "ytMvUrl": "https://www.youtube.com/watch?v=JPPIrXdocjQ",
+      "ytAudioUrl": "https://www.youtube.com/watch?v=xwSyicR1XDA",
+      "ytMusicUrl": "https://music.youtube.com/watch?v=xwSyicR1XDA",
+      "genieUrl": "https://www.genie.co.kr/detail/songInfo?xgnm=96549502",
+      "bugsUrl": "https://music.bugs.co.kr/track/32519088",
+      "appleUrl": "https://music.apple.com/us/album/our-blues-our-life/1698694046?i=1698694050",
+      "spotifyUrl": "",
+      "vibeUrl": "https://vibe.naver.com/track/54910319",
+      "deezerUrl": "https://www.deezer.com/track/2378110975"
     },
     {
       "rank": 76,
@@ -991,7 +1666,16 @@
       "delta": 0,
       "url": "https://www.melon.com/song/detail.htm?songId=1121123",
       "ytMvId": "oHReHugZd6Y",
-      "ytAudioId": "oHReHugZd6Y"
+      "ytAudioId": "oHReHugZd6Y",
+      "ytMvUrl": "https://www.youtube.com/watch?v=oHReHugZd6Y",
+      "ytAudioUrl": "https://www.youtube.com/watch?v=oHReHugZd6Y",
+      "ytMusicUrl": "https://music.youtube.com/watch?v=oHReHugZd6Y",
+      "genieUrl": "https://www.genie.co.kr/detail/songInfo?xgnm=16148584",
+      "bugsUrl": "https://music.bugs.co.kr/track/443620",
+      "appleUrl": "https://music.apple.com/us/album/%EC%82%AC%EB%9E%91%EC%9D%80-%EB%B4%84%EB%B9%84%EC%B2%98%EB%9F%BC-%EC%9D%B4%EB%B3%84%EC%9D%80-%EA%B2%A8%EC%9A%B8%EB%B9%84%EC%B2%98%EB%9F%BC-bonus-track-version/1567881374?i=1567882012",
+      "spotifyUrl": "",
+      "vibeUrl": "https://vibe.naver.com/track/22681",
+      "deezerUrl": "https://www.deezer.com/track/1442241122"
     },
     {
       "rank": 77,
@@ -1004,7 +1688,16 @@
       "delta": 0,
       "url": "https://www.melon.com/song/detail.htm?songId=1913501",
       "ytMvId": "8OAQ6RuYFGE",
-      "ytAudioId": "6I4Ygo0dwRs"
+      "ytAudioId": "6I4Ygo0dwRs",
+      "ytMvUrl": "https://www.youtube.com/watch?v=8OAQ6RuYFGE",
+      "ytAudioUrl": "https://www.youtube.com/watch?v=6I4Ygo0dwRs",
+      "ytMusicUrl": "https://music.youtube.com/watch?v=6I4Ygo0dwRs",
+      "genieUrl": "https://www.genie.co.kr/detail/songInfo?xgnm=66087750",
+      "bugsUrl": "https://music.bugs.co.kr/track/1584642",
+      "appleUrl": "https://music.apple.com/us/album/haru-haru/1346470974?i=1346470976",
+      "spotifyUrl": "",
+      "vibeUrl": "https://vibe.naver.com/track/1894431",
+      "deezerUrl": "https://www.deezer.com/track/1385023882"
     },
     {
       "rank": 78,
@@ -1017,7 +1710,16 @@
       "delta": 0,
       "url": "https://www.melon.com/song/detail.htm?songId=35454426",
       "ytMvId": "11cta61wi0g",
-      "ytAudioId": "T--6HBX2K4g"
+      "ytAudioId": "T--6HBX2K4g",
+      "ytMvUrl": "https://www.youtube.com/watch?v=11cta61wi0g",
+      "ytAudioUrl": "https://www.youtube.com/watch?v=T--6HBX2K4g",
+      "ytMusicUrl": "https://music.youtube.com/watch?v=T--6HBX2K4g",
+      "genieUrl": "https://www.genie.co.kr/detail/songInfo?xgnm=97582507",
+      "bugsUrl": "https://music.bugs.co.kr/track/6170217",
+      "appleUrl": "https://music.apple.com/us/album/hype-boy/1635469682?i=1635469851",
+      "spotifyUrl": "",
+      "vibeUrl": "https://vibe.naver.com/track/56398442",
+      "deezerUrl": "https://www.deezer.com/track/1843514397"
     },
     {
       "rank": 79,
@@ -1030,7 +1732,16 @@
       "delta": 0,
       "url": "https://www.melon.com/song/detail.htm?songId=30244931",
       "ytMvId": "xEeFrLSkMm8",
-      "ytAudioId": "xEeFrLSkMm8"
+      "ytAudioId": "xEeFrLSkMm8",
+      "ytMvUrl": "https://www.youtube.com/watch?v=xEeFrLSkMm8",
+      "ytAudioUrl": "https://www.youtube.com/watch?v=xEeFrLSkMm8",
+      "ytMusicUrl": "https://music.youtube.com/watch?v=xEeFrLSkMm8",
+      "genieUrl": "https://www.genie.co.kr/detail/songInfo?xgnm=86941521",
+      "bugsUrl": "https://music.bugs.co.kr/track/30547148",
+      "appleUrl": "https://music.apple.com/us/album/spring-day/1596528839?i=1596529381",
+      "spotifyUrl": "",
+      "vibeUrl": "https://vibe.naver.com/track/16091695",
+      "deezerUrl": "https://www.deezer.com/track/1783253587"
     },
     {
       "rank": 80,
@@ -1043,7 +1754,16 @@
       "delta": 0,
       "url": "https://www.melon.com/song/detail.htm?songId=39161085",
       "ytMvId": "n7kFRxFIPrI",
-      "ytAudioId": "L4dih3XjZNo"
+      "ytAudioId": "L4dih3XjZNo",
+      "ytMvUrl": "https://www.youtube.com/watch?v=n7kFRxFIPrI",
+      "ytAudioUrl": "https://www.youtube.com/watch?v=L4dih3XjZNo",
+      "ytMusicUrl": "https://music.youtube.com/watch?v=L4dih3XjZNo",
+      "genieUrl": "https://www.genie.co.kr/detail/songInfo?xgnm=110569963",
+      "bugsUrl": "https://music.bugs.co.kr/track/6316614",
+      "appleUrl": "https://music.apple.com/us/album/style/1819694545?i=1819694546",
+      "spotifyUrl": "",
+      "vibeUrl": "https://vibe.naver.com/track/94652492",
+      "deezerUrl": ""
     },
     {
       "rank": 81,
@@ -1056,7 +1776,16 @@
       "delta": 0,
       "url": "https://www.melon.com/song/detail.htm?songId=38426197",
       "ytMvId": "B4mLKcVIERs",
-      "ytAudioId": "q39IApbYEzg"
+      "ytAudioId": "q39IApbYEzg",
+      "ytMvUrl": "https://www.youtube.com/watch?v=B4mLKcVIERs",
+      "ytAudioUrl": "https://www.youtube.com/watch?v=q39IApbYEzg",
+      "ytMusicUrl": "https://music.youtube.com/watch?v=q39IApbYEzg",
+      "genieUrl": "https://www.genie.co.kr/detail/songInfo?xgnm=108805146",
+      "bugsUrl": "https://music.bugs.co.kr/track/6280186",
+      "appleUrl": "https://music.apple.com/us/album/if-i-say-i-love-you/1785637094?i=1785637238",
+      "spotifyUrl": "",
+      "vibeUrl": "https://vibe.naver.com/track/88514019",
+      "deezerUrl": "https://www.deezer.com/track/3817451852"
     },
     {
       "rank": 82,
@@ -1069,7 +1798,16 @@
       "delta": 0,
       "url": "https://www.melon.com/song/detail.htm?songId=38635449",
       "ytMvId": "pqUqaBC_2lk",
-      "ytAudioId": "mCXvMohcfP8"
+      "ytAudioId": "mCXvMohcfP8",
+      "ytMvUrl": "https://www.youtube.com/watch?v=pqUqaBC_2lk",
+      "ytAudioUrl": "https://www.youtube.com/watch?v=mCXvMohcfP8",
+      "ytMusicUrl": "https://music.youtube.com/watch?v=mCXvMohcfP8",
+      "genieUrl": "https://www.genie.co.kr/detail/songInfo?xgnm=109356852",
+      "bugsUrl": "https://music.bugs.co.kr/track/6293526",
+      "appleUrl": "https://music.apple.com/us/album/flower/1800893834?i=1800893837",
+      "spotifyUrl": "",
+      "vibeUrl": "https://vibe.naver.com/track/90638503",
+      "deezerUrl": "https://www.deezer.com/track/3269011521"
     },
     {
       "rank": 83,
@@ -1082,7 +1820,16 @@
       "delta": 0,
       "url": "https://www.melon.com/song/detail.htm?songId=36382580",
       "ytMvId": "yFlxYHjHYAw",
-      "ytAudioId": "-rYinDbuxlk"
+      "ytAudioId": "-rYinDbuxlk",
+      "ytMvUrl": "https://www.youtube.com/watch?v=yFlxYHjHYAw",
+      "ytAudioUrl": "https://www.youtube.com/watch?v=-rYinDbuxlk",
+      "ytMusicUrl": "https://music.youtube.com/watch?v=-rYinDbuxlk",
+      "genieUrl": "https://www.genie.co.kr/detail/songInfo?xgnm=101407645",
+      "bugsUrl": "https://music.bugs.co.kr/track/6196923",
+      "appleUrl": "https://music.apple.com/us/album/lets-say-goodbye/1683043397?i=1683043399",
+      "spotifyUrl": "",
+      "vibeUrl": "https://vibe.naver.com/track/63736666",
+      "deezerUrl": "https://www.deezer.com/track/2243635417"
     },
     {
       "rank": 84,
@@ -1095,7 +1842,16 @@
       "delta": 0,
       "url": "https://www.melon.com/song/detail.htm?songId=37347911",
       "ytMvId": "Vk5-c_v4gMU",
-      "ytAudioId": "YVMUjAE-0SM"
+      "ytAudioId": "YVMUjAE-0SM",
+      "ytMvUrl": "https://www.youtube.com/watch?v=Vk5-c_v4gMU",
+      "ytAudioUrl": "https://www.youtube.com/watch?v=YVMUjAE-0SM",
+      "ytMusicUrl": "https://music.youtube.com/watch?v=YVMUjAE-0SM",
+      "genieUrl": "https://www.genie.co.kr/detail/songInfo?xgnm=105872512",
+      "bugsUrl": "https://music.bugs.co.kr/track/33133208",
+      "appleUrl": "https://music.apple.com/us/album/magnetic/1734500886?i=1734500896",
+      "spotifyUrl": "",
+      "vibeUrl": "https://vibe.naver.com/track/83769218",
+      "deezerUrl": "https://www.deezer.com/track/2714845022"
     },
     {
       "rank": 85,
@@ -1108,7 +1864,16 @@
       "delta": 0,
       "url": "https://www.melon.com/song/detail.htm?songId=39566906",
       "ytMvId": "dAcDmbKXw_0",
-      "ytAudioId": "dAcDmbKXw_0"
+      "ytAudioId": "dAcDmbKXw_0",
+      "ytMvUrl": "https://www.youtube.com/watch?v=dAcDmbKXw_0",
+      "ytAudioUrl": "https://www.youtube.com/watch?v=dAcDmbKXw_0",
+      "ytMusicUrl": "https://music.youtube.com/watch?v=dAcDmbKXw_0",
+      "genieUrl": "https://www.genie.co.kr/detail/songInfo?xgnm=111280752",
+      "bugsUrl": "https://music.bugs.co.kr/track/6332722",
+      "appleUrl": "https://music.apple.com/us/album/starting-with-you/1831225990?i=1831225991",
+      "spotifyUrl": "",
+      "vibeUrl": "https://vibe.naver.com/track/95984900",
+      "deezerUrl": "https://www.deezer.com/track/3492710301"
     },
     {
       "rank": 86,
@@ -1121,7 +1886,16 @@
       "delta": 0,
       "url": "https://www.melon.com/song/detail.htm?songId=38444825",
       "ytMvId": "g36q0ZLvygQ",
-      "ytAudioId": "boq0LA2lGSQ"
+      "ytAudioId": "boq0LA2lGSQ",
+      "ytMvUrl": "https://www.youtube.com/watch?v=g36q0ZLvygQ",
+      "ytAudioUrl": "https://www.youtube.com/watch?v=boq0LA2lGSQ",
+      "ytMusicUrl": "https://music.youtube.com/watch?v=boq0LA2lGSQ",
+      "genieUrl": "https://www.genie.co.kr/detail/songInfo?xgnm=108836768",
+      "bugsUrl": "https://music.bugs.co.kr/track/6281197",
+      "appleUrl": "https://music.apple.com/us/album/rebel-heart/1786710182?i=1786710186",
+      "spotifyUrl": "",
+      "vibeUrl": "https://vibe.naver.com/track/88698714",
+      "deezerUrl": "https://www.deezer.com/track/3153143521"
     },
     {
       "rank": 87,
@@ -1134,7 +1908,16 @@
       "delta": 0,
       "url": "https://www.melon.com/song/detail.htm?songId=37145732",
       "ytMvId": "JleoAppaxi0",
-      "ytAudioId": "M2MXbUwq5Fs"
+      "ytAudioId": "M2MXbUwq5Fs",
+      "ytMvUrl": "https://www.youtube.com/watch?v=JleoAppaxi0",
+      "ytAudioUrl": "https://www.youtube.com/watch?v=M2MXbUwq5Fs",
+      "ytMusicUrl": "https://music.youtube.com/watch?v=M2MXbUwq5Fs",
+      "genieUrl": "https://www.genie.co.kr/detail/songInfo?xgnm=105293063",
+      "bugsUrl": "https://music.bugs.co.kr/track/6230788",
+      "appleUrl": "https://music.apple.com/us/album/love-wins-all/1726888401?i=1726888402",
+      "spotifyUrl": "",
+      "vibeUrl": "https://vibe.naver.com/track/82778052",
+      "deezerUrl": "https://www.deezer.com/track/2633284812"
     },
     {
       "rank": 88,
@@ -1147,7 +1930,16 @@
       "delta": 0,
       "url": "https://www.melon.com/song/detail.htm?songId=37053556",
       "ytMvId": "gH1rVdXUlpo",
-      "ytAudioId": "h-jDdBHBuMI"
+      "ytAudioId": "h-jDdBHBuMI",
+      "ytMvUrl": "https://www.youtube.com/watch?v=gH1rVdXUlpo",
+      "ytAudioUrl": "https://www.youtube.com/watch?v=h-jDdBHBuMI",
+      "ytMusicUrl": "https://music.youtube.com/watch?v=h-jDdBHBuMI",
+      "genieUrl": "https://www.genie.co.kr/detail/songInfo?xgnm=104821618",
+      "bugsUrl": "https://music.bugs.co.kr/track/6225822",
+      "appleUrl": "https://music.apple.com/us/album/episode/1786321554?i=1786321555",
+      "spotifyUrl": "",
+      "vibeUrl": "https://vibe.naver.com/track/81752503",
+      "deezerUrl": "https://www.deezer.com/track/3149971041"
     },
     {
       "rank": 89,
@@ -1160,7 +1952,16 @@
       "delta": 0,
       "url": "https://www.melon.com/song/detail.htm?songId=602930028",
       "ytMvId": "s466YCiHfKw",
-      "ytAudioId": "s466YCiHfKw"
+      "ytAudioId": "s466YCiHfKw",
+      "ytMvUrl": "https://www.youtube.com/watch?v=s466YCiHfKw",
+      "ytAudioUrl": "https://www.youtube.com/watch?v=s466YCiHfKw",
+      "ytMusicUrl": "https://music.youtube.com/watch?v=s466YCiHfKw",
+      "genieUrl": "https://www.genie.co.kr/detail/songInfo?xgnm=116605149",
+      "bugsUrl": "https://music.bugs.co.kr/track/6504432",
+      "appleUrl": "https://music.apple.com/us/album/fallen-angel/6804046952?i=6804046959",
+      "spotifyUrl": "",
+      "vibeUrl": "https://vibe.naver.com/track/107224011",
+      "deezerUrl": "https://www.deezer.com/track/4247616851"
     },
     {
       "rank": 90,
@@ -1173,7 +1974,16 @@
       "delta": 0,
       "url": "https://www.melon.com/song/detail.htm?songId=39156202",
       "ytMvId": "VjvzYjU1mY0",
-      "ytAudioId": "XYepTo2hnBQ"
+      "ytAudioId": "XYepTo2hnBQ",
+      "ytMvUrl": "https://www.youtube.com/watch?v=VjvzYjU1mY0",
+      "ytAudioUrl": "https://www.youtube.com/watch?v=XYepTo2hnBQ",
+      "ytMusicUrl": "https://music.youtube.com/watch?v=XYepTo2hnBQ",
+      "genieUrl": "https://www.genie.co.kr/detail/songInfo?xgnm=110552022",
+      "bugsUrl": "https://music.bugs.co.kr/track/6316357",
+      "appleUrl": "https://music.apple.com/us/album/famous/1819675760?i=1819675765",
+      "spotifyUrl": "",
+      "vibeUrl": "https://vibe.naver.com/track/94691925",
+      "deezerUrl": "https://www.deezer.com/track/3424456781"
     },
     {
       "rank": 91,
@@ -1186,7 +1996,16 @@
       "delta": 0,
       "url": "https://www.melon.com/song/detail.htm?songId=600359330",
       "ytMvId": "mR-kkHE0-tU",
-      "ytAudioId": "iN_l8iVrAUM"
+      "ytAudioId": "iN_l8iVrAUM",
+      "ytMvUrl": "https://www.youtube.com/watch?v=mR-kkHE0-tU",
+      "ytAudioUrl": "https://www.youtube.com/watch?v=iN_l8iVrAUM",
+      "ytMusicUrl": "https://music.youtube.com/watch?v=iN_l8iVrAUM",
+      "genieUrl": "https://www.genie.co.kr/detail/songInfo?xgnm=112363794",
+      "bugsUrl": "https://music.bugs.co.kr/track/6367638",
+      "appleUrl": "https://music.apple.com/us/album/no-words-can-say/1848023873?i=1848023874",
+      "spotifyUrl": "",
+      "vibeUrl": "https://vibe.naver.com/track/97643471",
+      "deezerUrl": "https://www.deezer.com/track/3614581012"
     },
     {
       "rank": 92,
@@ -1199,7 +2018,16 @@
       "delta": 0,
       "url": "https://www.melon.com/song/detail.htm?songId=601991491",
       "ytMvId": "XPUOHpkRAxg",
-      "ytAudioId": "XPUOHpkRAxg"
+      "ytAudioId": "XPUOHpkRAxg",
+      "ytMvUrl": "https://www.youtube.com/watch?v=XPUOHpkRAxg",
+      "ytAudioUrl": "https://www.youtube.com/watch?v=XPUOHpkRAxg",
+      "ytMusicUrl": "https://music.youtube.com/watch?v=XPUOHpkRAxg",
+      "genieUrl": "https://www.genie.co.kr/detail/songInfo?xgnm=115058380",
+      "bugsUrl": "https://music.bugs.co.kr/track/33936252",
+      "appleUrl": "https://music.apple.com/us/album/%EB%A7%88%EC%9D%8C%EC%9D%98-%EC%88%B2/6786198147?i=6786198149",
+      "spotifyUrl": "",
+      "vibeUrl": "https://vibe.naver.com/track/103559079",
+      "deezerUrl": "https://www.deezer.com/track/4125853421"
     },
     {
       "rank": 93,
@@ -1212,7 +2040,16 @@
       "delta": 0,
       "url": "https://www.melon.com/song/detail.htm?songId=601379618",
       "ytMvId": "YnEWSfm7j94",
-      "ytAudioId": "EKpoi1spOc0"
+      "ytAudioId": "EKpoi1spOc0",
+      "ytMvUrl": "https://www.youtube.com/watch?v=YnEWSfm7j94",
+      "ytAudioUrl": "https://www.youtube.com/watch?v=EKpoi1spOc0",
+      "ytMusicUrl": "https://music.youtube.com/watch?v=EKpoi1spOc0",
+      "genieUrl": "https://www.genie.co.kr/detail/songInfo?xgnm=113983203",
+      "bugsUrl": "https://music.bugs.co.kr/track/6429521",
+      "appleUrl": "https://music.apple.com/us/album/even-if-i-close-my-eyes-2026/1878599172?i=1878599173",
+      "spotifyUrl": "",
+      "vibeUrl": "https://vibe.naver.com/track/101084445",
+      "deezerUrl": ""
     },
     {
       "rank": 94,
@@ -1225,7 +2062,16 @@
       "delta": 0,
       "url": "https://www.melon.com/song/detail.htm?songId=601555636",
       "ytMvId": "3PHs-o5JPHM",
-      "ytAudioId": "RBaSiVjtKR4"
+      "ytAudioId": "RBaSiVjtKR4",
+      "ytMvUrl": "https://www.youtube.com/watch?v=3PHs-o5JPHM",
+      "ytAudioUrl": "https://www.youtube.com/watch?v=RBaSiVjtKR4",
+      "ytMusicUrl": "https://music.youtube.com/watch?v=RBaSiVjtKR4",
+      "genieUrl": "https://www.genie.co.kr/detail/songInfo?xgnm=114356072",
+      "bugsUrl": "https://music.bugs.co.kr/track/6441883",
+      "appleUrl": "https://music.apple.com/us/album/body-to-body/1868481904?i=1868481905",
+      "spotifyUrl": "",
+      "vibeUrl": "https://vibe.naver.com/track/101782327",
+      "deezerUrl": "https://www.deezer.com/track/3907717191"
     },
     {
       "rank": 95,
@@ -1238,7 +2084,16 @@
       "delta": 0,
       "url": "https://www.melon.com/song/detail.htm?songId=601968268",
       "ytMvId": "iTJSbJtS8MU",
-      "ytAudioId": "iTJSbJtS8MU"
+      "ytAudioId": "iTJSbJtS8MU",
+      "ytMvUrl": "https://www.youtube.com/watch?v=iTJSbJtS8MU",
+      "ytAudioUrl": "https://www.youtube.com/watch?v=iTJSbJtS8MU",
+      "ytMusicUrl": "https://music.youtube.com/watch?v=iTJSbJtS8MU",
+      "genieUrl": "https://www.genie.co.kr/detail/songInfo?xgnm=115013212",
+      "bugsUrl": "https://music.bugs.co.kr/track/6463446",
+      "appleUrl": "https://music.apple.com/us/album/wda-whole-different-animal-feat-g-dragon/1895001305?i=6762765807",
+      "spotifyUrl": "",
+      "vibeUrl": "https://vibe.naver.com/track/103450626",
+      "deezerUrl": "https://www.deezer.com/track/3973347911"
     },
     {
       "rank": 96,
@@ -1251,7 +2106,16 @@
       "delta": 0,
       "url": "https://www.melon.com/song/detail.htm?songId=600320356",
       "ytMvId": "Ur7aK4FvK-U",
-      "ytAudioId": "Ur7aK4FvK-U"
+      "ytAudioId": "Ur7aK4FvK-U",
+      "ytMvUrl": "https://www.youtube.com/watch?v=Ur7aK4FvK-U",
+      "ytAudioUrl": "https://www.youtube.com/watch?v=Ur7aK4FvK-U",
+      "ytMusicUrl": "https://music.youtube.com/watch?v=Ur7aK4FvK-U",
+      "genieUrl": "https://www.genie.co.kr/detail/songInfo?xgnm=112272119",
+      "bugsUrl": "https://music.bugs.co.kr/track/6363774",
+      "appleUrl": "https://music.apple.com/us/album/focus/1841828519?i=1841828520",
+      "spotifyUrl": "",
+      "vibeUrl": "https://vibe.naver.com/track/97589593",
+      "deezerUrl": "https://www.deezer.com/track/4053281831"
     },
     {
       "rank": 97,
@@ -1264,7 +2128,16 @@
       "delta": 0,
       "url": "https://www.melon.com/song/detail.htm?songId=36356993",
       "ytMvId": "6ZUIwj3FgUY",
-      "ytAudioId": "Bdzv7JBvkis"
+      "ytAudioId": "Bdzv7JBvkis",
+      "ytMvUrl": "https://www.youtube.com/watch?v=6ZUIwj3FgUY",
+      "ytAudioUrl": "https://www.youtube.com/watch?v=Bdzv7JBvkis",
+      "ytMusicUrl": "https://music.youtube.com/watch?v=Bdzv7JBvkis",
+      "genieUrl": "https://www.genie.co.kr/detail/songInfo?xgnm=101268096",
+      "bugsUrl": "https://music.bugs.co.kr/track/6195812",
+      "appleUrl": "https://music.apple.com/us/album/i-am/1680047093?i=1680047366",
+      "spotifyUrl": "",
+      "vibeUrl": "https://vibe.naver.com/track/63370133",
+      "deezerUrl": "https://www.deezer.com/track/2227832217"
     },
     {
       "rank": 98,
@@ -1277,7 +2150,16 @@
       "delta": 0,
       "url": "https://www.melon.com/song/detail.htm?songId=600513208",
       "ytMvId": "OgEwJ8a1OoY",
-      "ytAudioId": "XUNvU0Fy3ZI"
+      "ytAudioId": "XUNvU0Fy3ZI",
+      "ytMvUrl": "https://www.youtube.com/watch?v=OgEwJ8a1OoY",
+      "ytAudioUrl": "https://www.youtube.com/watch?v=XUNvU0Fy3ZI",
+      "ytMusicUrl": "https://music.youtube.com/watch?v=XUNvU0Fy3ZI",
+      "genieUrl": "https://www.genie.co.kr/detail/songInfo?xgnm=112693230",
+      "bugsUrl": "https://music.bugs.co.kr/track/6378118",
+      "appleUrl": "https://music.apple.com/us/album/one-more-time/1850392562?i=1850392565",
+      "spotifyUrl": "",
+      "vibeUrl": "https://vibe.naver.com/track/98682606",
+      "deezerUrl": "https://www.deezer.com/track/3635091602"
     },
     {
       "rank": 99,
@@ -1290,7 +2172,16 @@
       "delta": 0,
       "url": "https://www.melon.com/song/detail.htm?songId=600354699",
       "ytMvId": "TvVtYaqCni8",
-      "ytAudioId": "TvVtYaqCni8"
+      "ytAudioId": "TvVtYaqCni8",
+      "ytMvUrl": "https://www.youtube.com/watch?v=TvVtYaqCni8",
+      "ytAudioUrl": "https://www.youtube.com/watch?v=TvVtYaqCni8",
+      "ytMusicUrl": "https://music.youtube.com/watch?v=TvVtYaqCni8",
+      "genieUrl": "https://www.genie.co.kr/detail/songInfo?xgnm=112361232",
+      "bugsUrl": "https://music.bugs.co.kr/track/6366519",
+      "appleUrl": "https://music.apple.com/us/album/antifragile/1647830231?i=1647830390",
+      "spotifyUrl": "",
+      "vibeUrl": "https://vibe.naver.com/track/97629130",
+      "deezerUrl": ""
     },
     {
       "rank": 100,
@@ -1303,7 +2194,16 @@
       "delta": 0,
       "url": "https://www.melon.com/song/detail.htm?songId=37928383",
       "ytMvId": "B8JJ8RNM-60",
-      "ytAudioId": "Cz-msuk8oqM"
+      "ytAudioId": "Cz-msuk8oqM",
+      "ytMvUrl": "https://www.youtube.com/watch?v=B8JJ8RNM-60",
+      "ytAudioUrl": "https://www.youtube.com/watch?v=Cz-msuk8oqM",
+      "ytMusicUrl": "https://music.youtube.com/watch?v=Cz-msuk8oqM",
+      "genieUrl": "https://www.genie.co.kr/detail/songInfo?xgnm=107590770",
+      "bugsUrl": "https://music.bugs.co.kr/track/6259117",
+      "appleUrl": "https://music.apple.com/us/album/pinball/1764485168?i=1764485172",
+      "spotifyUrl": "",
+      "vibeUrl": "https://vibe.naver.com/track/86839871",
+      "deezerUrl": "https://www.deezer.com/track/2966352111"
     }
   ]
 }
