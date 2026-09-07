@@ -170,10 +170,8 @@
         }).join("");
         listEl.querySelectorAll("[data-play]").forEach(function(btn) {
           btn.addEventListener("click", function() {
-            btn.addEventListener("click", function() {
-              const track = tracks.find(function(item) { return item.songId === btn.getAttribute("data-play"); });
-              if (track) playAudio(track);
-            });
+            const track = tracks.find(function(item) { return item.songId === btn.getAttribute("data-play"); });
+            if (track) playAudio(track);
           });
         });
       }
