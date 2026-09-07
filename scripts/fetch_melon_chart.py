@@ -105,29 +105,34 @@ def channel_is_artist_or_topic(artist, channel):
     return bool(re.search(r"topic$", channel or "", re.I) and ar in ch)
 
 def score_audio(song, artist, title, channel):
-    if not title or AUDIO_NEG.search(title) or not AUDIO_POS.search(title): return -999
+    if not title or AUDIO_NEG.search(title): return -999
 
-    # Channel provenance is mandatory for Audio. This prevents a third-party
-    # uploader from being accepted merely because its title contains
-    # "Official Audio".
+    # Provenance is mandatory: a random uploader cannot become Official Audio
+    # just by putting "Official Audio" in the title.
     artist_or_topic = channel_is_artist_or_topic(artist, channel)
     label_channel = bool(OFFICIAL.search(channel or ""))
     if not artist_or_topic and not label_channel:
         return -999
 
-    score=0
-    if re.search(r"official\s*audio",title,re.I): score+=100
-    elif re.search(r"officialaudio",title,re.I): score+=95
-    elif re.search(r"\[audio\]|\(audio\)|audio\s*version",title,re.I): score+=65
+    exact = title_match(song, title)
+    if not exact:
+        return -999
 
-    if title_match(song,title): score+=40
+    score=0
+    # Audio labels are strong evidence, but NOT required. Official artist/Topic
+    # channels often publish releases with just "Song Title" (or "Artist - Song")
+    # and no "Audio" word at all.
+    if re.search(r"official\\s*audio",title,re.I): score+=100
+    elif re.search(r"officialaudio",title,re.I): score+=95
+    elif re.search(r"\\[audio\\]|\\(audio\\)|audio\\s*version",title,re.I): score+=65
+    else: score+=35
+
+    score+=40
     if artist_match(artist,title): score+=25
     if artist_or_topic: score+=70
-    elif artist_match(artist,channel): score+=25
     if label_channel: score+=20
 
-    # For a true artist/Topic channel, an explicit Audio marker is enough.
-    return score if score>=135 else -999
+    return score if score>=115 else -999
 
 def score_mv(song, artist, title, channel):
     # A different song must never become the MV just because it is from
