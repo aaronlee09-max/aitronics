@@ -122,9 +122,9 @@ def score_audio(song, artist, title, channel):
     # Audio labels are strong evidence, but NOT required. Official artist/Topic
     # channels often publish releases with just "Song Title" (or "Artist - Song")
     # and no "Audio" word at all.
-    if re.search(r"official\\s*audio",title,re.I): score+=100
+    if re.search(r"official\s*audio",title,re.I): score+=100
     elif re.search(r"officialaudio",title,re.I): score+=95
-    elif re.search(r"\\[audio\\]|\\(audio\\)|audio\\s*version",title,re.I): score+=65
+    elif re.search(r"\[audio\]|\(audio\)|audio\s*version",title,re.I): score+=65
     else: score+=35
 
     score+=40
