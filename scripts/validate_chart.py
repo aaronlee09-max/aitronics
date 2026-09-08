@@ -42,8 +42,10 @@ for t in tracks:
         ):
             raise SystemExit(f"unverified audio channel: {t.get('title')} -> {t.get('ytAudioChannel')}")
     apple = t.get("appleUrl") or ""
-    if apple and not re.match(r"^https://music\\.apple\\.com/kr/", apple):
-        raise SystemExit(f"non-KR or malformed Apple Music URL: {t.get('title')} -> {apple}")
+    # Apple Music may legitimately resolve to the user/catalog country (US, KR, JP, etc.).
+    # Validate the official Apple Music host and a two-letter storefront instead of forcing /kr/.
+    if apple and not re.match(r"^https://music\\.apple\\.com/[a-z]{2}/", apple, re.IGNORECASE):
+        raise SystemExit(f"malformed Apple Music URL: {t.get('title')} -> {apple}")
 
 yt=load("youtube_chart.json")
 yt_tracks=yt.get("tracks") or []
