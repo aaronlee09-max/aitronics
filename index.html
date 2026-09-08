@@ -26,7 +26,12 @@
       .info b { display:block; font-size:16px; line-height:1.25; }
       .info .artist { color:var(--muted); font-size:13px; font-weight:700; }
       .info .album { color:#7a8c83; font-size:12px; font-weight:700; margin-top:4px; }
-      .tabs { display:flex; gap:8px; margin:0 0 16px; }
+      .tabs-row { display:flex; flex-wrap:wrap; gap:10px; align-items:center; justify-content:space-between; margin:0 0 16px; }
+      .pdf-actions { display:flex; flex-wrap:wrap; gap:8px; }
+      .pdfbtn { display:inline-flex; align-items:center; gap:6px; height:40px; padding:0 14px; border:1px solid var(--green-deep); border-radius:999px; background:var(--green-deep); color:#fff; font:inherit; font-weight:900; font-size:13px; text-decoration:none; cursor:pointer; }
+      .pdfbtn.ghost { background:var(--paper); color:var(--green-deep); }
+      .pdfbtn[disabled] { opacity:.55; cursor:wait; }
+      .tabs { display:flex; gap:8px; margin:0; }
       .tab { border:1px solid var(--line); border-radius:999px; padding:10px 16px; background:var(--paper); color:var(--muted); font:inherit; font-weight:900; cursor:pointer; }
       .tab.active { background:var(--green-deep); color:#fff; border-color:var(--green-deep); }
       .services { display:flex; flex-wrap:wrap; gap:6px; margin-top:10px; }
@@ -63,9 +68,15 @@
           <span id="updated">데이터 불러오는 중</span>
         </div>
       </header>
-      <div class="tabs" role="tablist" aria-label="차트 선택">
-        <button class="tab active" type="button" data-tab="melon">Melon TOP100</button>
-        <button class="tab" type="button" data-tab="youtube">YouTube Music TOP Songs</button>
+      <div class="tabs-row">
+        <div class="tabs" role="tablist" aria-label="차트 선택">
+          <button class="tab active" type="button" data-tab="melon">Melon TOP100</button>
+          <button class="tab" type="button" data-tab="youtube">YouTube Music TOP Songs</button>
+        </div>
+        <div class="pdf-actions">
+          <button class="pdfbtn" type="button" data-pdf="bakgwangil">PDF 다운</button>
+          <button class="pdfbtn ghost" type="button" data-pdf="yoondongju">PDF 다운 · 윤동주</button>
+        </div>
       </div>
       <input id="q" type="search" placeholder="노래 제목, 아티스트, 앨범 검색" autocomplete="off" />
       <section id="list" class="list">차트 불러오는 중...</section>
@@ -125,7 +136,6 @@
       function deltaLabel(track) {
         if (track.change === "new") return { text: "NEW", cls: "new" };
         const delta = Number(track.delta);
-        // Never render meaningless ▲0/▼0. Zero means no movement.
         if (!Number.isFinite(delta) || delta <= 0) return { text: "-", cls: "same" };
         if (track.change === "up") return { text: "\u25b2 " + delta, cls: "up" };
         if (track.change === "down") return { text: "\u25bc " + delta, cls: "down" };
@@ -233,6 +243,39 @@
         });
       });
       qEl.addEventListener("input", render);
+      function downloadPdfFromB64(key, filename) {
+        const btn = document.querySelector('[data-pdf="' + key + '"]');
+        const url = "./downloads/Melon_Top100_" + key + ".b64?t=" + Date.now();
+        if (btn) btn.disabled = true;
+        fetch(url, { cache: "no-store" }).then(function(res) {
+          if (!res.ok) throw new Error("missing");
+          return res.text();
+        }).then(function(b64) {
+          b64 = (b64 || "").replace(/\s+/g, "");
+          const bin = atob(b64);
+          const bytes = new Uint8Array(bin.length);
+          for (let i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
+          const blob = new Blob([bytes], { type: "application/pdf" });
+          const a = document.createElement("a");
+          a.href = URL.createObjectURL(blob);
+          a.download = filename;
+          document.body.appendChild(a);
+          a.click();
+          a.remove();
+          setTimeout(function() { URL.revokeObjectURL(a.href); }, 1000);
+        }).catch(function() {
+          alert("아직 올라온 PDF가 없습니다. 다음 자동 갱신 이후 다시 눌러 주세요.");
+        }).finally(function() {
+          if (btn) btn.disabled = false;
+        });
+      }
+      document.querySelectorAll("[data-pdf]").forEach(function(btn) {
+        btn.addEventListener("click", function() {
+          const key = btn.getAttribute("data-pdf");
+          const name = key === "yoondongju" ? "Melon_Top100_Yoondongju.pdf" : "Melon_Top100_Playlist_A4.pdf";
+          downloadPdfFromB64(key, name);
+        });
+      });
       loadChart();
       loadYoutubeChart();
       setInterval(loadChart, 60 * 1000);
