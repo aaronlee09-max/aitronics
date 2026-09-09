@@ -11,6 +11,10 @@ import subprocess
 from datetime import datetime, timezone
 from pathlib import Path
 
+# Reuse the same strict, direct-link resolvers as the Melon pipeline so both
+# chart tabs expose the same streaming-service destinations.
+from fetch_melon_chart import apple_url, bugs_url, deezer_url, genie_url, vibe_url
+
 PLAYLIST_URL = "https://www.youtube.com/playlist?list=PL4fGSI1pDJn6jXS_Tv_N9B8Z0HTRVJE0m"
 CHART_URL = "https://charts.youtube.com/charts/TopSongs/kr/weekly"
 
@@ -43,15 +47,40 @@ def main():
         video_id = entry.get("id") or ""
         if not title or len(video_id) != 11:
             continue
-        rows.append({
+        row = {
             "rank": rank,
             "title": title,
             "artist": artist,
+            "album": (entry.get("album") or "").strip(),
             "views": "",
             "videoId": video_id,
             "url": f"https://www.youtube.com/watch?v={video_id}",
+            "ytMusicUrl": f"https://music.youtube.com/watch?v={video_id}",
             "image": entry.get("thumbnail") or f"https://i.ytimg.com/vi/{video_id}/hqdefault.jpg",
-        })
+            "melonUrl": "",
+            "genieUrl": "",
+            "bugsUrl": "",
+            "appleUrl": "",
+            "spotifyUrl": "",
+            "vibeUrl": "",
+            "deezerUrl": "",
+        }
+        # Resolve direct streaming links from the same title/artist pair.
+        # If a service cannot be verified, keep it empty rather than linking
+        # to an unrelated track.
+        resolvers = {
+            "genieUrl": genie_url,
+            "bugsUrl": bugs_url,
+            "appleUrl": apple_url,
+            "vibeUrl": vibe_url,
+            "deezerUrl": deezer_url,
+        }
+        for key, resolver in resolvers.items():
+            try:
+                row[key] = resolver(title, artist) or ""
+            except Exception:
+                row[key] = ""
+        rows.append(row)
 
     if len(rows) < 50:
         raise RuntimeError(f"YouTube Korea playlist returned too few tracks: {len(rows)}")
@@ -77,7 +106,7 @@ def main():
         )
 
     payload = {
-        "source": "YouTube Music Charts",
+        "source": "YouTube Music Charts · Top Songs KR",
         "chart": "Top Songs",
         "country": "KR",
         "sourceUrl": CHART_URL,
