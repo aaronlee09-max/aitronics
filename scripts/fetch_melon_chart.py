@@ -209,7 +209,7 @@ def apple_url(title, artist):
     match and prefer the Korean storefront.
     """
     target = norm(title)
-    artist_parts = [norm(x) for x in re.split(r"[/|,&]|\\bfeat\\.?\\b|\\bwith\\b", artist or "") if norm(x)]
+    artist_parts = [norm(x) for x in re.split(r"[/|,&]|\bfeat\.?\b|\bwith\b", artist or "") if norm(x)]
     terms = (f"{artist} {title}", f"{title} {artist}", title)
     for country in ("kr", "us"):
         for term in terms:
@@ -246,7 +246,7 @@ def apple_url(title, artist):
                     ranked.sort(key=lambda x: x[0], reverse=True)
                     url = ranked[0][1]
                     if country == "kr":
-                        return re.sub(r"https://music\\.apple\\.com/(?:us|[a-z]{2})/", "https://music.apple.com/kr/", url)
+                        return re.sub(r"https://music\.apple\.com/(?:us|[a-z]{2})/", "https://music.apple.com/kr/", url)
                     return url
             except Exception:
                 continue
