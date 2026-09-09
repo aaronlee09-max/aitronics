@@ -185,23 +185,39 @@
           });
         });
       }
+      function youtubeServicesFor(track) {
+        const q = encodeURIComponent(track.title + " " + track.artist);
+        return [
+          { key: "ytmusic", name: "YouTube Music", href: track.ytMusicUrl || track.url },
+          { key: "ytmv", name: "YouTube", href: track.url },
+          { key: "melon", name: "Melon", href: track.melonUrl },
+          { key: "genie", name: "Genie", href: track.genieUrl },
+          { key: "bugs", name: "Bugs", href: track.bugsUrl },
+          { key: "apple", name: "Apple", href: track.appleUrl },
+          { key: "spotify", name: "Spotify", href: track.spotifyUrl || ("https://open.spotify.com/search/" + q) },
+          { key: "vibe", name: "Vibe", href: track.vibeUrl },
+          { key: "deezer", name: "Deezer", href: track.deezerUrl }
+        ].filter(function(svc) { return svc.href; });
+      }
       function renderYoutube() {
         const query = qEl.value.trim().toLowerCase();
         const visible = youtubeTracks.filter(function(track) {
-          return !query || [track.title, track.artist].join(" ").toLowerCase().includes(query);
+          return !query || [track.title, track.artist, track.album].join(" ").toLowerCase().includes(query);
         });
         if (!visible.length) { listEl.innerHTML = '<div class="empty">검색 결과가 없습니다.</div>'; return; }
         listEl.innerHTML = visible.map(function(track) {
           const d = track.delta;
           const movement = d === null || d === undefined ? {text:"NEW", cls:"new"} :
             d > 0 ? {text:"▲ " + d, cls:"up"} : d < 0 ? {text:"▼ " + Math.abs(d), cls:"down"} : {text:"-", cls:"same"};
+          const services = youtubeServicesFor(track).map(function(svc) {
+            return '<a class="svc ' + svc.key + '" href="' + escapeAttr(svc.href) + '" target="_blank" rel="noreferrer" title="' + svc.name + '">' + (ICONS[svc.key] || "") + '<span>' + svc.name + '</span></a>';
+          }).join("");
           return '<article class="track">' +
             '<div class="rank-wrap"><div class="rank ' + rankClass(track.rank) + '">' + track.rank + '</div><div class="delta ' + movement.cls + '">' + movement.text + '</div></div>' +
             '<img class="cover" alt="' + escapeAttr(track.title) + '" src="' + escapeAttr(track.image) + '" width="72" height="72" />' +
-            '<div class="info"><b>' + escapeHtml(track.title) + '</b><div class="artist">' + escapeHtml(track.artist) + '</div><div class="services">' +
-            '<a class="svc ytmusic" href="' + escapeAttr(track.url) + '" target="_blank" rel="noreferrer">' + ICONS.ytmusic + '<span>YouTube Music</span></a>' +
-            '<a class="svc ytmv" href="' + escapeAttr(track.url) + '" target="_blank" rel="noreferrer">' + YT_ICON + '<span>YouTube</span></a>' +
-            '</div></div></article>';
+            '<div class="info"><b>' + escapeHtml(track.title) + '</b><div class="artist">' + escapeHtml(track.artist) + '</div>' +
+            (track.album ? '<div class="album">앨범 · ' + escapeHtml(track.album) + '</div>' : '') +
+            '<div class="services">' + services + '</div></div></article>';
         }).join("");
       }
       function render() {
