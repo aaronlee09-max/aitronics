@@ -32,7 +32,7 @@ for t in tracks:
         channel_compact = re.sub(r"[^a-z0-9가-힣]+", "", channel)
         artist_aliases = [
             re.sub(r"[^a-z0-9가-힣]+", "", part.lower())
-            for part in re.split(r"[/|,&]|\\bfeat\\.?\\b|\\bwith\\b", artist)
+            for part in re.split(r"[/|,&]|\bfeat\.?\b|\bwith\b", artist)
             if re.sub(r"[^a-z0-9가-힣]+", "", part.lower())
         ]
         if not any(
