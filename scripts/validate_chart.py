@@ -44,7 +44,7 @@ for t in tracks:
     apple = t.get("appleUrl") or ""
     # Apple Music may legitimately resolve to the user/catalog country (US, KR, JP, etc.).
     # Validate the official Apple Music host and a two-letter storefront instead of forcing /kr/.
-    if apple and not re.match(r"^https://music\\.apple\\.com/[a-z]{2}/", apple, re.IGNORECASE):
+    if apple and not re.match(r"^https://music\.apple\.com/[a-z]{2}/", apple, re.IGNORECASE):
         raise SystemExit(f"malformed Apple Music URL: {t.get('title')} -> {apple}")
 
 yt=load("youtube_chart.json")
