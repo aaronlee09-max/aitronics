@@ -8,6 +8,7 @@ from __future__ import annotations
 
 import json
 import subprocess
+import urllib.parse
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -57,7 +58,7 @@ def main():
             "url": f"https://www.youtube.com/watch?v={video_id}",
             "ytMusicUrl": f"https://music.youtube.com/watch?v={video_id}",
             "image": entry.get("thumbnail") or f"https://i.ytimg.com/vi/{video_id}/hqdefault.jpg",
-            "melonUrl": "",
+            "melonUrl": f"https://www.melon.com/search/total/index.htm?q={urllib.parse.quote(title + ' ' + artist)}",
             "genieUrl": "",
             "bugsUrl": "",
             "appleUrl": "",
