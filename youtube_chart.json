@@ -4,7 +4,7 @@
   "country": "KR",
   "sourceUrl": "https://charts.youtube.com/charts/TopSongs/kr/weekly",
   "playlistUrl": "https://www.youtube.com/playlist?list=PL4fGSI1pDJn6jXS_Tv_N9B8Z0HTRVJE0m",
-  "updatedAt": "2026-09-14T05:31:00.484983+00:00",
+  "updatedAt": "2026-09-14T11:06:04.325259+00:00",
   "count": 98,
   "tracks": [
     {
@@ -24,9 +24,9 @@
       "spotifyUrl": "",
       "vibeUrl": "",
       "deezerUrl": "",
-      "previousRank": null,
-      "delta": null,
-      "change": "new"
+      "previousRank": 1,
+      "delta": 0,
+      "change": "same"
     },
     {
       "rank": 2,
@@ -87,9 +87,9 @@
       "spotifyUrl": "",
       "vibeUrl": "",
       "deezerUrl": "",
-      "previousRank": null,
-      "delta": null,
-      "change": "new"
+      "previousRank": 4,
+      "delta": 0,
+      "change": "same"
     },
     {
       "rank": 5,
@@ -108,9 +108,9 @@
       "spotifyUrl": "",
       "vibeUrl": "",
       "deezerUrl": "",
-      "previousRank": 4,
-      "delta": -1,
-      "change": "down"
+      "previousRank": 5,
+      "delta": 0,
+      "change": "same"
     },
     {
       "rank": 6,
@@ -129,9 +129,9 @@
       "spotifyUrl": "",
       "vibeUrl": "",
       "deezerUrl": "",
-      "previousRank": 5,
-      "delta": -1,
-      "change": "down"
+      "previousRank": 6,
+      "delta": 0,
+      "change": "same"
     },
     {
       "rank": 7,
@@ -150,9 +150,9 @@
       "spotifyUrl": "",
       "vibeUrl": "",
       "deezerUrl": "",
-      "previousRank": 6,
-      "delta": -1,
-      "change": "down"
+      "previousRank": 7,
+      "delta": 0,
+      "change": "same"
     },
     {
       "rank": 8,
@@ -171,9 +171,9 @@
       "spotifyUrl": "",
       "vibeUrl": "",
       "deezerUrl": "",
-      "previousRank": null,
-      "delta": null,
-      "change": "new"
+      "previousRank": 8,
+      "delta": 0,
+      "change": "same"
     },
     {
       "rank": 9,
@@ -192,9 +192,9 @@
       "spotifyUrl": "",
       "vibeUrl": "",
       "deezerUrl": "",
-      "previousRank": null,
-      "delta": null,
-      "change": "new"
+      "previousRank": 9,
+      "delta": 0,
+      "change": "same"
     },
     {
       "rank": 10,
@@ -213,9 +213,9 @@
       "spotifyUrl": "",
       "vibeUrl": "",
       "deezerUrl": "",
-      "previousRank": 7,
-      "delta": -3,
-      "change": "down"
+      "previousRank": 10,
+      "delta": 0,
+      "change": "same"
     },
     {
       "rank": 11,
@@ -234,9 +234,9 @@
       "spotifyUrl": "",
       "vibeUrl": "",
       "deezerUrl": "",
-      "previousRank": 10,
-      "delta": -1,
-      "change": "down"
+      "previousRank": 11,
+      "delta": 0,
+      "change": "same"
     },
     {
       "rank": 12,
@@ -255,9 +255,9 @@
       "spotifyUrl": "",
       "vibeUrl": "",
       "deezerUrl": "",
-      "previousRank": 9,
-      "delta": -3,
-      "change": "down"
+      "previousRank": 12,
+      "delta": 0,
+      "change": "same"
     },
     {
       "rank": 13,
@@ -276,9 +276,9 @@
       "spotifyUrl": "",
       "vibeUrl": "",
       "deezerUrl": "",
-      "previousRank": null,
-      "delta": null,
-      "change": "new"
+      "previousRank": 13,
+      "delta": 0,
+      "change": "same"
     },
     {
       "rank": 14,
@@ -297,9 +297,9 @@
       "spotifyUrl": "",
       "vibeUrl": "",
       "deezerUrl": "",
-      "previousRank": 25,
-      "delta": 11,
-      "change": "up"
+      "previousRank": 14,
+      "delta": 0,
+      "change": "same"
     },
     {
       "rank": 15,
@@ -318,9 +318,9 @@
       "spotifyUrl": "",
       "vibeUrl": "",
       "deezerUrl": "",
-      "previousRank": 13,
-      "delta": -2,
-      "change": "down"
+      "previousRank": 15,
+      "delta": 0,
+      "change": "same"
     },
     {
       "rank": 16,
@@ -339,9 +339,9 @@
       "spotifyUrl": "",
       "vibeUrl": "",
       "deezerUrl": "",
-      "previousRank": 14,
-      "delta": -2,
-      "change": "down"
+      "previousRank": 16,
+      "delta": 0,
+      "change": "same"
     },
     {
       "rank": 17,
@@ -360,9 +360,9 @@
       "spotifyUrl": "",
       "vibeUrl": "",
       "deezerUrl": "",
-      "previousRank": 15,
-      "delta": -2,
-      "change": "down"
+      "previousRank": 17,
+      "delta": 0,
+      "change": "same"
     },
     {
       "rank": 18,
@@ -381,9 +381,9 @@
       "spotifyUrl": "",
       "vibeUrl": "",
       "deezerUrl": "",
-      "previousRank": 17,
-      "delta": -1,
-      "change": "down"
+      "previousRank": 18,
+      "delta": 0,
+      "change": "same"
     },
     {
       "rank": 19,
@@ -402,9 +402,9 @@
       "spotifyUrl": "",
       "vibeUrl": "",
       "deezerUrl": "",
-      "previousRank": 16,
-      "delta": -3,
-      "change": "down"
+      "previousRank": 19,
+      "delta": 0,
+      "change": "same"
     },
     {
       "rank": 20,
@@ -423,9 +423,9 @@
       "spotifyUrl": "",
       "vibeUrl": "",
       "deezerUrl": "",
-      "previousRank": 11,
-      "delta": -9,
-      "change": "down"
+      "previousRank": 20,
+      "delta": 0,
+      "change": "same"
     },
     {
       "rank": 21,
@@ -444,9 +444,9 @@
       "spotifyUrl": "",
       "vibeUrl": "",
       "deezerUrl": "",
-      "previousRank": 18,
-      "delta": -3,
-      "change": "down"
+      "previousRank": 21,
+      "delta": 0,
+      "change": "same"
     },
     {
       "rank": 22,
@@ -465,9 +465,9 @@
       "spotifyUrl": "",
       "vibeUrl": "",
       "deezerUrl": "",
-      "previousRank": 12,
-      "delta": -10,
-      "change": "down"
+      "previousRank": 22,
+      "delta": 0,
+      "change": "same"
     },
     {
       "rank": 23,
@@ -486,9 +486,9 @@
       "spotifyUrl": "",
       "vibeUrl": "",
       "deezerUrl": "",
-      "previousRank": 24,
-      "delta": 1,
-      "change": "up"
+      "previousRank": 23,
+      "delta": 0,
+      "change": "same"
     },
     {
       "rank": 24,
@@ -507,9 +507,9 @@
       "spotifyUrl": "",
       "vibeUrl": "",
       "deezerUrl": "",
-      "previousRank": null,
-      "delta": null,
-      "change": "new"
+      "previousRank": 24,
+      "delta": 0,
+      "change": "same"
     },
     {
       "rank": 25,
@@ -528,9 +528,9 @@
       "spotifyUrl": "",
       "vibeUrl": "",
       "deezerUrl": "",
-      "previousRank": 8,
-      "delta": -17,
-      "change": "down"
+      "previousRank": 25,
+      "delta": 0,
+      "change": "same"
     },
     {
       "rank": 26,
@@ -549,9 +549,9 @@
       "spotifyUrl": "",
       "vibeUrl": "",
       "deezerUrl": "",
-      "previousRank": 20,
-      "delta": -6,
-      "change": "down"
+      "previousRank": 26,
+      "delta": 0,
+      "change": "same"
     },
     {
       "rank": 27,
@@ -570,9 +570,9 @@
       "spotifyUrl": "",
       "vibeUrl": "",
       "deezerUrl": "",
-      "previousRank": 28,
-      "delta": 1,
-      "change": "up"
+      "previousRank": 27,
+      "delta": 0,
+      "change": "same"
     },
     {
       "rank": 28,
@@ -591,9 +591,9 @@
       "spotifyUrl": "",
       "vibeUrl": "",
       "deezerUrl": "",
-      "previousRank": 22,
-      "delta": -6,
-      "change": "down"
+      "previousRank": 28,
+      "delta": 0,
+      "change": "same"
     },
     {
       "rank": 29,
@@ -612,9 +612,9 @@
       "spotifyUrl": "",
       "vibeUrl": "",
       "deezerUrl": "",
-      "previousRank": 34,
-      "delta": 5,
-      "change": "up"
+      "previousRank": 29,
+      "delta": 0,
+      "change": "same"
     },
     {
       "rank": 30,
@@ -654,9 +654,9 @@
       "spotifyUrl": "",
       "vibeUrl": "",
       "deezerUrl": "",
-      "previousRank": 26,
-      "delta": -5,
-      "change": "down"
+      "previousRank": 31,
+      "delta": 0,
+      "change": "same"
     },
     {
       "rank": 32,
@@ -675,9 +675,9 @@
       "spotifyUrl": "",
       "vibeUrl": "",
       "deezerUrl": "",
-      "previousRank": 35,
-      "delta": 3,
-      "change": "up"
+      "previousRank": 32,
+      "delta": 0,
+      "change": "same"
     },
     {
       "rank": 33,
@@ -696,9 +696,9 @@
       "spotifyUrl": "",
       "vibeUrl": "",
       "deezerUrl": "",
-      "previousRank": 53,
-      "delta": 20,
-      "change": "up"
+      "previousRank": 33,
+      "delta": 0,
+      "change": "same"
     },
     {
       "rank": 34,
@@ -717,9 +717,9 @@
       "spotifyUrl": "",
       "vibeUrl": "",
       "deezerUrl": "",
-      "previousRank": 33,
-      "delta": -1,
-      "change": "down"
+      "previousRank": 34,
+      "delta": 0,
+      "change": "same"
     },
     {
       "rank": 35,
@@ -738,9 +738,9 @@
       "spotifyUrl": "",
       "vibeUrl": "",
       "deezerUrl": "",
-      "previousRank": 47,
-      "delta": 12,
-      "change": "up"
+      "previousRank": 35,
+      "delta": 0,
+      "change": "same"
     },
     {
       "rank": 36,
@@ -780,9 +780,9 @@
       "spotifyUrl": "",
       "vibeUrl": "",
       "deezerUrl": "",
-      "previousRank": 23,
-      "delta": -14,
-      "change": "down"
+      "previousRank": 37,
+      "delta": 0,
+      "change": "same"
     },
     {
       "rank": 38,
@@ -801,9 +801,9 @@
       "spotifyUrl": "",
       "vibeUrl": "",
       "deezerUrl": "",
-      "previousRank": null,
-      "delta": null,
-      "change": "new"
+      "previousRank": 38,
+      "delta": 0,
+      "change": "same"
     },
     {
       "rank": 39,
@@ -822,9 +822,9 @@
       "spotifyUrl": "",
       "vibeUrl": "",
       "deezerUrl": "",
-      "previousRank": 21,
-      "delta": -18,
-      "change": "down"
+      "previousRank": 39,
+      "delta": 0,
+      "change": "same"
     },
     {
       "rank": 40,
@@ -843,9 +843,9 @@
       "spotifyUrl": "",
       "vibeUrl": "",
       "deezerUrl": "",
-      "previousRank": 42,
-      "delta": 2,
-      "change": "up"
+      "previousRank": 40,
+      "delta": 0,
+      "change": "same"
     },
     {
       "rank": 41,
@@ -864,9 +864,9 @@
       "spotifyUrl": "",
       "vibeUrl": "",
       "deezerUrl": "",
-      "previousRank": 31,
-      "delta": -10,
-      "change": "down"
+      "previousRank": 41,
+      "delta": 0,
+      "change": "same"
     },
     {
       "rank": 42,
@@ -885,9 +885,9 @@
       "spotifyUrl": "",
       "vibeUrl": "",
       "deezerUrl": "https://www.deezer.com/track/1041886132",
-      "previousRank": null,
-      "delta": null,
-      "change": "new"
+      "previousRank": 42,
+      "delta": 0,
+      "change": "same"
     },
     {
       "rank": 43,
@@ -906,9 +906,9 @@
       "spotifyUrl": "",
       "vibeUrl": "",
       "deezerUrl": "",
-      "previousRank": 41,
-      "delta": -2,
-      "change": "down"
+      "previousRank": 43,
+      "delta": 0,
+      "change": "same"
     },
     {
       "rank": 44,
@@ -927,9 +927,9 @@
       "spotifyUrl": "",
       "vibeUrl": "",
       "deezerUrl": "",
-      "previousRank": 40,
-      "delta": -4,
-      "change": "down"
+      "previousRank": 44,
+      "delta": 0,
+      "change": "same"
     },
     {
       "rank": 45,
@@ -948,9 +948,9 @@
       "spotifyUrl": "",
       "vibeUrl": "",
       "deezerUrl": "",
-      "previousRank": 29,
-      "delta": -16,
-      "change": "down"
+      "previousRank": 45,
+      "delta": 0,
+      "change": "same"
     },
     {
       "rank": 46,
@@ -969,9 +969,9 @@
       "spotifyUrl": "",
       "vibeUrl": "",
       "deezerUrl": "",
-      "previousRank": 39,
-      "delta": -7,
-      "change": "down"
+      "previousRank": 46,
+      "delta": 0,
+      "change": "same"
     },
     {
       "rank": 47,
@@ -990,9 +990,9 @@
       "spotifyUrl": "",
       "vibeUrl": "",
       "deezerUrl": "",
-      "previousRank": 43,
-      "delta": -4,
-      "change": "down"
+      "previousRank": 47,
+      "delta": 0,
+      "change": "same"
     },
     {
       "rank": 48,
@@ -1011,9 +1011,9 @@
       "spotifyUrl": "",
       "vibeUrl": "",
       "deezerUrl": "",
-      "previousRank": 50,
-      "delta": 2,
-      "change": "up"
+      "previousRank": 48,
+      "delta": 0,
+      "change": "same"
     },
     {
       "rank": 49,
@@ -1032,9 +1032,9 @@
       "spotifyUrl": "",
       "vibeUrl": "",
       "deezerUrl": "",
-      "previousRank": 32,
-      "delta": -17,
-      "change": "down"
+      "previousRank": 49,
+      "delta": 0,
+      "change": "same"
     },
     {
       "rank": 50,
@@ -1053,9 +1053,9 @@
       "spotifyUrl": "",
       "vibeUrl": "",
       "deezerUrl": "",
-      "previousRank": 44,
-      "delta": -6,
-      "change": "down"
+      "previousRank": 50,
+      "delta": 0,
+      "change": "same"
     },
     {
       "rank": 51,
@@ -1074,9 +1074,9 @@
       "spotifyUrl": "",
       "vibeUrl": "",
       "deezerUrl": "",
-      "previousRank": 37,
-      "delta": -14,
-      "change": "down"
+      "previousRank": 51,
+      "delta": 0,
+      "change": "same"
     },
     {
       "rank": 52,
@@ -1095,9 +1095,9 @@
       "spotifyUrl": "",
       "vibeUrl": "",
       "deezerUrl": "",
-      "previousRank": null,
-      "delta": null,
-      "change": "new"
+      "previousRank": 52,
+      "delta": 0,
+      "change": "same"
     },
     {
       "rank": 53,
@@ -1116,9 +1116,9 @@
       "spotifyUrl": "",
       "vibeUrl": "",
       "deezerUrl": "",
-      "previousRank": 60,
-      "delta": 7,
-      "change": "up"
+      "previousRank": 53,
+      "delta": 0,
+      "change": "same"
     },
     {
       "rank": 54,
@@ -1137,9 +1137,9 @@
       "spotifyUrl": "",
       "vibeUrl": "",
       "deezerUrl": "",
-      "previousRank": 80,
-      "delta": 26,
-      "change": "up"
+      "previousRank": 54,
+      "delta": 0,
+      "change": "same"
     },
     {
       "rank": 55,
@@ -1158,9 +1158,9 @@
       "spotifyUrl": "",
       "vibeUrl": "",
       "deezerUrl": "",
-      "previousRank": 46,
-      "delta": -9,
-      "change": "down"
+      "previousRank": 55,
+      "delta": 0,
+      "change": "same"
     },
     {
       "rank": 56,
@@ -1179,9 +1179,9 @@
       "spotifyUrl": "",
       "vibeUrl": "",
       "deezerUrl": "",
-      "previousRank": null,
-      "delta": null,
-      "change": "new"
+      "previousRank": 56,
+      "delta": 0,
+      "change": "same"
     },
     {
       "rank": 57,
@@ -1200,9 +1200,9 @@
       "spotifyUrl": "",
       "vibeUrl": "",
       "deezerUrl": "",
-      "previousRank": null,
-      "delta": null,
-      "change": "new"
+      "previousRank": 57,
+      "delta": 0,
+      "change": "same"
     },
     {
       "rank": 58,
@@ -1221,9 +1221,9 @@
       "spotifyUrl": "",
       "vibeUrl": "",
       "deezerUrl": "",
-      "previousRank": 55,
-      "delta": -3,
-      "change": "down"
+      "previousRank": 58,
+      "delta": 0,
+      "change": "same"
     },
     {
       "rank": 59,
@@ -1263,9 +1263,9 @@
       "spotifyUrl": "",
       "vibeUrl": "",
       "deezerUrl": "",
-      "previousRank": 51,
-      "delta": -9,
-      "change": "down"
+      "previousRank": 60,
+      "delta": 0,
+      "change": "same"
     },
     {
       "rank": 61,
@@ -1284,9 +1284,9 @@
       "spotifyUrl": "",
       "vibeUrl": "",
       "deezerUrl": "https://www.deezer.com/track/1741233027",
-      "previousRank": 67,
-      "delta": 6,
-      "change": "up"
+      "previousRank": 61,
+      "delta": 0,
+      "change": "same"
     },
     {
       "rank": 62,
@@ -1305,9 +1305,9 @@
       "spotifyUrl": "",
       "vibeUrl": "",
       "deezerUrl": "",
-      "previousRank": 19,
-      "delta": -43,
-      "change": "down"
+      "previousRank": 62,
+      "delta": 0,
+      "change": "same"
     },
     {
       "rank": 63,
@@ -1326,9 +1326,9 @@
       "spotifyUrl": "",
       "vibeUrl": "",
       "deezerUrl": "",
-      "previousRank": 71,
-      "delta": 8,
-      "change": "up"
+      "previousRank": 63,
+      "delta": 0,
+      "change": "same"
     },
     {
       "rank": 64,
@@ -1347,9 +1347,9 @@
       "spotifyUrl": "",
       "vibeUrl": "",
       "deezerUrl": "",
-      "previousRank": 38,
-      "delta": -26,
-      "change": "down"
+      "previousRank": 64,
+      "delta": 0,
+      "change": "same"
     },
     {
       "rank": 65,
@@ -1368,9 +1368,9 @@
       "spotifyUrl": "",
       "vibeUrl": "",
       "deezerUrl": "",
-      "previousRank": 68,
-      "delta": 3,
-      "change": "up"
+      "previousRank": 65,
+      "delta": 0,
+      "change": "same"
     },
     {
       "rank": 66,
@@ -1389,9 +1389,9 @@
       "spotifyUrl": "",
       "vibeUrl": "",
       "deezerUrl": "",
-      "previousRank": 56,
-      "delta": -10,
-      "change": "down"
+      "previousRank": 66,
+      "delta": 0,
+      "change": "same"
     },
     {
       "rank": 67,
@@ -1410,9 +1410,9 @@
       "spotifyUrl": "",
       "vibeUrl": "",
       "deezerUrl": "",
-      "previousRank": 69,
-      "delta": 2,
-      "change": "up"
+      "previousRank": 67,
+      "delta": 0,
+      "change": "same"
     },
     {
       "rank": 68,
@@ -1431,9 +1431,9 @@
       "spotifyUrl": "",
       "vibeUrl": "",
       "deezerUrl": "",
-      "previousRank": 74,
-      "delta": 6,
-      "change": "up"
+      "previousRank": 68,
+      "delta": 0,
+      "change": "same"
     },
     {
       "rank": 69,
@@ -1452,9 +1452,9 @@
       "spotifyUrl": "",
       "vibeUrl": "",
       "deezerUrl": "https://www.deezer.com/track/2030958287",
-      "previousRank": 65,
-      "delta": -4,
-      "change": "down"
+      "previousRank": 69,
+      "delta": 0,
+      "change": "same"
     },
     {
       "rank": 70,
@@ -1473,9 +1473,9 @@
       "spotifyUrl": "",
       "vibeUrl": "",
       "deezerUrl": "",
-      "previousRank": 66,
-      "delta": -4,
-      "change": "down"
+      "previousRank": 70,
+      "delta": 0,
+      "change": "same"
     },
     {
       "rank": 71,
@@ -1494,9 +1494,9 @@
       "spotifyUrl": "",
       "vibeUrl": "",
       "deezerUrl": "https://www.deezer.com/track/2458438615",
-      "previousRank": 90,
-      "delta": 19,
-      "change": "up"
+      "previousRank": 71,
+      "delta": 0,
+      "change": "same"
     },
     {
       "rank": 72,
@@ -1515,9 +1515,9 @@
       "spotifyUrl": "",
       "vibeUrl": "",
       "deezerUrl": "",
-      "previousRank": 81,
-      "delta": 9,
-      "change": "up"
+      "previousRank": 72,
+      "delta": 0,
+      "change": "same"
     },
     {
       "rank": 73,
@@ -1536,9 +1536,9 @@
       "spotifyUrl": "",
       "vibeUrl": "",
       "deezerUrl": "",
-      "previousRank": 82,
-      "delta": 9,
-      "change": "up"
+      "previousRank": 73,
+      "delta": 0,
+      "change": "same"
     },
     {
       "rank": 74,
@@ -1557,9 +1557,9 @@
       "spotifyUrl": "",
       "vibeUrl": "",
       "deezerUrl": "",
-      "previousRank": null,
-      "delta": null,
-      "change": "new"
+      "previousRank": 74,
+      "delta": 0,
+      "change": "same"
     },
     {
       "rank": 75,
@@ -1578,9 +1578,9 @@
       "spotifyUrl": "",
       "vibeUrl": "",
       "deezerUrl": "",
-      "previousRank": null,
-      "delta": null,
-      "change": "new"
+      "previousRank": 75,
+      "delta": 0,
+      "change": "same"
     },
     {
       "rank": 76,
@@ -1620,9 +1620,9 @@
       "spotifyUrl": "",
       "vibeUrl": "",
       "deezerUrl": "https://www.deezer.com/track/4251461201",
-      "previousRank": null,
-      "delta": null,
-      "change": "new"
+      "previousRank": 77,
+      "delta": 0,
+      "change": "same"
     },
     {
       "rank": 78,
@@ -1641,9 +1641,9 @@
       "spotifyUrl": "",
       "vibeUrl": "",
       "deezerUrl": "",
-      "previousRank": 58,
-      "delta": -20,
-      "change": "down"
+      "previousRank": 78,
+      "delta": 0,
+      "change": "same"
     },
     {
       "rank": 79,
@@ -1662,9 +1662,9 @@
       "spotifyUrl": "",
       "vibeUrl": "",
       "deezerUrl": "",
-      "previousRank": 83,
-      "delta": 4,
-      "change": "up"
+      "previousRank": 79,
+      "delta": 0,
+      "change": "same"
     },
     {
       "rank": 80,
@@ -1683,9 +1683,9 @@
       "spotifyUrl": "",
       "vibeUrl": "",
       "deezerUrl": "",
-      "previousRank": 87,
-      "delta": 7,
-      "change": "up"
+      "previousRank": 80,
+      "delta": 0,
+      "change": "same"
     },
     {
       "rank": 81,
@@ -1704,9 +1704,9 @@
       "spotifyUrl": "",
       "vibeUrl": "",
       "deezerUrl": "",
-      "previousRank": 72,
-      "delta": -9,
-      "change": "down"
+      "previousRank": 81,
+      "delta": 0,
+      "change": "same"
     },
     {
       "rank": 82,
@@ -1725,9 +1725,9 @@
       "spotifyUrl": "",
       "vibeUrl": "",
       "deezerUrl": "",
-      "previousRank": 70,
-      "delta": -12,
-      "change": "down"
+      "previousRank": 82,
+      "delta": 0,
+      "change": "same"
     },
     {
       "rank": 83,
@@ -1746,9 +1746,9 @@
       "spotifyUrl": "",
       "vibeUrl": "",
       "deezerUrl": "https://www.deezer.com/track/1041886122",
-      "previousRank": 92,
-      "delta": 9,
-      "change": "up"
+      "previousRank": 83,
+      "delta": 0,
+      "change": "same"
     },
     {
       "rank": 84,
@@ -1767,9 +1767,9 @@
       "spotifyUrl": "",
       "vibeUrl": "",
       "deezerUrl": "",
-      "previousRank": 85,
-      "delta": 1,
-      "change": "up"
+      "previousRank": 84,
+      "delta": 0,
+      "change": "same"
     },
     {
       "rank": 85,
@@ -1788,9 +1788,9 @@
       "spotifyUrl": "",
       "vibeUrl": "",
       "deezerUrl": "",
-      "previousRank": 86,
-      "delta": 1,
-      "change": "up"
+      "previousRank": 85,
+      "delta": 0,
+      "change": "same"
     },
     {
       "rank": 86,
@@ -1809,9 +1809,9 @@
       "spotifyUrl": "",
       "vibeUrl": "",
       "deezerUrl": "",
-      "previousRank": 94,
-      "delta": 8,
-      "change": "up"
+      "previousRank": 86,
+      "delta": 0,
+      "change": "same"
     },
     {
       "rank": 87,
@@ -1830,9 +1830,9 @@
       "spotifyUrl": "",
       "vibeUrl": "",
       "deezerUrl": "",
-      "previousRank": 88,
-      "delta": 1,
-      "change": "up"
+      "previousRank": 87,
+      "delta": 0,
+      "change": "same"
     },
     {
       "rank": 88,
@@ -1851,9 +1851,9 @@
       "spotifyUrl": "",
       "vibeUrl": "",
       "deezerUrl": "https://www.deezer.com/track/3527461621",
-      "previousRank": null,
-      "delta": null,
-      "change": "new"
+      "previousRank": 88,
+      "delta": 0,
+      "change": "same"
     },
     {
       "rank": 89,
@@ -1872,9 +1872,9 @@
       "spotifyUrl": "",
       "vibeUrl": "",
       "deezerUrl": "",
-      "previousRank": 78,
-      "delta": -11,
-      "change": "down"
+      "previousRank": 89,
+      "delta": 0,
+      "change": "same"
     },
     {
       "rank": 90,
@@ -1893,9 +1893,9 @@
       "spotifyUrl": "",
       "vibeUrl": "",
       "deezerUrl": "",
-      "previousRank": null,
-      "delta": null,
-      "change": "new"
+      "previousRank": 90,
+      "delta": 0,
+      "change": "same"
     },
     {
       "rank": 91,
@@ -1914,9 +1914,9 @@
       "spotifyUrl": "",
       "vibeUrl": "",
       "deezerUrl": "",
-      "previousRank": null,
-      "delta": null,
-      "change": "new"
+      "previousRank": 91,
+      "delta": 0,
+      "change": "same"
     },
     {
       "rank": 92,
@@ -1935,9 +1935,9 @@
       "spotifyUrl": "",
       "vibeUrl": "",
       "deezerUrl": "https://www.deezer.com/track/4070234781",
-      "previousRank": 91,
-      "delta": -1,
-      "change": "down"
+      "previousRank": 92,
+      "delta": 0,
+      "change": "same"
     },
     {
       "rank": 93,
@@ -1956,9 +1956,9 @@
       "spotifyUrl": "",
       "vibeUrl": "",
       "deezerUrl": "",
-      "previousRank": null,
-      "delta": null,
-      "change": "new"
+      "previousRank": 93,
+      "delta": 0,
+      "change": "same"
     },
     {
       "rank": 94,
@@ -1977,9 +1977,9 @@
       "spotifyUrl": "",
       "vibeUrl": "",
       "deezerUrl": "",
-      "previousRank": 100,
-      "delta": 6,
-      "change": "up"
+      "previousRank": 94,
+      "delta": 0,
+      "change": "same"
     },
     {
       "rank": 95,
@@ -1998,9 +1998,9 @@
       "spotifyUrl": "",
       "vibeUrl": "",
       "deezerUrl": "",
-      "previousRank": null,
-      "delta": null,
-      "change": "new"
+      "previousRank": 95,
+      "delta": 0,
+      "change": "same"
     },
     {
       "rank": 96,
@@ -2019,9 +2019,9 @@
       "spotifyUrl": "",
       "vibeUrl": "",
       "deezerUrl": "",
-      "previousRank": null,
-      "delta": null,
-      "change": "new"
+      "previousRank": 96,
+      "delta": 0,
+      "change": "same"
     },
     {
       "rank": 97,
@@ -2040,9 +2040,9 @@
       "spotifyUrl": "",
       "vibeUrl": "",
       "deezerUrl": "https://www.deezer.com/track/28604451",
-      "previousRank": null,
-      "delta": null,
-      "change": "new"
+      "previousRank": 97,
+      "delta": 0,
+      "change": "same"
     },
     {
       "rank": 98,
@@ -2061,9 +2061,9 @@
       "spotifyUrl": "",
       "vibeUrl": "",
       "deezerUrl": "",
-      "previousRank": null,
-      "delta": null,
-      "change": "new"
+      "previousRank": 98,
+      "delta": 0,
+      "change": "same"
     }
   ]
 }
