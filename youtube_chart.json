@@ -4,7 +4,7 @@
   "country": "KR",
   "sourceUrl": "https://charts.youtube.com/charts/TopSongs/kr/weekly",
   "playlistUrl": "https://www.youtube.com/playlist?list=PL4fGSI1pDJn6jXS_Tv_N9B8Z0HTRVJE0m",
-  "updatedAt": "2026-09-22T01:40:25.281664+00:00",
+  "updatedAt": "2026-09-22T12:37:51.010589+00:00",
   "count": 100,
   "tracks": [
     {
@@ -401,7 +401,7 @@
       "appleUrl": "",
       "spotifyUrl": "",
       "vibeUrl": "",
-      "deezerUrl": "https://www.deezer.com/track/4246467631",
+      "deezerUrl": "",
       "previousRank": 19,
       "delta": 0,
       "change": "same"
