@@ -34,6 +34,15 @@
       .tabs { display:flex; gap:8px; margin:0; }
       .tab { border:1px solid var(--line); border-radius:999px; padding:10px 16px; background:var(--paper); color:var(--muted); font:inherit; font-weight:900; cursor:pointer; }
       .tab.active { background:var(--green-deep); color:#fff; border-color:var(--green-deep); }
+      .youtube-box { margin:0 0 18px; padding:16px; border:1px solid var(--line); border-radius:18px; background:var(--paper); box-shadow:0 8px 24px rgba(22,48,39,.06); }
+      .youtube-box h2 { margin:0 0 6px; font-size:18px; }
+      .youtube-box p { margin:0 0 12px; color:var(--muted); font-size:13px; font-weight:700; }
+      .youtube-input-row { display:flex; gap:8px; }
+      .youtube-input { flex:1; min-width:0; border:1px solid var(--line); border-radius:12px; padding:12px 13px; background:#fff; color:var(--ink); font:inherit; font-weight:700; }
+      .youtube-play { border:0; border-radius:12px; padding:0 18px; background:#111; color:#fff; font:inherit; font-weight:900; cursor:pointer; }
+      .youtube-error { margin-top:8px; color:#c1121f; font-size:12px; font-weight:800; }
+      .youtube-player { display:none; margin-top:14px; aspect-ratio:16/9; overflow:hidden; border-radius:14px; background:#000; }
+      .youtube-player iframe { width:100%; height:100%; border:0; display:block; }
       .services { display:flex; flex-wrap:wrap; gap:6px; margin-top:10px; }
       .svc, .playbtn { display:inline-flex; align-items:center; gap:6px; height:28px; padding:0 8px 0 4px; border:0; border-radius:999px; text-decoration:none; color:#fff; font-size:11px; font-weight:800; cursor:pointer; font-family:inherit; }
       .svc svg, .playbtn svg { width:20px; height:20px; flex:0 0 auto; }
@@ -54,7 +63,7 @@
       .now { display:flex; justify-content:space-between; gap:12px; align-items:center; font-size:13px; font-weight:800; margin-bottom:8px; }
       .now span { color:#bbb; font-weight:700; }
       .dock iframe { width:100%; height:58px; border:0; border-radius:10px; background:#000; }
-      @media (max-width:640px) { .track { grid-template-columns:36px 56px 1fr; } .cover { width:56px; height:56px; } }
+      @media (max-width:640px) { .track { grid-template-columns:36px 56px 1fr; } .cover { width:56px; height:56px; } .youtube-input-row { flex-direction:column; } .youtube-play { min-height:44px; } }
     </style>
   </head>
   <body>
@@ -78,6 +87,18 @@
           <button class="pdfbtn ghost" type="button" data-pdf="yoondongju">PDF 다운 · 윤동주</button>
         </div>
       </div>
+      <section class="youtube-box" aria-label="YouTube 플레이어">
+        <h2>🎬 YouTube 플레이어</h2>
+        <p>YouTube 영상 링크를 붙여넣으면 이 사이트에서 바로 재생합니다.</p>
+        <div class="youtube-input-row">
+          <input id="youtube-url" class="youtube-input" type="url" inputmode="url" placeholder="https://www.youtube.com/watch?v=..." autocomplete="off" />
+          <button id="youtube-play" class="youtube-play" type="button">재생</button>
+        </div>
+        <div id="youtube-error" class="youtube-error" role="alert" hidden></div>
+        <div id="youtube-player" class="youtube-player">
+          <iframe id="youtube-custom-iframe" title="YouTube 영상 플레이어" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+      </section>
       <input id="q" type="search" placeholder="노래 제목, 아티스트, 앨범 검색" autocomplete="off" />
       <section id="list" class="list">차트 불러오는 중...</section>
       <footer>
@@ -96,6 +117,11 @@
       const qEl = document.getElementById("q");
       const dock = document.getElementById("dock");
       const player = document.getElementById("player");
+      const customYoutubeUrl = document.getElementById("youtube-url");
+      const customYoutubePlay = document.getElementById("youtube-play");
+      const customYoutubeError = document.getElementById("youtube-error");
+      const customYoutubePlayer = document.getElementById("youtube-player");
+      const customYoutubeIframe = document.getElementById("youtube-custom-iframe");
       let tracks = [];
       let youtubeTracks = [];
       let activeTab = "melon";
@@ -114,6 +140,34 @@
       function watchUrl(id) { return id ? ("https://www.youtube.com/watch?v=" + id) : ""; }
       function musicUrl(id) { return id ? ("https://music.youtube.com/watch?v=" + id) : ""; }
       function embedUrl(id) { return "https://www.youtube-nocookie.com/embed/" + id + "?autoplay=1&rel=0&modestbranding=1"; }
+      function youtubeVideoId(value) {
+        try {
+          const url = new URL(String(value || "").trim());
+          const host = url.hostname.replace(/^www\./, "").toLowerCase();
+          if (host === "youtu.be") return url.pathname.split("/").filter(Boolean)[0] || "";
+          if (host === "youtube.com" || host === "m.youtube.com" || host === "music.youtube.com") {
+            if (url.pathname === "/watch") return url.searchParams.get("v") || "";
+            const parts = url.pathname.split("/").filter(Boolean);
+            if (["shorts", "live", "embed"].includes(parts[0])) return parts[1] || "";
+          }
+        } catch (_) {}
+        return "";
+      }
+      function playCustomYoutube() {
+        const id = youtubeVideoId(customYoutubeUrl.value);
+        customYoutubeError.hidden = true;
+        customYoutubeError.textContent = "";
+        if (!id || !/^[A-Za-z0-9_-]{6,20}$/.test(id)) {
+          customYoutubePlayer.style.display = "none";
+          customYoutubeIframe.src = "";
+          customYoutubeError.textContent = "올바른 YouTube 영상 링크를 넣어 주세요.";
+          customYoutubeError.hidden = false;
+          return;
+        }
+        customYoutubeIframe.src = embedUrl(id);
+        customYoutubePlayer.style.display = "block";
+        customYoutubePlayer.scrollIntoView({ behavior: "smooth", block: "nearest" });
+      }
       function linksFor(track) {
         const q = encodeURIComponent(track.title + " " + track.artist);
         return [
@@ -260,6 +314,10 @@
         });
       });
       qEl.addEventListener("input", render);
+      customYoutubePlay.addEventListener("click", playCustomYoutube);
+      customYoutubeUrl.addEventListener("keydown", function(event) {
+        if (event.key === "Enter") playCustomYoutube();
+      });
       function downloadPdfFromB64(key, filename) {
         const btn = document.querySelector('[data-pdf="' + key + '"]');
         const url = "./downloads/Melon_Top100_" + key + ".b64?t=" + Date.now();
