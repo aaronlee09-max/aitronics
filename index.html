@@ -58,11 +58,6 @@
       footer { margin-top:22px; color:var(--muted); font-size:12px; line-height:1.6; }
       a { color:var(--green-deep); }
       .empty, .error { padding:24px; border-radius:16px; background:var(--paper); color:var(--muted); font-weight:700; }
-      .dock { position:fixed; left:0; right:0; bottom:0; z-index:20; background:#111; color:#fff; box-shadow:0 -10px 30px rgba(0,0,0,.18); }
-      .dock-inner { width:min(920px, calc(100% - 24px)); margin:0 auto; padding:10px 0 12px; }
-      .now { display:flex; justify-content:space-between; gap:12px; align-items:center; font-size:13px; font-weight:800; margin-bottom:8px; }
-      .now span { color:#bbb; font-weight:700; }
-      .dock iframe { width:100%; height:58px; border:0; border-radius:10px; background:#000; }
       @media (max-width:640px) { .track { grid-template-columns:36px 56px 1fr; } .cover { width:56px; height:56px; } .youtube-input-row { flex-direction:column; } .youtube-play { min-height:44px; } }
     </style>
   </head>
@@ -102,21 +97,13 @@
       <input id="q" type="search" placeholder="노래 제목, 아티스트, 앨범 검색" autocomplete="off" />
       <section id="list" class="list">차트 불러오는 중...</section>
       <footer>
-        Official Audio가 있는 곡만 이 페이지에서 재생됩니다. 재생은 버튼을 눌렀을 때만 시작됩니다.
+        차트의 Official Audio도 위 YouTube 플레이어에서 재생됩니다. 재생은 버튼을 눌렀을 때만 시작됩니다.
         공식 차트: <a href="https://www.melon.com/chart/index.htm" rel="noreferrer">melon.com/chart</a>
       </footer>
     </main>
-    <div class="dock" id="dock" hidden>
-      <div class="dock-inner">
-        <div class="now"><b id="now-title">재생 대기</b><span id="now-artist"></span></div>
-        <iframe id="player" title="YouTube Official Audio" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
-    </div>
     <script>
       const listEl = document.getElementById("list");
       const qEl = document.getElementById("q");
-      const dock = document.getElementById("dock");
-      const player = document.getElementById("player");
       const customYoutubeUrl = document.getElementById("youtube-url");
       const customYoutubePlay = document.getElementById("youtube-play");
       const customYoutubeError = document.getElementById("youtube-error");
@@ -183,10 +170,8 @@
       }
       function playAudio(track) {
         if (!track.ytAudioId) return;
-        dock.hidden = false;
-        document.getElementById("now-title").textContent = track.title + " \u00b7 Official Audio";
-        document.getElementById("now-artist").textContent = track.artist;
-        player.src = embedUrl(track.ytAudioId);
+        customYoutubeUrl.value = watchUrl(track.ytAudioId);
+        playCustomYoutube();
       }
       function deltaLabel(track) {
         if (track.change === "new") return { text: "NEW", cls: "new" };
