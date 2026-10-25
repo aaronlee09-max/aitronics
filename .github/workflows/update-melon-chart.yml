@@ -61,7 +61,7 @@ jobs:
         run: |
           set -euo pipefail
           git config user.name "github-actions[bot]"
-          git config user.email "41898282+users.noreply.github.com"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add chart.json chart_previous.json youtube_chart.json downloads/Melon_Top100_bakgwangil.b64 downloads/Melon_Top100_yoondongju.b64
           if git diff --staged --quiet; then
             echo "chart unchanged"
