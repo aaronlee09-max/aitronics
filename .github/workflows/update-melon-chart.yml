@@ -59,14 +59,18 @@ jobs:
         run: python3 scripts/generate_melon_pdfs.py
       - name: Commit chart.json if changed
         run: |
+          set -euo pipefail
           git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config user.email "41898282+users.noreply.github.com"
           git add chart.json chart_previous.json youtube_chart.json downloads/Melon_Top100_bakgwangil.b64 downloads/Melon_Top100_yoondongju.b64
           if git diff --staged --quiet; then
             echo "chart unchanged"
-          else
-            git commit -m "chore: auto-sync Melon chart and official follow-up links"
-            git fetch origin main
-            git rebase origin/main
-            git push origin HEAD:main
+            exit 0
           fi
+          git commit -m "chore: auto-sync Melon chart and official follow-up links"
+          git fetch origin main
+          # PDF base64 files are regenerated on every run and can conflict when
+          # another scheduled run updates main first. Prefer this run's freshly
+          # generated outputs when replaying the commit on the latest main.
+          git rebase -X theirs origin/main
+          git push origin HEAD:main
