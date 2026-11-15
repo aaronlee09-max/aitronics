@@ -4,8 +4,8 @@
   "country": "KR",
   "sourceUrl": "https://charts.youtube.com/charts/TopSongs/kr/weekly",
   "playlistUrl": "https://www.youtube.com/playlist?list=PL4fGSI1pDJn6jXS_Tv_N9B8Z0HTRVJE0m",
-  "updatedAt": "2026-11-14T20:39:30.007949+00:00",
-  "count": 100,
+  "updatedAt": "2026-11-15T00:26:46.226223+00:00",
+  "count": 99,
   "tracks": [
     {
       "rank": 1,
@@ -807,27 +807,6 @@
     },
     {
       "rank": 39,
-      "title": "back number - ヒロイン (full)",
-      "artist": "back number",
-      "album": "",
-      "views": "",
-      "videoId": "VPZK72W4Xxw",
-      "url": "https://www.youtube.com/watch?v=VPZK72W4Xxw",
-      "ytMusicUrl": "https://music.youtube.com/watch?v=VPZK72W4Xxw",
-      "image": "https://i.ytimg.com/vi/VPZK72W4Xxw/hqdefault.jpg",
-      "melonUrl": "https://www.melon.com/search/total/index.htm?q=back%20number%20-%20%E3%83%92%E3%83%AD%E3%82%A4%E3%83%B3%20%28full%29%20back%20number",
-      "genieUrl": "https://www.genie.co.kr/detail/songInfo?xgnm=115591939",
-      "bugsUrl": "",
-      "appleUrl": "",
-      "spotifyUrl": "",
-      "vibeUrl": "",
-      "deezerUrl": "",
-      "previousRank": 39,
-      "delta": 0,
-      "change": "same"
-    },
-    {
-      "rank": 40,
       "title": "Please Be Happy",
       "artist": "임영웅",
       "album": "",
@@ -844,11 +823,11 @@
       "vibeUrl": "",
       "deezerUrl": "",
       "previousRank": 40,
-      "delta": 0,
-      "change": "same"
+      "delta": 1,
+      "change": "up"
     },
     {
-      "rank": 41,
+      "rank": 40,
       "title": "로이킴 (Roy Kim) - 내게 사랑이 뭐냐고 물어본다면 (If You Ask Me What Love Is) MV",
       "artist": "STONE MUSIC",
       "album": "",
@@ -865,11 +844,11 @@
       "vibeUrl": "",
       "deezerUrl": "",
       "previousRank": 41,
-      "delta": 0,
-      "change": "same"
+      "delta": 1,
+      "change": "up"
     },
     {
-      "rank": 42,
+      "rank": 41,
       "title": "RIIZE 라이즈 'Insomnia' MV",
       "artist": "SMTOWN",
       "album": "",
@@ -886,11 +865,11 @@
       "vibeUrl": "",
       "deezerUrl": "",
       "previousRank": 42,
-      "delta": 0,
-      "change": "same"
+      "delta": 1,
+      "change": "up"
     },
     {
-      "rank": 43,
+      "rank": 42,
       "title": "B THE HOOD (비더후드) 'CHOP!' MV",
       "artist": "B THE HOOD (비더후드)",
       "album": "",
@@ -907,11 +886,11 @@
       "vibeUrl": "",
       "deezerUrl": "",
       "previousRank": 43,
-      "delta": 0,
-      "change": "same"
+      "delta": 1,
+      "change": "up"
     },
     {
-      "rank": 44,
+      "rank": 43,
       "title": "Joy, Sorrow, A Beautiful Heart",
       "artist": "AKMU",
       "album": "",
@@ -928,11 +907,11 @@
       "vibeUrl": "",
       "deezerUrl": "https://www.deezer.com/track/3920191761",
       "previousRank": 44,
-      "delta": 0,
-      "change": "same"
+      "delta": 1,
+      "change": "up"
     },
     {
-      "rank": 45,
+      "rank": 44,
       "title": "IU 'Dear my crazy soulmate' MV",
       "artist": "이지금 [IU Official]",
       "album": "",
@@ -949,11 +928,11 @@
       "vibeUrl": "",
       "deezerUrl": "",
       "previousRank": 45,
-      "delta": 0,
-      "change": "same"
+      "delta": 1,
+      "change": "up"
     },
     {
-      "rank": 46,
+      "rank": 45,
       "title": "My whole world",
       "artist": "카더가든 (Car, the garden)",
       "album": "",
@@ -970,11 +949,11 @@
       "vibeUrl": "",
       "deezerUrl": "https://www.deezer.com/track/2084946067",
       "previousRank": 46,
-      "delta": 0,
-      "change": "same"
+      "delta": 1,
+      "change": "up"
     },
     {
-      "rank": 47,
+      "rank": 46,
       "title": "첫 눈 The First Snow",
       "artist": "EXO",
       "album": "",
@@ -991,11 +970,11 @@
       "vibeUrl": "",
       "deezerUrl": "https://www.deezer.com/track/728235292",
       "previousRank": 47,
-      "delta": 0,
-      "change": "same"
+      "delta": 1,
+      "change": "up"
     },
     {
-      "rank": 48,
+      "rank": 47,
       "title": "ROSE (Feat. Skinny Brown, Homeboy)",
       "artist": "YANGHONGWON",
       "album": "",
@@ -1012,11 +991,11 @@
       "vibeUrl": "",
       "deezerUrl": "",
       "previousRank": 48,
-      "delta": 0,
-      "change": "same"
+      "delta": 1,
+      "change": "up"
     },
     {
-      "rank": 49,
+      "rank": 48,
       "title": "TUIDE (튜이드) ‘SUN KISS’ Official MV",
       "artist": "HYBE LABELS",
       "album": "",
@@ -1033,11 +1012,11 @@
       "vibeUrl": "",
       "deezerUrl": "",
       "previousRank": 49,
-      "delta": 0,
-      "change": "same"
+      "delta": 1,
+      "change": "up"
     },
     {
-      "rank": 50,
+      "rank": 49,
       "title": "RESCENE (리센느) 'Runaway' Official MV",
       "artist": "RESCENE",
       "album": "",
@@ -1054,11 +1033,11 @@
       "vibeUrl": "",
       "deezerUrl": "",
       "previousRank": 50,
-      "delta": 0,
-      "change": "same"
+      "delta": 1,
+      "change": "up"
     },
     {
-      "rank": 51,
+      "rank": 50,
       "title": "[Official Audio] 데이먼스 이어 (Damons Year) - yours",
       "artist": "POCLANOS",
       "album": "",
@@ -1075,11 +1054,11 @@
       "vibeUrl": "",
       "deezerUrl": "",
       "previousRank": 51,
-      "delta": 0,
-      "change": "same"
+      "delta": 1,
+      "change": "up"
     },
     {
-      "rank": 52,
+      "rank": 51,
       "title": "Hearts2Hearts 하츠투하츠 'ICONIC HEART' MV",
       "artist": "SMTOWN",
       "album": "",
@@ -1096,11 +1075,11 @@
       "vibeUrl": "",
       "deezerUrl": "",
       "previousRank": 52,
-      "delta": 0,
-      "change": "same"
+      "delta": 1,
+      "change": "up"
     },
     {
-      "rank": 53,
+      "rank": 52,
       "title": "TWS (투어스) '내 이름을 불러줘' Official MV",
       "artist": "HYBE LABELS",
       "album": "",
@@ -1117,11 +1096,11 @@
       "vibeUrl": "",
       "deezerUrl": "",
       "previousRank": 53,
-      "delta": 0,
-      "change": "same"
+      "delta": 1,
+      "change": "up"
     },
     {
-      "rank": 54,
+      "rank": 53,
       "title": "[MV] 범진(BUMJIN) - 인사 (A Letter)",
       "artist": "더블엑스엔터테인먼트 xxentertainment",
       "album": "",
@@ -1138,11 +1117,11 @@
       "vibeUrl": "",
       "deezerUrl": "",
       "previousRank": 54,
-      "delta": 0,
-      "change": "same"
+      "delta": 1,
+      "change": "up"
     },
     {
-      "rank": 55,
+      "rank": 54,
       "title": "Girls' Generation-HRS 소녀시대-효리수 'Skibidi' Performance Video",
       "artist": "SMTOWN",
       "album": "",
@@ -1159,11 +1138,11 @@
       "vibeUrl": "",
       "deezerUrl": "",
       "previousRank": 55,
-      "delta": 0,
-      "change": "same"
+      "delta": 1,
+      "change": "up"
     },
     {
-      "rank": 56,
+      "rank": 55,
       "title": "숲",
       "artist": "최유리 Choi Yu Ree",
       "album": "",
@@ -1180,11 +1159,11 @@
       "vibeUrl": "",
       "deezerUrl": "",
       "previousRank": 56,
-      "delta": 0,
-      "change": "same"
+      "delta": 1,
+      "change": "up"
     },
     {
-      "rank": 57,
+      "rank": 56,
       "title": "BABYMONSTER - 'DESERVE' M/V",
       "artist": "BABYMONSTER",
       "album": "",
@@ -1201,11 +1180,11 @@
       "vibeUrl": "",
       "deezerUrl": "",
       "previousRank": 57,
-      "delta": 0,
-      "change": "same"
+      "delta": 1,
+      "change": "up"
     },
     {
-      "rank": 58,
+      "rank": 57,
       "title": "Marc Atlas - Waste My Time",
       "artist": "Marc Atlas",
       "album": "",
@@ -1222,11 +1201,11 @@
       "vibeUrl": "",
       "deezerUrl": "",
       "previousRank": 58,
-      "delta": 0,
-      "change": "same"
+      "delta": 1,
+      "change": "up"
     },
     {
-      "rank": 59,
+      "rank": 58,
       "title": "[Official Audio] 카더가든 (Car, the garden) - 가까운 듯 먼 그대여",
       "artist": "카더가든 (Car, the garden)",
       "album": "",
@@ -1243,11 +1222,11 @@
       "vibeUrl": "",
       "deezerUrl": "",
       "previousRank": 59,
-      "delta": 0,
-      "change": "same"
+      "delta": 1,
+      "change": "up"
     },
     {
-      "rank": 60,
+      "rank": 59,
       "title": "LISA - Tarantino (Official Music Video)",
       "artist": "LLOUD Official",
       "album": "",
@@ -1264,11 +1243,11 @@
       "vibeUrl": "",
       "deezerUrl": "",
       "previousRank": 60,
-      "delta": 0,
-      "change": "same"
+      "delta": 1,
+      "change": "up"
     },
     {
-      "rank": 61,
+      "rank": 60,
       "title": "A2O SOUL 'SUPERSTAR' Official Music Video",
       "artist": "A2O SOUL",
       "album": "",
@@ -1285,11 +1264,11 @@
       "vibeUrl": "",
       "deezerUrl": "",
       "previousRank": 61,
-      "delta": 0,
-      "change": "same"
+      "delta": 1,
+      "change": "up"
     },
     {
-      "rank": 62,
+      "rank": 61,
       "title": "‎Good Night Good Dream (좋은 밤 좋은 꿈)",
       "artist": "NERD CONNECTION",
       "album": "",
@@ -1306,11 +1285,11 @@
       "vibeUrl": "",
       "deezerUrl": "",
       "previousRank": 62,
-      "delta": 0,
-      "change": "same"
+      "delta": 1,
+      "change": "up"
     },
     {
-      "rank": 63,
+      "rank": 62,
       "title": "Hearts2Hearts 하츠투하츠 'Lemon Tang' MV",
       "artist": "SMTOWN",
       "album": "",
@@ -1327,11 +1306,11 @@
       "vibeUrl": "",
       "deezerUrl": "",
       "previousRank": 63,
-      "delta": 0,
-      "change": "same"
+      "delta": 1,
+      "change": "up"
     },
     {
-      "rank": 64,
+      "rank": 63,
       "title": "Dua Lipa - Training Season (Official Music Video)",
       "artist": "Dua Lipa",
       "album": "",
@@ -1348,11 +1327,11 @@
       "vibeUrl": "",
       "deezerUrl": "",
       "previousRank": 64,
-      "delta": 0,
-      "change": "same"
+      "delta": 1,
+      "change": "up"
     },
     {
-      "rank": 65,
+      "rank": 64,
       "title": "Finest Thing",
       "artist": "RESCENE",
       "album": "",
@@ -1363,17 +1342,17 @@
       "image": "https://i.ytimg.com/vi/V_kzqTam8lQ/hqdefault.jpg",
       "melonUrl": "https://www.melon.com/search/total/index.htm?q=Finest%20Thing%20RESCENE",
       "genieUrl": "https://www.genie.co.kr/detail/songInfo?xgnm=117530640",
-      "bugsUrl": "",
+      "bugsUrl": "https://music.bugs.co.kr/track/6514885",
       "appleUrl": "https://music.apple.com/us/album/finest-thing/6828335122?i=6828335132&uo=4",
       "spotifyUrl": "",
       "vibeUrl": "",
       "deezerUrl": "https://www.deezer.com/track/4380852661",
       "previousRank": 65,
-      "delta": 0,
-      "change": "same"
+      "delta": 1,
+      "change": "up"
     },
     {
-      "rank": 66,
+      "rank": 65,
       "title": "BIGBANG - ‘BiiiG’ DANCE PRACTICE",
       "artist": "BIGBANG",
       "album": "",
@@ -1390,11 +1369,11 @@
       "vibeUrl": "",
       "deezerUrl": "",
       "previousRank": 66,
-      "delta": 0,
-      "change": "same"
+      "delta": 1,
+      "change": "up"
     },
     {
-      "rank": 67,
+      "rank": 66,
       "title": "When Spring Comes",
       "artist": "로이킴 Roy Kim",
       "album": "",
@@ -1411,11 +1390,11 @@
       "vibeUrl": "",
       "deezerUrl": "https://www.deezer.com/track/2682459952",
       "previousRank": 67,
-      "delta": 0,
-      "change": "same"
+      "delta": 1,
+      "change": "up"
     },
     {
-      "rank": 68,
+      "rank": 67,
       "title": "[MV] DAVICHI(다비치) - This Love(이 사랑) l Descendants of the Sun 태양의 후예 OST",
       "artist": "MUSIC&NEW 뮤직앤뉴",
       "album": "",
@@ -1432,11 +1411,11 @@
       "vibeUrl": "",
       "deezerUrl": "",
       "previousRank": 68,
-      "delta": 0,
-      "change": "same"
+      "delta": 1,
+      "change": "up"
     },
     {
-      "rank": 69,
+      "rank": 68,
       "title": "NewJeans (뉴진스) 'Ditto' Performance Video",
       "artist": "NewJeans",
       "album": "",
@@ -1453,11 +1432,11 @@
       "vibeUrl": "",
       "deezerUrl": "",
       "previousRank": 69,
-      "delta": 0,
-      "change": "same"
+      "delta": 1,
+      "change": "up"
     },
     {
-      "rank": 70,
+      "rank": 69,
       "title": "[MV] 성시경 _ Every Moment Of You(너의 모든 순간) (Original) (My Love From the Star(별에서 온 그대) OST)",
       "artist": "1theK (원더케이)",
       "album": "",
@@ -1474,11 +1453,11 @@
       "vibeUrl": "",
       "deezerUrl": "",
       "previousRank": 70,
-      "delta": 0,
-      "change": "same"
+      "delta": 1,
+      "change": "up"
     },
     {
-      "rank": 71,
+      "rank": 70,
       "title": "[MV] ABM - 'YARARARA' Feat. 重音テト",
       "artist": "AnythingBecomeMoe",
       "album": "",
@@ -1495,11 +1474,11 @@
       "vibeUrl": "",
       "deezerUrl": "",
       "previousRank": 71,
-      "delta": 0,
-      "change": "same"
+      "delta": 1,
+      "change": "up"
     },
     {
-      "rank": 72,
+      "rank": 71,
       "title": "back number - クリスマスソング (full)",
       "artist": "back number",
       "album": "",
@@ -1516,11 +1495,11 @@
       "vibeUrl": "",
       "deezerUrl": "",
       "previousRank": 72,
-      "delta": 0,
-      "change": "same"
+      "delta": 1,
+      "change": "up"
     },
     {
-      "rank": 73,
+      "rank": 72,
       "title": "엔플라잉 (N.Flying) ‘잔불 (Still)’ MV",
       "artist": "N.Flying (엔플라잉)",
       "album": "",
@@ -1537,11 +1516,11 @@
       "vibeUrl": "",
       "deezerUrl": "",
       "previousRank": 73,
-      "delta": 0,
-      "change": "same"
+      "delta": 1,
+      "change": "up"
     },
     {
-      "rank": 74,
+      "rank": 73,
       "title": "[MV] Roy Kim(로이킴) _ Whenever, Wherever(그대가 있는 곳, 언제 어디든) (MY DEMON(마이데몬) OST Pt. 2)",
       "artist": "1theK (원더케이)",
       "album": "",
@@ -1558,11 +1537,11 @@
       "vibeUrl": "",
       "deezerUrl": "",
       "previousRank": 74,
-      "delta": 0,
-      "change": "same"
+      "delta": 1,
+      "change": "up"
     },
     {
-      "rank": 75,
+      "rank": 74,
       "title": "Lim Young Woong [Baila] Live Clip. @2026 IMHERO 10 : THE STADIUM CONCERT 2",
       "artist": "임영웅",
       "album": "",
@@ -1579,11 +1558,11 @@
       "vibeUrl": "",
       "deezerUrl": "",
       "previousRank": 75,
-      "delta": 0,
-      "change": "same"
+      "delta": 1,
+      "change": "up"
     },
     {
-      "rank": 76,
+      "rank": 75,
       "title": "fromis_9 (프로미스나인) 'Vitamin ME' MV",
       "artist": "fromis_9",
       "album": "",
@@ -1600,11 +1579,11 @@
       "vibeUrl": "",
       "deezerUrl": "",
       "previousRank": 76,
-      "delta": 0,
-      "change": "same"
+      "delta": 1,
+      "change": "up"
     },
     {
-      "rank": 77,
+      "rank": 76,
       "title": "[MV] BOL4(볼빨간사춘기) - Eternal love(사랑할 수밖에)",
       "artist": "SUPER SOUND Bugs!",
       "album": "",
@@ -1621,11 +1600,11 @@
       "vibeUrl": "",
       "deezerUrl": "",
       "previousRank": 77,
-      "delta": 0,
-      "change": "same"
+      "delta": 1,
+      "change": "up"
     },
     {
-      "rank": 78,
+      "rank": 77,
       "title": "On the street (Feat. ASH ISLAND)",
       "artist": "LEELLAMARZ",
       "album": "",
@@ -1642,11 +1621,11 @@
       "vibeUrl": "",
       "deezerUrl": "https://www.deezer.com/track/2406567205",
       "previousRank": 78,
-      "delta": 0,
-      "change": "same"
+      "delta": 1,
+      "change": "up"
     },
     {
-      "rank": 79,
+      "rank": 78,
       "title": "Aiobahn +81 feat. DEMONDICE - DEMON'S SHOT (Official MV) [Theme for PUKEY GODDESS SHOT TRICK]",
       "artist": "Aiobahn",
       "album": "",
@@ -1663,11 +1642,11 @@
       "vibeUrl": "",
       "deezerUrl": "",
       "previousRank": 79,
-      "delta": 0,
-      "change": "same"
+      "delta": 1,
+      "change": "up"
     },
     {
-      "rank": 80,
+      "rank": 79,
       "title": "LE SSERAFIM (르세라핌) 'Made My Night' OFFICIAL MV with OVERWATCH",
       "artist": "HYBE LABELS",
       "album": "",
@@ -1684,11 +1663,11 @@
       "vibeUrl": "",
       "deezerUrl": "",
       "previousRank": 80,
-      "delta": 0,
-      "change": "same"
+      "delta": 1,
+      "change": "up"
     },
     {
-      "rank": 81,
+      "rank": 80,
       "title": "SOMEDAY (썸데이) - 고백 Propose Official M/V",
       "artist": "GENIE MUSIC",
       "album": "",
@@ -1705,11 +1684,11 @@
       "vibeUrl": "",
       "deezerUrl": "",
       "previousRank": 81,
-      "delta": 0,
-      "change": "same"
+      "delta": 1,
+      "change": "up"
     },
     {
-      "rank": 82,
+      "rank": 81,
       "title": "UNIS(유니스) '하늘땅 별땅' Performance Video",
       "artist": "UNIS",
       "album": "",
@@ -1726,11 +1705,11 @@
       "vibeUrl": "",
       "deezerUrl": "",
       "previousRank": 82,
-      "delta": 0,
-      "change": "same"
+      "delta": 1,
+      "change": "up"
     },
     {
-      "rank": 83,
+      "rank": 82,
       "title": "다이나믹 듀오(Dynamicduo) - '죽일 놈 (Guilty)' M/V",
       "artist": "Amoeba Culture (아메바컬쳐)",
       "album": "",
@@ -1747,11 +1726,11 @@
       "vibeUrl": "",
       "deezerUrl": "",
       "previousRank": 83,
-      "delta": 0,
-      "change": "same"
+      "delta": 1,
+      "change": "up"
     },
     {
-      "rank": 84,
+      "rank": 83,
       "title": "어른인 척 하는 중",
       "artist": "MEOMURU",
       "album": "",
@@ -1768,11 +1747,11 @@
       "vibeUrl": "",
       "deezerUrl": "",
       "previousRank": 84,
-      "delta": 0,
-      "change": "same"
+      "delta": 1,
+      "change": "up"
     },
     {
-      "rank": 85,
+      "rank": 84,
       "title": "yung kai - blue (official music video)",
       "artist": "yung kai",
       "album": "",
@@ -1789,11 +1768,11 @@
       "vibeUrl": "",
       "deezerUrl": "",
       "previousRank": 85,
-      "delta": 0,
-      "change": "same"
+      "delta": 1,
+      "change": "up"
     },
     {
-      "rank": 86,
+      "rank": 85,
       "title": "GENER8ION - STORM starring Yung Lean",
       "artist": "GENER8ION",
       "album": "",
@@ -1810,11 +1789,11 @@
       "vibeUrl": "",
       "deezerUrl": "",
       "previousRank": 86,
-      "delta": 0,
-      "change": "same"
+      "delta": 1,
+      "change": "up"
     },
     {
-      "rank": 87,
+      "rank": 86,
       "title": "ADÉLA - Nicole Kidman",
       "artist": "ADÉLA",
       "album": "",
@@ -1825,17 +1804,17 @@
       "image": "https://i.ytimg.com/vi/3sB4Iv_tM7U/hqdefault.jpg",
       "melonUrl": "https://www.melon.com/search/total/index.htm?q=AD%C3%89LA%20-%20Nicole%20Kidman%20AD%C3%89LA",
       "genieUrl": "https://www.genie.co.kr/detail/songInfo?xgnm=115591939",
-      "bugsUrl": "",
+      "bugsUrl": "https://music.bugs.co.kr/track/133803654",
       "appleUrl": "",
       "spotifyUrl": "",
       "vibeUrl": "",
       "deezerUrl": "",
       "previousRank": 87,
-      "delta": 0,
-      "change": "same"
+      "delta": 1,
+      "change": "up"
     },
     {
-      "rank": 88,
+      "rank": 87,
       "title": "너에게 쓰는 편지 (Feat. 린)",
       "artist": "MC몽",
       "album": "",
@@ -1846,17 +1825,17 @@
       "image": "https://i.ytimg.com/vi/nhuFm3BGIBY/hqdefault.jpg",
       "melonUrl": "https://www.melon.com/search/total/index.htm?q=%EB%84%88%EC%97%90%EA%B2%8C%20%EC%93%B0%EB%8A%94%20%ED%8E%B8%EC%A7%80%20%28Feat.%20%EB%A6%B0%29%20MC%EB%AA%BD",
       "genieUrl": "https://www.genie.co.kr/detail/songInfo?xgnm=16172816",
-      "bugsUrl": "",
+      "bugsUrl": "https://music.bugs.co.kr/track/3885405",
       "appleUrl": "",
       "spotifyUrl": "",
       "vibeUrl": "",
       "deezerUrl": "https://www.deezer.com/track/2030958287",
       "previousRank": 88,
-      "delta": 0,
-      "change": "same"
+      "delta": 1,
+      "change": "up"
     },
     {
-      "rank": 89,
+      "rank": 88,
       "title": "박화요비 - 그런일은",
       "artist": "Hwa Yo Bi",
       "album": "",
@@ -1867,17 +1846,17 @@
       "image": "https://i.ytimg.com/vi/brM5QZvBl3Y/hqdefault.jpg",
       "melonUrl": "https://www.melon.com/search/total/index.htm?q=%EB%B0%95%ED%99%94%EC%9A%94%EB%B9%84%20-%20%EA%B7%B8%EB%9F%B0%EC%9D%BC%EC%9D%80%20Hwa%20Yo%20Bi",
       "genieUrl": "https://www.genie.co.kr/detail/songInfo?xgnm=115591939",
-      "bugsUrl": "",
+      "bugsUrl": "https://music.bugs.co.kr/track/3743",
       "appleUrl": "",
       "spotifyUrl": "",
       "vibeUrl": "",
       "deezerUrl": "",
       "previousRank": 89,
-      "delta": 0,
-      "change": "same"
+      "delta": 1,
+      "change": "up"
     },
     {
-      "rank": 90,
+      "rank": 89,
       "title": "LEECHANGSUB - 'Four seasons, and you' M/V",
       "artist": "fantagio 판타지오",
       "album": "",
@@ -1894,11 +1873,11 @@
       "vibeUrl": "",
       "deezerUrl": "",
       "previousRank": 90,
-      "delta": 0,
-      "change": "same"
+      "delta": 1,
+      "change": "up"
     },
     {
-      "rank": 91,
+      "rank": 90,
       "title": "[MV] 로코베리(ROCOBERRY)_너에게(春喜) (TO YOU)",
       "artist": "로코베리 rocoberry",
       "album": "",
@@ -1915,11 +1894,11 @@
       "vibeUrl": "",
       "deezerUrl": "",
       "previousRank": 91,
-      "delta": 0,
-      "change": "same"
+      "delta": 1,
+      "change": "up"
     },
     {
-      "rank": 92,
+      "rank": 91,
       "title": "[최초 공개] DK (디셈버) - 心 (심)",
       "artist": "방구석 캐스팅",
       "album": "",
@@ -1936,11 +1915,11 @@
       "vibeUrl": "",
       "deezerUrl": "",
       "previousRank": 92,
-      "delta": 0,
-      "change": "same"
+      "delta": 1,
+      "change": "up"
     },
     {
-      "rank": 93,
+      "rank": 92,
       "title": "Drunk (Feat. Coogie)",
       "artist": "BE'O_OFFICIAL",
       "album": "",
@@ -1957,11 +1936,11 @@
       "vibeUrl": "",
       "deezerUrl": "",
       "previousRank": 93,
-      "delta": 0,
-      "change": "same"
+      "delta": 1,
+      "change": "up"
     },
     {
-      "rank": 94,
+      "rank": 93,
       "title": "사랑하지 않아서 그랬어",
       "artist": "신예영 SIN YE YOUNG",
       "album": "",
@@ -1978,11 +1957,11 @@
       "vibeUrl": "",
       "deezerUrl": "",
       "previousRank": 94,
-      "delta": 0,
-      "change": "same"
+      "delta": 1,
+      "change": "up"
     },
     {
-      "rank": 95,
+      "rank": 94,
       "title": "CRY OUT LOUD",
       "artist": "로이킴 Roy Kim",
       "album": "",
@@ -1999,11 +1978,11 @@
       "vibeUrl": "",
       "deezerUrl": "https://www.deezer.com/track/4298274612",
       "previousRank": 95,
-      "delta": 0,
-      "change": "same"
+      "delta": 1,
+      "change": "up"
     },
     {
-      "rank": 96,
+      "rank": 95,
       "title": "PLAVE 'Star Trace' M/V",
       "artist": "PLAVE 플레이브",
       "album": "",
@@ -2020,11 +1999,11 @@
       "vibeUrl": "",
       "deezerUrl": "",
       "previousRank": 96,
-      "delta": 0,
-      "change": "same"
+      "delta": 1,
+      "change": "up"
     },
     {
-      "rank": 97,
+      "rank": 96,
       "title": "RESCENE (리센느) ‘Glow Up’ Official MV",
       "artist": "RESCENE",
       "album": "",
@@ -2041,11 +2020,11 @@
       "vibeUrl": "",
       "deezerUrl": "",
       "previousRank": 97,
-      "delta": 0,
-      "change": "same"
+      "delta": 1,
+      "change": "up"
     },
     {
-      "rank": 98,
+      "rank": 97,
       "title": "[100일의 거짓말 (100 Days of Deception) OST Part 2] 이소라 (Lee So Ra) -  널 (You) MV",
       "artist": "STONE MUSIC",
       "album": "",
@@ -2062,11 +2041,11 @@
       "vibeUrl": "",
       "deezerUrl": "",
       "previousRank": 98,
-      "delta": 0,
-      "change": "same"
+      "delta": 1,
+      "change": "up"
     },
     {
-      "rank": 99,
+      "rank": 98,
       "title": "HeeJae (희재)",
       "artist": "성시경 SUNG SI KYUNG",
       "album": "",
@@ -2083,11 +2062,11 @@
       "vibeUrl": "",
       "deezerUrl": "",
       "previousRank": 99,
-      "delta": 0,
-      "change": "same"
+      "delta": 1,
+      "change": "up"
     },
     {
-      "rank": 100,
+      "rank": 99,
       "title": "My Love (And)",
       "artist": "BUZZ",
       "album": "",
@@ -2098,14 +2077,14 @@
       "image": "https://i.ytimg.com/vi/CSSYv4qsgSc/hqdefault.jpg",
       "melonUrl": "https://www.melon.com/search/total/index.htm?q=My%20Love%20%28And%29%20BUZZ",
       "genieUrl": "https://www.genie.co.kr/detail/songInfo?xgnm=38955390",
-      "bugsUrl": "",
+      "bugsUrl": "https://music.bugs.co.kr/track/80208787",
       "appleUrl": "https://music.apple.com/us/album/my-love-and/1670828782?i=1670828789&uo=4",
       "spotifyUrl": "",
       "vibeUrl": "",
       "deezerUrl": "https://www.deezer.com/track/2143132647",
       "previousRank": 100,
-      "delta": 0,
-      "change": "same"
+      "delta": 1,
+      "change": "up"
     }
   ]
 }
